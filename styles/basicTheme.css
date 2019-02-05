@@ -1,0 +1,160 @@
+
+html, body {
+	height: 100%; 
+	margin: 0; 
+	padding: 0;
+  	scroll-behavior: smooth;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+h1{
+    margin: 0;
+    font-size: 2em;
+    color:#393e46;
+    border-bottom: solid 2px #f8b500;
+    width:25%;
+    /*border-radius: 20px;*/
+    padding:10px;
+    z-index:0;
+
+}
+
+#home{
+	background-color: #caccce;
+    min-height:100%;
+	padding-top:290px;
+    z-index:1;
+}
+
+#notes{
+	min-height:100%;
+	/*border:solid 1px black;*/
+	background-color:#f7f7f7;
+	padding-top:290px;
+}
+
+#assignments{
+	min-height:100%;
+	/*border:solid 1px black;*/
+	background-color:#5c636e;
+	padding-top:290px;
+}
+
+#labs{
+	min-height:100%;
+	/*border:solid 1px black;*/
+	background-color: #caccce;
+	padding-top:290px;
+}
+
+#projects{
+	min-height:100%;
+	/*border:solid 1px black;*/
+	background-color:#f7f7f7;
+	padding-top:290px;
+}
+
+#reviewsAndSolutions{
+	min-height:100%;
+	/*border:solid 1px black;*/
+	background-color:#5c636e;
+	padding-top:290px;
+}
+
+#tutorials{
+	min-height:100%;
+	/*border:solid 1px black;*/
+	background-color: #caccce;
+	padding-top:290px;
+}
+
+#contact{
+	min-height:100%;
+	/*border:solid 1px black;*/
+	background-color:#f7f7f7;
+	padding-top:290px;
+}
+
+#top{
+    position:fixed;
+    top:0px;
+    width:100%;
+    background-color:#5c636e;
+    z-index:2;
+}
+
+#top img{
+    min-height:200px;
+    padding:10px 10px 20px 0px;
+    float:left;
+}
+
+#headerText{
+
+    font-size:3em;
+    padding-top:100px;
+    font-style:bold;
+    color:#f8b500;
+}
+
+#unit{
+    font-size:1.25em;
+    font-weight:bold;
+    padding:10px;
+}
+
+#navBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #393e46;
+    background-color: #393e46;
+    position: fixed;
+    top:225px;;
+    width:100%;
+    z-index:3;
+
+}
+
+#navBar li {
+    float: left;
+    font-size: 1.5em;
+}
+
+#navBar li a {
+    display: block;
+    color: #f7f7f7;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	
+}
+
+#navBar li a:hover{
+	background-color:#f8b500;
+}
+
+#notesList li{
+    color: #f8b500;
+}
+
+#notesList li a{
+    text-decoration:none;
+    color:#393e46;
+}
+
+#notesList li a:hover{
+    color: #5c636e;
+}
+/*
+li a:hover:not(.active) {
+    background-color: #f8b500;
+}
+
+
+li a.active {
+    color: white;
+    background-color: #f8b500;
+}
+*/
