@@ -1,7 +1,7 @@
 # Card Dealer
 
 ## Introduction
-In this lab you will be introduced static methods and state variables
+In this lab you will be introduced to static methods and state variables
 
 ## Your Tasks
 
