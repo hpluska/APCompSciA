@@ -1,4 +1,4 @@
-#Card Dealer
+# Card Dealer
 
 ## Introduction
 In this lab you will be introduced static methods and state variables
@@ -15,9 +15,9 @@ In this lab you will be introduced static methods and state variables
 	* Add the files below to the project folder
 	* Implement challenges 1 thru 3
 	
-[Card.java](Card.java)
-[DeckOfCards.java](DeckOfCards.java) 
-[CardDealer.java](CardDealer.java)
+		- [Card.java](Card.java)
+		- [DeckOfCards.java](DeckOfCards.java) 
+		- [CardDealer.java](CardDealer.java)
 
 
 
