@@ -33,45 +33,38 @@ h1{
 	padding-top:290px;
 }
 
-#assignments{
-	min-height:100%;
-	/*border:solid 1px black;*/
-	background-color:#5c636e;
-	padding-top:290px;
-}
-
 #labs{
 	min-height:100%;
 	/*border:solid 1px black;*/
-	background-color: #caccce;
+	background-color: #5c636e;
 	padding-top:290px;
 }
 
 #projects{
 	min-height:100%;
 	/*border:solid 1px black;*/
-	background-color:#f7f7f7;
+	background-color:#caccce;
 	padding-top:290px;
 }
 
 #reviewsAndSolutions{
 	min-height:100%;
 	/*border:solid 1px black;*/
-	background-color:#5c636e;
+	background-color:#f7f7f7;
 	padding-top:290px;
 }
 
 #tutorials{
 	min-height:100%;
 	/*border:solid 1px black;*/
-	background-color: #caccce;
+	background-color: #5c636e;
 	padding-top:290px;
 }
 
 #contact{
 	min-height:100%;
 	/*border:solid 1px black;*/
-	background-color:#f7f7f7;
+	background-color:#caccce;
 	padding-top:290px;
 }
 
@@ -135,16 +128,16 @@ h1{
 	background-color:#f8b500;
 }
 
-#notesList li{
+#contentList li{
     color: #f8b500;
 }
 
-#notesList li a{
+#contentList li a{
     text-decoration:none;
     color:#393e46;
 }
 
-#notesList li a:hover{
+#contentList li a:hover{
     color: #5c636e;
 }
 /*
