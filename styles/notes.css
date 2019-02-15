@@ -85,9 +85,15 @@ body{
     display: inline;
   }
 
-  #code{
+  .codeblock{
     font-family: 'Source Code Pro', monospace;
+    background-color:lightgray;
+    border-radius:20px;
+    border: 1px solid black;
+  }
 
+  .practice{
+      margin:10px;
   }
 
 
