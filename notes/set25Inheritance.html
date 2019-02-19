@@ -12,10 +12,19 @@
 <div id="skills">
     <ul id="skillsList">
         <li>
-            Skill 25.1 <a href="#skill1">Explain the purpose in inheritance</a>
+            Skill 25.1 <a href="#skill1">Explain the purpose of inheritance</a>
         </li>
         <li>
-            Skill 24.2 <a href="#skill2">Implement inheritance using the keyword <strong>extends</strong></a>
+            Skill 25.2 <a href="#skill2">Implement inheritance using the keyword <strong>extends</strong></a>
+        </li>
+        <li>
+            Skill 25.3 <a href="#skill3">Implement the constructor of a super class using the keyword <strong>super</strong></a>
+        </li>
+        <li>
+            Skill 25.4 <a href="#skill4">Invoke the methods of a super class in a subclass</a>
+        </li>
+        <li>
+            Skill 25.5 <a href="#skill5">Create objects from super and sub classes</a>
         </li>
     </ul>    
 </div>
@@ -35,7 +44,7 @@
                         By doing this, we are reusing the fields and methods of the existing class.</li>
             </ul>
 </div>
-<div id="skill1" class="skills">Skill 25.2 Implement inheritance using the keyword <strong>extends</strong></div>
+<div id="skill2" class="skills">Skill 25.2 Implement inheritance using the keyword <strong>extends</strong></div>
 <div class="skillConceptsHeader">Skill 25.2 Concepts</div>
 <div class="skillConcepts">
 <p>The keyword used for inheritance is extends.</p>
@@ -46,21 +55,83 @@
         <p>}</p>    
     </div>
 
+<p>In the below example of inheritance, class Bicycle is a base class, class MountainBike is a derived class which extends Bicycle class and class Main is a driver 
+    class to run program.</p>
+
+    <iframe height="600px" width="100%" src="https://repl.it/@hpluska/Set25Skill2?lite=true" scrolling="no" frameborder="no" 
+    allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    <p>In the above example, the Bicycle class is refered to as our Superclass. The MountainBike class is referred to as our Subclass.  
+        By using the work "extends" in the MountainBike class, the MountainBike class inherits all the methods and state variables of the Bicycle class. 
+    </p>
+
     <div class="practice">
-        <a href="../ticketOutTheDoor/set25/Set25TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 25.1: Exercise 1</a>
+            <a href="../ticketOutTheDoor/set25/Set25TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 25.2: Exercise 1</a>
     </div>
 
-<p>In below example of inheritance, class Bicycle is a base class, class MountainBike is a derived class which extends Bicycle class and class Test is a driver class to run program.</p>
+</div>
+<div id="skill3" class="skills">Skill 25.3 Implement the constructor of a super class using the keyword <strong>super</strong></div>
+<div class="skillConceptsHeader">Skill 25.3 Concepts</div>
+<div class="skillConcepts">
+<p>As previously mentioned, the keyword <strong>extends</strong> causes a subclass to inherit all the methods and state variables of its super class.  This is also true for the constructor. </p>
+<p>To invoke the constructor of a super class the keyword <strong>super</strong> is used. This concept is illustrated below. </p>
+<img src = "../images/inheritance.png">
+
+
+<p>There are some significant features of inheritance illustrated above. In the absence
+        of super(gear, speed), the MountainBike constructor would have tried to automatically call the
+        Bicycle constructor and would have failed, since the Bicycle constructor requires two
+        parameters and we would not have supplied these. By making super(gear, speed) the first line of code,
+        we are able to supply the needed parameters. When used, <strong>super()</strong> must be the first line of code in the
+        constructor of the subclass. 
+        </p>
+
+<div class="practice">
+        <a href="../ticketOutTheDoor/set25/Set25TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 25.3: Exercise 1</a>
+</div>
+</div>
+<div id="skill4" class="skills">Skill 25.4 Invoke the methods of a super class in a subclass</div>
+<div class="skillConceptsHeader">Skill 25.4 Concepts</div>
+<div class="skillConcepts">
+<p>
+    Because the MountainBike class extends the Bicycle class, MountainBike is able to access all the public methods and variables associated with Bicycle.   
+    This concept is illustrated below, 
+    
+
+</p>
+<img src="../images/inheritanceOfMethods.png">
+<iframe height="600px" width="100%" src="https://repl.it/@hpluska/Set25Skill4?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<div class="practice">
+        <a href="../ticketOutTheDoor/set25/Set25TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 25.4: Exercise 1</a>
 </div>
 
+</div>
 
+<div id="skill5" class="skills">Skill 25.5 Create objects from super and sub classes</div>
+<div class="skillConceptsHeader">Skill 25.5 Concepts</div>
+<div class="skillConcepts">
+<p>The inheritance of one class from another follows an "IS A" relationship.  That is, a mountain bike "IS A" bicycle.  The reverse is not true however.  For example, a bike is
+    not necessarily a mountain bike.  When creating objects from super and sub classes, this relatioinship becomes important. 
+</p>
+<p>Consider the following hierarchy of inherited classes between bicycles</p>
+<img src = "../images/inheritanceRelationships.png">
 
+<p>The above heirarchy shows the relationship among the classes in a program.  According to the heirarchy 
+    <ul>
+        <li>CrossCountryBike "IS A" MountainBike</li>
+        <li>DownhillBike "IS A" MountainBike</li>
+        <li>MountainBike "IS A" Bicycle</li>
+    </ul>
+</p>
 
+<p>When creating objects from super and sub classes this relationsihp is enforced.  This is illustrated below,
+</p>
+<img src = "../images/inheritanceCreatingObjects.png">
+<p>Another way to think of this is that "parents can make children, but children cannot make parents"</p>
+<div class="practice">
+        <a href="../ticketOutTheDoor/set25/Set25TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 25.5: Exercise 1</a>
+</div>
+<iframe height="600px" width="100%" src="https://repl.it/@hpluska/Set25Skill5?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-
-
-
-
-
+</div>
 </body>
 </html>
