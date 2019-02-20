@@ -138,9 +138,36 @@
 <iframe height="600px" width="100%" src="https://repl.it/@hpluska/Set25Skill5?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 </div>
-<div id="skill6" class="skills">Skill 26.1 Pass a sub class object as a parameter</div>
-<div class="skillConceptsHeader">Skill 26.1 Concepts</div>
+<div id="skill6" class="skills">Skill 25.6 Pass a sub class object as a parameter</div>
+<div class="skillConceptsHeader">Skill 25.6 Concepts</div>
 <div class="skillConcepts">
+    <p>Any time when a parameter is expecting to receive an object of a particular type, it is acceptable
+            to send it an object of the same class or a subclass, but never of a superclass. This is because the passed class
+            object inherits all the methods of the object. If you attempt to pass an object of a parent class, the expected object may not
+            have all the expected methods. Consider the following hierarchy of classes where each class is a
+            subclass of the class immediately above it.</p>
+    <img src = "../images/inheritanceHierarchy.png">
+
+    <p>Suppose there is a method with the following signature:</p>
+    <div class="codeblock"> 
+            <p>public void theMethod(Male ml)</p>   
+    </div>
+    <p>The method theMethod is clearly expecting a Male object; therefore, the following calls to this
+            method would be legal since we are either sending a Male object or an object of a subclass:</p>
+
+    <div class = "codeblock">
+            <p>Male m = new Male();</p>
+            <p>theMethod(m); //ok to send m since it’s expecting a Male object</p>
+            <p>Boy b = new Boy();</p>
+            <p>theMethod(b); //ok to send b since b is created from a subclass of Male</p>
+    </div>
+    <p>Since theMethod is expecting a Male object, we can’t send an object of a superclass.</p>
+    <div class = "codeblock">
+            <p>Person p = new Person();</p> 
+            <p>theMethod(p); //Illegal</p>
+            <p>theMethod((Male)p); //Legal if we cast p as a Male object</p>
+    </div>
+            
 </div>
 </body>
 </html>
