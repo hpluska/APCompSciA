@@ -3,27 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package CardDealer;
+package cardcounterwithimages;
 
 /**
  *
  * @author timberlinepluska
  */
-public class CardCounter extends CardDealer {
+public class CardCounter extends CardDealer{
     
     public CardCounter(int d){
         super(d);
-        
     }
-    //Write a method called show deal
-    public void showDeal(){
-        
-        for(int i = 0; i < dealCards().length;i++){
-            System.out.println(dealCards().toString());
-            
-        }
-    }
+    //Write a method that returns the sum of the value of two cards
     
+
+
     //Write a method that finds the number of aces, twos, threes, etc
     
     
@@ -32,9 +26,6 @@ public class CardCounter extends CardDealer {
     
     
     
-    //Write a method that prints the dealt hand backwards
     
-    
-    //
     
 }

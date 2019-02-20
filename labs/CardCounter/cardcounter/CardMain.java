@@ -3,21 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package CardDealer;
+package cardcounterwithimages;
+
+import javax.swing.JFrame;
 
 /**
  *
  * @author timberlinepluska
  */
-public class CardCounterDriver {
+public class CardMain {
     
     public static void main(String args[]){
-        CardCounter myGame = new CardCounter(10);
-        Card dealtCards[] = myGame.dealCards();
-        
-        for(int i = 0; i < dealtCards.length;i++){
-            System.out.println(dealtCards[i].toString());
-        }
+
+        JFrame frame = new JFrame("Card Counter");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	frame.getContentPane().add(new CardPanel());
+	frame.pack();
+	frame.setVisible(true);
+ 
     }
     
 }
