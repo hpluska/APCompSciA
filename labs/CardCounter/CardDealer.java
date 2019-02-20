@@ -34,7 +34,7 @@ public class CardDealer extends DeckOfCards{
      * Deals a hand of cards of size DEALSIZE
      * @return dealt, an array of cards
      */
-    public Card[] dealCards(){
+    private Card[] dealCards(){
         
         for(int i = 0; i < dealSize; i++){
             dealt[i] = nextCard();
@@ -43,7 +43,7 @@ public class CardDealer extends DeckOfCards{
         return dealt;
     }
     
-    public void swapCards(Card a, Card b, int i, int k){
+    private void swapCards(Card a, Card b, int i, int k){
         Card temp = a;//temp is a
         a = b;//a is b
         b = temp;//b is a
@@ -51,7 +51,7 @@ public class CardDealer extends DeckOfCards{
         setCard(k, b);//set k with new b
 
     }
-    public void swapCards2(int i, int k){
+    private void swapCards2(int i, int k){
         Card c1 = getCard(i);
         Card c2 = getCard(k);
         setCard(i, c2);
@@ -60,7 +60,7 @@ public class CardDealer extends DeckOfCards{
     
     
     
-    public void shuffleCards(){
+    private void shuffleCards(){
         for(int i = 0; i < deckSize(); i++){
             int k = (int)(Math.random()*deckSize());
             swapCards(getCard(i), getCard(k), i, k);
