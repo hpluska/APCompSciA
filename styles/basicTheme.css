@@ -90,7 +90,7 @@ h1{
     color:#f8b500;
 }
 
-#unit{
+.unit{
     font-size:1.25em;
     font-weight:bold;
     padding:10px;
@@ -128,16 +128,16 @@ h1{
 	background-color:#f8b500;
 }
 
-#contentList li{
+.contentList li{
     color: #f8b500;
 }
 
-#contentList li a{
+.contentList li a{
     text-decoration:none;
     color:#393e46;
 }
 
-#contentList li a:hover{
+.contentList li a:hover{
     color: #5c636e;
 }
 /*
