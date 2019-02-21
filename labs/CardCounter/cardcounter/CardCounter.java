@@ -3,29 +3,29 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cardcounterwithimages;
+package cardcounter;
 
 /**
  *
- * @author timberlinepluska
+ * @author Pluska
  */
 public class CardCounter extends CardDealer{
     
     public CardCounter(int d){
         super(d);
     }
-    //Write a method that returns the sum of the value of two cards
-    
+	
+	//TODO: Write a method called show sumDeal that returns the sum of all the cards dealt 
+	
+    //TODO: Write a method called countValues that finds the number of aces, twos, threes, etc
+    //This method should return an array of the stored values
 
 
-    //Write a method that finds the number of aces, twos, threes, etc
+    //TODO: Write a method called countSuites that finds the number of cards in each suite
+    //This method should return an array of the stored values
+
     
-    
-    
-    //Write a method that finds the number of each suite
-    
-    
-    
+
     
     
 }

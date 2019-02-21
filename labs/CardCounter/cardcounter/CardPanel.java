@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cardcounterwithimages;
+package cardcounter;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -20,7 +20,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author timberlinepluska
+ * @author Pluska
  */
 public class CardPanel extends JPanel implements ActionListener {
     private int dealSize;
@@ -28,7 +28,7 @@ public class CardPanel extends JPanel implements ActionListener {
     private Card clickedCard;
     private JButton[] cardButtons;
     private Card cardArray[];
-    private String pathToCardImages = "/home/timberlinepluska/NetBeansProjects/CardCounterWithImages/src/images/";
+    private String pathToCardImages="C:\\Users\\HP Sprout\\Desktop\\NetbeansProjects\\CardCounter\\src\\images\\";
     ImageIcon cardImageIcon;
 
     /**
@@ -38,10 +38,15 @@ public class CardPanel extends JPanel implements ActionListener {
     public CardPanel(){
         
         dealSize = 10;
-        CardCounter pluska = new CardCounter(dealSize);
-        cardArray = pluska.getDealtCards();
+        CardCounter myDeal = new CardCounter(dealSize);
+        cardArray = myDeal.getDealtCards();
+	
+		
+	//DO NOT EDIT
         showCards(cardArray);
     }
+	
+	//DO NOT EDIT ANYTHING BELOW 
     
     /**
      * Displays the dealt cards as buttons

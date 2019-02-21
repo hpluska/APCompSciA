@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cardcounterwithimages;
+package cardcounter;
 
 import javax.swing.JFrame;
 
 /**
  *
- * @author timberlinepluska
+ * @author Pluska
  */
 public class CardMain {
     
@@ -17,9 +17,9 @@ public class CardMain {
 
         JFrame frame = new JFrame("Card Counter");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	frame.getContentPane().add(new CardPanel());
-	frame.pack();
-	frame.setVisible(true);
+		frame.getContentPane().add(new CardPanel());
+		frame.pack();
+		frame.setVisible(true);
  
     }
     

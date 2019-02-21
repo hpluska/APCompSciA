@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cardcounterwithimages;
+package cardcounter;
 
 /**
  *
- * @author timberlinepluska
+ * @author Pluska
  */
 public class DeckOfCards {
     
@@ -60,6 +60,17 @@ public class DeckOfCards {
     public int getValue(Card c){
         return c.getValue();
     }
+	
+	  /**
+     * gets the symbol of the suite of the card
+     * @param Card - the Card object we want the suite to retreive
+     * @return
+     */
+	public char getSuite(Card c){
+        
+        String suite = c.toString();
+        return suite.charAt(suite.length() - 1);
+    }
     
     /**
      * Returns the Card at a specified index in the deck
@@ -103,6 +114,24 @@ public class DeckOfCards {
      */
     public int deckSize(){
         return DECKSIZE;
+    }
+	 /**
+     *
+     * @return an array of card values
+     */
+	public String[] getCardValues(){
+        return values;
+    }
+    
+	 /**
+     *
+     * @return an array of suite symbols
+     */
+    public char[] getSuiteValues(){
+        char suites[] = new char[4];
+        for(int i = 0; i < suiteNames.length;i++)
+            suites[i] = suiteNames[i].charAt(suiteNames[i].length() - 1);
+        return suites;
     }
     
 }
