@@ -1,4 +1,4 @@
-# Card Dealer
+# Card Counter
 
 ## Introduction
 In this lab you will be introduced to inheritance
@@ -13,7 +13,7 @@ In this lab you will be introduced to inheritance
 
 	* Create a new project in netbeans called CardCounter
 	* Add the files below to the project folder
-	* Create an image folder in your project folder and save the images below to the image
+	* Create an image folder in your project folder and save the images below in the image folder
 	* Implement challenges 1 thru 3 (To receive credit, the dealt cards must appear in the GUI)
 
 		- [Card.java](Card.java)
