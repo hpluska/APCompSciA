@@ -22,8 +22,7 @@ In this lab you will be introduced to inheritance
 		- [CardPanel.java](CardPanel.java)
 		- [DeckOfCards.java](DeckOfCards.java) 
 		- [CardDealer.java](CardDealer.java)
-		<br>
-		- [images](images)
+	* [images](images)
 
 
 
