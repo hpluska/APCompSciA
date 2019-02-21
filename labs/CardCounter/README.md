@@ -15,13 +15,15 @@ In this lab you will be introduced to inheritance
 	* Add the files below to the project folder
 	* Add the image folder below to the project folder
 	* Implement challenges 1 thru 3 (To receive credit, the dealt cards must appear in the GUI)
+	<u>Needed files</u>
 		- [Card.java](Card.java)
 		- [CardCounter.java](CardCounter.java)
 		- [CardMain.java](CardMain.java)
 		- [CardPanel.java](CardPanel.java)
 		- [DeckOfCards.java](DeckOfCards.java) 
 		- [CardDealer.java](CardDealer.java)
-                - [images](images)
+	<u>Needed images</u>
+		- [images](images)
 
 
 
