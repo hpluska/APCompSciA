@@ -1,0 +1,274 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+    <link rel="stylesheet" href="../styles/notes.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+</head>
+<body>
+<div id="top">
+    <h1>Set 26: Abstract Classes and Interfaces</h1>
+</div>
+<div id="skills">
+    <ul id="skillsList">
+        <li>
+            Skill 26.1 <a href="#skill1">Explain the purpose of an abstract class</a>
+        </li>
+        <li>
+            Skill 26.2 <a href="#skill2">Implement an abstract class<strong>extends</strong></a>
+        </li>
+        <li>
+            Skill 26.3 <a href="#skill3">Explain the purpose of an interface</a>
+        </li>
+        <li>
+            Skill 25.4 <a href="#skill4">Invoke the methods of a super class in a subclass</a>
+        </li>
+        <li>
+            Skill 25.5 <a href="#skill5">Create objects from super and sub classes</a>
+        </li>
+        <li>
+            Skill 25.6 <a href="#skill6">Pass a sub class object as a parameter</a>    
+        </li>
+    </ul>    
+</div>
+<div id="skill1" class="skills">Skill 26.1 Explain the purpose of an abstract class</div>
+<div class="skillConceptsHeader">Skill 26.1 Concepts</div>
+<div class="skillConcepts">
+        <p>
+                Suppose that for some reason, we had a programming task that was to model animals. For
+                example, we want to have a class for a cat, a class for a dog, a class for a horse, and so forth. As
+                you can imagine, there could be lots of redundancy among those classes because animals have
+                some common characteristics. For instance, all animals have, say, two eyes, or two ears, and
+                make sounds, and so forth. Or at least all the animals that we would like to model do.
+        </p>
+        <p>
+                We could create a super class called animal to capture all these common characteristics and
+                behaviors. And then we could have all the specific animal classes derive from the animal class.
+                So far so good…
+        </p>
+        <p>
+                The question though is, what would new animal mean? In other words, if we create an object of
+                the animal class, what kind of object would that be? What would we try to model by creating an
+                object of the animal class?
+        </p>
+        <p>
+                You may be thinking there is no point in creating objects from the animal class, so there is no
+                need to ever invoke the animal constructor. But subclasses could benefit from extending such a
+                class.
+        </p>
+        <p>
+                Java prohibits, under some circumstances, creating objects from specific classes. Such classes are
+                referred to as abstract classes. Abstract classes are classes that cannot be instantiated – objects
+                cannot be created from abstract classes. While the methods abstract classes carry may be
+                implemented, methods declared as abstract cannot be implemented by the abstract class, they
+                must instead be implemented by the subclass. Such methods can provide a framework for a
+                subclass.
+        </p>
+
+        <div class="skillTakeAway"><p>Objects cannot be created from abstract classes</p></div>
+        <div class="skillTakeAway"><p>Methods declared as abstract cannot be implemented by the abstract class, they
+                must instead be implemented by the subclass</p></div>
+</div>
+<div id="skill2" class="skills">Skill 26.2 Implement an abstract class<strong>extends</strong></div>
+<div class="skillConceptsHeader">Skill 26.2 Concepts</div>
+<div class="skillConcepts">
+<p>Abstract classes are implemented using the keyword <strong>abstract</strong></p>
+<p>In the below example, we have created an abstract class called <em>animal</em></p>
+    <div class="codeblock"> 
+        <p>public abstract class Animal
+        <br>{</p>  
+        <p>//methods and fields</p>     
+        <p>}</p>    
+    </div>
+<p>As previously mentioned, abstract classes can provide the frameword for a subclass.  
+    For example, consider the following subclasses which inherit the animal class,
+</p>
+    <div class="codeblock"> 
+        <p>public class Cow extends Animal
+        <br>{</p>  
+        <p>//methods and fields</p>     
+        <p>}</p>    
+
+        <p>public class Dog extends Animal
+        <br>{</p>  
+        <p>//methods and fields</p>     
+        <p>}</p>    
+     
+        <p>public class Cat extends Animal
+        <br>{</p>  
+        <p>//methods and fields</p>     
+        <p>}</p>    
+    </div>
+<p>Each of the classes that inherit the parent class, Animal, have some common characteristics.
+    For example, a Cow, a Dog, and a Cat, all have two eyes, two ears, and
+    make sounds, and so forth. But these charasterics are different for each animal we 
+    want to model.
+    
+</p>
+<p>Suppose we want to ensure that every animal we model can speak.   To do this, we would
+    write an abstract method in our abstract class.  
+</p>
+<div class="codeblock"> 
+        <p>public abstract class Animal
+        <br>{</p>  
+        <p>     public abstract void speak();</p>     
+        <p>}</p>    
+</div>
+<p>Notice we have only declared the abstract method, but we did not implement it.  In fact,
+    Java does not allow for this.   However, the classes that inherit the Animal class <em>must</em>
+    implement the speak method.</p>
+</p>
+
+<p>This is illustrated below,</p>
+
+<iframe height="600px" width="100%" src="https://repl.it/@hpluska/Set26Skill21?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>  
+
+    <p>
+        The above illustrates how abstract classes can serve as a framework for subclasses.  
+        In addition to abstract methods, abstract classes can also include regular methods.
+        For example, all the animals in our subclasses have four legs, therefore we can 
+        create a method to return the number of legs in the parent class. 
+    </p>
+    <div class="codeblock"> 
+            <p>public abstract class Animal
+            <br>{</p>  
+            <p>     public abstract void speak();</p>  
+            <p>     public String getLegs(){<br>
+                        return "Four";<br>
+                    }
+            </p>   
+            <p>}</p> 
+    </div>   
+            <iframe height="400px" width="100%" src="https://repl.it/@hpluska/Set26Skill22?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+    <div class="practice">
+            <a href="../ticketOutTheDoor/set25/Set25TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 25.2: Exercise 1</a>
+    </div>
+
+</div>
+<div id="skill3" class="skills">Skill 26.3 Explain the purpose of an interface</div>
+<div class="skillConceptsHeader">Skill 26.3 Concepts</div>
+<div class="skillConcepts">
+
+    <p>An interface is an abstract super class that contains only abstract methods.  
+        Consider the following example.
+    </p>
+    <p>The super class:</p>
+    <div class = "codeblock">
+            <p>public abstract class Parent<br>
+            {<br>
+            public abstract void method1();<br>
+            public abstract void method2();<br>
+            public abstract int method3(double d);<br>
+            }</p>
+    </div>
+    <p>And now the subclass:</p>
+    <div class = "codeblock">
+            <p>public class Child extends Parent<br>
+            {<br>
+            public void method1(){ … some code … }<br>
+            public void method2(){ … some code … }<br>
+            public int method3()(double c) { … some code … }<br>
+            }</p>
+    </div>
+    <p>Notice that in the above example, the super class does nothing. In other words, all methods in the
+    super class are abstract. Moreover, there are no variables which need to be accessed. The only
+    purpose of the super class is to force the subclass to implement its methods. If this is all a
+    particular super class does, then the “abstract” declaration can be replaced with an interface as
+    shown below,</p>
+
+    <div class="codeblock">
+        <p>
+                public interface Parent<br>
+                {<br>
+                void method1();<br>
+                void method2();<br>
+                int method3(double d);<br>
+                }
+        </p>
+    </div>
+
+<div class="practice">
+        <a href="../ticketOutTheDoor/set25/Set25TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 25.3: Exercise 1</a>
+</div>
+</div>
+<div id="skill4" class="skills">Skill 25.4 Invoke the methods of a super class in a subclass</div>
+<div class="skillConceptsHeader">Skill 25.4 Concepts</div>
+<div class="skillConcepts">
+<p>
+    Because the MountainBike class extends the Bicycle class, MountainBike is able to access all the public methods and variables associated with Bicycle.   
+    This concept is illustrated below, 
+    
+
+</p>
+<img src="../images/inheritanceOfMethods.png">
+<iframe height="600px" width="100%" src="https://repl.it/@hpluska/Set25Skill4?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<div class="practice">
+        <a href="../ticketOutTheDoor/set25/Set25TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 25.4: Exercise 1</a>
+</div>
+
+</div>
+
+<div id="skill5" class="skills">Skill 25.5 Create objects from super and sub classes</div>
+<div class="skillConceptsHeader">Skill 25.5 Concepts</div>
+<div class="skillConcepts">
+<p>The inheritance of one class from another follows an "IS A" relationship.  That is, a mountain bike "IS A" bicycle.  The reverse is not true however.  For example, a bike is
+    not necessarily a mountain bike.  When creating objects from super and sub classes, this relatioinship becomes important. 
+</p>
+<p>Consider the following hierarchy of inherited classes between bicycles</p>
+<img src = "../images/inheritanceRelationships.png">
+
+<p>The above heirarchy shows the relationship among the classes in a program.  According to the heirarchy 
+    <ul>
+        <li>CrossCountryBike "IS A" MountainBike</li>
+        <li>DownhillBike "IS A" MountainBike</li>
+        <li>MountainBike "IS A" Bicycle</li>
+    </ul>
+</p>
+
+<p>When creating objects from super and sub classes this relationsihp is enforced.  This is illustrated below,
+</p>
+<img src = "../images/inheritanceCreatingObjects.png">
+<p>Another way to think of this is that "parents can make children, but children cannot make parents"</p>
+<div class="practice">
+        <a href="../ticketOutTheDoor/set25/Set25TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 25.5: Exercise 1</a>
+</div>
+<iframe height="600px" width="100%" src="https://repl.it/@hpluska/Set25Skill5?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+</div>
+<div id="skill6" class="skills">Skill 25.6 Pass a sub class object as a parameter</div>
+<div class="skillConceptsHeader">Skill 25.6 Concepts</div>
+<div class="skillConcepts">
+    <p>Any time when a parameter is expecting to receive an object of a particular type, it is acceptable
+            to send it an object of the same class or a subclass, but never of a superclass. This is because the passed class
+            object inherits all the methods of the object. If you attempt to pass an object of a parent class, the expected object may not
+            have all the expected methods. Consider the following hierarchy of classes where each class is a
+            subclass of the class immediately above it.</p>
+    <img src = "../images/inheritanceHierarchy.png">
+
+    <p>Suppose there is a method with the following signature:</p>
+    <div class="codeblock"> 
+            <p>public void theMethod(Male ml)</p>   
+    </div>
+    <p>The method theMethod is clearly expecting a Male object; therefore, the following calls to this
+            method would be legal since we are either sending a Male object or an object of a subclass:</p>
+
+    <div class = "codeblock">
+            <p>Male m = new Male();</p>
+            <p>theMethod(m); //ok to send m since it’s expecting a Male object</p>
+            <p>Boy b = new Boy();</p>
+            <p>theMethod(b); //ok to send b since b is created from a subclass of Male</p>
+    </div>
+    <p>Since theMethod is expecting a Male object, we can’t send an object of a superclass.</p>
+    <div class = "codeblock">
+            <p>Person p = new Person();</p> 
+            <p>theMethod(p); //Illegal</p>
+            <p>theMethod((Male)p); //Legal if we cast p as a Male object</p>
+    </div>
+    <div class="practice">
+            <a href="../ticketOutTheDoor/set25/Set25TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 25.6: Exercise 1</a>
+    </div>
+            
+</div>
+</body>
+</html>
