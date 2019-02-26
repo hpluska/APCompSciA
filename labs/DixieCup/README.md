@@ -126,7 +126,7 @@ Cup        Number of Items
 
 - [ ] Grade your project against the Rubric [rubric.md](rubric.md)
 
-[ ] Submit your project according to the submission guidelines on Zofia
+- [ ] Submit your project according to the submission guidelines on Zofia
 
 
 
