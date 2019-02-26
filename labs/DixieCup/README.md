@@ -122,10 +122,7 @@ Cup        Number of Items
 ```
 - [ ] Thoroughly document both your DixieCup and DixieCupMaker classes using proper javac documentation and comments. 
 
-- [ ] Complete a thorough README. Refer to the template and the example below as a guide. 
-
-	* [https://github.com/hpluska/TimberlineCS/blob/master/README_Guidelines/README_EXAMPLE.md](https://github.com/hpluska/TimberlineCS/blob/master/README_Guidelines/README_EXAMPLE.md)
-	* [https://github.com/hpluska/TimberlineCS/blob/master/README_Guidelines/README_TEMPLATE.md](https://github.com/hpluska/TimberlineCS/blob/master/README_Guidelines/README_TEMPLATE.md)
+- [ ] Complete a thorough README. Refer to the template and the example located in the tutorials section of this site
 
 - [ ] Grade your project against the Rubric [rubric.md](rubric.md)
 
