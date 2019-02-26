@@ -21,7 +21,7 @@
             Skill 26.3 <a href="#skill3">Explain the purpose of an interface</a>
         </li>
         <li>
-            Skill 25.4 <a href="#skill4">Invoke the methods of a super class in a subclass</a>
+            Skill 26.4 <a href="#skill4">Implement an interface</a>
         </li>
         <li>
             Skill 25.5 <a href="#skill5">Create objects from super and sub classes</a>
@@ -188,18 +188,43 @@
         </p>
     </div>
 
+    <p>Notice, that with the methods above, it would be legal to start their signatures with public abstract,
+            however, even if we leave them off, they are automatically public and abstract… all because it is
+            an interface. It is conventional in interfaces <em>not</em> to use public and abstract in the signatures.</p>
+    <p>
+            Finally, because the parent class has been changed to an interface, the subclass must also be changed,
+    </p>
+    <div class = "codeblock">
+        <p>
+                public class Child implements Parent<br>
+                {<br>
+                public void method1(){ … some code … }<br>
+                public void method2(){ … some code … }<br>
+                public int method3()(double c) { … some code … }<br>
+                }
+        </p>
+    </div>
+
+    <p>
+            In the subclass, the word <strong>extends</strong> has been replaced with <strong>implements</strong>. Everything else is the
+            same. Notice, that all the interface does here is to force us to implement those methods in the
+            subclass… big deal! Actually it is a very big deal, as the interface provides the structure that the
+            subclasses must adhere to.
+    </p>
+
+    <div class="skillTakeAway"><p>All the methods in an interface are abstract</p></div>
+    <div class="skillTakeAway"><p>An interface provides the structure for the subclass.  That is, 
+        all methods in the interface, must be implemented in the subclass
+    </p></div>
 <div class="practice">
         <a href="../ticketOutTheDoor/set25/Set25TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 25.3: Exercise 1</a>
 </div>
 </div>
-<div id="skill4" class="skills">Skill 25.4 Invoke the methods of a super class in a subclass</div>
-<div class="skillConceptsHeader">Skill 25.4 Concepts</div>
+<div id="skill4" class="skills">Skill 26.4 Implement an interface</div>
+<div class="skillConceptsHeader">Skill 26.4 Concepts</div>
 <div class="skillConcepts">
 <p>
-    Because the MountainBike class extends the Bicycle class, MountainBike is able to access all the public methods and variables associated with Bicycle.   
-    This concept is illustrated below, 
-    
-
+        <p>An interface is implemented using the keyword <strong>implements</strong></p>
 </p>
 <img src="../images/inheritanceOfMethods.png">
 <iframe height="600px" width="100%" src="https://repl.it/@hpluska/Set25Skill4?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
