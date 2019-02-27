@@ -23,12 +23,6 @@
         <li>
             Skill 26.4 <a href="#skill4">Implement an interface</a>
         </li>
-        <li>
-            Skill 25.5 <a href="#skill5">Create objects from super and sub classes</a>
-        </li>
-        <li>
-            Skill 25.6 <a href="#skill6">Pass a sub class object as a parameter</a>    
-        </li>
     </ul>    
 </div>
 <div id="skill1" class="skills">Skill 26.1 Explain the purpose of an abstract class</div>
@@ -68,8 +62,11 @@
         <div class="skillTakeAway"><p>Objects cannot be created from abstract classes</p></div>
         <div class="skillTakeAway"><p>Methods declared as abstract cannot be implemented by the abstract class, they
                 must instead be implemented by the subclass</p></div>
+        <div class="practice">
+            <a href="../ticketOutTheDoor/set26/Set26TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 26.1: Exercise 1</a>
+        </div>
 </div>
-<div id="skill2" class="skills">Skill 26.2 Implement an abstract class<strong>extends</strong></div>
+<div id="skill2" class="skills">Skill 26.2 Implement an abstract class</div>
 <div class="skillConceptsHeader">Skill 26.2 Concepts</div>
 <div class="skillConcepts">
 <p>Abstract classes are implemented using the keyword <strong>abstract</strong></p>
@@ -142,7 +139,7 @@
             <iframe height="400px" width="100%" src="https://repl.it/@hpluska/Set26Skill22?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
     <div class="practice">
-            <a href="../ticketOutTheDoor/set25/Set25TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 25.2: Exercise 1</a>
+            <a href="../ticketOutTheDoor/set26/Set26TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 26.2: Exercise 1</a>
     </div>
 
 </div>
@@ -217,83 +214,119 @@
         all methods in the interface, must be implemented in the subclass
     </p></div>
 <div class="practice">
-        <a href="../ticketOutTheDoor/set25/Set25TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 25.3: Exercise 1</a>
+        <a href="../ticketOutTheDoor/set26/Set26TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 26.3: Exercise 1</a>
 </div>
 </div>
 <div id="skill4" class="skills">Skill 26.4 Implement an interface</div>
 <div class="skillConceptsHeader">Skill 26.4 Concepts</div>
 <div class="skillConcepts">
-<p>
+
         <p>An interface is implemented using the keyword <strong>implements</strong></p>
-</p>
-<img src="../images/inheritanceOfMethods.png">
-<iframe height="600px" width="100%" src="https://repl.it/@hpluska/Set25Skill4?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-<div class="practice">
-        <a href="../ticketOutTheDoor/set25/Set25TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 25.4: Exercise 1</a>
-</div>
+        <p>Consider the interface below, </p>
 
-</div>
+        <div class = "codeblock">
+            <p>public interface RobotArm<br>
+            {<br>
+                void moveUp( double rate, double howFar );<br>
+                void moveDown( double rate, double howFar );<br>
+                void twistLeft( double deg );<br>
+                void twestRight( double deg );<br>
+            }
+            </p>
+        </div>
 
-<div id="skill5" class="skills">Skill 25.5 Create objects from super and sub classes</div>
-<div class="skillConceptsHeader">Skill 25.5 Concepts</div>
-<div class="skillConcepts">
-<p>The inheritance of one class from another follows an "IS A" relationship.  That is, a mountain bike "IS A" bicycle.  The reverse is not true however.  For example, a bike is
-    not necessarily a mountain bike.  When creating objects from super and sub classes, this relatioinship becomes important. 
-</p>
-<p>Consider the following hierarchy of inherited classes between bicycles</p>
-<img src = "../images/inheritanceRelationships.png">
+        <p>The robot interface created above provides the “glue” that holds together several cooperating classes
+            shown below, specifically two different industrial robots supplied by two different robot manufacturers.
+            They are the Lexmar 234 and the General Robotics 56A.</p>
 
-<p>The above heirarchy shows the relationship among the classes in a program.  According to the heirarchy 
-    <ul>
-        <li>CrossCountryBike "IS A" MountainBike</li>
-        <li>DownhillBike "IS A" MountainBike</li>
-        <li>MountainBike "IS A" Bicycle</li>
-    </ul>
-</p>
+        <table>
+            <tr>
+                <td valign="top">
+                        <div class = "codeblock">
+                                <p>
+                                public class Lexmar234 implements RobotArm<br>
+                                {<br>
+                                    public Lexmar234() { //constructor }<br>
+                                    public void moveUp(double rate, double howFar) {<br>
+                                        //some code }<br>
+                                    public void moveDown(double rate, double howFar) {<br>
+                                        //some code }<br>
+                                    public void twistLeft( double deg ) { //some code }<br>
+                                    public void twistRight( double deg ) { //some code }<br>
+                                }
+                                </p>
+                            </div>
+                </td>
+                <td valign="top">
+                        <div class = "codeblock">
+                                <p>
+                                public class GR56A implements RobotArm<br>
+                                {<br>
+                                    public Lexmar234() { //constructor }<br>
+                                    public void moveUp(double rate, double howFar) {<br>
+                                        //some more code }<br>
+                                    public void moveDown(double rate, double howFar) {<br>
+                                        //some more code }<br>
+                                    public void twistLeft( double deg ) {<br>
+                                        //some more code }<br>
+                                    public void twistRight( double deg ) {<br>
+                                        //some more code }<br>
+                                        }
+                                </p>
+                        </div>
+                </td>
+            </tr>
+        </table>
+        <p>
 
-<p>When creating objects from super and sub classes this relationsihp is enforced.  This is illustrated below,
-</p>
-<img src = "../images/inheritanceCreatingObjects.png">
-<p>Another way to think of this is that "parents can make children, but children cannot make parents"</p>
-<div class="practice">
-        <a href="../ticketOutTheDoor/set25/Set25TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 25.5: Exercise 1</a>
-</div>
-<iframe height="600px" width="100%" src="https://repl.it/@hpluska/Set25Skill5?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+                So far there is no difference from the implementation of the abstract class we previously
+                discussed. In other words, just like the abstract class, the interface forces us to write code for
+                those methods in classes where we specifically implement RobotArm.
+        </p>
+        <p>
+                Now let’s find out what is different about interfaces. In the main Robot
+                class below we will create objects from the RobotArm interface… recall this was not allowed
+                with abstract classes.
+        </p>
+        <div class = "codeblock">
+                <p>
+                public class Robot
+                {<br>
+     
+                    public static void main(String[] args)<br>
 
-</div>
-<div id="skill6" class="skills">Skill 25.6 Pass a sub class object as a parameter</div>
-<div class="skillConceptsHeader">Skill 25.6 Concepts</div>
-<div class="skillConcepts">
-    <p>Any time when a parameter is expecting to receive an object of a particular type, it is acceptable
-            to send it an object of the same class or a subclass, but never of a superclass. This is because the passed class
-            object inherits all the methods of the object. If you attempt to pass an object of a parent class, the expected object may not
-            have all the expected methods. Consider the following hierarchy of classes where each class is a
-            subclass of the class immediately above it.</p>
-    <img src = "../images/inheritanceHierarchy.png">
+                    {<p style="margin-left:50px">
+                        RobotArm lx = new Lexmar234();<br>
+                        RobotArm gr = new GR56A();<br>
+                        //Do something with the Lexmar robot<br>
+                        lx.moveDown(3, 27.87);<br>
+                        lx.twistRight(22.0);<br>
+                        //Do something with the General Robotics machine<br>
+                         gr.moveUp(16.1, -23,19);<br>
+                        gr.twistLeft(18);
+                        </p>
+                        }<br>
+                        
+                }
+                </p>
+        </div>
+        <p>It is significant that nowhere in the above class did we say implements in the code. Also notice,
+        for example, that when we declare</p>
+        <div class = "codeblock">
+                <p>RobotArm lx = new Lexmar234();</p>
+        </div>
+        <p>That lx is a type RobotArm even though RobotArm is not a class, it is an interface. This is
+                specified by the left side of the above statement, and it means that lx can only use methods given
+                in the RobotArm interface. The object lx will use these methods as implemented in the
+                Lemar234 class. Notice this is specified on the right side of the above statement.</p>
 
-    <p>Suppose there is a method with the following signature:</p>
-    <div class="codeblock"> 
-            <p>public void theMethod(Male ml)</p>   
-    </div>
-    <p>The method theMethod is clearly expecting a Male object; therefore, the following calls to this
-            method would be legal since we are either sending a Male object or an object of a subclass:</p>
-
-    <div class = "codeblock">
-            <p>Male m = new Male();</p>
-            <p>theMethod(m); //ok to send m since it’s expecting a Male object</p>
-            <p>Boy b = new Boy();</p>
-            <p>theMethod(b); //ok to send b since b is created from a subclass of Male</p>
-    </div>
-    <p>Since theMethod is expecting a Male object, we can’t send an object of a superclass.</p>
-    <div class = "codeblock">
-            <p>Person p = new Person();</p> 
-            <p>theMethod(p); //Illegal</p>
-            <p>theMethod((Male)p); //Legal if we cast p as a Male object</p>
-    </div>
+                <div class="skillTakeAway"><p>Objects can be created from interfaces but not from abstract classes
+                    </p></div>
+                <div class="skillTakeAway"><p>Classes can implement many interfaces, but can only extend one parent class
+                    </p></div>
     <div class="practice">
-            <a href="../ticketOutTheDoor/set25/Set25TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 25.6: Exercise 1</a>
+            <a href="../ticketOutTheDoor/set26/Set26TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 26.4: Exercise 1</a>
     </div>
-            
 </div>
 </body>
 </html>
