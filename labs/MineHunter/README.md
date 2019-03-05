@@ -20,8 +20,8 @@ In this lab you will create a version of the popular game Mine Sweeper.  The req
 		- [MineHunterControls.java](mineHunter/MineHunterControls.java)
 		- [MineHunterGrid.java](mineHunter/MineHunterGrid.java)
 		- [MineHunterInterface.java](mineHunter/MineHunterInterface.java)
-		- [MineHunterPane.java](mineHunter/MineHunterPage.java) 
-		- [flag.jpg](https://github.com/hpluska/APCompSciA/tree/master/labs/mineHunter/images/flag.jpg)
+		- [MineHunterPane.java](mineHunter/MineHunterPane.java) 
+		- [flag.jpg](https://github.com/hpluska/APCompSciA/blob/master/labs/MineHunter/images/flag.jpg)
 
 
 
