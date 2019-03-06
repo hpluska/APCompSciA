@@ -17,8 +17,8 @@ In this activity you will be introduce to  2-Dimensional Arrays
 	* Add the files below to the project folder
 	* Complete challenges 1 thru 5 in the GridMaker activity guide
 	
-[GridMaker/Grid.java](GridMaker/Grid.java)
-[GridMaker.java](GridMaker.java) 
+- [Grid.java](Grid.java)
+- [GridMaker.java](GridMaker.java) 
 
 
 
