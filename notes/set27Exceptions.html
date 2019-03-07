@@ -15,7 +15,7 @@
             Skill 27.1 <a href="#skill1">Explain what an exception is in Java</a>
         </li>
         <li>
-            Skill 26.2 <a href="#skill2">Implement an abstract class<strong>extends</strong></a>
+            Skill 27.2 <a href="#skill2">Explain the two main types of exceptions</a>
         </li>
         <li>
             Skill 26.3 <a href="#skill3">Explain the purpose of an interface</a>
@@ -35,40 +35,38 @@
                 therefore, such exceptions should be handled.
         </p>
         <p>
-                We could create a super class called animal to capture all these common characteristics and
-                behaviors. And then we could have all the specific animal classes derive from the animal class.
-                So far so good…
+                An exception can occur for many different reasons. 
+                Following are some scenarios where an exception occurs.
+                <ul>
+                    <li>A user has entered an invalid data.</li>
+                    <li>A file that needs to be opened cannot be found.</li>
+                    <li>A network connection has been lost in the middle of 
+                        communications or the JVM has run out of memory.</li>
+                </ul>
+
         </p>
         <p>
-                The question though is, what would new animal mean? In other words, if we create an object of
-                the animal class, what kind of object would that be? What would we try to model by creating an
-                object of the animal class?
-        </p>
-        <p>
-                You may be thinking there is no point in creating objects from the animal class, so there is no
-                need to ever invoke the animal constructor. But subclasses could benefit from extending such a
-                class.
-        </p>
-        <p>
-                Java prohibits, under some circumstances, creating objects from specific classes. Such classes are
-                referred to as abstract classes. Abstract classes are classes that cannot be instantiated – objects
-                cannot be created from abstract classes. While the methods abstract classes carry may be
-                implemented, methods declared as abstract cannot be implemented by the abstract class, they
-                must instead be implemented by the subclass. Such methods can provide a framework for a
-                subclass.
+                Some of these exceptions are caused by user error, others by programmer error, 
+                and others by physical resources that have failed in some manner.
         </p>
 
-        <div class="skillTakeAway"><p>Objects cannot be created from abstract classes</p></div>
-        <div class="skillTakeAway"><p>Methods declared as abstract cannot be implemented by the abstract class, they
-                must instead be implemented by the subclass</p></div>
-        <div class="practice">
-            <a href="../ticketOutTheDoor/set26/Set26TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 26.1: Exercise 1</a>
-        </div>
 </div>
-<div id="skill2" class="skills">Skill 26.2 Implement an abstract class</div>
-<div class="skillConceptsHeader">Skill 26.2 Concepts</div>
+<div id="skill2" class="skills">Skill 27.2 Explain the two main types of exceptions</div>
+<div class="skillConceptsHeader">Skill 27.2 Concepts</div>
 <div class="skillConcepts">
-<p>Abstract classes are implemented using the keyword <strong>abstract</strong></p>
+<p>Exceptions can be divided into two main categories.</p>
+<p></p><strong>Checked exceptions</strong> − A checked exception is an exception that is checked (notified) 
+by the compiler at compilation-time, these are also called as compile time exceptions. 
+These exceptions cannot simply be ignored, the programmer should take care of (handle) these exceptions.</p>
+<p>Below is an example</p>
+<iframe height="600px" width="100%" src="https://repl.it/@hpluska/Set27Skill21?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<p>If you try to compile the above program, you get the following exception,</p>
+<img src="../images/exceptionsOutput.png">
+
+
+
+
+
 <p>In the below example, we have created an abstract class called <em>animal</em></p>
     <div class="codeblock"> 
         <p>public abstract class Animal
