@@ -58,6 +58,51 @@
 
     <img src="../images/exceptionhierarchy3.png">
 
+<p><strong>Errors</strong> - Errors are serious problems that a reasonable 
+    application should not try to catch.  An example of an error would be an infinite loop
+or a <em>stack overflow</em> error caused by infinite recursion.</p>
+<p>Consider the following examples,</p>
+<div class="codeblock">
+        <p>
+            class InfiniteLoop { <br>
+                <p style="margin-left:50px">
+                public static void test(int i) <br>
+                { 
+                    <p style="margin-left:100px">
+                    for(int i = 1; i > 0; i++){<br>
+                    System.out.println(i);<br>
+                    } 
+                    </p>
+                <p style="margin-left:50px">
+                } 
+                </p>
+            } 
+        </p>
+    </div>
+    <div class="codeblock">
+        <p>
+            class StackOverflow { <br>
+                <p style="margin-left:50px">
+                public static void test(int i) <br>
+                { 
+                    <p style="margin-left:100px">
+                    // Not correct as base condition leads to <br>
+                    // non-stop recursion. <br>
+                    if (i == 0) <br>
+                        return; <br>
+                    else { <br>
+                        test(i++); <br>
+                    } 
+                    </p>
+                <p style="margin-left:50px">
+                } 
+                </p>
+            } 
+        </p>
+    </div>
+<div class="practice">
+    <a href="../ticketOutTheDoor/set27/Set27TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 27.2: Exercise 1</a>
+</div>
 <p>Exceptions can be divided into two main categories.</p>
 <p><strong>Checked exceptions</strong> − A checked exception is an exception that is checked (notified) 
 by the compiler at compilation-time.  Checked exceptions, check for errors that are typically out of the programmers
@@ -95,6 +140,9 @@ you, and requires you to handle them before compilation.</p>
         <li>ArithmeticException</li>
         <li>ClassCastException</li>
     </ul>
+<div class="practice">
+    <a href="../ticketOutTheDoor/set27/Set27TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 27.2: Exercise 2</a>
+</div>
      
 <p>Below is an example of an ArrayIndexOutOfBounds exception</p>
 
@@ -105,7 +153,9 @@ you, and requires you to handle them before compilation.</p>
     <strong>try-catch</strong> block can be used 
 </p>
 <iframe height="400px" width="100%" src="https://repl.it/@hpluska/Set27Skill25?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-
+<div class="practice">
+    <a href="../ticketOutTheDoor/set27/Set27TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 27.2: Exercise 3</a>
+</div>
 </div>
 </body>
 </html>
