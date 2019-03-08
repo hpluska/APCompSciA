@@ -15,13 +15,7 @@
             Skill 27.1 <a href="#skill1">Explain what an exception is in Java</a>
         </li>
         <li>
-            Skill 27.2 <a href="#skill2">Explain the two main types of exceptions</a>
-        </li>
-        <li>
-            Skill 26.3 <a href="#skill3">Explain the purpose of an interface</a>
-        </li>
-        <li>
-            Skill 26.4 <a href="#skill4">Implement an interface</a>
+            Skill 27.2 <a href="#skill2">Implement code to handle the two main types of exceptions in Java</a>
         </li>
     </ul>    
 </div>
@@ -95,17 +89,20 @@ you, and requires you to handle them before compilation.</p>
 
     <ul>
         <li>NullPointerException</li>
-        <li>ArrayIndexOutOfBounds</li>
+        <li>ArrayIndexOutOfBoundsException</li>
+        <li>IndexOutOfBoundsException</li>
         <li>IllegalArgumentException</li>
         <li>ArithmeticException</li>
+        <li>ClassCastException</li>
     </ul>
      
 <p>Below is an example of an ArrayIndexOutOfBounds exception</p>
 
 <iframe height="600px" width="100%" src="https://repl.it/@hpluska/Set27Skill24?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-<p>Unlike a checked exception, this error went undetected (unchecked) by the compiler.  To check for 
-    the possibility of going out of bounds a try-catch block can be used as illustrated below,
+<p>Unlike a checked exception, this error went undetected (unchecked) by the compiler.  
+    To check for the possibility of going out of bounds a 
+    <strong>try-catch</strong> block can be used 
 </p>
 <iframe height="400px" width="100%" src="https://repl.it/@hpluska/Set27Skill25?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
