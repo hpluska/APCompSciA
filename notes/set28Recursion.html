@@ -18,7 +18,13 @@
             Skill 28.2 <a href="#skill2">Implement a recursive method</a>
         </li>
         <li>
-            Skill 28.3 <a href="#skill3">Trace a recursive method</a>
+            Skill 28.3 <a href="#skill3">Trace a recursive algorithm</a>
+        </li>
+        <li>
+            Skill 28.4 <a href="#skill4">Trace code using binary recursion</a>
+        </li>
+        <li>
+            Skill 28.5 <a href="#skill5">Trace head and tail recursion</a>
         </li>
     </ul>    
 </div>
@@ -65,7 +71,7 @@ we will increment count.  The calls to aRecursiveMethod() will end once the coun
 
 </div>
 
-<div id="skill2" class="skills">Skill 28.3 Trace a recursive method</div>
+<div id="skill3" class="skills">Skill 28.3 Trace a recursive algorithm</div>
 <div class="skillConceptsHeader">Skill 28.3 Concepts</div>
 <div class="skillConcepts">
 <p>In Java the call stack keeps track of the methods that you have called since the main method executes. 
@@ -83,12 +89,29 @@ we will increment count.  The calls to aRecursiveMethod() will end once the coun
         The main method calls the method test1 (at line 20) which calls the method test2 (at line 6) 
         which has the divide by zero error (line 14). This can be seen in the call stack shown below 
         which shows the call stack from the top (most recent method called) to the bottom (first method called).</p>
-
+    <div>
     <img src="../images/codeForCallStack.png" style="float:left; width:50%;">
-    <img src="../images/errorCallStack.png" style="float:right; width:50%;">
-<p>When a method calls itself the new method call gets added to the top of 
-    the call stack. Execution of the current method pauses while the recursive call is being processed.</p>
+    <img src="../images/errorCallStack.png" style="width:50%;">
+    </div>
 
+    <div style="float:left;">
+    <p>When a method calls itself the new method call gets added to the top of 
+                    the call stack. Execution of the current method pauses while the recursive call is being processed.
+                    Once the base condition is met, the method calls "pop" off the stack.  
+                    </p>
+    <p>This concept is further illustrated in the video below. 
+    </p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/_rLBeHD3xps" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+<div id="skill4" class="skills">Skill 28.4 Trace code using binary recursion</div>
+<div class="skillConceptsHeader">Skill 28.4 Concepts</div>
+<div class="skillConcepts">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wP19CnwXnIU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div id="skill5" class="skills">Skill 28.5 Trace head and tail recursion</div>
+<div class="skillConceptsHeader">Skill 28.5 Concepts</div>
+<div class="skillConcepts">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/o2nQDij5eqs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 </body>
 </html>
