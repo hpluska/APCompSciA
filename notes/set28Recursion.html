@@ -1,0 +1,93 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+    <link rel="stylesheet" href="../styles/notes.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+</head>
+<body>
+<div id="top">
+    <h1>Set 28: Recursion</h1>
+</div>
+<div id="skills">
+    <ul id="skillsList">
+        <li>
+            Skill 28.1 <a href="#skill1">Explain what recursion is in Java</a>
+        </li>
+        <li>
+            Skill 28.2 <a href="#skill2">Implement a recursive method</a>
+        </li>
+        <li>
+            Skill 28.3 <a href="#skill3">Trace a recursive method</a>
+        </li>
+    </ul>    
+</div>
+<div id="skill1" class="skills">Skill 28.1 Explain what recursion is in Java</div>
+<div class="skillConceptsHeader">Skill 28.1 Concepts</div>
+<div class="skillConcepts">
+        <p>
+            Recursion is a basic programming technique you can use in Java, 
+            in which a method calls itself to solve some problem. 
+            A method that uses this technique is recursive. 
+            Many programming problems can be solved only by recursion, 
+            and some problems that can be solved by other techniques are 
+            better solved by recursion.
+        </p>
+        <p>
+            The video below illustrates how recursion can be applied to solve a problem.
+
+        </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/jc1gKVbu2aY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</div>
+<div id="skill2" class="skills">Skill 28.2 Implement a recursive method</div>
+<div class="skillConceptsHeader">Skill 28.2 Concepts</div>
+<div class="skillConcepts">
+<p>Before we write a recursive method, let's revisit how method calls are stored in memory.</p>
+
+<p>Consider the example depicted below.  In this example, the main method is the first method called, 
+    and it is the first method placed on the stack.  Once inside the main method, we call aRecursiveMethod()
+    and this method is placed on the stack.  Inside aRecursiveMethod(), we call aRecursiveMethod() again, 
+    and it too is placed on the stack.  Notice that, because aRecursiveMethod() calls aRecursiveMethod(),  
+    there is no end to the program.  Eventually, you will incure a <strong>stackOverflow</strong> error, because
+    there is only so such much memory.  
+</p>
+<img src = "../images/stackOverflow.png">
+
+<p>Avoiding a <strong>stackOverflow</strong> error requireds a <strong>base case</strong>.  A <strong>base case</strong>
+is a condition, that once met, stops the recursive call process.</p>
+<p>In our example, we will create a new variable <em>count</em>.  Each time aRecursiveMethod() is called, 
+we will increment count.  The calls to aRecursiveMethod() will end once the count reaches 4.</p>
+<img src = "../images/recursionExample1.png">
+
+
+<iframe height="600px" width="100%" src="https://repl.it/@hpluska/Set28Skill2?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+</div>
+
+<div id="skill2" class="skills">Skill 28.3 Trace a recursive method</div>
+<div class="skillConceptsHeader">Skill 28.3 Concepts</div>
+<div class="skillConcepts">
+<p>In Java the call stack keeps track of the methods that you have called since the main method executes. 
+    A stack is a way of organizing data that adds and removes items only from the top of the stack. 
+    An example is a stack of cups. You can grap a cup from the top of the stack or add more cups 
+    at the top of the stack.</p>
+    <img src = "../images/cupStack.jpg" width="300px" style="float:left;">
+<p>When you are executing one method (method a) and it calls another method (method b) 
+    the method call is placed on the call stack along with information about where it was called from, 
+    which tells the run-time where to return to when the current method finishes executing. 
+    Once method b finishes executing, the run-time pops method b off of the call stack and 
+    returns execution to the next line to be executed in method a.</p>
+    <p>Consider the example below. </p>
+    <p>The code below will cause a run-time error of division by zero when it runs. 
+        The main method calls the method test1 (at line 20) which calls the method test2 (at line 6) 
+        which has the divide by zero error (line 14). This can be seen in the call stack shown below 
+        which shows the call stack from the top (most recent method called) to the bottom (first method called).</p>
+
+    <img src="../images/codeForCallStack.png" style="float:left; width:50%;">
+    <img src="../images/errorCallStack.png" style="float:right; width:50%;">
+
+
+</div>
+</body>
+</html>
