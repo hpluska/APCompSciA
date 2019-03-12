@@ -18,13 +18,10 @@
             Skill 28.2 <a href="#skill2">Implement a recursive method</a>
         </li>
         <li>
-            Skill 28.3 <a href="#skill3">Trace a recursive algorithm</a>
+            Skill 28.3 <a href="#skill3">Interpret the call stack</a>
         </li>
         <li>
-            Skill 28.4 <a href="#skill4">Trace code using binary recursion</a>
-        </li>
-        <li>
-            Skill 28.5 <a href="#skill5">Trace head and tail recursion</a>
+            Skill 28.4 <a href="#skill4">Trace a recursive algorithm</a>
         </li>
     </ul>    
 </div>
@@ -71,47 +68,52 @@ we will increment count.  The calls to aRecursiveMethod() will end once the coun
 
 </div>
 
-<div id="skill3" class="skills">Skill 28.3 Trace a recursive algorithm</div>
+<div id="skill3" class="skills">Skill 28.3 Interpret the call stack</div>
 <div class="skillConceptsHeader">Skill 28.3 Concepts</div>
 <div class="skillConcepts">
-<p>In Java the call stack keeps track of the methods that you have called since the main method executes. 
-    A stack is a way of organizing data that adds and removes items only from the top of the stack. 
-    An example is a stack of cups. You can grap a cup from the top of the stack or add more cups 
-    at the top of the stack.</p>
-    <img src = "../images/cupStack.jpg" width="300px" style="float:left;">
-<p>When you are executing one method (method a) and it calls another method (method b) 
+    <p>In Java the <strong>call stack</strong> keeps track of the methods that you have called since the main method executes. 
+        A stack is a way of organizing data that adds and removes items only from the top of the stack. 
+        An example is a stack of cups. You can grap a cup from the top of the stack or add more cups 
+        at the top of the stack.</p>
+        <img src = "../images/cupStack.jpg" width="300px" style="float:left;">
+    <p>When you are executing one method (method a) and it calls another method (method b) 
     the method call is placed on the call stack along with information about where it was called from, 
     which tells the run-time where to return to when the current method finishes executing. 
     Once method b finishes executing, the run-time pops method b off of the call stack and 
-    returns execution to the next line to be executed in method a.</p>
+        returns execution to the next line to be executed in method a.</p>
     <p>Consider the example below. </p>
     <p>The code below will cause a run-time error of division by zero when it runs. 
         The main method calls the method test1 (at line 20) which calls the method test2 (at line 6) 
         which has the divide by zero error (line 14). This can be seen in the call stack shown below 
         which shows the call stack from the top (most recent method called) to the bottom (first method called).</p>
-    <div>
-    <img src="../images/codeForCallStack.png" style="float:left; width:50%;">
-    <img src="../images/errorCallStack.png" style="width:50%;">
-    </div>
+        <div style="float:right;">
+            <img src="../images/codeForCallStack.png" style="float:left; width:50%;">
+            <img src="../images/errorCallStack.png" style="width:50%;">
+        </div>
 
-    <div style="float:left;">
-    <p>When a method calls itself the new method call gets added to the top of 
-                    the call stack. Execution of the current method pauses while the recursive call is being processed.
-                    Once the base condition is met, the method calls "pop" off the stack.  
-                    </p>
-    <p>This concept is further illustrated in the video below. 
-    </p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/_rLBeHD3xps" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="practice" style="float:left;">
+                <a href="../ticketOutTheDoor/set28/Set28TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 28.3: Exercise 1</a>
+        </div>
     </div>
-<div id="skill4" class="skills">Skill 28.4 Trace code using binary recursion</div>
+<div style="clear:both;" id="skill4" class="skills">Skill 28.4 Trace a recursive algorithm</div>
 <div class="skillConceptsHeader">Skill 28.4 Concepts</div>
-<div class="skillConcepts">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/wP19CnwXnIU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<div class = "skillConcepts">
+<p>When a program calls a function, that function goes on top of the call stack. This similar to a stack of books. You add things one at a time. 
+    Then, when you are ready to take something off, you always take off the top item.</p>
+    <p>Recursive functions add to the call stack until a <strong>base case</strong> is met.  Once the base condition is met, the method calls "pop" off the stack. </p>
+    <p>This concept is further illustrated in the video below.</p>
+    <iframe width="560" height="315"  src="https://www.youtube.com/embed/_rLBeHD3xps" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>The above illustrates a simple example of recursion.  The next two examples, illustrate how to interpret <strong>binary recursion</strong> and 
+    <strong>head and tail recursion</strong>.</p>
+<p><strong><u>Binary recursion</u></strong></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wP19CnwXnIU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p><strong><u>Head and tail recursion</u></strong></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/o2nQDij5eqs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="practice">
+        <a href="../ticketOutTheDoor/set28/Set28TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 28.3: Exercise 1</a>
 </div>
-<div id="skill5" class="skills">Skill 28.5 Trace head and tail recursion</div>
-<div class="skillConceptsHeader">Skill 28.5 Concepts</div>
-<div class="skillConcepts">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/o2nQDij5eqs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 </body>
 </html>
