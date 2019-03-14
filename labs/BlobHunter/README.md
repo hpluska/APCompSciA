@@ -30,10 +30,10 @@ that do not contain mines will change color.
 	* Add the files below to the project folder
 	* Create an image folder in your project folder and save the flag image to this folder
 
-		- [BlobHunter.java](blobHunter/twoDimension/BlobHunter.java)
-		- [BlobHunterGrid.java](blobHunter/twoDimension/BlobHunterGrid.java)
-		- [BlobHunterInterface.java](blobHunter/twoDimension/BlobHunterInterface.java)
-		- [BlobHunterPane.java](blobHunter/twoDimension/BlobHunterPane.java) 
+		- [BlobHunter.java](blobHunter/twoDimensions/BlobHunter.java)
+		- [BlobHunterGrid.java](blobHunter/twoDimensions/BlobHunterGrid.java)
+		- [BlobHunterInterface.java](blobHunter/twoDimensions/BlobHunterInterface.java)
+		- [BlobHunterPane.java](blobHunter/twoDimensions/BlobHunterPane.java) 
 		- [flag.jpg](blobHunter/images/flag.jpg)
 
 
