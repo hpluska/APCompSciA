@@ -1,4 +1,4 @@
-# Card Counter
+# Mine Hunter
 
 ## Introduction
 In this lab you will create a version of the popular game Mine Sweeper.  The requirements for the game you will create will be specified by an interface you implement. 
