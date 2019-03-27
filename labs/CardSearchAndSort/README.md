@@ -26,10 +26,10 @@ public int locateCard(Card[] cArr, Card c);
 
 - minToFront
 
-In the CardCounter class write a method called minToFront.  The minToFront method should locate the card with the lowest value in the dealtCardsArray then move it to the front of the array.  The minToFront method should have the following signature,
+In the CardCounter class write a method called minToFront.  The minToFront method should locate the card with the lowest value in the dealtCardsArray then move it to the front of the array. It should return the new dealtCardsArray. The minToFront method should have the following signature,
  
 ```
-public void minToFront(Card[] cArr);
+public Card[] minToFront(Card[] cArr);
 
 ```
 
