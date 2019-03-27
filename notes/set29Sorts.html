@@ -1,0 +1,113 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+    <link rel="stylesheet" href="../styles/notes.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+</head>
+<body>
+<div id="top">
+    <h1>Set 9: Sorts</h1>
+</div>
+<div id="skills">
+    <ul id="skillsList">
+        <li>
+            Skill 29.1 <a href="#skill1">Implement a selection sort</a>
+        </li>
+        <li>
+            Skill 29.2 <a href="#skill2">Implement an insertion sort</a>
+        </li>
+        <li>
+            Skill 28.3 <a href="#skill3">Interpret the call stack</a>
+        </li>
+        <li>
+            Skill 28.4 <a href="#skill4">Trace a recursive algorithm</a>
+        </li>
+    </ul>    
+</div>
+<div id="skill1" class="skills">Skill 29.1 Implement a selection sort</div>
+<div class="skillConceptsHeader">Skill 29.1 Concepts</div>
+<div class="skillConcepts">
+        <p>
+            The Selection Sort uses an incremental approach to sorting. 
+            During the first pass the smallest value is selected from 
+            the entire array and swapped with the first element. 
+            On the second pass the smallest value is selected from the array 
+            beginning with the 2nd element and swapped with the second element, 
+            etc….the above description is for an ascending sort. 
+            
+        </p>
+        <p>
+            The video below illustrates the selection sort concept:
+        </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/jZBWRZZT8AI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>The following illustrates an implementation of a selection sort.</p>
+        <iframe height="600px" width="100%" src="https://repl.it/@hpluska/Set29Skill1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+</div>
+<div id="skill2" class="skills">Skill 29.2 Implement an insertion sort</div>
+<div class="skillConceptsHeader">Skill 29.2 Concepts</div>
+<div class="skillConcepts">
+<p>An insertion sort also uses an incremental approach.  With an insertion sort,
+    the array can be thought of as consisting of two parts, a sorted list followed
+    by an unsorted list.  The idea behind an insertion sort is to move elements from 
+    the unsorted list to the sorted list one at a time. As each item is moved, 
+    it is inserted into its correct position in the sorted list.  In order to 
+    place the new item, array elements need to be shifted to create a slot.
+</p>
+<p>
+    The video below illustrates the insertion sort concept:
+</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YgHlTV-c530" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>The following illustrates an implementation of a selection sort.</p>
+<iframe height="600px" width="100%" src="https://repl.it/@hpluska/Set29Skill1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+</div>
+
+<div id="skill3" class="skills">Skill 28.3 Interpret the call stack</div>
+<div class="skillConceptsHeader">Skill 28.3 Concepts</div>
+<div class="skillConcepts">
+    <p>In Java the <strong>call stack</strong> keeps track of the methods that you have called since the main method executes. 
+        A stack is a way of organizing data that adds and removes items only from the top of the stack. 
+        An example is a stack of cups. You can grap a cup from the top of the stack or add more cups 
+        at the top of the stack.</p>
+        <img src = "../images/cupStack.jpg" width="300px" style="float:left;">
+    <p>When you are executing one method (method a) and it calls another method (method b) 
+    the method call is placed on the call stack along with information about where it was called from, 
+    which tells the run-time where to return to when the current method finishes executing. 
+    Once method b finishes executing, the run-time pops method b off of the call stack and 
+        returns execution to the next line to be executed in method a.</p>
+    <p>Consider the example below. </p>
+    <p>The code below will cause a run-time error of division by zero when it runs. 
+        The main method calls the method test1 (at line 20) which calls the method test2 (at line 6) 
+        which has the divide by zero error (line 14). This can be seen in the call stack shown below 
+        which shows the call stack from the top (most recent method called) to the bottom (first method called).</p>
+        <div style="float:right;">
+            <img src="../images/codeForCallStack.png" style="float:left; width:50%;">
+            <img src="../images/errorCallStack.png" style="width:50%;">
+        </div>
+
+        <div class="practice" style="float:left;">
+                <a href="../ticketOutTheDoor/set28/Set28TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 28.3: Exercise 1</a>
+        </div>
+    </div>
+<div style="clear:both;" id="skill4" class="skills">Skill 28.4 Trace a recursive algorithm</div>
+<div class="skillConceptsHeader">Skill 28.4 Concepts</div>
+
+<div class = "skillConcepts">
+<p>When a program calls a function, that function goes on top of the call stack. This similar to a stack of books. You add things one at a time. 
+    Then, when you are ready to take something off, you always take off the top item.</p>
+    <p>Recursive functions add to the call stack until a <strong>base case</strong> is met.  Once the base condition is met, the method calls "pop" off the stack. </p>
+    <p>This concept is further illustrated in the video below.</p>
+    <iframe width="560" height="315"  src="https://www.youtube.com/embed/_rLBeHD3xps" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+
+<p><strong><u>Binary recursion</u></strong></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wP19CnwXnIU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p><strong><u>Head and tail recursion</u></strong></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/o2nQDij5eqs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="practice">
+        <a href="../ticketOutTheDoor/set28/Set28TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 28.3: Exercise 1</a>
+</div>
+</div>
+</body>
+</html>
