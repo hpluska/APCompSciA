@@ -18,10 +18,10 @@
             Skill 29.2 <a href="#skill2">Implement an insertion sort</a>
         </li>
         <li>
-            Skill 28.3 <a href="#skill3">Interpret the call stack</a>
+            Skill 29.3 <a href="#skill3">Implement a merge sort</a>
         </li>
         <li>
-            Skill 28.4 <a href="#skill4">Trace a recursive algorithm</a>
+            Skill 29.4 <a href="#skill4">Implement a quick sort</a>
         </li>
     </ul>    
 </div>
@@ -59,37 +59,27 @@
     The video below illustrates the insertion sort concept:
 </p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YgHlTV-c530" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<p>The following illustrates an implementation of a selection sort.</p>
+<p>The following illustrates an implementation of an insertion sort.</p>
 <iframe height="600px" width="100%" src="https://repl.it/@hpluska/Set29Skill1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 </div>
 
-<div id="skill3" class="skills">Skill 28.3 Interpret the call stack</div>
-<div class="skillConceptsHeader">Skill 28.3 Concepts</div>
+<div id="skill3" class="skills">Skill 29.3 Implement a merge sort</div>
+<div class="skillConceptsHeader">Skill 29.3 Concepts</div>
 <div class="skillConcepts">
-    <p>In Java the <strong>call stack</strong> keeps track of the methods that you have called since the main method executes. 
-        A stack is a way of organizing data that adds and removes items only from the top of the stack. 
-        An example is a stack of cups. You can grap a cup from the top of the stack or add more cups 
-        at the top of the stack.</p>
-        <img src = "../images/cupStack.jpg" width="300px" style="float:left;">
-    <p>When you are executing one method (method a) and it calls another method (method b) 
-    the method call is placed on the call stack along with information about where it was called from, 
-    which tells the run-time where to return to when the current method finishes executing. 
-    Once method b finishes executing, the run-time pops method b off of the call stack and 
-        returns execution to the next line to be executed in method a.</p>
-    <p>Consider the example below. </p>
-    <p>The code below will cause a run-time error of division by zero when it runs. 
-        The main method calls the method test1 (at line 20) which calls the method test2 (at line 6) 
-        which has the divide by zero error (line 14). This can be seen in the call stack shown below 
-        which shows the call stack from the top (most recent method called) to the bottom (first method called).</p>
-        <div style="float:right;">
-            <img src="../images/codeForCallStack.png" style="float:left; width:50%;">
-            <img src="../images/errorCallStack.png" style="width:50%;">
-        </div>
-
-        <div class="practice" style="float:left;">
-                <a href="../ticketOutTheDoor/set28/Set28TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 28.3: Exercise 1</a>
-        </div>
-    </div>
+    <p>Selection and insertion sorts are inefficient for large n, requiring approximately
+        <em>n</em> passes through a list of <em>n</em> elements.  More efficient algorithms
+        can be devised using a "divide-and-conquer" approach, which is used in the merge sort
+        algorithm.
+    </p>
+    <p>The Merge Sort uses the divide-and-conquer approach. It begins by placing each element 
+        into its own individual list. Then each pair of adjacent lists is combined into one sorted list. 
+        This continues until there is one big, final, sorted list. The process is illustrated in the video below.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/4VqmGXwpLqc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+    <p>The following illustrates an implementation of an insertion sort.</p>
+    <iframe height="400px" width="100%" src="https://repl.it/@hpluska/Set29Skill1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    
+        
+</div>
 <div style="clear:both;" id="skill4" class="skills">Skill 28.4 Trace a recursive algorithm</div>
 <div class="skillConceptsHeader">Skill 28.4 Concepts</div>
 
