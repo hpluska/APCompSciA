@@ -83,6 +83,7 @@ body{
  
   .skillTakeAway p {
     display: inline;
+    font-family: 'Over the Rainbow', cursive;
   }
 
   .codeblock{

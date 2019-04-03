@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="../styles/notes.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Over+the+Rainbow" rel="stylesheet">
 </head>
 <body>
 <div id="top">
@@ -22,6 +23,9 @@
         </li>
         <li>
             Skill 29.4 <a href="#skill4">Implement a quick sort</a>
+        </li>
+        <li>
+            Skill 29.5 <a href="#skill5">Summarize the four sorting algorithms you should be familiar with</a>
         </li>
     </ul>    
 </div>
@@ -84,20 +88,42 @@
 <div class="skillConceptsHeader">Skill 29.4 Concepts</div>
 
 <div class = "skillConcepts">
-<p>When a program calls a function, that function goes on top of the call stack. This similar to a stack of books. You add things one at a time. 
-    Then, when you are ready to take something off, you always take off the top item.</p>
-    <p>Recursive functions add to the call stack until a <strong>base case</strong> is met.  Once the base condition is met, the method calls "pop" off the stack. </p>
-    <p>This concept is further illustrated in the video below.</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/X4Cz7w29NoY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    
+    <p>The quick sort uses divide and conquer to gain the same advantages as the merge sort, 
+        while not using additional storage. As a trade-off, however, 
+        it is possible that the list may not be divided in half. 
+        When this happens, we will see that performance is diminished.</p>
 
-<p><strong><u>Binary recursion</u></strong></p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wP19CnwXnIU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<p><strong><u>Head and tail recursion</u></strong></p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/o2nQDij5eqs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<div class="practice">
-        <a href="../ticketOutTheDoor/set28/Set28TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 28.3: Exercise 1</a>
+    <p>A quick sort first selects a value, which is called the pivot value. 
+        There are several different ways to choose the pivot value, 
+        <ul>
+                <li>pick first element as pivot</li>
+                <li>pick last element as pivot</li>
+                <li>pick a random element as pivot</li>
+                <li>pick median as pivot</li>
+        </ul>
+    The role of the pivot value is to assist with splitting the list. 
+    The actual position where the pivot value belongs in the final sorted list, 
+    commonly called the split point, will be used to divide the list for 
+    subsequent calls to the quick sort.</p>
+
+
+
+    <p>This concept is further illustrated in the video below.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Hoixgm4-P4M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p>The following illustrates an implementation of an merge sort.</p>
+    <iframe height="400px" width="100%" src="https://repl.it/@hpluska/Set29Skill1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+
+
 </div>
-</div>
+
+<div style="clear:both;" id="skill5" class="skills">Skill 29.5 Summarize the four sorting algorithms you should be familiar with</div>
+<div class="skillConceptsHeader">Skill 29.5 Concepts</div>
+<p class = "skillTakeAway">The quicksort algorithm is a sorting algorithm that sorts a collection by choosing a pivot point, 
+        and partitioning the collection around the pivot, so that elements smaller than the 
+        pivot are before it, and elements larger than the pivot are after it. It continues to 
+        choose a pivot point and break down the collection into single-element lists, 
+        before combing them back together to form one sorted list.</p>
+<div class = "skillConcepts">
 </body>
 </html>
