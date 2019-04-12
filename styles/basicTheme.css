@@ -68,6 +68,13 @@ h1{
 	padding-top:290px;
 }
 
+#home p, #contact p{
+    font-family: 'Montserrat', sans-serif;
+    line-height:1.5em;
+    margin:10px;
+    color:#393e46;
+}
+
 #top{
     position:fixed;
     top:0px;
