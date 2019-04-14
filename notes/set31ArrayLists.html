@@ -27,7 +27,7 @@
             Skill 31.3 <a href="#skill3">Store primitive data types inside an ArrayList</a>
         </li>
         <li>
-            Skill 31.4 <a href="#skill4">Traverse and ArrayList</a>
+            Skill 31.4 <a href="#skill4">Traverse an ArrayList</a>
         </li>
     </ul>    
 </div>
@@ -202,10 +202,44 @@ easily create ArrayLists and then convert the values to the required primitive e
         <a href="../ticketOutTheDoor/set31/Set31TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 31.2: Exercise 1</a>
 </div>
 </div>
-<div id="skill4" class="skills">Skill 31.4 Traverse and ArrayList</div>
+<div id="skill4" class="skills">Skill 31.4 Traverse an ArrayList</div>
 <div class="skillConceptsHeader">Skill 31.4 Concepts</div>
 <div class="skillConcepts">
+<p>ArrayLists can be traversed using the same techniques as normal arrays.  The only differences are how we determine the length of the
+    list be traversed and how we retrieve the values. Consider the following example, </p>
 
+<div class = "codeblock">
+        <p>ArrayList<Integer> i = new ArrayList<Integer>(); //creates an ArrayList of Integer objects<br>
+            i.add(1); //adds 1 to the end of the list <br>
+            i.add(2); //adds 2 to the end of the list<br>
+            i.add(3); //adds 3 to the end of the list<br>
+        </p>
+        <p>        
+            for(int j = 0; j &#60; i.size(); j++){ //size() is used to get the length of the array<br><br>
+            System.out.println(i.get(j)); //get() is used to get the value at position j <br><br>
+        }</p>
+
+
+</div>
+
+<p>A modified for-each loop can also be applied to traverse an array.  This technique is illustrated in the code below, </p>
+<div class = "codeblock">
+        <p>ArrayList<Integer> i = new ArrayList<Integer>(); //creates an ArrayList of Integer objects<br>
+            i.add(1); //adds 1 to the end of the list <br>
+            i.add(2); //adds 2 to the end of the list<br>
+            i.add(3); //adds 3 to the end of the list<br>
+        </p>
+        <p>        
+        for(int tempValue : i){ //gets each Integer in ArrayList i and assigns it to tempValue<br><br>
+            System.out.println(tempValue); //prints the tempValue <br><br>
+        }</p>
+</div>
+
+<p>Another important consideration is that because items can be added and removed dyanmically from an ArrayList during a traversal
+    objects may be outputted twice or missed entirely. This concept is illustrated further
+    in the video below. 
+</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/r5VavXQd3pc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 </body>
