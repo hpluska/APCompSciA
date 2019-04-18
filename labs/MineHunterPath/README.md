@@ -20,8 +20,8 @@ In this lab you will build upon the Mine Hunter game you created previously.  Th
 		- [MineHunterControls.java](mineHunterPath/MineHunterControls.java)
 		- [MineHunterGrid.java](mineHunterPath/MineHunterGrid.java)
 		- [MineHunterInterface.java](mineHunterPath/MineHunterInterface.java)
-		- [MineHunterPane.java](mineHunterPath/MineHunterPane.java) 
-	        - [MineHunterPath.java](mineHunterPath/MineHunterPath.java) 
+		- [MineHunterPane.java](mineHunterPath/MineHunterPane.java)
+		- [MineHunterPath.java](mineHunterPath/MineHunterPath.java) 
 		- [flag.jpg](https://github.com/hpluska/APCompSciA/blob/master/labs/MineHunterPath/images/flag.jpg)
 
 
