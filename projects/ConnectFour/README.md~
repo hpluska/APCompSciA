@@ -20,6 +20,7 @@ In this project you will create a connect four game.  Your game will simulate di
 
 - [ ] Begin a project in NetBeans called ConnectFour
 - [ ] Locate the required classes and add them to your ConnectFour project folder
+	- [https://github.com/hpluska/APCompSciA/blob/master/projects/ConnectFour/ConnectFour/ConnectFourGrid.java](https://github.com/hpluska/APCompSciA/blob/master/projects/ConnectFour/ConnectFour/ConnectFourGrid.java)
 - [ ] Locate the ConnectFourGrid class
 - [ ] Complete this class, by completing the "TODO"'s indicated in this class.  Feel free to add more methods, or variables as needed to make a creative game!
 - [ ] Document your code thoroughly as you go!  
