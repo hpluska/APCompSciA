@@ -12,9 +12,9 @@ In this project you will create a connect four game.  Your game will simulate di
 
 ## Specifications
 
-- You will be provided the required classes.  
+- You will be provided the required classes.
 - You must complete the ConnectFourGrid class which implements the ConnectFourInterface
-- A working version of the game is provided here.  Your game must work as shown. 
+- A working version of the game is provided here ([connectFourDemo.mp4](connectFourDemo.mp4)).  Your game must work as shown. 
 
 ## Your Tasks
 
@@ -23,7 +23,7 @@ In this project you will create a connect four game.  Your game will simulate di
 	- [https://github.com/hpluska/APCompSciA/tree/master/projects/ConnectFour/ConnectFour](https://github.com/hpluska/APCompSciA/tree/master/projects/ConnectFour/ConnectFour)
 - [ ] Locate the ConnectFourGrid class
 - [ ] Complete this class, by completing the "TODO"'s indicated in this class.  Feel free to add more methods, or variables as needed to make a creative game!
-- [ ] Document your code thoroughly as you go!  
+- [ ] Document your code thoroughly as you go!
 - [ ] Javadocs must be included with your final submission
 - [ ] Complete the required README using specified guidelines
 
