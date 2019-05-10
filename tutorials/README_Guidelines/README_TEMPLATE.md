@@ -13,10 +13,7 @@ paste, but paraphrase what is stated in the project specification.
 
 ## Compiling and Using
 
-This section should tell the user how to compile your code.  It is
-also appropriate to instruct the user how to use your code. Does your
-program require user input? If so, what does your user need to know
-about it to use it as quickly as possible?
+This section should tell the user how to compile your code. You need to indicate the required files.  You should also instruct the user how to use your code. Does your program require user input? If so, what does your user need to know about it to use it as quickly as possible?  Is your program a game?  What does your user need to know about it to play?
 
 ## Discussion
 
@@ -24,7 +21,7 @@ Discuss the issues and successes you encountered during programming
 (development). Here are some questions to get you started. You don't
 have to answer all of them in order - they are a guideline to get you
 thinking.
-  * What problems did you have? What went well?
+  * What problems did you have? What went well?  
   * What process did you go through to create the program?
   * What did you have to research and learn on your own?
   * What kinds of errors did you get? How did you fix them?
@@ -53,7 +50,7 @@ be sure to call it out so the grader does not overlook it.
 If you used any sources outside of the lecture notes, class lab files,
 or text book you need to list them here. If you looked something up on
 stackoverflow.com and fail to cite it in this section it will be
-considered plagiarism and be dealt with accordingly. So be safe CITE!
+considered plagiarism and be dealt with accordingly. If you got help from a peer, indicate which portion you received help on and cite your peer - if you do not, it will be considered cheating and dealt with accordingly.  
 [Here is some help creating links](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links)
 
 ----------
