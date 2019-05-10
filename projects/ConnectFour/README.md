@@ -30,6 +30,7 @@ In this project you will create a connect four game.  Your game will simulate di
 # Grade your prject before submitting
 
 - [ ] Before you submit your project, grade your project against the criteria below.  CORRECTIONS WILL NOT BE ALLOWED. 
+	[ConnectFourRubric.md](ConnectFourRubric.md)
 
 
 
