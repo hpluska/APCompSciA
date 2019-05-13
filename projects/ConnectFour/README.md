@@ -27,10 +27,16 @@ In this project you will create a connect four game.  Your game will simulate di
 - [ ] Javadocs must be included with your final submission
 - [ ] Complete the required README using specified guidelines
 
-# Grade your prject before submitting
+# Grade your project before submitting
 
 - [ ] Before you submit your project, grade your project against the criteria below.  CORRECTIONS WILL NOT BE ALLOWED. 
 	[ConnectFourRubric.md](ConnectFourRubric.md)
+- [ ] Submit your project using the following guidelines
+	- Create a folder in your Google Drive Account called <em>ConnectFourLastname</em> (Example: ConnectFourPluska)
+	- Share your folder with me: heidi.pluska@boiseschools.org
+	- Upload the following files
+		- ConnectFourGrid.java
+		- README
 
 
 
