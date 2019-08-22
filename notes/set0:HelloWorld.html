@@ -1,0 +1,141 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+    <link rel="stylesheet" href="../styles/notes.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Over+the+Rainbow" rel="stylesheet">
+</head>
+<body>
+<div id="top">
+    <h1>Set 23: Static Methods and State Variables</h1>
+</div>
+<div id="skills">
+    <ul id="skillsList">
+        <li>
+            Skill 0.1 <a href="#skill1">Declare a class</a>
+        </li>
+        <li>
+            Skill 0.2 <a href="#skill2">Write a main method</a>
+        </li>
+        <li>
+            Skill 0.3 <a href="#skill3">Print to the console</a>
+        </li>
+        <li>
+            Skill 23.4 <a href="#skill4">Declare a static constant</a>
+        </li>
+    </ul>    
+</div>
+<div id="skill1" class="skills">Skill 0.1 Declare a class</div>
+<div class="skillConceptsHeader">Skill 0.1 Concepts</div>
+<div class="skillConcepts">
+    <p>A “class” in the context of the java programming language is just a template for something.  
+        Classes in java also serve to organize your code in a logical manner – kind of like school!  
+        At school, your day is divided among different classes.  You may go to a math class, a history class, 
+        and if your are reading this, a computer science class.  And, just like java, the math class you take 
+        here is also offered somewhere else, so the math class must also have a template so it can be implemented 
+        at different schools. </p> 
+
+    <p>Classes in java are typically separated into different java files, just like your classes at school are separated into
+        different rooms. The way you declare a class in java is illustrated below, </p>
+        <img src="../images/javaClass.png">
+
+
+        <ul>
+            <li>Notice in the screen shot above that the name of the file, 
+                HelloWorld.java, ends with the extension “.java”.  
+                This is required for all java programs.  </li>
+            <li>To create a new class in java you must use the declaration “class” 
+                followed by the name of the file (minus the .java extension). </li>
+            <li>We have also added the word “public” in front of the class declaration.  
+                Although this is not required, it is helpful because this allows us to define who has access to the file.  
+                The term “public” allows us to access this file from anywhere in our program – but, more on this later. </li>
+            <li>Finally, we have added an open curly bracket after the “public class HelloWorld” 
+                declaration and a closing curly bracket further down the page.  All the code associated 
+                with the HelloWorld class must appear between these curly brackets. 
+                </li>
+        </ul>
+        <div class="practice">
+                <a href="../ticketOutTheDoor/set0/Set0TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 0.1: Exercise 1</a>
+        </div>
+
+</div>
+<div id="skill2" class="skills">Skill 0.2 Write a main method</div>
+<div class="skillConceptsHeader">Skill 0.2 Concepts</div>
+<div class="skillConcepts">
+        <p>Inside the classes we create, there are "methods".  Methods (also known as functions) allow us to define the things
+            a class can do.  For example, in a math class we can add, substract, divide, and mulitple numbers.  A method that adds two
+            numbers simply stated could look like, a + b, where a and b represent different numbers. 
+        </p>
+        <p>All java programs must have a "main" method.  In fact, when you run your program, this is what java looks for first.  The main method
+            is also referred to as the "driver" because it drives the program. 
+            </p>
+        <p>The way you declare the main method is illustrated below,</p>
+
+        <img src="../images/mainMethod.gif">
+
+
+        <ul>
+                <li>At this point, do not worry about what all the words mean.  The only word you need to be concerned with at this point 
+                    is the word "main".  This is the name of the method. </li>
+                <li>Notice the main method appears between the curly brackets in the HelloWorld class. </li>
+                <li>We have added an open curly bracket after the "public static void main(String args[])" 
+                    declaration and a closing curly bracket further down the page.  All the code associated 
+                    with the main method must appear between these curly brackets. 
+                    </li>
+            </ul>
+
+            <div class="practice">
+                    <a href="../ticketOutTheDoor/set0/Set0TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 0.2: Exercise 1</a>
+            </div>      
+</div>
+<div id="skill3" class="skills">Skill 0.3 Print to the consol</div>
+<div class="skillConceptsHeader">Skill 0.3 Concepts</div>
+<div class="skillConcepts">
+        <p>Printing to the consol can be done using the following code</p>
+        <p class="codeblock">System.out.print("Hello!");</p>
+
+        <ul>
+                <li>Notice, the semicolon at the end.  This terminates the command and is required for all commands. </li>
+                <li>System.out.print() is the signature for the print command.  Whatever you include in quotes in between the parentheses will be 
+                    printed to the consol. 
+                </li>
+                <li>Java is case sensitive.  That is the word "System" must be capitalized and words "out" and "print" must be lower case. 
+                    </li>
+            </ul>
+
+            <p>Printing to the consol can also be done using the following code</p>
+            <p class="codeblock">System.out.println("Hello!");</p>
+    
+            <ul>
+                    <li>The only difference between this command and the previous is the "ln" after the word print </li>
+                    <li>This command will print whatever is in between quotes and then will go to the next line
+                    </li>
+                </ul>
+
+        <p>Below is an example that shows the difference between print and println</p>
+
+        <iframe height="400px" width="100%" src="https://repl.it/@hpluska/Set-0-Skill-3?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+       
+        <div class="practice">
+            <a href="../ticketOutTheDoor/set0/Set0TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 0.3: Exercise 1</a>
+        </div>
+
+    </div>
+    <div id="skill4" class="skills">0.4 Compile and run a java program</div>
+    <div class="skillConceptsHeader">Skill 0.4 Concepts</div>
+    <div class="skillConcepts">
+     <p>Before you can run a java program on your computer you must first compile it.  Compiling a java program converts the program from 
+         readable code to a format the computer can understand.  
+     </p>
+
+     <p>Consider the HelloWorld.java file from before.  The following line of code would compile this program. </p>
+     <p class="codeblock">javac HellowWorld.java</p>
+     <p>When you compile a java program, an additional file is created.  The file takes the same as the file you compiled, but the extension is ".class"
+         .  In this example, running the above code would create a HelloWorld.class file.
+     </p>
+     <p>When you run your program you are actually running the class file.  The following commmand can be used to run the compiled HellowWorld program, </p>
+     <p class="codeblock">java HellowWorld</p>
+        </div>
+</body>
+</html>
