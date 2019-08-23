@@ -31,7 +31,7 @@ on separate lines
 	* Course
 	* Date
 
-- [] Inside the main method of your program use block quotes to write a comment that describes the ascii art you created.  
+- [] Inside the main method of your program use block quotes to write a comment that describes the ascii art you created.
 
 
 
