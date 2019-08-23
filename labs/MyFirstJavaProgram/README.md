@@ -18,6 +18,8 @@ In this lab you will learn how to write your first java program
 	* Once you have completed your challenges push your AP Computer Science A Repo to GitHub
 	* Show your completed challenges to Ms. Pluska to receive credit for the individual portion of this lab
 
+<u>Challenge 1</u>
+
 
 
 
