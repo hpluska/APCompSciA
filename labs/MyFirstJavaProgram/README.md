@@ -20,6 +20,21 @@ In this lab you will learn how to write your first java program
 
 <u>Challenge 1</u>
 
+- [] Write a program that prints an ascii art to the console.  Follow this link to get some inspiration, 
+
+[https://text-symbols.com/ascii-art/](https://text-symbols.com/ascii-art/)
+
+- [] At the top of the file, before your class declaration use comments to indicate the following 
+on separate lines
+
+	* Your name
+	* Course
+	* Date
+
+- [] Inside the main method of your program use block quotes to write a comment that describes the ascii art you created.  
+
+
+
 
 
 
