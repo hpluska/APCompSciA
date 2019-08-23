@@ -20,7 +20,7 @@ In this lab you will learn how to write your first java program
 
 <u>Challenge 1</u>
 
-- [] Write a program that prints an ascii art to the console.  Follow this link to get some inspiration, 
+[ ] Write a program that prints an ascii art to the console.  Follow this link to get some inspiration, 
 
 [https://text-symbols.com/ascii-art/](https://text-symbols.com/ascii-art/)
 
