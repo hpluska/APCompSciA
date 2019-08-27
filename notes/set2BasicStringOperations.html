@@ -25,14 +25,11 @@
             Skill 2.4 <a href="#skill4">Convert between lower and upper case </a>
         </li>
         <li>
-            Skill 2.5 <a href="#skill5">Concatenate a String and a numeric </a>
-        </li>
-        <li>
-            Skill 2.6 <a href="#skill6">Use escape sequences to print special characters </a>
+            Skill 2.5 <a href="#skill6">Use escape sequences to print special characters </a>
         </li>
     </ul>    
 </div>
-<div id="skill1" class="skills">Skill 2.1 Concatenate String typevariables</div>
+<div id="skill1" class="skills">Skill 2.1 Concatenate String type variables</div>
 <div class="skillConceptsHeader">Skill 2.1 Concepts</div>
 <div class="skillConcepts">
     <p>Concatenation means to combine or attach things together. In Java this is done with the plus
@@ -68,6 +65,18 @@ space between these words as shown below,
     <p class="codeblock">
     System.out.println("Hello" + " good buddy"); //prints <b>Hello good buddy</b>
     </p>
+
+    <p>It is possible to concatenate a String with a numeric variable as follows.  This is a useful technique for converting
+            an int variable type to a String variable type.
+        </p>
+
+        <p class="codeblock">
+            int x = 17;<br>
+            String s = "Was haben wir gemacht?"//German for "What have we done"<br>
+            String combo = s + "" + x;<br>
+            System.out.println(combo);//prints <b>Was haben wir gemacht?27</b></b>
+            
+        </p>
     <div class="practice">
                 <a href="../ticketOutTheDoor/set1/Set1TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 2.1: Exercise 1</a>
         </div>
@@ -186,27 +195,10 @@ space between these words as shown below,
      <div class="practice">
             <a href="../ticketOutTheDoor/set1/Set1TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 1.4: Exercise 1</a>
     </div>
-        </div>
+</div>
 
-        <div id="skill5" class="skills">Skill 2.5 Concatenate a String and a numeric </div>
+        <div id="skill5" class="skills">Skill 2.5 Use escape sequences to print special characters </div>
         <div class="skillConceptsHeader">Skill 2.5 Concepts</div>
-
-        <div class="skillConcepts">
-                <p>It is possible to concatenate a String with a numeric variable as follows.  This is a useful technique for converting
-                    an int variable type to a String variable type.
-                </p>
-
-                <p class="codeblock">
-                    int x = 17;<br>
-                    String s = "Was haben wir gemacht?"//German for "What have we done"<br>
-                    String combo = s + "" + x;<br>
-                    System.out.println(combo);//prints <b>Was haben wir gemacht?27</b></b>
-                    
-                </p>
-        </div>
-
-        <div id="skill6" class="skills">Skill 2.6 Use escape sequences to print special characters </div>
-        <div class="skillConceptsHeader">Skill 2.6 Concepts</div>
 
         <div class="skillConcepts">
                 <p>To force a quote character (") to printout, or to be part of a String, use the escape sequence, “\”.
