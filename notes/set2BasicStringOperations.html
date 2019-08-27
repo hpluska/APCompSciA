@@ -1,0 +1,236 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+    <link rel="stylesheet" href="../styles/notes.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Over+the+Rainbow" rel="stylesheet">
+</head>
+<body>
+<div id="top">
+    <h1>Set 1: Variables</h1>
+</div>
+<div id="skills">
+    <ul id="skillsList">
+        <li>
+            Skill 2.1 <a href="#skill1">Concatenate String type variables</a>
+        </li>
+        <li>
+            Skill 2.2 <a href="#skill2">Use the length() method to find the number of characters in a String</a>
+        </li>
+        <li>
+            Skill 2.3 <a href="#skill3">Retrieve a portion of a String using the substring() method</a>
+        </li>
+        <li>
+            Skill 2.4 <a href="#skill4">Convert between lower and upper case </a>
+        </li>
+        <li>
+            Skill 2.5 <a href="#skill5">Concatenate a String and a numeric </a>
+        </li>
+        <li>
+            Skill 2.6 <a href="#skill6">Use escape sequences to print special characters </a>
+        </li>
+    </ul>    
+</div>
+<div id="skill1" class="skills">Skill 2.1 Concatenate String typevariables</div>
+<div class="skillConceptsHeader">Skill 2.1 Concepts</div>
+<div class="skillConcepts">
+    <p>Concatenation means to combine or attach things together. In Java this is done with the plus
+(+) sign.  
+    </p> 
+
+    <p>Consider the following example. Below, the variables initialized to “Hello” and “good buddy”
+are concatenated and assigned to a new variable c. The program prints Hellogood buddy to the
+screen.
+    </p>
+
+    <p class="codeblock">
+    String mm = "Hello";<br>
+    String nx = "good buddy";<br>
+    String c = mm + nx;<br>
+    System.out.println(c); //prints <b>Hellogood buddy</b>... notice no space between o & g
+    </p>
+
+    <p>
+    A space between the words “Hello” and “good” could have been achieved by concatenating a
+space between these words as shown below,
+
+    </p>
+    <p class="codeblock">
+    String mm = "Hello";<br>
+    String nx = "good buddy";<br>
+    System.out.println(mm+ " " + nx);//prints <b>Hello good buddy</b>..notice the space
+    </p>
+
+    <p>
+    The example below also illustrates another way a space could have been achieved,
+    </p>
+    <p class="codeblock">
+    System.out.println("Hello" + " good buddy"); //prints <b>Hello good buddy</b>
+    </p>
+    <div class="practice">
+                <a href="../ticketOutTheDoor/set1/Set1TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 2.1: Exercise 1</a>
+        </div>
+
+</div>
+<div id="skill2" class="skills">Skill 2.2 Use the length() method to find the number of characters in a String</div>
+<div class="skillConceptsHeader">Skill 2.2 Concepts</div>
+<div class="skillConcepts">
+        <p> The length() method can be used to find the number of characters in a String. Consider the
+            following example,
+        </p>
+        <img src = "../images/lengthOfString.jpg">
+
+            <div class="practice">
+                    <a href="../ticketOutTheDoor/set1/Set1TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 1.2: Exercise 1</a>
+            </div>      
+</div>
+<div id="skill3" class="skills">Skill 2.3 Retrieve a portion of a String using the substring() method</div>
+<div class="skillConceptsHeader">Skill 2.3 Concepts</div>
+<div class="skillConcepts">
+        <p>The substring() method can be used to indicate the portion of the String we want to retrieve. In
+            computer science counting begins at 0. In the String “Sparky the dog”, the character assignments
+            are as follows, 
+        </p>
+        <table class="notesTable" style ="width:12%;">
+            <tbody><tr>
+            <th style="width:5%">Letter</th>
+            <th style="width:5%">Position</th>
+            </tr>
+                    <tr>
+                    <td>S</td>
+                    <td>0</td>
+                    </tr>
+                    <tr>
+                    <td>p</td>
+                    <td>1</td>
+                    </tr>
+                    <tr>
+                    <td>a</td>
+                    <td>2</td>
+                    </tr>
+                    <tr>
+                    <td>r</td>
+                    <td>3</td>
+                    </tr>
+                    <tr>
+                    <td>k</td>
+                    <td>4</td>
+                    </tr>
+                    <tr>
+                    <td>y</td>
+                    <td>5</td>
+                    </tr>
+                    <tr>
+                    <td></td>
+                    <td>6</td>
+                    </tr>
+                    <tr>
+                    <td>t</td>
+                    <td>7</td>
+                    </tr>
+                    <tr>
+                    <td>h</td>
+                    <td>8</td>
+                    </tr>
+                    <tr>
+                    <td>e</td>
+                    <td>9</td>
+                    </tr>
+                    <tr>
+                    <td></td>
+                    <td>10</td>
+                    </tr>
+                    <tr>
+                    <td>d</td>
+                    <td>11</td>
+                    </tr>
+                    <tr>
+                    <td>o</td>
+                    <td>12</td>
+                    </tr>
+                    <tr>
+                    <td>g</td>
+                    <td>13</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        <p>If we wanted to print all the characters starting at position 4 (“k”), we could use substring(4). This is illustrated below,</p>
+        <img src = "../images/subString.jpg">
+
+        <p>Another application of the substring() method involves retrieving the characters from the middle
+            of a String. </p>
+
+        <p>If we want to print all the characters starting at k (position 4) and ending at d (position 11), we
+            could use substring(4, 12). This is illustrated below,</p>
+            <img src = "../images/subString2.jpg">
+
+
+        <div class="practice">
+            <a href="../ticketOutTheDoor/set1/Set1TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 1.3: Exercise 1</a>
+        </div>
+
+    </div>
+    <div id="skill4" class="skills">2.4 Convert between lower and upper case </div>
+    <div class="skillConceptsHeader">Skill 2.4 Concepts</div>
+    <div class="skillConcepts">
+     <p>The method “toLowerCase()” converts all characters to lower case (small letters) 
+     </p>
+     <img src = "../images/toLowerCase.jpg">
+     <p>The method “toUpperCase()” converts all characters to upper case (capital letters) 
+     </p>
+
+     <img src = "../images/toUpperCase.jpg">
+
+     <div class="practice">
+            <a href="../ticketOutTheDoor/set1/Set1TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 1.4: Exercise 1</a>
+    </div>
+        </div>
+
+        <div id="skill5" class="skills">Skill 2.5 Concatenate a String and a numeric </div>
+        <div class="skillConceptsHeader">Skill 2.5 Concepts</div>
+
+        <div class="skillConcepts">
+                <p>It is possible to concatenate a String with a numeric variable as follows.  This is a useful technique for converting
+                    an int variable type to a String variable type.
+                </p>
+
+                <p class="codeblock">
+                    int x = 17;<br>
+                    String s = "Was haben wir gemacht?"//German for "What have we done"<br>
+                    String combo = s + "" + x;<br>
+                    System.out.println(combo);//prints <b>Was haben wir gemacht?27</b></b>
+                    
+                </p>
+        </div>
+
+        <div id="skill6" class="skills">Skill 2.6 Use escape sequences to print special characters </div>
+        <div class="skillConceptsHeader">Skill 2.6 Concepts</div>
+
+        <div class="skillConcepts">
+                <p>To force a quote character (") to printout, or to be part of a String, use the escape sequence, “\”.
+                        Note escape sequences always start with a “\” character.  
+                </p>
+
+                <p>Consider the following example, </p>
+
+                <img src="../images/escape.jpg">
+                <p>Another escape sequence, \n, will create a new line (also called a line break) as shown below </p>
+
+                <img src="../images/newLineEscape.jpg">
+
+                <p>The escape sequence, \\, will allow us to print a backslash within our String. Otherwise, if we try
+                        to insert just a single \ it will be interpreted as the beginning of an escape sequence, </p>
+
+                <img src="../images/escapeBackslash.jpg">    
+
+                <p>The escape sequence, \t, will allow us to tab over. The following code tabs twice. </p>
+                <img src="../images/escapeTab.jpg">  
+                <div class="practice">
+                       <a href="../ticketOutTheDoor/set1/Set1TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skills 1.5 & 1.6: Exercise 1</a>
+               </div>
+        </div>
+
+</body>
+</html>
