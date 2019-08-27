@@ -97,6 +97,19 @@ body{
   .practice{
       margin:10px;
   }
+  
+  .notesTable{
+      border: black solid 1px;
+      border-collapse: collapse;
+  }
+
+  .notesTable tr{
+      border: black solid thin;
+  }
+
+  .notesTable th{
+      background-color:grey;
+  }
 
 
 

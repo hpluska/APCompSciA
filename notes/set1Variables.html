@@ -8,157 +8,280 @@
 </head>
 <body>
 <div id="top">
-    <h1>Set 23: Static Methods and State Variables</h1>
+    <h1>Set 1: Variables</h1>
 </div>
 <div id="skills">
     <ul id="skillsList">
         <li>
-            Skill 0.1 <a href="#skill1">Declare a class</a>
+            Skill 1.1 <a href="#skill1">Declare and initialize a variable</a>
         </li>
         <li>
-            Skill 0.2 <a href="#skill2">Write a main method</a>
+            Skill 1.2 <a href="#skill2">Describe the 8 primitive data types</a>
         </li>
         <li>
-            Skill 0.3 <a href="#skill3">Print to the console</a>
+            Skill 1.3 <a href="#skill3">Declare and initialize the variable types you must know for this class</a>
         </li>
         <li>
-            Skill 0.4 <a href="#skill4">Compile and run a java program</a>
+            Skill 1.4 <a href="#skill4">Interchange double and int variable types</a>
         </li>
         <li>
-            Skill 0.5 <a href="#skill5">Add comments to a program</a>
+            Skill 0.5 <a href="#skill5">Declare and initialize a boolean variable type</a>
         </li>
     </ul>    
 </div>
-<div id="skill1" class="skills">Skill 0.1 Declare a class</div>
-<div class="skillConceptsHeader">Skill 0.1 Concepts</div>
+<div id="skill1" class="skills">Skill 1.1 Declare and initialize a variable</div>
+<div class="skillConceptsHeader">Skill 1.1 Concepts</div>
 <div class="skillConcepts">
-    <p>A “class” in the context of the java programming language is just a template for something.  
-        Classes in java also serve to organize your code in a logical manner – kind of like school!  
-        At school, your day is divided among different classes.  You may go to a math class, a history class, 
-        and if your are reading this, a computer science class.  And, just like java, the math class you take 
-        here is also offered somewhere else, so the math class must also have a template so it can be implemented 
-        at different schools. </p> 
+    <p>Variables are letters or words that can be used to store data.   Variables declared
+        inside of a method are referred to as <i>local</i> variables - that is their use is
+        localized to the method in which they are declared.  
+    </p> 
 
-    <p>Classes in java are typically separated into different java files, just like your classes at school are separated into
-        different rooms. The way you declare a class in java is illustrated below, </p>
-        <img src="../images/javaClass.png">
+    <p>Java is a strict variable type language.  That is, to declare a variable requires that you
+        not only provide a name for the variable, but also declare the type.  To illistrate how to 
+        declare a variable in Java, we will use the <i>int</i> type variable. 
+    </p>
+    <p>An int type variable can hold any whole number.  The following code could be used
+        to declare an <i>int</i> type variable called <i>x</i>.  Notice that in the code, <i>int</i>
+        is the type of variable we want to declare and <i>x</i> is the name of the variable. 
+    </p>
 
+    <p class="codeblock">int x;</p>
 
+    <p>The variable we declared above is currently empty, that is no value has been assigned to it. 
+        Assigning a value to a variable is called <i>initializing</i>.  The following code illustrates
+        how to initialize the variable x. Notice in the code below, 
+        
         <ul>
-            <li>Notice in the screen shot above that the name of the file, 
-                HelloWorld.java, ends with the extension “.java”.  
-                This is required for all java programs.  </li>
-            <li>To create a new class in java you must use the declaration “class” 
-                followed by the name of the file (minus the .java extension). </li>
-            <li>We have also added the word “public” in front of the class declaration.  
-                Although this is not required, it is helpful because this allows us to define who has access to the file.  
-                The term “public” allows us to access this file from anywhere in our program – but, more on this later. </li>
-            <li>Finally, we have added an open curly bracket after the “public class HelloWorld” 
-                declaration and a closing curly bracket further down the page.  All the code associated 
-                with the HelloWorld class must appear between these curly brackets. 
-                </li>
+            <li>we did not type <i>int</i> again. 
+                Once a variable is declared, it cannot be declared again.  Leaving <i>int</i> in front of our variable
+                x would actually generate an error. </li>
+            <li>Also, notice that the variable name is always on the left of the equal sign.  The value you want to assign
+                to the variable goes on the right of the equal sign. 
+            </li>
         </ul>
-        <div class="practice">
+
+    </p>
+    <p class="codeblock">x = 10;</p>
+
+    <p>The value of variables can be changed at any point in the method in which they were declared.
+        For example, the code below, would change the value of x to 5.
+    </p>
+    <p class="codeblock">x = 5;</p>
+    <p>Variables can also be manipulated.  For example I could add 1 to variable x as follows, 
+    </p>
+        <p class="codeblock">x = x + 1;</p>
+
+    <p>The naming convention for variables in java is "lower camel case".  That is, the first letter
+        in the variable is lower case.  If there are multiple words associated with the variable name, they
+        are run together.  Each word in the variable (except for the first word) is capatilized. Consider the
+        example below.  In this example, we have declared and initialized the variable on one line. 
+    </p>
+    <p class="codeblock">int myFinalScore = 10;</p>
+
+    <p>To print the value of a variable to the console, we use the same print statement we learned previously. The 
+        following code could be used to print <i>myFinalScore</i>.  Notice in the below example, there are no quotes 
+        around the variable.  If there were quotes around myFinalScore, "myFinalScore" is what would be printed.  Leaving
+        the quotes off, prints the value of the variable. 
+    </p>
+    <p class="codeblock">System.out.prinlnt(myFinalScore);</p>    
+    
+    
+    <div class="practice">
                 <a href="../ticketOutTheDoor/set0/Set0TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 0.1: Exercise 1</a>
         </div>
 
 </div>
-<div id="skill2" class="skills">Skill 0.2 Write a main method</div>
-<div class="skillConceptsHeader">Skill 0.2 Concepts</div>
+<div id="skill2" class="skills">Skill 1.2 Describe the 8 primitive data types</div>
+<div class="skillConceptsHeader">Skill 1.2 Concepts</div>
 <div class="skillConcepts">
-        <p>Inside the classes we create, there are "methods".  Methods (also known as functions) allow us to define the things
-            a class can do.  For example, in a math class we can add, substract, divide, and mulitple numbers.  A method that adds two
-            numbers simply stated could look like, a + b, where a and b represent different numbers. 
+        <p> There are eight primitive variable types in the Java language.
+            These variable types are the most basic data types available within the 
+            Java language and serve as the building blocks of data manipulation.  
+            Primitive variable types serve only one purpose — to contain pure, 
+            simple values of a kind. Because these data types are defined 
+            into the Java type system by default, they come with a number of 
+            operations predefined. 
         </p>
-        <p>All java programs must have a "main" method.  In fact, when you run your program, this is what java looks for first.  The main method
-            is also referred to as the "driver" because it drives the program. 
-            </p>
-        <p>The way you declare the main method is illustrated below,</p>
+        <p>Primitive number type variables are divided into two groups:
+                <p><b>Integer</b> types stores whole numbers, positive or negative (such as 123 or -456), without decimals. Valid types are byte, short, int and long. Which type you should use, depends on the numeric value.</p>
+                <p>The four types of Integer types are described below.  Each of the Integer types store whole numbers.  
+                        The only difference is the range of numbers they can store. 
+                    </p>
+                            <table class="notesTable">
+                                    <tbody><tr>
+                                    <th style="width:20%">Data Type</th>
+                                    <th style="width:17%">Size</th>
+                                    <th style="width:63%">Description</th>
+                                    </tr>
+                                    <tr>
+                                    <td>byte</td>
+                                    <td>1 byte</td>
+                                    <td>Stores whole numbers from -128 to 127</td>
+                                    </tr>
+                                    <tr>
+                                    <td>short</td>
+                                    <td>2 bytes</td>
+                                    <td>Stores whole numbers from -32,768 to 32,767</td>
+                                    </tr>
+                                    <tr>
+                                    <td>int</td>
+                                    <td>4 bytes</td>
+                                    <td>Stores whole numbers from -2,147,483,648 to 2,147,483,647</td>
+                                    </tr>
+                                    <tr>
+                                    <td>long</td>
+                                    <td>8 bytes</td>
+                                    <td>Stores whole numbers from -9,223,372,036,854,775,808 to 
+                                    9,223,372,036,854,775,807</td>
+                                    </tr>  
+                                    </tbody>
+                                    </table>
+                <p><b>Floating point</b> types represents numbers with a fractional part, containing one or more decimals. There are two types: float and double. </p>
+        
+        
+<p>The two types of Floating type variables are described below.  </p>
+<table class="notesTable">
+        <tbody><tr>
+        <th style="width:20%">Data Type</th>
+        <th style="width:17%">Size</th>
+        <th style="width:63%">Description</th>
+        </tr>
+        <tr>
+                <td>float</td>
+                <td>4 bytes</td>
+                <td>Stores fractional numbers. Sufficient for 
+                storing 6 to 7 decimal digits</td>
+                </tr>
+                <tr>
+                <td>double</td>
+                <td>8 bytes</td>
+                <td>Stores fractional numbers. Sufficient for 
+                storing 15 decimal digits</td>
+                </tr>
 
-        <img src="../images/mainMethod.gif">
+        </tbody>
+        </table>
 
+    <p>The last two primitive data types do not store numbers.  They are described below,</p>
+    <table class="notesTable">
+        <tbody><tr>
+        <th style="width:20%">Data Type</th>
+        <th style="width:17%">Size</th>
+        <th style="width:63%">Description</th>
+        </tr>
+                <tr>
+                <td>boolean</td>
+                <td>1 bit</td>
+                <td>Stores true or false values</td>
+                </tr>
+                <tr>
+                <td>char</td>
+                <td>2 bytes</td>
+                <td>Stores a single character/letter or ASCII values</td>
+                </tr>
+            </tbody>
+        </table>
+  <p>For the purposes of this class you only need to be concerned with the following data types</p>
 
-        <ul>
-                <li>At this point, do not worry about what all the words mean.  The only word you need to be concerned with at this point 
-                    is the word "main".  This is the name of the method. </li>
-                <li>Notice the main method appears between the curly brackets in the HelloWorld class. </li>
-                <li>We have added an open curly bracket after the "public static void main(String args[])" 
-                    declaration and a closing curly bracket further down the page.  All the code associated 
-                    with the main method must appear between these curly brackets. 
-                    </li>
-            </ul>
+  <ul>
+      <li>int</li>
+      <li>double</li>
+      <li>boolean</li>
+      <li>char (Although not required of AP, we will utilize this in future projects)</li>
+  </ul>
 
             <div class="practice">
                     <a href="../ticketOutTheDoor/set0/Set0TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 0.2: Exercise 1</a>
             </div>      
 </div>
-<div id="skill3" class="skills">Skill 0.3 Print to the consol</div>
-<div class="skillConceptsHeader">Skill 0.3 Concepts</div>
+<div id="skill3" class="skills">Skill 1.3 Declare and initialize the variable types you must know for this class</div>
+<div class="skillConceptsHeader">Skill 1.3 Concepts</div>
 <div class="skillConcepts">
-        <p>Printing to the consol can be done using the following code</p>
-        <p class="codeblock">System.out.print("Hello!");</p>
+        <p>As aforementioned, the three variable types you MUST know for the AP Exam are int, double, and boolean.  But, 
+            because we use the char variable type in upcoming projects, you should be familiar with the use of this data type
+            too.  The code segment below illustrates how to declare and initialize each of these variable types,  
+        </p>
+        <p class="codeblock">int aWholeNumber = 3;<br>
+                            double aNumberWithADecimal = 3.0;<br>
+                            boolean aTrueFalseVariable = true;<br>
+                            char aCharValue = 'a';</p>
 
         <ul>
-                <li>Notice, the semicolon at the end.  This terminates the command and is required for all commands. </li>
-                <li>System.out.print() is the signature for the print command.  Whatever you include in quotes in between the parentheses will be 
-                    printed to the consol. 
+                <li>Notice that all the variable declarations above begin with a type declaration followed by an equal sign </li>
+                <li>The value of the variable appears to the right of the equal sign.  
                 </li>
-                <li>Java is case sensitive.  That is the word "System" must be capitalized and words "out" and "print" must be lower case. 
+                <li>The <i>char</i>variable type requires single quotes around the value.  
                     </li>
             </ul>
-
-            <p>Printing to the consol can also be done using the following code</p>
-            <p class="codeblock">System.out.println("Hello!");</p>
-    
-            <ul>
-                    <li>The only difference between this command and the previous is the "ln" after the word print </li>
-                    <li>This command will print whatever is in between quotes and then will go to the next line
-                    </li>
-                </ul>
-
-        <p>Below is an example that shows the difference between print and println</p>
-
-        <iframe height="400px" width="100%" src="https://repl.it/@hpluska/Set-0-Skill-3?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-       
         <div class="practice">
             <a href="../ticketOutTheDoor/set0/Set0TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 0.3: Exercise 1</a>
         </div>
 
     </div>
-    <div id="skill4" class="skills">0.4 Compile and run a java program</div>
-    <div class="skillConceptsHeader">Skill 0.4 Concepts</div>
+    <div id="skill4" class="skills">1.4 Interchange int and double variable types</div>
+    <div class="skillConceptsHeader">Skill 1.4 Concepts</div>
     <div class="skillConcepts">
-     <p>Before you can run a java program on your computer you must first compile it.  Compiling a java program converts the program from 
-         readable code to a format the computer can understand.  
+     <p>Recall that an <i>int</i> variable type is a whole number.  Whereas a <i>double</i> is a decimal type number
      </p>
 
-     <p>Consider the HelloWorld.java file from before.  The following line of code would compile this program. </p>
-     <p class="codeblock">javac HelloWorld.java</p>
-     <p>When you compile a java program, an additional file is created.  The file takes the same as the file you compiled, but the extension is ".class"
-         .  In this example, running the above code would create a HelloWorld.class file.
+     <p>When a value is assigned to a double type variable, Java automatically assigns zeros after the digit.  
+         This makes this type of variable more precise (1.000 for example, is more precise than just 1).  Because 
+         a double is more precise than an int, you cannot assign a double to an int, however the reverse is
+         allowed.  Consider the following example,
      </p>
-     <p>When you run your program you are actually running the class file.  The following commmand can be used to run the compiled HellowWorld program, </p>
-     <p class="codeblock">java HelloWorld</p>
+
+     <p class="codeblock">int i = 1;<br>
+                        double d = 2;<br>
+                        d = i; //allowed because i is an int and is not precise<br>
+                        i = d; //<b>not</b> allowed because d is a double and cannot be assigned to an int<br>
+                        i = 2.0000; //<b>not</b> allowed because 2.0000 is too precise
+
+    </p>
+     
+     <p>The reason for the above assignment rules is that while asigning an int to a double does not cause a loss
+         in precision or information, assigning a double to an int does. Likewise you may not assign a decimal precision
+         number to an int type variable. If you try this, you will get the following error, 
+     </p>
+     <p class="codeblock">error: incompatible types: possible lossy conversion from double to int<br>
+            int i = 2.000;<br>
+                    
+    1 error
+    </p>
+
+    <p>You can however <b>force</b> a <i>double</i> type variable into an <i>int</i> type variable with <b>casting</b>. 
+    The following code snippet illustrates how to cast a <i>double</i> type variable into an <i>int</i>, 
+    </p>
+
+    <p class="codeblock">int i = 1;<br>
+        double d = 2.9999;<br>
+        d = i; //allowed because i is an int and is not precise<br>
+        i = (int)d; //<b>allowed</b> because we <b>casted</b> variable d to an int<br>
+        i = (int)2.0000; //<b>allowed</b> because we <b>casted</b> 2.0000 to an int<br>
+
+</p>
+
+<p>Be careful with the above operation however, because <i>int</i> type variables cut off
+all information following the decimal and only preserve the "ones" place.  Converting 2.9999 to an int for 
+example, would result in 2.  Rounding does NOT apply to int variables - all numbers after the decimal 
+are simply chopped off.</p>
+
+
      <div class="practice">
             <a href="../ticketOutTheDoor/set0/Set0TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 0.4: Exercise 1</a>
     </div>
         </div>
 
-        <div id="skill5" class="skills">Skill 0.5 Add comments to a program</div>
-        <div class="skillConceptsHeader">Skill 0.5 Concepts</div>
+        <div id="skill5" class="skills">Skill 1.5 Declare and initialize a boolean variable type</div>
+        <div class="skillConceptsHeader">Skill 1.5 Concepts</div>
 
         <div class="skillConcepts">
-                <p>Comments are segments of code that you can add to your program that are ignored by the compiler.  They are
-                    extremely important for both testing and documenting your code.  As we move through the course, you 
-                    realize the importants of comments and documenting your code. 
+                <p><i>boolean</i> variable types can only be assigned a value of true or false.  The following
+                    code is an example.  And, like other variable types, their value can be changed at anytime,
                 </p>
-                <p>There are two ways to add comments to your program these are demonstrated below,</p>
 
-                <p class="codeblock">//This line is ignored because the two slashes out front are called inline comments</p>
-
-                <p class="codeblock">/*This line is ignored because the slash followed by the asterisk begins a block comment <br>
-                This line also ignored because I have not ended the block quote<br>
-                This line is ignored too! But closing the block comment will end the quote.  I will do this with a asterisk followed by a backslash */</p>
+                <p class="codeblock">boolean b = true;<br>
+                b = false;</p>
                 <div class="practice">
                        <a href="../ticketOutTheDoor/set0/Set0TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 0.4: Exercise 1</a>
                </div>
