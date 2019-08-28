@@ -34,16 +34,7 @@ After your program is run, they should look as follows when printed to the conso
 
 ### Challenge 2
 
-- [ ] The text below, is the text required of a driver class.  Format the text using the escape techniques in this lesson, to get it to print EXACTLY as shown IN THE CONSOLE.  Feel free to change the message in the quotes. 
-
-public class Hello
-{
-     public static void main(String args[])
-     {
-          System.out.println(“Hello There! My name is Ms. Pluska!”);
-     }
-}
-
+- [ ] The text here [SampleDriverClass](SampleDriverClass.java), is the text required of a driver class.  Format the text using the escape techniques in this lesson, to get it to print EXACTLY as shown IN THE CONSOLE.  Feel free to change the message in the quotes.
 
 - [ ] At the top of the file, before your class declaration use comments to indicate the following 
 on separate lines
