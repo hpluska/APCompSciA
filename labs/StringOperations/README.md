@@ -34,7 +34,7 @@ After your program is run, they should look as follows when printed to the conso
 
 ### Challenge 2
 
-- [ ] The text here [SampleDriverClass](SampleDriverClass.java), is the text required of a driver class.  Format the text using the escape techniques in this lesson, to get it to print EXACTLY as shown IN THE CONSOLE.  Feel free to change the message in the quotes.
+- [ ] The text linked here [SampleDriverClass](SampleDriverClass.java), is the text required of a driver class.  Format the text using the escape techniques in this lesson, to get it to print EXACTLY as shown IN THE CONSOLE.  Feel free to change the message in the quotes.
 
 - [ ] At the top of the file, before your class declaration use comments to indicate the following 
 on separate lines
@@ -43,7 +43,7 @@ on separate lines
 	* Course
 	* Date
 
-- [ ] Inside the main method of your program use block quotes to write a comments which indicate challenge 1 and challenge 2
+- [ ] Inside the main method of your program use block quotes to write a comments which indicate challenge 1 and challenge 2, along with a description about what these challenges accomplish. 
 
 - [ ] Once you have completed the above be sure to push your changes to your AP Computer Science A Repo to GitHub
 
