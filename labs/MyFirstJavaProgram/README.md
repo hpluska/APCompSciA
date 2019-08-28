@@ -1,4 +1,4 @@
-# Hello World
+# My First Java Program
 
 ## Introduction
 In this lab you will learn how to write your first java program
