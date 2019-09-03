@@ -8,12 +8,12 @@
 </head>
 <body>
 <div id="top">
-    <h1>Set 2: Basic String Operations</h1>
+    <h1>Set 3: Numerical Operations</h1>
 </div>
 <div id="skills">
     <ul id="skillsList">
         <li>
-            Skill 2.1 <a href="#skill1">Concatenate String type variables</a>
+            Skill 3.1 <a href="#skill1">Declare and/or initialize multiple variables in a single line</a>
         </li>
         <li>
             Skill 2.2 <a href="#skill2">Use the length() method to find the number of characters in a String</a>
@@ -29,41 +29,36 @@
         </li>
     </ul>    
 </div>
-<div id="skill1" class="skills">Skill 2.1 Concatenate String type variables</div>
-<div class="skillConceptsHeader">Skill 2.1 Concepts</div>
+<div id="skill1" class="skills">Skill 3.1 Declare and/or initialize multiple variables in a single line</div>
+<div class="skillConceptsHeader">Skill 3.1 Concepts</div>
 <div class="skillConcepts">
-    <p>Concatenation means to combine or attach things together. In Java this is done with the plus
-(+) sign.  
-    </p> 
-
-    <p>Consider the following example. Below, the variables initialized to “Hello” and “good buddy”
-are concatenated and assigned to a new variable c. The program prints Hellogood buddy to the
-screen.
-    </p>
+    <p>Recall that the assignment operator is the standard equal sign (=) and is used to “assign” a value to a
+        variable.</p>
+    <p>Consider the following example,  </p> 
 
     <p class="codeblock">
-    String mm = "Hello";<br>
-    String nx = "good buddy";<br>
-    String c = mm + nx;<br>
-    System.out.println(c); //prints <b>Hellogood buddy</b>... notice no space between o & g
+    int i = 3; //<b>OK.</b> Assigns the value of 3 to i.  Notice the direction of data flow.<br>
+    3 = i; //<b>Illegal.  Data does not flow this way. </b><br>
+    double p;<br>
+    double j = 47.12;<br>
+    p = j; //<b>OK.</b> Assigns the value of j to p.  Both p and j are now equal to 47.12
     </p>
 
     <p>
-    A space between the words “Hello” and “good” could have been achieved by concatenating a
-space between these words as shown below,
+    It is possible to declare several variables of the same type on one line.  In the below example, i, x, y, and z are all 
+    declared as int type variables.  
 
     </p>
     <p class="codeblock">
-    String mm = "Hello";<br>
-    String nx = "good buddy";<br>
-    System.out.println(mm+ " " + nx);//prints <b>Hello good buddy</b>..notice the space
+    int i, x, y, z;
     </p>
 
     <p>
-    The example below also illustrates another way a space could have been achieved,
+    We can also declare and initialize variables on one line.  In the example below, w and j, are both declared and initialized.  g however
+    is just declared.  
     </p>
     <p class="codeblock">
-    System.out.println("Hello" + " good buddy"); //prints <b>Hello good buddy</b>
+    int w = 1000, j = 2000, g;
     </p>
 
     <p>It is possible to concatenate a String with a numeric variable as follows.  This is a useful technique for converting
@@ -74,7 +69,7 @@ space between these words as shown below,
             int x = 17;<br>
             String s = "Was haben wir gemacht?"//German for "What have we done"<br>
             String combo = s + "" + x;<br>
-            System.out.println(combo);//prints <b>Was haben wir gemacht?17</b></b>
+            System.out.println(combo);//prints <b>Was haben wir gemacht?27</b></b>
             
         </p>
     <div class="practice">
