@@ -16,16 +16,13 @@
             Skill 3.1 <a href="#skill1">Declare and/or initialize multiple variables in a single line</a>
         </li>
         <li>
-            Skill 2.2 <a href="#skill2">Use the length() method to find the number of characters in a String</a>
+            Skill 3.2 <a href="#skill2">Apply the fundamental arithmetic operations to int variable types</a>
         </li>
         <li>
-            Skill 2.3 <a href="#skill3">Retrieve a portion of a String using the substring() method</a>
+            Skill 3.3 <a href="#skill3">Apply unary operators</a>
         </li>
         <li>
-            Skill 2.4 <a href="#skill4">Convert between lower and upper case </a>
-        </li>
-        <li>
-            Skill 2.5 <a href="#skill5">Use escape sequences to print special characters </a>
+            Skill 3.4 <a href="#skill4">Apply compound operators </a>
         </li>
     </ul>    
 </div>
@@ -60,167 +57,176 @@
     <p class="codeblock">
     int w = 1000, j = 2000, g;
     </p>
-
-    <p>It is possible to concatenate a String with a numeric variable as follows.  This is a useful technique for converting
-            an int variable type to a String variable type.
-        </p>
-
-        <p class="codeblock">
-            int x = 17;<br>
-            String s = "Was haben wir gemacht?"//German for "What have we done"<br>
-            String combo = s + "" + x;<br>
-            System.out.println(combo);//prints <b>Was haben wir gemacht?27</b></b>
-            
-        </p>
     <div class="practice">
-                <a href="../ticketOutTheDoor/set2/Set2TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 2.1: Exercise 1</a>
+                <a href="../ticketOutTheDoor/set3/Set3TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 3.1: Exercise 1</a>
         </div>
 
 </div>
-<div id="skill2" class="skills">Skill 2.2 Use the length() method to find the number of characters in a String</div>
-<div class="skillConceptsHeader">Skill 2.2 Concepts</div>
+<div id="skill2" class="skills">Skill 3.2 Apply the fundamental arithmetic operations to int variable types</div>
+<div class="skillConceptsHeader">Skill 3.2 Concepts</div>
 <div class="skillConcepts">
-        <p> In the previous lesson we learned about a <i>String</i> type variable.  While, <i>String</i> type variables are nothing more than a serious
-            of characters, they are also considered objects in Java (as oppossed to primitives).  The String object class in Java provides a library of methods 
-            which are useful for manipulating <i>String</i> type variables. </p>
-            <p>To access these methods, we can use the "dot" notation.  One method in the String library that is useful is the lenth() method.  This
-                method can be used to find the number of characters in a String. Consider the following example,
-        </p>
-        <img src = "../images/lengthOfString.jpg">
-
-            <div class="practice">
-                    <a href="../ticketOutTheDoor/set2/Set2TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 2.2: Exercise 1</a>
-            </div>      
-</div>
-<div id="skill3" class="skills">Skill 2.3 Retrieve a portion of a String using the substring() method</div>
-<div class="skillConceptsHeader">Skill 2.3 Concepts</div>
-<div class="skillConcepts">
-        <p>The substring() method can be used to indicate the portion of the String we want to retrieve. In
-            computer science counting begins at 0. In the String “Sparky the dog”, the character assignments
-            are as follows, 
-        </p>
+        <p>The basic arithmetic operations are as follows,</p>
         <table class="notesTable" style ="width:12%;">
             <tbody><tr>
-            <th style="width:5%">Letter</th>
-            <th style="width:5%">Position</th>
+            <th style="width:5%">Operator</th>
+            <th style="width:5%">Description</th>
             </tr>
                     <tr>
-                    <td>S</td>
-                    <td>0</td>
+                    <td>+</td>
+                    <td>addition</td>
                     </tr>
                     <tr>
-                    <td>p</td>
-                    <td>1</td>
+                    <td>-</td>
+                    <td>substraction</td>
                     </tr>
                     <tr>
-                    <td>a</td>
-                    <td>2</td>
+                    <td>*</td>
+                    <td>multiplication</td>
                     </tr>
                     <tr>
-                    <td>r</td>
-                    <td>3</td>
+                    <td>/</td>
+                    <td>division</td>
                     </tr>
                     <tr>
-                    <td>k</td>
-                    <td>4</td>
-                    </tr>
-                    <tr>
-                    <td>y</td>
-                    <td>5</td>
-                    </tr>
-                    <tr>
-                    <td></td>
-                    <td>6</td>
-                    </tr>
-                    <tr>
-                    <td>t</td>
-                    <td>7</td>
-                    </tr>
-                    <tr>
-                    <td>h</td>
-                    <td>8</td>
-                    </tr>
-                    <tr>
-                    <td>e</td>
-                    <td>9</td>
-                    </tr>
-                    <tr>
-                    <td></td>
-                    <td>10</td>
-                    </tr>
-                    <tr>
-                    <td>d</td>
-                    <td>11</td>
-                    </tr>
-                    <tr>
-                    <td>o</td>
-                    <td>12</td>
-                    </tr>
-                    <tr>
-                    <td>g</td>
-                    <td>13</td>
+                    <td>%</td>
+                    <td>modulus</td>
                     </tr>
                 </tbody>
             </table>
+            <p>Examples of how each of the above operators can be applied are illustrated below,</p>
+            <p><u>Addition</u></p>
+            <p class="codeblock">
+                int x = 1;<br>
+                int y = 2;<br>
+                int z = x + y;//3 is assigned to z<br>
+                x = x + z;//4 is re-assigned to x<br>
+                System.out.println(z);//3 is printed to the console<br>
+                System.out.println(x + y);//6 is printed to the console<br>
+                System.out.println(x + 10);//14 is printed to the console<br>
+                System.out.println(10 + 10);//20 is printed to the console
+            </p>
+            <p><u>Subtraction</u></p>
+            <p class="codeblock">
+                int x = 1;<br>
+                int y = 2;<br>
+                int z = x - y;//-1 is assigned to z<br>
+                x = x - z;//0 is re-assigned to x<br>  
+                System.out.println(z);//-1 is printed to the console<br>
+                System.out.println(x - y);//-2 is printed to the console<br>
+                System.out.println(x - 10);//-10 is printed to the console<br>
+                System.out.println(10 - 10);//0 is printed to the console
+            </p>
+            <p><u>Multiplication</u></p>
+            <p class="codeblock">
+                int x = 1;<br>
+                int y = 2;<br>
+                int z = x * y;//2 is assigned to z<br>
+                x = x * z;//2 is re-assigned to x<br>
+                System.out.println(z);//2 is printed to the console<br>
+                System.out.println(x * y);//4 is printed to the console<br>
+                System.out.println(x * 10);//20 is printed to the console<br>
+                System.out.println(10 * 10);//100 is printed to the console
+            </p>
+            <p><u>Division</u></p>
+            <p>The below example illustrates how int type variables are treated.  If the result of the 
+                division is a fraction, the decimal places are "cut off" - <b>int variable types do not round</b>. 
+            </p>
+            <p class="codeblock">
+                int x = 1;<br>
+                int y = 2;<br>
+                int z = y/x;//2 is assigned to z<br>
+                x = z/x;//2 is re-assigned to x<br>
+                System.out.println(z);//2 is printed to the console<br>
+                System.out.println(x/y);//1 is printed to the console<br>
+                System.out.println(x/10);//0 is printed to the console<br>
+                System.out.println(10/10);//1 is printed to the console
+            </p>
+            <p><u>Modulus</u></p>
+            <p>Modulus prints the remainder of a division operation. For example, System.out.println(5%3);
+                will print 2. This is because when 5 is divided by 3, the remainder is 2. Modulus gives the
+                remainder. Modulus also handles negatives. The answer to a%b has the same sign as a. The
+                sign of b is ignored.</b>. 
+            </p>
+            <p class="codeblock">
+                int x = 1;<br>
+                int y = 2;<br>
+                int z = x%y;//1 is assigned to z<br>
+                x = x%z;//0 is re-assigned to x<br>
+                System.out.println(z);//1 is printed to the console<br>
+                System.out.println(x%y);//0 is printed to the console<br>
+                System.out.println(x%10);//0 is printed to the console<br>
+                System.out.println(10/10);//0 is printed to the console
+            </p>
+            <div class="practice">
+                    <a href="../ticketOutTheDoor/set3/Set3TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 3.2: Exercise 1</a>
+            </div>      
+</div>
+<div id="skill3" class="skills">Skill 3.3 Apply unary operators</div>
+<div class="skillConceptsHeader">Skill 3.3 Concepts</div>
+<div class="skillConcepts">
+        <p>The unary operators  are operations that require only one operand; 
+            they perform various operations such as incrementing/decrementing a value by one, 
+            negating an expression, or inverting the value of a boolean. 
+        </p>
+        <u>Incrementing a value by 1</u>
+        <p>The code below illustrates how to increment the variable x by 1</p>
+        <p class="codeblock">
+            int x = 1;<br>
+            x = x + 1;//x is now 2
+        </p>
 
-        <p>If we wanted to print all the characters starting at position 4 (“k”), we could use substring(4). This is illustrated below,</p>
-        <img src = "../images/subString.jpg">
+        <p>Incrementing a value by 1 can also be done using the <i>++</i> operator,</p>
+        <p class="codeblock">
+            int x = 1;<br>
+            System.out.println(x++);//1 is printed to the consol, <b>then</b> x is incremented <br>
+            System.out.println(++x);//x is incremented first, then it's value, 3, is printed to the consol.
+        </p>
+        <p>Notice in the above example that <i>++</i> can come before or after the variable.  
+        If it comes <i>before</i> the variable, the variable is first incremented then printed.  
+        If it comes <i>after</i> the variable, the variable is first printed then incremented.</p>
+        <u>Decrementing a value by 1</u>
+        <p>The code below illustrates how to decrement the variable y by 1</p>
+        <p class="codeblock">
+            int y = 10;<br>
+            y = y - 1;//y is now 9
+        </p>
 
-        <p>Another application of the substring() method involves retrieving the characters from the middle
-            of a String. </p>
-
-        <p>If we want to print all the characters starting at k (position 4) and ending at d (position 11), we
-            could use substring(4, 12). This is illustrated below,</p>
-            <img src = "../images/subString2.jpg">
-
-
+        <p>Decrementing a value by 1 can also be done using the <i>--</i> operator,</p>
+        <p class="codeblock">
+            int y = 10;<br>
+            System.out.println(y--);//10 is printed to the consol, <b>then</b> y is decremented <br>
+            System.out.println(--y);//y is decremented first, then it's value, 8, is printed to the consol
+        </p>
+        <p>Notice in the above example that <i>--</i> can come before or after the variable.  
+            If it comes <i>before</i> the variable, the variable is first decremented then printed.  
+            If it comes <i>after</i> the variable, the variable is first printed then decremented.</p>
+        </p>
         <div class="practice">
-            <a href="../ticketOutTheDoor/set2/Set2TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 2.3: Exercise 1</a>
+            <a href="../ticketOutTheDoor/set3/Set3TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 3.3: Exercise 1</a>
         </div>
 
     </div>
-    <div id="skill4" class="skills">2.4 Convert between lower and upper case </div>
-    <div class="skillConceptsHeader">Skill 2.4 Concepts</div>
+    <div id="skill4" class="skills">3.4 Apply compound operators </div>
+    <div class="skillConceptsHeader">Skill 3.4 Concepts</div>
     <div class="skillConcepts">
-     <p>The method “toLowerCase()” converts all characters to lower case (small letters) 
+     <p>A compound assignment operator is an operator that performs a calculation 
+         and an assignment at the same time. In the below example, x can be re-assigned explicitely
+         using <i>x = x + 5</i>; x can also be re-assigned using the addition compound operator. 
      </p>
-     <img src = "../images/toLowerCase.jpg">
-     <p>The method “toUpperCase()” converts all characters to upper case (capital letters) 
+     <p class="codeblock">
+            int x = 10;<br>
+            x = x + 5;//x is 15<br>
+            x += 5;//x is now 20
      </p>
-
-     <img src = "../images/toUpperCase.jpg">
+     <p>Compound operators can be applied to all the arithmetic operations.  How this is done
+         is illustrated below, 
+     </p>
+     <img src="../images/compoundOperators.jpg">
 
      <div class="practice">
-            <a href="../ticketOutTheDoor/set2/Set2TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 2.4: Exercises 1 & 2</a>
+            <a href="../ticketOutTheDoor/set3/Set3TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 3.4: Exercises 1</a>
     </div>
 </div>
-
-        <div id="skill5" class="skills">Skill 2.5 Use escape sequences to print special characters </div>
-        <div class="skillConceptsHeader">Skill 2.5 Concepts</div>
-
-        <div class="skillConcepts">
-                <p>To force a quote character (") to printout, or to be part of a String, use the escape sequence, “\”.
-                        Note escape sequences always start with a “\” character.  
-                </p>
-
-                <p>Consider the following example, </p>
-
-                <img src="../images/escape.jpg">
-                <p>Another escape sequence, \n, will create a new line (also called a line break) as shown below </p>
-
-                <img src="../images/newLineEscape.jpg">
-
-                <p>The escape sequence, \\, will allow us to print a backslash within our String. Otherwise, if we try
-                        to insert just a single \ it will be interpreted as the beginning of an escape sequence, </p>
-
-                <img src="../images/escapeBackslash.jpg">    
-
-                <p>The escape sequence, \t, will allow us to tab over. The following code tabs twice. </p>
-                <img src="../images/escapeTab.jpg">  
-                <div class="practice">
-                       <a href="../ticketOutTheDoor/set2/Set2TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skills 2.5: Exercise 1</a>
-               </div>
-        </div>
 
 </body>
 </html>
