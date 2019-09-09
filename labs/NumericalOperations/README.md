@@ -23,6 +23,7 @@ In this lab you will apply numerical operations to perform calculation and print
 - [ ] Implement the number reversal code you wrote in the group portion of this lab.  Your code should work for any 4 digit integer.  When your code is ran the original and the reversed number should print to the console.  Consider the examples below, 
 
 |  number | result  |
+|---|---|
 | 1234  | 1234 --> 4321  |
 | 6789  | 6789 --> 9876  |
 | 1080  | 1080 --> 0801  |
