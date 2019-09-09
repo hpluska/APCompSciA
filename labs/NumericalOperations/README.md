@@ -33,6 +33,7 @@ int i2 = 18;
 | 57.2 * ((double)i1 / i2) + 1  |   |
 | 15 – i1 * (d1 * 3) + 4  |  |
 | 15 – i1 * ((int)d1 * 3) + 4  |  |
+| 15 – i1 * (int)(d1 * 3) + 4  |  |
 
 - [ ] Print the result to each of the above problems to the console.  Do they match your prediction?
 
