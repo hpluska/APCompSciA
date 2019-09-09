@@ -13,19 +13,13 @@
 <div id="skills">
     <ul id="skillsList">
         <li>
-            Skill 5.1 <a href="#skill1">Use the java math class to perform mathematical operations s</a>
+            Skill 5.1 <a href="#skill1">Use the java Math class to perform mathematical operations s</a>
         </li>
         <li>
-            Skill 2.2 <a href="#skill2">Use the length() method to find the number of characters in a String</a>
+            Skill 5.2 <a href="#skill2">Apply the random() method to create a random integer in a specified range</a>
         </li>
         <li>
-            Skill 2.3 <a href="#skill3">Retrieve a portion of a String using the substring() method</a>
-        </li>
-        <li>
-            Skill 2.4 <a href="#skill4">Convert between lower and upper case </a>
-        </li>
-        <li>
-            Skill 2.5 <a href="#skill5">Use escape sequences to print special characters </a>
+            Skill 5.3 <a href="#skill3">Familiarize yourself with additional methods in the java Math class</a>
         </li>
     </ul>    
 </div>
@@ -54,39 +48,177 @@
 
         <img src="../images/mathClassSignature.jpg">
         
-
-    </p>
-    <p class="codeblock">
-    String mm = "Hello";<br>
-    String nx = "good buddy";<br>
-    System.out.println(mm+ " " + nx);//prints <b>Hello good buddy</b>..notice the space
     </p>
 
-    <p>
-    The example below also illustrates another way a space could have been achieved,
-    </p>
-    <p class="codeblock">
-    System.out.println("Hello" + " good buddy"); //prints <b>Hello good buddy</b>
-    </p>
+    <table class="notesTable" style ="width:75%;">
+        <tbody><tr>
+        <th style="width:20%">Method</th>
+        <th style="width:30%">Signature</th>
+        <th style="width:30%">Description</th>
+        </tr>
+                <tr>
+                <td>abs</td>
+                <td>int abs(int x)</td>
+                <td>Returns the absolute value of x</td>
+                </tr>
+                <tr>
+                <td>abs</td>
+                <td>double abs(double x)</td>
+                <td>Returns the absolute value of x</td>
+                </tr>
+                <tr>
+                <td>pow</td>
+                <td>double pow(double d, double e)</td>
+                <td>Returns d raised to the e power</td>
+                </tr>
+                <tr>
+                <td>sqrt</td>
+                <td>double sqrt(double x)</td>
+                <td>Returns the square root of x</td>
+                </tr>
+                <tr>
+                <td>ceil</td>
+                <td>double ceil(double x)</td>
+                <td>Returns next highest whole number from x</td>
+                </tr>
+                <tr>
+                <td>floor</td>
+                <td>double floor(double x)</td>
+                <td>Returns next lowest whole number from x</td>
+                </tr>
+                <tr>
+                <td>min</td>
+                <td>double min(double a, double b)</td>
+                <td>Returns the smaller of a and b</td>
+                </tr>
+                <tr>
+                <td>max</td>
+                <td>double max(double a, double b)</td>
+                <td>Returns the larger of a and b</td>
+                </tr>
+                <tr>
+                <td>min</td>
+                <td>int min(int a, int b)</td>
+                <td>Returns the smaller of a and b</td>
+                </tr>
+                <tr>
+                <td>max</td>
+                <td>int max(int a, int b)</td>
+                <td>Returns the larger of a and b</td>
+                </tr>
+                <tr>
+                <td>random</td>
+                <td>double random()</td>
+                <td>Returns a random double (range 0 < r < 1)</td>
+                </tr>
+                <tr>
+                <td>round</td>
+                <td>long round(double x)</td>
+                <td>Returns x rounded to the nearest whole number</td>
+                </tr>
+                <tr>
+                <td>PI</td>
+                <td>double PI</td>
+                <td>Returns 3.1459625…</td>
+                </tr>
+            </tbody>
+        </table>
+    <p>Below are examples of each of the methods described above, </p>
 
-    <p>It is possible to concatenate a String with a numeric variable as follows.  This is a useful technique for converting
-            an int variable type to a String variable type.
-        </p>
-
+    <ol>
+        <li>
         <p class="codeblock">
-            int x = 17;<br>
-            String s = "Was haben wir gemacht?"//German for "What have we done"<br>
-            String combo = s + "" + x;<br>
-            System.out.println(combo);//prints <b>Was haben wir gemacht?17</b></b>
-            
+        double d = -379.22;<br>
+        System.out.println(Math.abs(d));//379.22
         </p>
+        </li>
+        <li>
+        <p class="codeblock">
+        double d = 42.01;<br>
+        double e = 3.728;<br>
+        System.out.println(Math.pow(a,e));//1126831.027
+        </p>
+        </li>
+        <li>
+        <p class="codeblock">
+        double d = 2034.56;<br>
+        System.out.println(Math.sqrt(d));//45.10609715
+        </p>
+        </li>
+        <li>
+        <p class="codeblock">
+        double d = 1.4;<br>
+        System.out.println(Math.ceil(d));//2.0
+        </p>
+        </li>
+        <li>
+        <p class="codeblock">
+        double d = -1.6;<br>
+        System.out.println(Math.ceil(d));//-1.0
+        </p>
+        </li>
+        <li>
+        <p class="codeblock">
+        double d = 1.4;<br>
+        System.out.println(Math.floor(d));//1.0
+        </p>
+        </li>
+        <li>
+        <p class="codeblock">
+        double d = -1.6;<br>
+        System.out.println(Math.floor(d));//-2.0
+        </p>
+        </li>
+        <li>
+        <p class="codeblock">
+        double d = 7.89;<br>
+        System.out.println(Math.log(d));//2.065596135 *log is base e
+        </p>
+        </li>
+        <li>
+        <p class="codeblock">
+        double x = 2038.5;<br>
+        double y = -8999.0;<br>
+        System.out.println(Math.min(x, y));//-8999.0
+        </p>
+        </li>
+        <li>
+        <p class="codeblock">
+        double x = 2038.5;<br>
+        double y = -8999.0;<br>
+        System.out.println(Math.max(x, y));//2038.5
+        </p>
+        </li>
+        <li>
+        <p class = "codeblock">
+        double x = 148.2;<br>
+        System.out.println(Math.round(x));//148<br><br>
+        double x = 148.7;<br>
+        System.out.println(Math.round(x));//149<br><br>
+        double x = -148.2;<br>
+        System.out.println(Math.round(x));//-148<br><br>
+        double x = -148.7;<br>
+        System.out.println(Math.round(x));//-149
+        </p>
+        </li>
+        <li>
+        <p class = "codeblock">
+        System.out.println(Math.PI);//3.14159265...
+        </p>
+        </li>
+        <li>
+        <p class = "codeblock">
+        System.out.println(Math.random());//prints a random number between 0 and 1 where 0 is inclusive, but 1 is not
+        </p>
+        </li>
+        </ol>
     <div class="practice">
                 <a href="../ticketOutTheDoor/set2/Set2TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 2.1: Exercise 1</a>
         </div>
 
 </div>
-<div id="skill2" class="skills">Skill 2.2 Use the length() method to find the number of characters in a String</div>
-<div class="skillConceptsHeader">Skill 2.2 Concepts</div>
+<div id="skill2" class="skills">Skill 5.2 Apply the random() method to create a random integer in a specified range</div>
+<div class="skillConceptsHeader">Skill 5.2 Concepts</div>
 <div class="skillConcepts">
         <p> In the previous lesson we learned about a <i>String</i> type variable.  While, <i>String</i> type variables are nothing more than a serious
             of characters, they are also considered objects in Java (as oppossed to primitives).  The String object class in Java provides a library of methods 
