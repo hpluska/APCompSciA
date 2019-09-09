@@ -8,12 +8,12 @@
 </head>
 <body>
 <div id="top">
-    <h1>Set 2: Basic String Operations</h1>
+    <h1>Set 5: Methods of the Math Class</h1>
 </div>
 <div id="skills">
     <ul id="skillsList">
         <li>
-            Skill 2.1 <a href="#skill1">Concatenate String type variables</a>
+            Skill 5.1 <a href="#skill1">Use the java math class to perform mathematical operations s</a>
         </li>
         <li>
             Skill 2.2 <a href="#skill2">Use the length() method to find the number of characters in a String</a>
@@ -29,24 +29,25 @@
         </li>
     </ul>    
 </div>
-<div id="skill1" class="skills">Skill 2.1 Concatenate String type variables</div>
-<div class="skillConceptsHeader">Skill 2.1 Concepts</div>
+<div id="skill1" class="skills">Skill 5.1 Use the java math class to perform mathematical operations </div>
+<div class="skillConceptsHeader">Skill 5.1 Concepts</div>
 <div class="skillConcepts">
-    <p>Concatenation means to combine or attach things together. In Java this is done with the plus
-(+) sign.  
+    <p>The math class is a powerful class of methods for performing mathematical computations. An
+        example of how the math class can be applied is illustrated below. The example below computes
+        the square root of 17. The result is assigned to the double variable p because square roots
+        typically do not result in integer values.   
     </p> 
-
-    <p>Consider the following example. Below, the variables initialized to “Hello” and “good buddy”
-are concatenated and assigned to a new variable c. The program prints Hellogood buddy to the
-screen.
-    </p>
-
     <p class="codeblock">
-    String mm = "Hello";<br>
-    String nx = "good buddy";<br>
-    String c = mm + nx;<br>
-    System.out.println(c); //prints <b>Hellogood buddy</b>... notice no space between o & g
+    double p = Math.square(17); <br>
     </p>
+    <p>In the above example, </p>
+    <ul>
+        <li><i>double p</i> is the variable to which the result of the Math operation is assigned</li>
+        <li><i>Math.</i> is the notation we used to access the library of Math functions in java</li>
+        <li><i>square(17)</i> is the operation we want to perform on the number 17.  In this case, it is the square root.</li>
+    </ul>
+
+    <img src = "../images/mathClassSquareRoot.jpg">
 
     <p>
     A space between the words “Hello” and “good” could have been achieved by concatenating a
