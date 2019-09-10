@@ -213,154 +213,109 @@
         </li>
         </ol>
     <div class="practice">
-                <a href="../ticketOutTheDoor/set2/Set2TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 2.1: Exercise 1</a>
+                <a href="../ticketOutTheDoor/set5/Set5TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 5.1: Exercise 1</a>
         </div>
 
 </div>
 <div id="skill2" class="skills">Skill 5.2 Apply the random() method to create a random integer in a specified range</div>
 <div class="skillConceptsHeader">Skill 5.2 Concepts</div>
 <div class="skillConcepts">
-        <p> In the previous lesson we learned about a <i>String</i> type variable.  While, <i>String</i> type variables are nothing more than a serious
-            of characters, they are also considered objects in Java (as oppossed to primitives).  The String object class in Java provides a library of methods 
-            which are useful for manipulating <i>String</i> type variables. </p>
-            <p>To access these methods, we can use the "dot" notation.  One method in the String library that is useful is the lenth() method.  This
-                method can be used to find the number of characters in a String. Consider the following example,
+        <p>
+            Many applications you will create will require a random number.  For example, what if
+            you needed to write a program to generate a number that represented a face from a 6-sided die, 
+            or a card from a 52 card deck? 
         </p>
-        <img src = "../images/lengthOfString.jpg">
+        <p>The random() method in the Math class generates a random double type number between 0 and 1,  
+            where 0 is inclusive, but 1 is not.  The below code is illustrative,
+        </p>
 
+        <p class = "codeblock">
+            System.out.println(Math.random());//prints a random double from 0 up to 1
+        </p>
+        
+        <p>To create a number in a different range, say 0 up to 10, simply multiply the result of Math.random()
+            by the desired range.  An example is shown below, 
+        </p>
+        <p class = "codeblock">
+                System.out.println(Math.random()*10);//prints a random double from 0 up to 10
+        </p>
+        <p>Recall, however that the random() method returns a double.  The below code illustrates
+            how to generate a random int from 0 up to 10,
+        </p>
+        <p class = "codeblock">
+                int randomNumber = (int)(Math.random()*10);<br>
+                System.out.println(randomNumber);//prints a random int from 0 up to 10
+        </p>
+        <p>
+            The above examples, illustrate how to scale the random() method to a specified range. The example
+            below illustrates how to shift the range of the random number.  
+        </p>
+        <p class = "codeblock">
+                int randomNumber = (int)(Math.random()*10)+100;<br>
+                System.out.println(randomNumber);//prints a random int from 100 up to 110
+        </p>
             <div class="practice">
-                    <a href="../ticketOutTheDoor/set2/Set2TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 2.2: Exercise 1</a>
+                    <a href="../ticketOutTheDoor/set5/Set5TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 5.2: Exercise 1</a>
             </div>      
 </div>
-<div id="skill3" class="skills">Skill 2.3 Retrieve a portion of a String using the substring() method</div>
-<div class="skillConceptsHeader">Skill 2.3 Concepts</div>
+<div id="skill3" class="skills">Skill 5.3 Familiarize yourself with additional methods in the java Math class</div>
+<div class="skillConceptsHeader">Skill 5.3 Concepts</div>
 <div class="skillConcepts">
-        <p>The substring() method can be used to indicate the portion of the String we want to retrieve. In
-            computer science counting begins at 0. In the String “Sparky the dog”, the character assignments
-            are as follows, 
-        </p>
-        <table class="notesTable" style ="width:12%;">
+        
+    <table class="notesTable" style ="width:75%;">
             <tbody><tr>
-            <th style="width:5%">Letter</th>
-            <th style="width:5%">Position</th>
+            <th style="width:20%">Method</th>
+            <th style="width:30%">Signature</th>
+            <th style="width:30%">Description</th>
             </tr>
                     <tr>
-                    <td>S</td>
-                    <td>0</td>
+                    <td>log</td>
+                    <td>double log(double x)</td>
+                    <td>Returns log base e of x</td>
                     </tr>
                     <tr>
-                    <td>p</td>
-                    <td>1</td>
+                    <td>sin</td>
+                    <td>double sin(double a)</td>
+                    <td>Returns the sin of angle a in radians</td>
                     </tr>
                     <tr>
-                    <td>a</td>
-                    <td>2</td>
+                    <td>cos</td>
+                    <td>double cos(double a)</td>
+                    <td>Returns the cos of angle a in radians</td>
                     </tr>
                     <tr>
-                    <td>r</td>
-                    <td>3</td>
+                    <td>tan</td>
+                    <td>double tan(double a)</td>
+                    <td>Returns the tangent of angle a in radians</td>
                     </tr>
                     <tr>
-                    <td>k</td>
-                    <td>4</td>
+                    <td>asin</td>
+                    <td>double asin(double x)</td>
+                    <td>Returns the arcsine of x in the range –PI/2 to PI/2</td>
                     </tr>
                     <tr>
-                    <td>y</td>
-                    <td>5</td>
+                    <td>acos</td>
+                    <td>double acos(double x)</td>
+                    <td>Returns the arctan of x in the range –PI/2 to PI/2</td>
                     </tr>
                     <tr>
-                    <td></td>
-                    <td>6</td>
+                    <td>toDegrees</td>
+                    <td>double toDegrees(double angRad)</td>
+                    <td>Converts radians to degrees</td>
                     </tr>
                     <tr>
-                    <td>t</td>
-                    <td>7</td>
-                    </tr>
-                    <tr>
-                    <td>h</td>
-                    <td>8</td>
-                    </tr>
-                    <tr>
-                    <td>e</td>
-                    <td>9</td>
-                    </tr>
-                    <tr>
-                    <td></td>
-                    <td>10</td>
-                    </tr>
-                    <tr>
-                    <td>d</td>
-                    <td>11</td>
-                    </tr>
-                    <tr>
-                    <td>o</td>
-                    <td>12</td>
-                    </tr>
-                    <tr>
-                    <td>g</td>
-                    <td>13</td>
+                    <td>toRadians</td>
+                    <td>double toRadians(double angDeg)</td>
+                    <td>Converts degrees to radians</td>
                     </tr>
                 </tbody>
             </table>
-
-        <p>If we wanted to print all the characters starting at position 4 (“k”), we could use substring(4). This is illustrated below,</p>
-        <img src = "../images/subString.jpg">
-
-        <p>Another application of the substring() method involves retrieving the characters from the middle
-            of a String. </p>
-
-        <p>If we want to print all the characters starting at k (position 4) and ending at d (position 11), we
-            could use substring(4, 12). This is illustrated below,</p>
-            <img src = "../images/subString2.jpg">
-
-
         <div class="practice">
-            <a href="../ticketOutTheDoor/set2/Set2TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 2.3: Exercise 1</a>
+            <a href="../ticketOutTheDoor/set5/Set5TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 5.3: Exercise 1</a>
         </div>
 
     </div>
-    <div id="skill4" class="skills">2.4 Convert between lower and upper case </div>
-    <div class="skillConceptsHeader">Skill 2.4 Concepts</div>
-    <div class="skillConcepts">
-     <p>The method “toLowerCase()” converts all characters to lower case (small letters) 
-     </p>
-     <img src = "../images/toLowerCase.jpg">
-     <p>The method “toUpperCase()” converts all characters to upper case (capital letters) 
-     </p>
 
-     <img src = "../images/toUpperCase.jpg">
-
-     <div class="practice">
-            <a href="../ticketOutTheDoor/set2/Set2TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 2.4: Exercises 1 & 2</a>
-    </div>
-</div>
-
-        <div id="skill5" class="skills">Skill 2.5 Use escape sequences to print special characters </div>
-        <div class="skillConceptsHeader">Skill 2.5 Concepts</div>
-
-        <div class="skillConcepts">
-                <p>To force a quote character (") to printout, or to be part of a String, use the escape sequence, “\”.
-                        Note escape sequences always start with a “\” character.  
-                </p>
-
-                <p>Consider the following example, </p>
-
-                <img src="../images/escape.jpg">
-                <p>Another escape sequence, \n, will create a new line (also called a line break) as shown below </p>
-
-                <img src="../images/newLineEscape.jpg">
-
-                <p>The escape sequence, \\, will allow us to print a backslash within our String. Otherwise, if we try
-                        to insert just a single \ it will be interpreted as the beginning of an escape sequence, </p>
-
-                <img src="../images/escapeBackslash.jpg">    
-
-                <p>The escape sequence, \t, will allow us to tab over. The following code tabs twice. </p>
-                <img src="../images/escapeTab.jpg">  
-                <div class="practice">
-                       <a href="../ticketOutTheDoor/set2/Set2TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skills 2.5: Exercise 1</a>
-               </div>
-        </div>
 
 </body>
 </html>
