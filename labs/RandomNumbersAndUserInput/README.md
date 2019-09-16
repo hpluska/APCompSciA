@@ -20,14 +20,14 @@ In this lab you will apply methods from the Math class to generate random number
 
 ### Challenge 1
 
-- [ ] Your task is to create a random number generator.  Your simulator will prompt the user for two numbers (one of which is negative).  The numbers will represent the range of each die.  Once the input is received your program should generate two random numbers (int type) within the range specified, where the lowest number is inclusive but the highest number is not.  Consider the example below, 
+- [ ] Your task is to create a random number generator.  Your simulator will prompt the user for two numbers.  The first number should be negative.  The second number should be greater than the absolute value of the first number.  The numbers will represent the range.  Once the input is received your program should generate two random numbers (int type) within the range specified, where the lowest number is inclusive but the highest number is not.  Consider the example below, 
 
 ```
 Type a negative number: -5
 
 Type a postive number that is greater than 5: 50
 
-You rolled a -4 and a 36
+You got a -4 and a 36
 
 ```
 
