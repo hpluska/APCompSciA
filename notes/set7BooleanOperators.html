@@ -8,7 +8,7 @@
 </head>
 <body>
 <div id="top">
-    <h1>Set 6: Input from the Keyboard</h1>
+    <h1>Set 7: Boolean Operators</h1>
 </div>
 <div id="skills">
     <ul id="skillsList">
@@ -19,10 +19,16 @@
             Skill 7.2 <a href="#skill2">Evaluate true and false statements using proper java syntax</a>
         </li>
         <li>
-            Skill 6.3 <a href="#skill3">Retrieve and display user input of type int, double, and String</a>
+            Skill 7.3 <a href="#skill3">Use truth tables to evaluate whether a statement is true or false</a>
         </li>
         <li>
-            Skill 6.4 <a href="#skill4">Beware of the Scanner anomaly</a>
+            Skill 7.4 <a href="#skill4">Apply the "not" operator</a>
+        </li>
+        <li>
+            Skill 7.5 <a href="#skill4">Create boolean variables</a>
+        </li>
+        <li>
+            Skill 7.6 <a href="#skill5">Apply operator precedence</a>
         </li>
     </ul>    
 </div>
@@ -69,7 +75,7 @@
    
     
     <div class="practice">
-                <a href="../ticketOutTheDoor/set6/Set6TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 6.1: Exercise 1</a>
+                <a href="../ticketOutTheDoor/set7/Set7TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 7.1: Exercise 1</a>
         </div>
 
 </div>
@@ -87,110 +93,187 @@
                 <th style="width:60%">Java syntax explanation</th>
                 </tr>
                         <tr>
-                        <td><code>(( x < 10 ) && ( y = = 97 )</code></td>
-                        <td><i>And</i> is replaced with &&, <i>=</i> is replaced with “= =”</td>
+                        <td><code>(( x < 10 ) && ( y == 97 )</code></td>
+                        <td><i>And</i> is replaced with &&, <i>=</i> is replaced with “==”</td>
                         </tr>
                         <tr>
-                        <td><code>(( x < 10 ) && ( y = = -3 )</code></td>
-                        <td>And</i> is replaced with &&, <i>=</i> is replaced with “= =”</td>
+                        <td><code>(( x < 10 ) && ( y == -3 )</code></td>
+                        <td><i>And</i> is replaced with &&, <i>=</i> is replaced with “==”</td>
                         </tr>
                         <tr>
                         <td><code>(( x < 10 ) && ( y != -3 )</code></td>
-                        <td>First part is <u>true</u>, second part is <u>true</u>, entire statement is <u>true</u></td>
+                        <td><i>And</i> is replaced with &&, <i>≠</i> is replaced with “!=”</td>
                         </tr>
                         <tr>
-                        <td><code>(( x < 10 ) OR ( y = 97 ))</code></td>
-                        <td>Either part is <u>true</u>, entire statement is <u>true</u></td>
+                        <td><code>(( x < 10 ) || ( y == 97 ))</code></td>
+                        <td><i>OR</i> is replaced with ||, <i>=</i> is replaced with "=="</td>
                         </tr>
                         <tr>
-                        <td><code>(( x < 10 ) OR ( y = -3 ))</code></td>
-                        <td>Either part is <u>true</u>, entire statement is <u>true</u></td>
+                        <td><code>(( x < 10 ) || ( y == -3 ))</code></td>
+                        <td><i>OR</i> is replaced with ||, <i>=</i> is replaced with "=="</td>
                         </tr>
                 </tbody>
             </table>
 
             <div class="practice">
-                    <a href="../ticketOutTheDoor/set6/Set6TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 6.2: Exercise 1</a>
+                    <a href="../ticketOutTheDoor/set7/Set7TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 7.2: Exercise 1</a>
             </div>      
 </div>
-<div id="skill3" class="skills">Skill 6.3 Retrieve and display user input of type int, double, and String</div>
-<div class="skillConceptsHeader">Skill 6.3 Concepts</div>
+<div id="skill3" class="skills">Skill 7.3 Use truth tables to evaluate whether a statement is true or false</div>
+<div class="skillConceptsHeader">Skill 7.3 Concepts</div>
 <div class="skillConcepts">
         
-<p>The kbReader object we created above will allow us to get user input.  This process is illustrated below. </p>
-<u>User input of type int</u>
-<p>Getting int data types from the user requires the <i>nextInt()</i> method. Consider the following code</p>
-
-<p class = "codeblock">
-    Scanner kbReader = new Scanner(System.in);<br><br>
-    System.out.println("How old are you?"):<br>
-    int age = kbReader.nextInt();<br>
-    System.out.println("You were born in " + (2019 - age));
-
-</p> 
-<p>In the above code, the line <b><code>int age = kbReader.nextInt()</code></b> is doing two things: (1)
-it is prompting the user for an integer input from the keyboard and (2) it is assigning the user input
-to the int type variable <i>age</i></p>
-<p>Also notice the <i>dot</i> notation.  We have used this before.  The <i>dot</i> notation
-allows us to access the Scanner libraries we imported previously.</p>  
-
-<u>User input of type double</u>
-<p>Getting double data types from the user requires the <i>nextDouble()</i> method. Consider the following code</p>
-
-<p class = "codeblock">
-    Scanner kbReader = new Scanner(System.in);<br><br>
-    System.out.println("How tall are you in inches to the nearest 10th decimal place?"):<br>
-    int height = kbReader.nextDouble();<br>
-    System.out.println("You are " + (int)(height/12) + " feet " + (height % 12) + " inches" );
-
+<p>Truth tables are helpful for showing how && and || work for various combinations.  
+    These are illustrated below, 
 </p>
-<p>In the above code, the line <b><code>double height = kbReader.nextDouble()</code></b> is doing two things: (1)
-    it is prompting the user for a double input from the keyboard and (2) it is assigning the user input
-    to the double type variable <i>height</i></p>
 
-    <u>User input of type String</u>
-    <p>The <i>next()</i> method accepts String input up to the first white space.  For example if I type <i>Computer Science</i>
-as input, the <i>next()</i> method only scans the word "Computer".  This is illustrated below.</p>
-    
-    <p class = "codeblock">
-        Scanner kbReader = new Scanner(System.in);<br><br>
-        System.out.println("What is the name of this class?"):<br>
-        String firstWord = kbReader.next();//Suppose the user types <i>Computer Science</i><br>
-        System.out.println(firstWord);//Only the word <i>Computer</i> is printed
-    
-    </p>
+<table class="notesTable" style ="width:50%;">
+    <tbody><tr>
+    <th style="width:8%">a</th>
+    <th style="width:8%">b</th>
+    <th style="width:8%">(a && b)</th>
+    <th style="width:1%; background-color:#000000;"></th>
+    <th style="width:8%">a</th>
+    <th style="width:8%">b</th>
+    <th style="width:8%">(a || b)</th>
+    </tr>
+            <tr>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td style="background-color:#000000;"></td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            </tr>
+            <tr>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+            <td style="background-color:#000000;"></td>
+            <td>false</td>
+            <td>true</td>
+            <td>true</td>
+            </tr>
+            <tr>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td style="background-color:#000000;"></td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            </tr>
+            <tr>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td style="background-color:#000000;"></td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            </tr>
 
-    <p>The <i>nextLine()</i> method can be used to retrieve an entire line, including white space.
-    This is illustrated below.</p>
-    <p class = "codeblock">
-            Scanner kbReader = new Scanner(System.in);<br><br>
-            System.out.println("What is the name of this class?"):<br>
-            String myClass = kbReader.nextLine();//Suppose the user types <i>Computer Science</i><br>
-            System.out.println(myClass);//<i>Computer Science is printed</i>
-        
-        </p>
+    </tbody>
+</table>
+
         <div class="practice">
-            <a href="../ticketOutTheDoor/set6/Set6TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 6.3: Exercises 1 thru 3</a>
+            <a href="../ticketOutTheDoor/set7/Set7TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 7.3: Exercise 1</a>
         </div>
 
     </div>
-    <div id="skill4" class="skills">Skill 6.4 Beware of the Scanner anomaly
+    <div id="skill4" class="skills">Skill 7.4 Apply the "not" operator
         </div>
-        <div class="skillConceptsHeader">Skill 6.4 Concepts</div>
+        <div class="skillConceptsHeader">Skill 7.4 Concepts</div>
         <div class="skillConcepts">
             <p>
-            Using a single Scanner object, the methods nextInt(), nextDouble, next(), and nextLine() may be used in any sequence with the following exception:   
+            The not (or negation) operator is used to indicate opposite.  
+            For example, what is the opposite of true?... False of course. 
+            The “not” operator is indicated with the ! sign.  Below are some examples. 
             </p> 
-            <p>
-            It is not permissible to follow nextInt() or nextDouble() with nextLine().  If it is necessary to do this, then a new Scanner object must be constructed for use with nextLine() and any subsequent inputs. 
+            <p class="codeblock">
+                System.out.println(!true);//false<br>
+                System.out.println(!false);//true<br>
+                System.out.println(!(3&lt;5));//false<br>
+                System.out.println(!(1==0));//true
             </p>
+            
 
             
             <div class="practice">
-                        <a href="../ticketOutTheDoor/set6/Set6TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 6.4: Exercise 1</a>
+                        <a href="../ticketOutTheDoor/set7/Set7TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 7.4: Exercise 1</a>
                 </div>
         
         </div>
+        <div id="skill5" class="skills">Skill 7.5 Create boolean variables</div>
+            <div class="skillConceptsHeader">Skill 7.5 Concepts</div>
+            <div class="skillConcepts">
+                    <p>Boolean variables are denoted with the word “boolean” 
+                        and can be assigned a value that evaluates to true or false.  
+                        Below are three examples, 
+                    </p>
+                    <p class = "codeblock">   
+                    boolean a;//declares a boolean variable a <br>
+                    boolean b = true;//declares and initializes boolean variable b<br>
+                    boolean z = (( p <  j ) && ( x !=  c)); //declares and initializes boolean z
+                    </p>
+    
+                
+                <div class="practice">
+                            <a href="../ticketOutTheDoor/set6/Set6TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 6.4: Exercise 1</a>
+                    </div>
+            
+            </div>
 
+        <div id="skill6" class="skills">Skill 7.6 Apply operator precedence</div>
+        <div class="skillConceptsHeader">Skill 7.6 Concepts</div>
+            <div class="skillConcepts">
+                <p>Just like math operations follow an order of precedence, 
+                    so too do operations like AND (&&) and OR (||).  Consider a problem like,  
+                </p>
+                <p class = "codeblock">   
+                System.out.println( ( true && false ) || ((true && false) || false) );
+                </p>
+                <p>
+                In this example we can tell what parts we should do first because 
+                of the grouping by parenthesis.  However, what if we had a different 
+                problem like the one below?
+                </p>
+                <p class = "codeblock">   
+                System.out.println( false && true || true );
+                </p> 
+                <p>
+                Which part do we do first?  As it turns out we would first 
+                do && and then ||. Because false and true are not the same thing, 
+                false && true evaluates to false.  Next we consider false or true, 
+                which is true.  The order of precedence for the operators we are 
+                studying are as follows, 
+                </p>
+                <p>! &nbsp&nbsp&nbsp    ==  &nbsp&nbsp&nbsp  != &nbsp&nbsp&nbsp    &&   &nbsp&nbsp&nbsp  ||</p>
+                <p>The order of precedence for operators is illustrated in the following examples,</p>
+                <table class="notesTable" style ="width:80%;">
+                        <tbody><tr>
+                        <th style="width:25%">example</th>
+                        <th style="width:25%">explanation</th>
+                        </tr>
+                        <tr>
+                        <td><code>System.out.println(true || false && false);</code></td>
+                        <td>Do the false && false part <b>first</b> to get a result of false<br>
+                        Now do true||false to get a final result of <b>true</b></td>
+                        </tr>
+                        <tr>
+                        <td><code>System.out.println(true && false || false);</code></td>
+                        <td>Do the true && false part <b>first</b> to get a result of false.<br>
+                        Now do false || false to get a final result of <b>false</b></td>        
+                        </tr>
+                        </tbody>
+                    </table>
+                
+                
+                <div class="practice">
+                            <a href="../ticketOutTheDoor/set6/Set6TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 6.4: Exercise 1</a>
+                    </div>
+            
+            </div>
 </body>
 </html>
