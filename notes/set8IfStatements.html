@@ -16,19 +16,22 @@
             Skill 8.1 <a href="#skill1">Write an <i>if</i> statement</a>
         </li>
         <li>
-            Skill 8.2 <a href="#skill2">Write and <i>if-else</i> statement</a>
+            Skill 8.2 <a href="#skill2">Write an <i>if-else</i> statement</a>
         </li>
         <li>
-            Skill 7.3 <a href="#skill3">Use truth tables to evaluate whether a statement is true or false</a>
+            Skill 8.3 <a href="#skill3">Evaluate numeric expressions with <i>if-else</i> statements</a>
         </li>
         <li>
-            Skill 7.4 <a href="#skill4">Apply the "not" operator</a>
+            Skill 8.4 <a href="#skill4">Compare string expressions with <i>if-else</i> statements</a>
         </li>
         <li>
-            Skill 7.5 <a href="#skill4">Create boolean variables</a>
+            Skill 8.5 <a href="#skill5">Combine multiple <i>if</i> statements with <i>if-else</i></a>
         </li>
         <li>
-            Skill 7.6 <a href="#skill5">Apply operator precedence</a>
+            Skill 8.6 <a href="#skill6">Write nested <i>if-else</i> statements</a>
+        </li>
+        <li>
+            Skill 8.7 <a href="#skill7">Write <i>if-else</i> statements without curly brackets</a>
         </li>
     </ul>    
 </div>
@@ -37,14 +40,14 @@
 <div class="skillConceptsHeader">Skill 8.1 Concepts</div>
 <div class="skillConcepts">
     <p>Control structures allow us to control the flow of our programs.  The <i>if</i> statement is the simplist of these.
-    As implied by the name an <i>if</i> statement will allow something to occur <i>if</i> a boolean condition is met. </p>
+    As implied by the name, an <i>if</i> statement will allow something to occur <i>if</i> a boolean condition is met. </p>
     <p>An <i>if</i> statement takes the following form.  
     </p> 
     <p class = "codeblock">
         if(boolean expression){<br><br>
 
             //the code between these curly brackets are executed<br>
-            //<i>if</i> the boolean expression in parenthesis is true<br>
+            //<i>if</i> the boolean expression in parenthesis is true<br><br>
         }
     </p>
     
@@ -53,125 +56,147 @@
         </div>
 
 </div>
-<div id="skill2" class="skills">Skill 7.2 Evaluate true and false statements using proper java syntax</div>
-<div class="skillConceptsHeader">Skill 7.2 Concepts</div>
+<div id="skill2" class="skills"> Skill 8.2 Write an <i>if-else</i> statement</div>
+<div class="skillConceptsHeader">Skill 8.2 Concepts</div>
 <div class="skillConcepts">
         <p>
-                The above examples illustrate how true and false statements are evaluated, 
-                however the syntax is not correct.  In order for java to correctly read the syntax 
-                the “AND” and “OR” statements must be replaced with the correct symbols as shown below, 
+        The <i>if-else</i> statement allows you to handle conditions that evaluate to true as well as false.  Just as we saw in the example above, the <i>if</i> portion of
+        this statement will occur <i>if</i> a boolean condition is met, otherwise the <i>else</i> portion of the statement will be executed.  Consider
+        the example below,
         </p>
-        <table class="notesTable" style ="width:75%;">
-                <tbody><tr>
-                <th style="width:40%">Statement</th>
-                <th style="width:60%">Java syntax explanation</th>
-                </tr>
-                        <tr>
-                        <td><code>(( x < 10 ) && ( y == 97 )</code></td>
-                        <td><i>And</i> is replaced with &&, <i>=</i> is replaced with “==”</td>
-                        </tr>
-                        <tr>
-                        <td><code>(( x < 10 ) && ( y == -3 )</code></td>
-                        <td><i>And</i> is replaced with &&, <i>=</i> is replaced with “==”</td>
-                        </tr>
-                        <tr>
-                        <td><code>(( x < 10 ) && ( y != -3 )</code></td>
-                        <td><i>And</i> is replaced with &&, <i>≠</i> is replaced with “!=”</td>
-                        </tr>
-                        <tr>
-                        <td><code>(( x < 10 ) || ( y == 97 ))</code></td>
-                        <td><i>OR</i> is replaced with ||, <i>=</i> is replaced with "=="</td>
-                        </tr>
-                        <tr>
-                        <td><code>(( x < 10 ) || ( y == -3 ))</code></td>
-                        <td><i>OR</i> is replaced with ||, <i>=</i> is replaced with "=="</td>
-                        </tr>
-                </tbody>
-            </table>
+        <p class = "codeblock">
+            if(boolean expression){<br><br>
+    
+                //the code between these curly brackets are executed<br>
+                //<i>if</i> the boolean expression in parenthesis is true<br><br>
+            }else{<br><br>
+                //the code between these curly brackets are executed<br>
+                //<i>if</i> the boolean expression in parenthesis is false<br><br>
+            }
+        </p>
 
             <div class="practice">
                     <a href="../ticketOutTheDoor/set7/Set7TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 7.2: Exercise 1</a>
             </div>      
 </div>
-<div id="skill3" class="skills">Skill 7.3 Use truth tables to evaluate whether a statement is true or false</div>
-<div class="skillConceptsHeader">Skill 7.3 Concepts</div>
+<div id="skill3" class="skills">Skill 8.3 Evaluate numeric expressions with <i>if-else</i> statements</div>
+<div class="skillConceptsHeader">Skill 8.3 Concepts</div>
 <div class="skillConcepts">
+         <p>
+        In a previous lesson we learned that numerical expressions can be evaluated using either of the following expressions.  
+        </p>
+        <p>   ==  &nbsp&nbsp&nbsp  != &nbsp&nbsp&nbsp</p>
+        <p>Consider the following examples, </p>
+        <p class = "codeblock">
+            int i1 = 2;<br>
+            int i2 = 3;<br><br>
+            if(i1 == i2){<br><br>
+    
+                //the code between these curly brackets <b>will not</b> be executed<br>
+                //because i1 is not the same as i2<br><br>
+                
+            }else{<br><br>
+                //the code between these curly brackets <b>will</b> be executed<br>
+                //because i1 is not the same as i2<br><br>
+            }
+        </p>
+
+        <p class = "codeblock">
+                int i1 = 2;<br>
+                int i2 = 3;<br><br>
+                if(i1 != i2){<br><br>
         
-<p>Truth tables are helpful for showing how && and || work for various combinations.  
-    These are illustrated below, 
-</p>
+                    //the code between these curly brackets <b>will</b> be executed<br>
+                    //because i1 is not the same as i2<br><br>
+                    
+                }else{<br><br>
+                    //the code between these curly brackets <b>will not</b> be executed<br>
+                    //because i1 is not the same as i2<br><br>
+                }
+        </p>
 
-<table class="notesTable" style ="width:50%;">
-    <tbody><tr>
-    <th style="width:8%">a</th>
-    <th style="width:8%">b</th>
-    <th style="width:8%">(a && b)</th>
-    <th style="width:1%; background-color:#000000;"></th>
-    <th style="width:8%">a</th>
-    <th style="width:8%">b</th>
-    <th style="width:8%">(a || b)</th>
-    </tr>
-            <tr>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            <td style="background-color:#000000;"></td>
-            <td>false</td>
-            <td>false</td>
-            <td>false</td>
-            </tr>
-            <tr>
-            <td>false</td>
-            <td>true</td>
-            <td>false</td>
-            <td style="background-color:#000000;"></td>
-            <td>false</td>
-            <td>true</td>
-            <td>true</td>
-            </tr>
-            <tr>
-            <td>true</td>
-            <td>false</td>
-            <td>false</td>
-            <td style="background-color:#000000;"></td>
-            <td>true</td>
-            <td>false</td>
-            <td>true</td>
-            </tr>
-            <tr>
-            <td>true</td>
-            <td>true</td>
-            <td>true</td>
-            <td style="background-color:#000000;"></td>
-            <td>true</td>
-            <td>true</td>
-            <td>true</td>
-            </tr>
+        <p>Numerical expressions can also be combined using either the OR and AND operators,</p>
+        <p>   ||  &nbsp&nbsp&nbsp  && &nbsp&nbsp&nbsp</p>
+        <p>For example, </p>
 
-    </tbody>
-</table>
+        <p class = "codeblock">
+                int i1 = 2;<br>
+                int i2 = 3;<br><br>
+                if(( i1 < 10 ) && ( i2 == 5)){<br><br>
+        
+                    //the code between these curly brackets <b>will not</b> be executed<br>
+                    //because the condition evaluates to false<br><br>
+                    
+                }else{<br><br>
+                    //the code between these curly brackets <b>will</b> be executed<br>
+                    //because the condition evaluates to false<br><br>
+                }
+        </p>
+
+        <p class = "codeblock">
+                int i1 = 2;<br>
+                int i2 = 3;<br><br>
+                if(( i1 < 10 ) || ( i2 == 5)){<br><br>
+        
+                    //the code between these curly brackets <b>will</b> be executed<br>
+                    //because condition evaluates to true<br><br>
+                    
+                }else{<br><br>
+                    //the code between these curly brackets <b>will not</b> be executed<br>
+                    //because the condition evaluates to true<br><br>
+                }
+        </p>
 
         <div class="practice">
             <a href="../ticketOutTheDoor/set7/Set7TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 7.3: Exercise 1</a>
         </div>
 
     </div>
-    <div id="skill4" class="skills">Skill 7.4 Apply the "not" operator
+    <div id="skill4" class="skills">Skill 8.4 Compare string expressions with <i>if-else</i> statements
         </div>
-        <div class="skillConceptsHeader">Skill 7.4 Concepts</div>
+        <div class="skillConceptsHeader">Skill 8.4 Concepts</div>
         <div class="skillConcepts">
             <p>
-            The not (or negation) operator is used to indicate opposite.  
-            For example, what is the opposite of true?... False of course. 
-            The “not” operator is indicated with the ! sign.  Below are some examples. 
+            In the previous examples the <i>==</i> notation was used to compare values.  However, this notation is only valid for comparing primitive type variables. 
+            Recall that String variables are <b>not</b> primitives - they are <i>object</i> variables.  We will discuss the difference between primitive and object
+            type variables later, but for now just recognize that String variables (or any object type variable) <b>cannot</b> be compared using the <i>==</i> operator. 
+            String variables can only be compared by using the <i>equals</i> method illustrated below, 
+
             </p> 
             <p class="codeblock">
-                System.out.println(!true);//false<br>
-                System.out.println(!false);//true<br>
-                System.out.println(!(3&lt;5));//false<br>
-                System.out.println(!(1==0));//true
+                String c = "cat";<br>
+                String d = "dog";<br>
+                boolean b = c.equals(d);//compares d to c and assigns the result to b<br>
+                System.out.println(b);//prints false<br><br>
+                b = !c.equals(d);<br>//reverses the comparison with the not operator
+                System.out.println(b);//prints true
+
             </p>
-            
+
+            <p>How the equals method can be combined with <i>if-else</i> statements is illustrated below,</p>
+            <p class = "codeblock">
+            String s1 = "a";<br>
+            String s2 = "b";<br>
+            String s3 = "b";<br><br>
+            if(( s1.equals(s2)) && ( s2.equals(s3))){<br><br>
+    
+                //the code between these curly brackets <b>will not</b> be executed<br>
+                //because the condition evaluates to false<br><br>
+                
+            }else{<br><br>
+                //the code between these curly brackets <b>will</b> be executed<br>
+                //because the condition evaluates to false<br><br>
+            }<br><br>
+            if(( s1.equals(s2)) || ( s2.equals(s3))){<br><br>
+    
+                //the code between these curly brackets <b>will</b> be executed<br>
+                //because the condition evaluates to true<br><br>
+                
+            }else{<br><br>
+                //the code between these curly brackets <b>will not</b> be executed<br>
+                //because the condition evaluates to true<br><br>
+            }
+            </p>
 
             
             <div class="practice">
@@ -179,17 +204,26 @@
                 </div>
         
         </div>
-        <div id="skill5" class="skills">Skill 7.5 Create boolean variables</div>
-            <div class="skillConceptsHeader">Skill 7.5 Concepts</div>
+        <div id="skill5" class="skills">Skill 8.5 Combine multiple <i>if</i> statements with <i>if-else</i></div>
+            <div class="skillConceptsHeader">Skill 8.5 Concepts</div>
             <div class="skillConcepts">
-                    <p>Boolean variables are denoted with the word “boolean” 
-                        and can be assigned a value that evaluates to true or false.  
-                        Below are three examples, 
+                    <p>Multiple <i>if</i> statements can be combined with <i>if-else</i>.  This is illustrated below, 
                     </p>
                     <p class = "codeblock">   
-                    boolean a;//declares a boolean variable a <br>
-                    boolean b = true;//declares and initializes boolean variable b<br>
-                    boolean z = (( p <  j ) && ( x !=  c)); //declares and initializes boolean z
+                    Scanner s = new Scanner(System.in);<br>
+                    System.out.println("What is your grade?");<br>
+                    int theGrade = s.nextInt();<br><br>
+                    if(theGrade>=90){<br><br>
+                        <span style="padding-left:5em;">System.out.println("You got an A!");</span><br><br>
+                    }else if(theGrade>=80){<br><br>
+                        <span style="padding-left:5em;">System.out.println("You got a B!");</span><br><br>
+                    }else if(theGrade>=70){<br><br>
+                        <span style="padding-left:5em;">System.out.println("You got a C!");</span><br><br>
+                    }else if(theGrade>=60){<br><br>
+                        <span style="padding-left:5em;">System.out.println("You got a D!");</span><br><br>
+                    }else{<br><br>
+                        <span style="padding-left:5em;">System.out.println("You failed!");</span><br><br>
+                    }
                     </p>
     
                 
@@ -199,55 +233,95 @@
             
             </div>
 
-        <div id="skill6" class="skills">Skill 7.6 Apply operator precedence</div>
-        <div class="skillConceptsHeader">Skill 7.6 Concepts</div>
+        <div id="skill6" class="skills">Skill 8.6 Write nested <i>if-else</i> statements</div>
+        <div class="skillConceptsHeader">Skill 8.6 Concepts</div>
             <div class="skillConcepts">
-                <p>Just like math operations follow an order of precedence, 
-                    so too do operations like AND (&&) and OR (||).  Consider a problem like,  
+                <p>A nested <i>if</i> or <i>if-else</i> statement refers to an <i>if</i> or <i>if-else</i> statement inside of an <i>if-else</i> statement.
+                    Consider the following example, 
                 </p>
                 <p class = "codeblock">   
-                System.out.println( ( true && false ) || ((true && false) || false) );
-                </p>
-                <p>
-                In this example we can tell what parts we should do first because 
-                of the grouping by parenthesis.  However, what if we had a different 
-                problem like the one below?
-                </p>
-                <p class = "codeblock">   
-                System.out.println( false && true || true );
-                </p> 
-                <p>
-                Which part do we do first?  As it turns out we would first 
-                do && and then ||. Because false and true are not the same thing, 
-                false && true evaluates to false.  Next we consider false or true, 
-                which is true.  The order of precedence for the operators we are 
-                studying are as follows, 
-                </p>
-                <p>! &nbsp&nbsp&nbsp    ==  &nbsp&nbsp&nbsp  != &nbsp&nbsp&nbsp    &&   &nbsp&nbsp&nbsp  ||</p>
-                <p>The order of precedence for operators is illustrated in the following examples,</p>
-                <table class="notesTable" style ="width:80%;">
-                        <tbody><tr>
-                        <th style="width:25%">example</th>
-                        <th style="width:25%">explanation</th>
-                        </tr>
-                        <tr>
-                        <td><code>System.out.println(true || false && false);</code></td>
-                        <td>Do the false && false part <b>first</b> to get a result of false<br>
-                        Now do true||false to get a final result of <b>true</b></td>
-                        </tr>
-                        <tr>
-                        <td><code>System.out.println(true && false || false);</code></td>
-                        <td>Do the true && false part <b>first</b> to get a result of false.<br>
-                        Now do false || false to get a final result of <b>false</b></td>        
-                        </tr>
-                        </tbody>
-                    </table>
-                
+                        Scanner s = new Scanner(System.in);<br>
+                        System.out.println("What is your grade?");<br>
+                        int theGrade = s.nextInt();<br><br>
+                        if(theGrade>=90){<br><br>
+                            <span style="padding-left:5em;">
+                            if(theGrade&lt94){<br><br>
+                                <span style="padding-left:10em;">
+                                    System.out.println("you got an A-");<br><br>
+                                </span>
+                            <span style="padding-left:5em;">  
+                            }else{<br><br>
+                            </span>
+                                <span style="padding-left:10em;">
+                                    System.out.println("you got an A");<br><br>
+                                </span>
+                                <span style="padding-left:5em;">
+                                }<br><br>
+                                </span>
+                            }else if(theGrade>=80){<br><br>
+                            <span style="padding-left:5em;">
+                            if(theGrade>86){<br><br>
+                                <span style="padding-left:10em;">
+                                System.out.println("you got a B+");<br><br>
+                                </span>
+                            <span style="padding-left:5em;">  
+                            }else if(theGrade&lt84){<br><br>
+                            </span>
+                                <span style="padding-left:10em;">
+                                System.out.println("you got a B-");<br><br>
+                                </span>
+                            <span style="padding-left:5em;">
+                            }else{<br><br>
+                            </span>
+                                    <span style="padding-left:10em;">
+                                    System.out.println("you got a B");<br><br>
+                                    </span>
+                            <span style="padding-left:5em;">
+                            }<br><br>
+                            </span>
+                            }else{<br><br>
+                            <span style="padding-left:5em;">
+                                System.out.println("you got another grade");<br><br>
+                            </span>
+                        }
+                        </p>            
                 
                 <div class="practice">
                             <a href="../ticketOutTheDoor/set6/Set6TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 6.4: Exercise 1</a>
                     </div>
             
             </div>
+            <div id="skill7" class="skills">Skill 8.7 Write <i>if-else</i> statements without curly brackets</div>
+            <div class="skillConceptsHeader">Skill 8.7 Concepts</div>
+                <div class="skillConcepts">
+                    <p>Curly brackets are not needed if only one line of code is in the <i>if</i> or <i>else</i> parts.  
+                        Likewise, the absence of brackets implies only one line of code in the <i>if-else</i> parts. </p>
+                        <p>This is illustrated below.</p>
+                        <p class="codeblock">
+                            int groovyDude=37;<br>
+                            if(groovyDude == 37)<br>
+                            <span style="padding-left:5em;">groovyDude++;//this line is executed</span><br>
+                            System.out.println(groovyDude);//38 is printed
+                        </p>
+                        <p class="codeblock">
+                                int groovyDude=105;<br>
+                                if(groovyDude == 37)<br>
+                                <span style="padding-left:5em;">groovyDude++;//this line is <b>not</b> executed</span><br>
+                                System.out.println(groovyDude);//105 is printed
+                        </p>
+                        <p class="codeblock">
+                                int groovyDude=105;<br>
+                                if(groovyDude == 37)<br>
+                                <span style="padding-left:5em;">groovyDude++;//this line is <b>not</b> executed</span><br>
+                                else<br>
+                                <span style="padding-left:5em;">groovyDude--;//this line is executed</span><br>
+                                System.out.println(groovyDude);//104 is printed
+                        </p>
+                    
+                    <div class="practice">
+                                <a href="../ticketOutTheDoor/set6/Set6TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 6.4: Exercise 1</a>
+                        </div>
+                
+                </div>
 </body>
 </html>
