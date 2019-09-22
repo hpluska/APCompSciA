@@ -53,13 +53,12 @@ public class BouncyBall extends JPanel
 		// Calculate new x anchor point value
 		x += xDelta;
 		// TODO 1: needs more to stay in-bounds
-		if(x<0){xDelta*=-1;}else if(x > width){xDelta*=-1;};
 		
 
 		// Calculate new y anchor point value
 		y += yDelta;
 		// TODO 2: needs more to stay in-bounds
-		if(y<0){yDelta*=-1;}else if(y > height){yDelta*=-1;}
+
 	
 
 		// TODO 3: use rDelta, MIN_RADIUS, and MAX_RADIUS to increase/decrease oval radius.
@@ -108,13 +107,6 @@ public class BouncyBall extends JPanel
                 //int G = generate a random number between 0 and 256
                 //int B= generate a random number between 0 and 256
                 //color = new Color(R, G, B);
-
-		
-
-
-
-				
-			
 
 
 		//Start the animation - DO NOT REMOVE
