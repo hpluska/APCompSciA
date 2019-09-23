@@ -36,7 +36,7 @@ You will apply conditional (if) statements to recognize boundary conditions, and
 
 ### Challenge 3
 
-- [ ]  Locate the comment "**TODO 3**: use rDelta, MIN_RADIUS, and MAX_RADIUS to increase/decrease oval radius."
+- [ ]  Locate the comment "**TODO 3: use rDelta, MIN_RADIUS, and MAX_RADIUS to increase/decrease oval radius.**"
         
 	* Have the radius of the ball transition between a range of sizes with each step 
 
