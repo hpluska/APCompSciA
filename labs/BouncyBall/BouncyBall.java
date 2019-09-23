@@ -61,7 +61,7 @@ public class BouncyBall extends JPanel
 
 	
 
-		// TODO 3: use rDelta, MIN_RADIUS, and MAX_RADIUS to increase/decrease oval radius.
+		// TODO 3: use radius, rDelta, MIN_RADIUS, and MAX_RADIUS to increase/decrease oval radius.
 				
 
 
