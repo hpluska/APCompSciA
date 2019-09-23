@@ -16,7 +16,7 @@ You will apply conditional (if) statements to recognize boundary conditions, and
 	* Inside your labs directory, create another directory called "BouncyBall"
 	* Download the following file into your BouncyBall directory: [BouncyBall.java](BouncyBall.java)
 	* Open the file in your text editor and take a look around.  You probably do not understand most of this, but that is ok, you will eventually!
-	* Complete the challenges below to create a bouncy ball like the one shown in this video [BouncyBall_video.swf](BouncyBall_video.swf)
+	* Complete the challenges below to create a bouncy ball like the one shown in this video [BouncyBall.html](BouncyBall.html)
 	* Once you have completed your challenges push your AP Computer Science A Repo to GitHub
 	* Show your completed challenges to Ms. Pluska to receive credit for the individual portion of this lab
 
@@ -69,7 +69,7 @@ color = new Color(R, G, B);
 
 - [ ] Make your bouncy ball awesome! 
 
-	* Have the color of your ball change by a small amount with each step. You will need to keep track of the current value of each RGB color channel, delta values for each color channel, and checking to make sure each color channel stays within the 0-to-255 range.[BouncyBallFancy_video.swf](BouncyBallFancy_video.swf)
+	* Have the color of your ball change by a small amount with each step. You will need to keep track of the current value of each RGB color channel, delta values for each color channel, and checking to make sure each color channel stays within the 0-to-255 range.[BouncyBall.html](BouncyBall.html)
 	* Try disabling the call to clear the panel in paintComponent() so the ball becomes a continuous paintbrush on the panel.
 
 
