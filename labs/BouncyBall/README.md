@@ -16,7 +16,7 @@ You will apply conditional (if) statements to recognize boundary conditions, and
 	* Inside your labs directory, create another directory called "BouncyBall"
 	* Download the following file into your BouncyBall directory: [BouncyBall.java](BouncyBall.java)
 	* Open the file in your text editor and take a look around.  You probably do not understand most of this, but that is ok, you will eventually!
-	* Complete the challenges below to create a bouncy ball like the one shown in this video [BouncyBall.html](BouncyBall.html)
+	* Complete the challenges below to create a bouncy ball
 	* Once you have completed your challenges push your AP Computer Science A Repo to GitHub
 	* Show your completed challenges to Ms. Pluska to receive credit for the individual portion of this lab
 
