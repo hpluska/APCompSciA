@@ -15,7 +15,7 @@ shapes.
 
 Create an animated dance party. Your dance party should include at least one avatar (or object) which should move in various ways (back and forth, across the screen, up and down, wave a hand, etc). The dance party should include a variety of shapes and colors (these can move too). Your dance party should also include a message (Yo Yo, Woo Hoo, Rar, etc.).
 
-An example of a the dance party is provided here ([DanceParty.mp4](DanceParty.mp4))
+An example of a the dance party is provided here ([https://github.com/hpluska/APCompSciA/tree/master/projects/DanceParty/DanceParty/DanceParty.mp4](https://github.com/hpluska/APCompSciA/tree/master/projects/DanceParty/DanceParty/DanceParty.mp4))
 
 ## Your Tasks
 
