@@ -29,9 +29,9 @@ An example of a the dance party is provided here ([https://github.com/hpluska/AP
 - [ ] Document your code thoroughly as you go with comments
 - [ ] Complete the required README using specified guidelines
 
-# Grade your project before submitting
+## Grade and Submit your Project
 
-- [ ] Before you submit your project, grade your project against the criteria below.  
+- [ ] Before you submit your project, grade your project against the criteria below. 
 	[DancePartyRubric.md](DancePartyRubric.md)
 - [ ] Submit your project using the following guidelines (TBA)
 	
