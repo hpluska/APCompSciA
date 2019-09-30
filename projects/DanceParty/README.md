@@ -19,6 +19,8 @@ An example of a the dance party is provided here ([https://github.com/hpluska/AP
 
 ## Your Tasks
 
+**Here is a tutorial to help you get started: [https://hpluska.github.io/APCompSciA/tutorials/Netbeans/GettingStarted.pdf](https://hpluska.github.io/APCompSciA/tutorials/Netbeans/GettingStarted.pdf)**
+
 - [ ] Begin a project in NetBeans called DanceParty
 - [ ] Locate the required DanceParty class and add it to your DanceParty project folder
 	- [https://github.com/hpluska/APCompSciA/tree/master/projects/DanceParty/DanceParty](https://github.com/hpluska/APCompSciA/tree/master/projects/DanceParty/DanceParty)
