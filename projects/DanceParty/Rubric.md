@@ -7,9 +7,9 @@ Comments:
 =================================================
 
 ## Quality
-- Submission:     5/5
-- Documentation: 10/10
-- Code Style:     5/5
+- Submission:     /5
+- Documentation:  /10
+- Code Style:     /5
 
 ## Features
 
