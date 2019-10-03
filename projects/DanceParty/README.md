@@ -34,7 +34,7 @@ An example of a the dance party is provided here ([https://github.com/hpluska/AP
 ## Grade and Submit your Project
 
 - [ ] Before you submit your project, grade your project against the criteria below. 
-	[Rubric.md](Rubric.md)
+	[Rubric](Rubric)
 - [ ] Submit your project using the following guidelines (TBA)
 	
 
