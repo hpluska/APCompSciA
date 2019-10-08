@@ -16,13 +16,10 @@
             Skill 9.1 <a href="#skill1">Apply <i>switch</i> statements with integers to evaluate different conditions</a>
         </li>
         <li>
-            Skill 9.2 <a href="#skill2">Apply <i>switch</i> statements with chars to evaluate different conditions</a>
+            Skill 9.2 <a href="#skill2">Apply <i>switch</i> statements with Strings to evaluate different conditions</a>
         </li>
         <li>
-            Skill 9.3 <a href="#skill3">Apply <i>switch</i> statements with Strings to evaluate different conditions</a>
-        </li>
-        <li>
-            Skill 9.4 <a href="#skill4">Interpret the usage of the <i>break</i> statement</a>
+            Skill 9.3 <a href="#skill4">Interpret the usage of the <i>break</i> statement</a>
         </li>
     </ul>    
 </div>
@@ -96,272 +93,97 @@
 
     
     <div class="practice">
-                <a href="../ticketOutTheDoor/set8/Set8TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 8.1: Exercise 1</a>
+                <a href="../ticketOutTheDoor/set9/Set9TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 9.1: Exercise 1</a>
         </div>
 
 </div>
-<div id="skill2" class="skills"> Skill 8.2 Write an <i>if-else</i> statement</div>
-<div class="skillConceptsHeader">Skill 8.2 Concepts</div>
+<div id="skill2" class="skills"> Apply <i>switch</i> statements with Strings to evaluate different conditions</div>
+<div class="skillConceptsHeader">Skill 9.2 Concepts</div>
 <div class="skillConcepts">
         <p>
-        The <i>if-else</i> statement allows you to handle conditions that evaluate to true as well as false.  Just as we saw in the example above, the <i>if</i> portion of
-        this statement will occur <i>if</i> a boolean condition is met, otherwise the <i>else</i> portion of the statement will be executed.  Consider
-        the example below,
+            It is also possible to compare Strings when using <i>switch</i> statements.  This is demonstrated below, </p>
         </p>
         <p class = "codeblock">
-            if(boolean expression){<br><br>
+            System.out.println("Make your arithmetic selection from the choices below:\n");<br><br>
+            System.out.println(" A. Addition ");<br>
+            System.out.println(" S. Substraction ");<br>
+            System.out.println(" M. Multiplication ");<br>
+            System.out.println(" D. Division ");<br><br>
+            System.out.println(" Your choice? ");<br><br>
     
-                //the code between these curly brackets are executed<br>
-                //<i>if</i> the boolean expression in parenthesis is true<br><br>
-            }else{<br><br>
-                //the code between these curly brackets are executed<br>
-                //<i>if</i> the boolean expression in parenthesis is false<br><br>
-            }
+            Scanner kbReader = new Scanner(System.in);<br><br>
+            String choice = kbReader.nextLine();<br><br>
+
+            System.out.println("\nEnter first operand");<br>
+            double op1 = kbReader.nextDouble();<br>
+            System.out.println("\nEnter second operand");<br>
+            double op2 = kbReader.nextDouble();<br><br>
+            System.out.println("");<br><br>
+            switch(choice) {<br><br>
+                <span style = "padding-left:5em;">case "A":</span><br>
+                <span style = "padding-left:5em;">System.out.println(op1 + " plus " + op2 + "=" + (op1+op2));</span><br>
+                <span style = "padding-left:5em;">break;</span><br><br>
+                
+                <span style = "padding-left:5em;">case "S":</span><br>
+                <span style = "padding-left:5em;">System.out.println(op1 + " minus " + op2 + "=" + (op1-op2));</span><br>
+                <span style = "padding-left:5em;">break; </span><br><br>
+                
+                <span style = "padding-left:5em;">case "M":</span><br>
+                <span style = "padding-left:5em;">System.out.println(op1 + " times " + op2 + "=" + (op1*op2));</span><br>
+                <span style = "padding-left:5em;">break; </span><br><br>
+    
+                <span style = "padding-left:5em;">case "D":</span><br>
+                <span style = "padding-left:5em;">System.out.println(op1 + " divided by " + op2 + "=" + (op1/op2));</span><br>
+                <span style = "padding-left:5em;">break; </span><br><br>
+                
+                <span style = "padding-left:5em;">default:</span><br>
+                <span style = "padding-left:5em;">System.out.println("Hey dummy, enter only A, S, M, or D!");</span><br>
+             }
         </p>
 
             <div class="practice">
-                    <a href="../ticketOutTheDoor/set8/Set8TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 8.2: Exercise 1</a>
+                    <a href="../ticketOutTheDoor/set9/Set9TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 9.2: Exercise 1</a>
             </div>      
 </div>
-<div id="skill3" class="skills">Skill 8.3 Evaluate numeric expressions with <i>if-else</i> statements</div>
-<div class="skillConceptsHeader">Skill 8.3 Concepts</div>
+<div id="skill3" class="skills">Skill 9.3 Interpret the usage of the <i>break</i> statement</div>
+<div class="skillConceptsHeader">Skill 9.3 Concepts</div>
 <div class="skillConcepts">
          <p>
-        In a previous lesson we learned that numerical expressions can be evaluated using either of the following expressions.  
+        The <i>break</i> command is used to jump out of the <i>switch</i> statement if a conditionis not met. 
+        If the <i>break</i> command is omitted, each statement will continue to be evaluated as long as the first
+        one is true.  In the following example, if <i>j</i> is equal to 1, 2, or 3, <i>message</i> will be assigned to "low".
+        If <i>j</i> is equal to 4, 5, or 6, <i>message</i> will be assigned to "high".  If <i>j</i> is equal to 7, <i>message</i> will be 
+        assigned to "lucky".
         </p>
-        <p>   ==  &nbsp&nbsp&nbsp  != &nbsp&nbsp&nbsp</p>
-        <p>Consider the following examples, </p>
+
         <p class = "codeblock">
-            int i1 = 2;<br>
-            int i2 = 3;<br><br>
-            if(i1 == i2){<br><br>
-    
-                //the code between these curly brackets <b>will not</b> be executed<br>
-                //because i1 is not the same as i2<br><br>
+            String message;<br>
+            int j = 2;<br><br>
+            switch(j) {<br><br>
+                <span style = "padding-left:5em;">case 1:</span><br>
+                <span style = "padding-left:5em;">case 2:</span><br>
+                <span style = "padding-left:5em;">case 3:</span><br>
+                <span style = "padding-left:10em;">message = "low";</span><br>
+                <span style = "padding-left:10em;">break;</span><br><br>
                 
-            }else{<br><br>
-                //the code between these curly brackets <b>will</b> be executed<br>
-                //because i1 is not the same as i2<br><br>
-            }
+                <span style = "padding-left:5em;">case 4:</span><br>
+                <span style = "padding-left:5em;">case 5:</span><br>
+                <span style = "padding-left:5em;">case 6:</span><br>
+                <span style = "padding-left:10em;">message = "high";</span><br>
+                <span style = "padding-left:10em;">break;</span><br><br>
+                
+
+                <span style = "padding-left:5em;">case 7:</span><br>
+                <span style = "padding-left:10em;">message = "lucky";</span><br>
+
+             }<br><br>
+             System.out.println(message);//<b>low</b> is printed
         </p>
-
-        <p class = "codeblock">
-                int i1 = 2;<br>
-                int i2 = 3;<br><br>
-                if(i1 != i2){<br><br>
-        
-                    //the code between these curly brackets <b>will</b> be executed<br>
-                    //because i1 is not the same as i2<br><br>
-                    
-                }else{<br><br>
-                    //the code between these curly brackets <b>will not</b> be executed<br>
-                    //because i1 is not the same as i2<br><br>
-                }
-        </p>
-
-        <p>Numerical expressions can also be combined using either the OR and AND operators,</p>
-        <p>   ||  &nbsp&nbsp&nbsp  && &nbsp&nbsp&nbsp</p>
-        <p>For example, </p>
-
-        <p class = "codeblock">
-                int i1 = 2;<br>
-                int i2 = 3;<br><br>
-                if(( i1 < 10 ) && ( i2 == 5)){<br><br>
-        
-                    //the code between these curly brackets <b>will not</b> be executed<br>
-                    //because the condition evaluates to false<br><br>
-                    
-                }else{<br><br>
-                    //the code between these curly brackets <b>will</b> be executed<br>
-                    //because the condition evaluates to false<br><br>
-                }
-        </p>
-
-        <p class = "codeblock">
-                int i1 = 2;<br>
-                int i2 = 3;<br><br>
-                if(( i1 < 10 ) || ( i2 == 5)){<br><br>
-        
-                    //the code between these curly brackets <b>will</b> be executed<br>
-                    //because condition evaluates to true<br><br>
-                    
-                }else{<br><br>
-                    //the code between these curly brackets <b>will not</b> be executed<br>
-                    //because the condition evaluates to true<br><br>
-                }
-        </p>
-
         <div class="practice">
-            <a href="../ticketOutTheDoor/set8/Set8TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 8.3: Exercise 1</a>
+            <a href="../ticketOutTheDoor/set9/Set9TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 9.3: Exercises 1 thru 3</a>
         </div>
 
     </div>
-    <div id="skill4" class="skills">Skill 8.4 Compare string expressions with <i>if-else</i> statements
-        </div>
-        <div class="skillConceptsHeader">Skill 8.4 Concepts</div>
-        <div class="skillConcepts">
-            <p>
-            In the previous examples the <i>==</i> notation was used to compare values.  However, this notation is only valid for comparing primitive type variables. 
-            Recall that String variables are <b>not</b> primitives - they are <i>object</i> variables.  We will discuss the difference between primitive and object
-            type variables later, but for now just recognize that String variables (or any object type variable) <b>cannot</b> be compared using the <i>==</i> operator. 
-            String variables can only be compared by using the <i>equals</i> method illustrated below, 
-
-            </p> 
-            <p class="codeblock">
-                String c = "cat";<br>
-                String d = "dog";<br>
-                boolean b = c.equals(d);//compares d to c and assigns the result to b<br>
-                System.out.println(b);//prints false<br><br>
-                b = !c.equals(d);<br>//reverses the comparison with the not operator
-                System.out.println(b);//prints true
-
-            </p>
-
-            <p>How the equals method can be combined with <i>if-else</i> statements is illustrated below,</p>
-            <p class = "codeblock">
-            String s1 = "a";<br>
-            String s2 = "b";<br>
-            String s3 = "b";<br><br>
-            if(( s1.equals(s2)) && ( s2.equals(s3))){<br><br>
     
-                //the code between these curly brackets <b>will not</b> be executed<br>
-                //because the condition evaluates to false<br><br>
-                
-            }else{<br><br>
-                //the code between these curly brackets <b>will</b> be executed<br>
-                //because the condition evaluates to false<br><br>
-            }<br><br>
-            if(( s1.equals(s2)) || ( s2.equals(s3))){<br><br>
-    
-                //the code between these curly brackets <b>will</b> be executed<br>
-                //because the condition evaluates to true<br><br>
-                
-            }else{<br><br>
-                //the code between these curly brackets <b>will not</b> be executed<br>
-                //because the condition evaluates to true<br><br>
-            }
-            </p>
-
-            
-            <div class="practice">
-                        <a href="../ticketOutTheDoor/set8/Set8TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 8.4: Exercise 1</a>
-                </div>
-        
-        </div>
-        <div id="skill5" class="skills">Skill 8.5 Combine multiple <i>if</i> statements with <i>if-else</i></div>
-            <div class="skillConceptsHeader">Skill 8.5 Concepts</div>
-            <div class="skillConcepts">
-                    <p>Multiple <i>if</i> statements can be combined with <i>if-else</i>.  This is illustrated below, 
-                    </p>
-                    <p class = "codeblock">   
-                    Scanner s = new Scanner(System.in);<br>
-                    System.out.println("What is your grade?");<br>
-                    int theGrade = s.nextInt();<br><br>
-                    if(theGrade>=90){<br><br>
-                        <span style="padding-left:5em;">System.out.println("You got an A!");</span><br><br>
-                    }else if(theGrade>=80){<br><br>
-                        <span style="padding-left:5em;">System.out.println("You got a B!");</span><br><br>
-                    }else if(theGrade>=70){<br><br>
-                        <span style="padding-left:5em;">System.out.println("You got a C!");</span><br><br>
-                    }else if(theGrade>=60){<br><br>
-                        <span style="padding-left:5em;">System.out.println("You got a D!");</span><br><br>
-                    }else{<br><br>
-                        <span style="padding-left:5em;">System.out.println("You failed!");</span><br><br>
-                    }
-                    </p>
-    
-                
-                <div class="practice">
-                            <a href="../ticketOutTheDoor/set8/Set8TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 8.5: Exercise 1</a>
-                    </div>
-            
-            </div>
-
-        <div id="skill6" class="skills">Skill 8.6 Write nested <i>if-else</i> statements</div>
-        <div class="skillConceptsHeader">Skill 8.6 Concepts</div>
-            <div class="skillConcepts">
-                <p>A nested <i>if</i> or <i>if-else</i> statement refers to an <i>if</i> or <i>if-else</i> statement inside of an <i>if-else</i> statement.
-                    Consider the following example, 
-                </p>
-                <p class = "codeblock">   
-                        Scanner s = new Scanner(System.in);<br>
-                        System.out.println("What is your grade?");<br>
-                        int theGrade = s.nextInt();<br><br>
-                        if(theGrade>=90){<br><br>
-                            <span style="padding-left:5em;">
-                            if(theGrade&lt94){<br><br>
-                                <span style="padding-left:10em;">
-                                    System.out.println("you got an A-");<br><br>
-                                </span>
-                            <span style="padding-left:5em;">  
-                            }else{<br><br>
-                            </span>
-                                <span style="padding-left:10em;">
-                                    System.out.println("you got an A");<br><br>
-                                </span>
-                                <span style="padding-left:5em;">
-                                }<br><br>
-                                </span>
-                            }else if(theGrade>=80){<br><br>
-                            <span style="padding-left:5em;">
-                            if(theGrade>86){<br><br>
-                                <span style="padding-left:10em;">
-                                System.out.println("you got a B+");<br><br>
-                                </span>
-                            <span style="padding-left:5em;">  
-                            }else if(theGrade&lt84){<br><br>
-                            </span>
-                                <span style="padding-left:10em;">
-                                System.out.println("you got a B-");<br><br>
-                                </span>
-                            <span style="padding-left:5em;">
-                            }else{<br><br>
-                            </span>
-                                    <span style="padding-left:10em;">
-                                    System.out.println("you got a B");<br><br>
-                                    </span>
-                            <span style="padding-left:5em;">
-                            }<br><br>
-                            </span>
-                            }else{<br><br>
-                            <span style="padding-left:5em;">
-                                System.out.println("you got another grade");<br><br>
-                            </span>
-                        }
-                        </p>            
-            
-            </div>
-            <div id="skill7" class="skills">Skill 8.7 Write <i>if-else</i> statements without curly brackets</div>
-            <div class="skillConceptsHeader">Skill 8.7 Concepts</div>
-                <div class="skillConcepts">
-                    <p>Curly brackets are not needed if only one line of code is in the <i>if</i> or <i>else</i> parts.  
-                        Likewise, the absence of brackets implies only one line of code in the <i>if-else</i> parts. </p>
-                        <p>This is illustrated below.</p>
-                        <p class="codeblock">
-                            int groovyDude=37;<br>
-                            if(groovyDude == 37)<br>
-                            <span style="padding-left:5em;">groovyDude++;//this line is executed</span><br>
-                            System.out.println(groovyDude);//38 is printed
-                        </p>
-                        <p class="codeblock">
-                                int groovyDude=105;<br>
-                                if(groovyDude == 37)<br>
-                                <span style="padding-left:5em;">groovyDude++;//this line is <b>not</b> executed</span><br>
-                                System.out.println(groovyDude);//105 is printed
-                        </p>
-                        <p class="codeblock">
-                                int groovyDude=105;<br>
-                                if(groovyDude == 37)<br>
-                                <span style="padding-left:5em;">groovyDude++;//this line is <b>not</b> executed</span><br>
-                                else<br>
-                                <span style="padding-left:5em;">groovyDude--;//this line is executed</span><br>
-                                System.out.println(groovyDude);//104 is printed
-                        </p>
-                    
-                    <div class="practice">
-                                <a href="../ticketOutTheDoor/set8/Set8TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 8.7: Exercise 1</a>
-                        </div>
-                
-                </div>
 </body>
 </html>
