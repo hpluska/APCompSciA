@@ -8,8 +8,8 @@ Comments:
 
 ## Quality
 - Submission:     /5
-- Documentation:  /10
-- Code Style:     /5
+- README Documentation:  /10
+- Code Style & Class Documentation:     /5
 
 ## Features
 
