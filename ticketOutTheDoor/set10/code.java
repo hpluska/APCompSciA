@@ -36,5 +36,34 @@ public class code{
 		else{
 			System.out.println("Not!");
 		}
+
+		//Skill 3 Exercise 1
+		for(int row = 0; row < 10; row++){
+			for(int col = 0; col < 10; col++){
+				System.out.print("*");
+			}
+		System.out.println();
+		}
+
+		System.out.println();
+
+		for(int row = 10; row > 0; row--){
+			for(int col = 0; col < row; col++){
+				System.out.print("*");
+			}
+		System.out.println();
+		}
+
+		System.out.println();
+
+		for(int row = 0; row < 10; row++){
+			for(int col = 0; col < row; col++){
+				System.out.print("*");
+			}
+		System.out.println();
+		}
+
+
+
 	}
 }
