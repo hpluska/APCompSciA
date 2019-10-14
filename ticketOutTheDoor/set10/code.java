@@ -37,6 +37,23 @@ public class code{
 			System.out.println("Not!");
 		}
 
+		//Jacob's Solutions
+		System.out.println("Jacob's Solution");
+		String reverse = "";
+
+		for(int r = 0; r < word.length()-1; r++){
+			reverse += word.substring(word.length()-1-r, word.length()-r);
+		}
+
+		System.out.println(reverse);
+		if(reverse.equals(word)){
+			System.out.println("Palindrome!");
+		}else{
+			System.out.println("Not!");
+		}
+
+
+
 		//Skill 3 Exercise 1
 		for(int row = 0; row < 10; row++){
 			for(int col = 0; col < 10; col++){
