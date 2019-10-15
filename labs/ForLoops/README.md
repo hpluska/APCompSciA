@@ -32,15 +32,15 @@ In this lab you will apply _for-loops_ to develop a palindrome checker for both 
 
 	* Horizontal stripes
 	* Vertical strips
+
+### Extra Credit
+
+- [ ] Implement the following, 
 	* A checkered grid
 	* A checkerer grid where only the top right half is filled (see lab guide for example)
 	* A checkerer grid where only the top left half is filled  (see lab guide for example)
 	* A checkered grid where only the bottom left half is filled (see lab guide for example)
 	* A checkered grid where only the bottom right half is filled (see lab guide for example)
-
-### Extra Credit
-
-- [ ] Create additional patterns that involve for-loops with different colors!
 
 
 
