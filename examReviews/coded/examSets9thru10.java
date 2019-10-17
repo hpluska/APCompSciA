@@ -6,17 +6,20 @@ public class examSets9thru10{
 
 	//Number 1
 	int x = 2, p = 5, y = -8;
-	switch(x){
-		case 2:
-			p++;
-		case 3:
-		case 4:
-			y+=(p--);
-			break;
-		case 5:
-			y+=(p++);
+
+		switch(x){
+
+     		case 2:
+         		p++;
+     		case 3:
+     		case 4:
+			y = y + (p--);
+          		break;
+     		case 5:
+          		y+=(p++);
 	}
-	System.out.println(y);
+
+System.out.println(y);
 
 	String s = "Red";
 	int q = 0;
@@ -32,7 +35,7 @@ public class examSets9thru10{
 		default:
 			q++;
 	}
-	System.out.println(q);
+	System.out.println(--q);
 
 	//Number 2
 	Scanner sc = new Scanner(System.in);
