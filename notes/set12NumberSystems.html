@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../styles/notes.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Over+the+Rainbow" rel="stylesheet">
+</head>
+
+<body>
+    <div id="top">
+        <h1>Set 12: Number Systems</h1>
+    </div>
+    <div id="skills">
+        <ul id="skillsList">
+            <li>
+                Skill 12.1 <a href="#skill1">Compare the decimal, binary, hexadecimal, and octal number systems</a>
+            </li>
+            <li>
+                Skill 12.2 <a href="#skill2">Convert a decimal number to binary, hexadecimal, or octal</i></a>
+            </li>
+            <li>
+                Skill 12.3 <a href="#skill3">Determine the number of places to represent a number in decimal, binary, hexadecimal, or octal</a>
+            </li>
+        </ul>
+    </div>
+    <div id="skill1" class="skills">Skill 12.1 Compare the decimal, binary, hexadecimal, and octal number systems
+    </div>
+    <div class="skillConceptsHeader">Skill 12.1 Concepts</div>
+    <div class="skillConcepts">
+        <p>
+            In this lesson we will examine four different number systems: decimal, binary, hexadecimal, and octal. Each is explained
+            below,
+        </p>
+
+        <p><u>Base 10</u></p>
+
+        <p>The base 10 system is based on groups of 10. </p> 
+        <p>There are 10 possible digits in this number system: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9</p>
+        <table class="notesTable" style="width:50%">
+                <tbody><tr>
+                <th style="width:20%">Base</th>
+                <th style="width:20%">Position</th>
+                <th style="width:20%">Base<sup>position</sup></th>
+                <th style="width:20%">Value</th>
+                <th style="width:20%">Log<sub>10</sub></th>
+                </tr>
+                <tr>
+                <td>10</td>
+                <td>0</td>
+                <td>10<sup>0</sup></td>
+                <td>1</td>
+                <td>0</td>
+                </tr>
+                <tr>
+                <td>10</td>
+                <td>1</td>
+                <td>10<sup>1</sup></td>
+                <td>10</td>
+                <td>1</td>
+                </tr>
+                <tr>
+                <td>10</td>
+                <td>2</td>
+                <td>10<sup>2</sup></td>
+                <td>100</td>
+                <td>2</td>
+                </tr>
+                <tr>
+                <td>10</td>
+                <td>3</td>
+                <td>10<sup>3</sup></td>
+                <td>1000</td>
+                <td>3</td>
+                </tr>
+                <tr>
+                <td>10</td>
+                <td>4</td>
+                <td>10<sup>4</sup></td>
+                <td>10000</td>
+                <td>4</td>
+                </tr>
+                <tr>
+                <td>10</td>
+                <td>5</td>
+                <td>10<sup>5</sup></td>
+                <td>100000</td>
+                <td>5</td>
+                </tr>
+                <tr>
+                <td>10</td>
+                <td>6</td>
+                <td>10<sup>6</sup></td>
+                <td>1000000</td>
+                <td>6</td>
+                </tr>
+                <tr>
+                <td>10</td>
+                <td>7</td>
+                <td>10<sup>7</sup></td>
+                <td>10000000</td>
+                <td>7</td>
+                </tr>
+                <tr>
+                <td>10</td>
+                <td>8</td>
+                <td>10<sup>8</sup></td>
+                <td>100000000</td>
+                <td>8</td>
+                </tr>
+                <tr>
+                <td>10</td>
+                <td>9</td>
+                <td>10<sup>9</sup></td>
+                <td>1000000000</td>
+                <td>9</td>
+                </tr>
+
+                </tbody>
+                </table>
+        
+        <p>Consider the decimal number 5,402.  The position of each digit is shown below, </p>
+        
+        <table class="notesTable">
+        <tbody><tr>
+                <th style="width:20%">Digit</th>
+                <td style="width:20%">5</td>
+                <td style="width:20%">4</td>
+                <td style="width:20%">0</td>
+                <td style="width:20%">2</td>
+                </tr>
+                <th style="width:20%">position</th>
+                <td>3</td>
+                <td>2</td>
+                <td>1</td>
+                <td>0</td>
+                </tr>
+        </tbody>
+        </table>
+        <p>The numerical value for each positional value can 
+            be determined by mulitiplying the digit in each 
+            position by its base raised to the position.  This 
+            concept is illustrated below.
+        </p>
+        <table class="notesTable">
+        <tbody><tr>
+                <th style="width:20%">Digit</sup></th>
+                <th style="width:20%">Position</sup></th>
+                <th style="width:20%">Digit x Base<sup>Position</sup></th>
+                <th style="width:20%">Positional Value</th>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>0</td>
+                <td>2 x 10<sup>0</sup></td>
+                <td>2</td>
+                </tr>
+                <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>0 x 10<sup>1</sup></td>
+                <td>0</td>
+                </tr>
+                <tr>
+                <td>4</td>
+                <td>2</td>
+                <td>4 x 10<sup>2</sup></td>
+                <td>400</td>
+                </tr>
+                <tr>
+                <td>5</td>
+                <td>3</td>
+                <td>5 x 10<sup>3</sup></td>
+                <td>5000</td>
+                </tr>
+        </tbody>
+        </table>
+
+        <p>Adding the positional values returns the original number, </p>
+        <p>2 + 0 + 400 + 5000 = 5402</p>
+
+        <p><u>Binary</u></p>
+        <p>In the binary number system, there are only two possible values: 0 and 1.</p>
+        <table class="notesTable" style="width:50%">
+                <tbody><tr>
+                <th style="width:20%">Base</th>
+                <th style="width:20%">Position</th>
+                <th style="width:20%">Base<sup>position</sup></th>
+                <th style="width:20%">Value</th>
+                <th style="width:20%">Log<sub>2</sub></th>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>0</td>
+                <td>2<sup>0</sup></td>
+                <td>1</td>
+                <td>0</td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>1</td>
+                <td>2<sup>1</sup></td>
+                <td>2</td>
+                <td>1</td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>2</td>
+                <td>2<sup>2</sup></td>
+                <td>4</td>
+                <td>2</td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>3</td>
+                <td>2<sup>3</sup></td>
+                <td>8</td>
+                <td>3</td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>4</td>
+                <td>2<sup>4</sup></td>
+                <td>16</td>
+                <td>4</td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>5</td>
+                <td>2<sup>5</sup></td>
+                <td>32</td>
+                <td>5</td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>6</td>
+                <td>2<sup>6</sup></td>
+                <td>64</td>
+                <td>6</td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>7</td>
+                <td>2<sup>7</sup></td>
+                <td>128</td>
+                <td>7</td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>8</td>
+                <td>2<sup>8</sup></td>
+                <td>256</td>
+                <td>8</td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>9</td>
+                <td>2<sup>9</sup></td>
+                <td>512</td>
+                <td>9</td>
+                </tr>
+
+                </tbody>
+                </table>
+<p>Consider the conversion of a binary number 1101 to decimal form. 
+    The position of each digit is shown below</p>
+    <table class="notesTable">
+            <tbody><tr>
+                    <th style="width:20%">Digit</th>
+                    <td style="width:20%">1</td>
+                    <td style="width:20%">1</td>
+                    <td style="width:20%">0</td>
+                    <td style="width:20%">1</td>
+                    </tr>
+                    <th style="width:20%">position</th>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>0</td>
+                    </tr>
+            </tbody>
+            </table>
+            <p>Multiplying the digit in each position by the base raised to the 
+                position (Baseposition) the positional value can be determined 
+                for each digit.</p>
+                <table class="notesTable">
+                <tbody><tr>
+                    <th style="width:20%">Digit</sup></th>
+                    <th style="width:20%">Position</sup></th>
+                    <th style="width:20%">Digit x Base<sup>Position</sup></th>
+                    <th style="width:20%">Positional Value</th>
+                    </tr>
+                    <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1 x 2<sup>0</sup></td>
+                    <td>1</td>
+                    </tr>
+                    <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0 x 2<sup>1</sup></td>
+                    <td>0</td>
+                    </tr>
+                    <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>1 x 2<sup>2</sup></td>
+                    <td>4</td>
+                    </tr>
+                    <tr>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>1 x 2<sup>3</sup></td>
+                    <td>8</td>
+                    </tr>
+                </tbody>
+                </table>
+                <p>Just as before, adding the positional values returns the value of the number
+                in base 10, </p>
+                <p>1 + 0 + 4 + 8 = 13</p>
+        
+    <p><u>Hexadecimal (Base 16)</u></p>
+    <p>The hexadecimal system is based on groups of 16.  </p>
+<p>There are 16 possible digits in this number system: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F</p>
+<p><u>NOTE</u> that A = 10, B = 11, C = 12, D = 13, E = 14, F = 15</p>
+
+<table class="notesTable" style="width:50%">
+        <tbody><tr>
+        <th style="width:20%">Base</th>
+        <th style="width:20%">Position</th>
+        <th style="width:20%">Base<sup>position</sup></th>
+        <th style="width:20%">Value</th>
+        <th style="width:20%">Log<sub>16</sub></th>
+        </tr>
+        <tr>
+        <td>16</td>
+        <td>0</td>
+        <td>16<sup>0</sup></td>
+        <td>1</td>
+        <td>0</td>
+        </tr>
+        <tr>
+        <td>16</td>
+        <td>1</td>
+        <td>16<sup>1</sup></td>
+        <td>16</td>
+        <td>1</td>
+        </tr>
+        <tr>
+        <td>16</td>
+        <td>2</td>
+        <td>16<sup>2</sup></td>
+        <td>256</td>
+        <td>2</td>
+        </tr>
+        <tr>
+        <td>16</td>
+        <td>3</td>
+        <td>16<sup>3</sup></td>
+        <td>4096</td>
+        <td>3</td>
+        </tr>
+        <tr>
+        <td>16</td>
+        <td>4</td>
+        <td>16<sup>4</sup></td>
+        <td>65536</td>
+        <td>4</td>
+        </tr>
+        </tbody>
+        </table>
+        <p>Consider the conversion of a hexadecimal number 5C02 to decimal form. 
+            The position of each digit is shown below,
+            <table class="notesTable">
+                    <tbody><tr>
+                            <th style="width:20%">Digit</th>
+                            <td style="width:20%">5</td>
+                            <td style="width:20%">C</td>
+                            <td style="width:20%">0</td>
+                            <td style="width:20%">2</td>
+                            </tr>
+                            <th style="width:20%">position</th>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>0</td>
+                            </tr>
+                    </tbody>
+                    </table>
+
+        <p>Multiplying the digit in each position by the base raised to the 
+        position (Baseposition) the positional value can be determined 
+        for each digit.</p>
+                <table class="notesTable">
+                <tbody><tr>
+                    <th style="width:20%">Digit</sup></th>
+                    <th style="width:20%">Position</sup></th>
+                    <th style="width:20%">Digit x Base<sup>Position</sup></th>
+                    <th style="width:20%">Positional Value</th>
+                    </tr>
+                    <tr>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>2 x 16<sup>0</sup></td>
+                    <td>2</td>
+                    </tr>
+                    <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0 x 16<sup>1</sup></td>
+                    <td>0</td>
+                    </tr>
+                    <tr>
+                    <td>12</td>
+                    <td>2</td>
+                    <td>12 x 16<sup>2</sup></td>
+                    <td>3072</td>
+                    </tr>
+                    <tr>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>5 x 16<sup>3</sup></td>
+                    <td>20480</td>
+                    </tr>
+                </tbody>
+                </table>
+                <p>Just as before, adding the positional values returns the value of the number
+                in base 10, </p>
+                <p>2 + 0 + 3072 + 20480 = 23554</p>
+    <p><u>Octal (Base 8)</u></p>
+    <p>The octal system is based on groups of 8  </p>
+    <p>There are 16 possible digits in this number system: 0, 1, 2, 3, 4, 5, 6, 7</p>
+            
+            <table class="notesTable" style="width:50%">
+                    <tbody><tr>
+                    <th style="width:20%">Base</th>
+                    <th style="width:20%">Position</th>
+                    <th style="width:20%">Base<sup>position</sup></th>
+                    <th style="width:20%">Value</th>
+                    <th style="width:20%">Log<sub>8</sub></th>
+                    </tr>
+                    <tr>
+                    <td>8</td>
+                    <td>0</td>
+                    <td>8<sup>0</sup></td>
+                    <td>1</td>
+                    <td>0</td>
+                    </tr>
+                    <tr>
+                    <td>8</td>
+                    <td>1</td>
+                    <td>8<sup>1</sup></td>
+                    <td>8</td>
+                    <td>1</td>
+                    </tr>
+                    <tr>
+                    <td>8</td>
+                    <td>2</td>
+                    <td>8<sup>2</sup></td>
+                    <td>64</td>
+                    <td>2</td>
+                    </tr>
+                    <tr>
+                    <td>8</td>
+                    <td>3</td>
+                    <td>8<sup>3</sup></td>
+                    <td>512</td>
+                    <td>3</td>
+                    </tr>
+                    <tr>
+                    <td>8</td>
+                    <td>4</td>
+                    <td>8<sup>4</sup></td>
+                    <td>4096</td>
+                    <td>4</td>
+                    </tr>
+                    </tbody>
+                    </table>
+
+            <p>Consider the conversion of the octal number 5402 to decimal form. The position
+                of each digit is shown below, 
+            </p>
+            <table class="notesTable">
+                <tbody><tr>
+                        <th style="width:20%">Digit</th>
+                        <td style="width:20%">5</td>
+                        <td style="width:20%">4</td>
+                        <td style="width:20%">0</td>
+                        <td style="width:20%">2</td>
+                        </tr>
+                        <th style="width:20%">position</th>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>0</td>
+                        </tr>
+                </tbody>
+                </table>
+
+                    <p>Multiplying the digit in each position by the base raised to the 
+                    position (Baseposition) the positional value can be determined 
+                    for each digit.</p>
+                            <table class="notesTable">
+                            <tbody><tr>
+                                <th style="width:20%">Digit</sup></th>
+                                <th style="width:20%">Position</sup></th>
+                                <th style="width:20%">Digit x Base<sup>Position</sup></th>
+                                <th style="width:20%">Positional Value</th>
+                                </tr>
+                                <tr>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>2 x 9<sup>0</sup></td>
+                                <td>2</td>
+                                </tr>
+                                <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0 x 8<sup>1</sup></td>
+                                <td>0</td>
+                                </tr>
+                                <tr>
+                                <td>4</td>
+                                <td>2</td>
+                                <td>4 x 8<sup>2</sup></td>
+                                <td>256</td>
+                                </tr>
+                                <tr>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>5 x 8<sup>3</sup></td>
+                                <td>2560</td>
+                                </tr>
+                            </tbody>
+                            </table>
+                            <p>Just as before, adding the positional values returns the value of the number
+                            in base 10, </p>
+                            <p>2 + 0 + 256 + 2560 = 2818</p>
+
+        <div class="practice">
+            <a href="../ticketOutTheDoor/set12/Set12TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 12.1: Exercise 1</a>
+        </div>
+
+    </div>
+
+    <div id="skill2" class="skills">Skill 12.2 Convert a decimal number to binary, hexadecimal, or octal</i></div>
+    <div class="skillConceptsHeader">Skill 12.2 Concepts</div>
+    <div class="skillConcepts">
+
+        <p>
+           Recall that to obtain the last digit of a decimal number we can apply the 
+           modulus operator
+        </p>
+
+        <p class="codeblock">
+            int num = 1234;<br>
+            int lastNumber = num%10;//returns 4
+        </p>
+        <p>To return the second to last digit of a decimal number we first divide by
+            10, then apply the modulus operation
+        </p>
+        <p class="codeblock">
+            int num = 1234;<br>
+            num = num/10;
+            int lastNumber = num%10;//returns 3
+        </p>
+        <p>If we continue this process until no more digits are available, we can 
+            obtain each digit in the number.  This idea can be applied to other number
+            systems as well.
+        </p>
+        <p><u>Binary</u></p>
+        <p>The below example illustrates how to convert a decimal number into a binary number.
+            Consider the decimal number 147. 
+        </p>
+
+        <table class="notesTable">
+            <tbody><tr>
+                <th style="width:20%">Base divisor</th>
+                <th style="width:20%">Number divided</th>
+                <th style="width:20%">Modulus base</th>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>147</td>
+                <td>1</td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>73</td>
+                <td>1</td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>36</td>
+                <td>0</td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>18</td>
+                <td>0</td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>9</td>
+                <td>1</td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>4</td>
+                <td>0</td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>2</td>
+                <td>0</td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>1</td>
+                <td>1</td>
+                </tr>
+            </tbody>
+            </table>
+        <p>Listing the numbers from bottom to to yields, 10010011 = 147</p>
+
+        <p><u>Hexadecimal</u></p>
+        <p>The below example illustrates how to convert a decimal number into a hexadecimal number.
+            Consider the decimal number 3741. 
+        </p>
+
+        <table class="notesTable">
+            <tbody><tr>
+                <th style="width:20%">Base divisor</th>
+                <th style="width:20%">Number divided</th>
+                <th style="width:20%">Modulus base</th>
+                </tr>
+                <tr>
+                <td>16</td>
+                <td>3741</td>
+                <td>13</td>
+                </tr>
+                <tr>
+                <td>16</td>
+                <td>233</td>
+                <td>9</td>
+                </tr>
+                <tr>
+                <td>16</td>
+                <td>14</td>
+                <td>14</td>
+                </tr>
+            </tbody>
+            </table>
+        <p>Now list the numbers from bottom to top.  Notice, when listing "14" we give
+            its hex equivalent, E, and for "13" we give the hex equivalent, D.  The 
+            resultant hex number is E9D = 3741. 
+        </p>
+
+        <p><u>Octal</u></p>
+        <p>The below example illustrates how to convert a decimal number into an octal number.
+            Consider the octal number 251. 
+        </p>
+
+        <table class="notesTable">
+            <tbody><tr>
+                <th style="width:20%">Base divisor</th>
+                <th style="width:20%">Number divided</th>
+                <th style="width:20%">Modulus base</th>
+                </tr>
+                <tr>
+                <td>8</td>
+                <td>251</td>
+                <td>3</td>
+                </tr>
+                <tr>
+                <td>8</td>
+                <td>31</td>
+                <td>7</td>
+                </tr>
+                <tr>
+                <td>8</td>
+                <td>3</td>
+                <td>3</td>
+                </tr>
+            </tbody>
+            </table>
+        <p>Now list the numbers from bottom to top, the 
+            resultant octal number is 373 = 251. 
+        </p>
+        <div class="practice">
+            <a href="../ticketOutTheDoor/set12/Set12TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 12.2: Exercise
+                1</a>
+        </div>
+
+
+    </div>
+    <div id="skill3" class="skills">Skill 12.3 Determine the number of places to represent a number in decimal, binary, hexadecimal, or octal</i></div>
+    <div class="skillConceptsHeader">Skill 12.3 Concepts</div>
+    <div class="skillConcepts">
+
+        <p>Recall that the base 10 system is based on groups of 10. </p> 
+        <p>And, that there are 10 possible digits in this number system: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9</p>
+        <table class="notesTable" style="width:50%">
+                <tbody><tr>
+                <th style="width:20%">Base</th>
+                <th style="width:20%">Position</th>
+                <th style="width:20%">Base<sup>position</sup></th>
+                <th style="width:20%">Value</th>
+                <th style="width:20%">Log<sub>10</sub></th>
+                </tr>
+                <tr>
+                <td>10</td>
+                <td>0</td>
+                <td>10<sup>0</sup></td>
+                <td>1</td>
+                <td>0</td>
+                </tr>
+                <tr>
+                <td>10</td>
+                <td>1</td>
+                <td>10<sup>1</sup></td>
+                <td>10</td>
+                <td>1</td>
+                </tr>
+                <tr>
+                <td>10</td>
+                <td>2</td>
+                <td>10<sup>2</sup></td>
+                <td>100</td>
+                <td>2</td>
+                </tr>
+                <tr>
+                <td>10</td>
+                <td>3</td>
+                <td>10<sup>3</sup></td>
+                <td>1000</td>
+                <td>3</td>
+                </tr>
+                <tr>
+                <td>10</td>
+                <td>4</td>
+                <td>10<sup>4</sup></td>
+                <td>10000</td>
+                <td>4</td>
+                </tr>
+                <tr>
+                <td>10</td>
+                <td>5</td>
+                <td>10<sup>5</sup></td>
+                <td>100000</td>
+                <td>5</td>
+                </tr>
+                <tr>
+                <td>10</td>
+                <td>6</td>
+                <td>10<sup>6</sup></td>
+                <td>1000000</td>
+                <td>6</td>
+                </tr>
+                <tr>
+                <td>10</td>
+                <td>7</td>
+                <td>10<sup>7</sup></td>
+                <td>10000000</td>
+                <td>7</td>
+                </tr>
+                <tr>
+                <td>10</td>
+                <td>8</td>
+                <td>10<sup>8</sup></td>
+                <td>100000000</td>
+                <td>8</td>
+                </tr>
+                <tr>
+                <td>10</td>
+                <td>9</td>
+                <td>10<sup>9</sup></td>
+                <td>1000000000</td>
+                <td>9</td>
+                </tr>
+
+                </tbody>
+                </table>
+
+            <p>From the above, it can be deduced that the number of postional values required to represent
+                 any decimal number can be determined as follows, 
+                </p>
+                <p>positions = log<sub>10</sub>(number)</p>
+                <p class="codeblock">
+                        int positions = (int)(Math.log10(number));
+            
+                </p>
+                <p>Likewise, the positinal value is, </p>
+                <p>positional value = value x 10<sup>position</sup></p>
+                <p class="codeblock">
+                        int positionalValue = (int)(value*Math.pow(10, position));
+            
+                </p>
+
+                
+            <p>This idea can be extended to other bases, base 2 for example,</p>
+            
+            <p>positions = log<sub>2</sub>(number)</p>
+
+            <p>Java does not hava a built in log base 2 operation.  However, the 
+                number of postions required to represent a number in 
+                    any base can be determined as follows, 
+
+                </p>
+                <p>Consider the number 32, which is also equal to 2<sup>5</sup>, so, </p>
+                <p>2<sup>5</sup> = 32</p>
+                <p>If we take the base 10 log of both sides, </p>
+                <p>Log<sub>10</sub>(2<sup>5</sup>) = Log<sub>10</sub>(32)</p>
+                <p>5 Log<sub>10</sub>(2) = Log<sub>10</sub>(32)</p>
+                <p>rearranging,</p>
+                <p>5 = Log<sub>10</sub>(32)/Log<sub>10</sub>(2)</p>
+                <p>The above example illustrates that the number of positions required to represent 
+                    the number 32 in base 2 is, 
+                </p>
+                <p>required positions = Log<sub>10</sub>(32)/Log<sub>10</sub>(2)</p>
+                <p>Generalizing this expression provides a way to obtain the number of positions
+                    required to represent a number in any base, 
+                </p>
+                <p class="codeblock">
+                    int positions = (int)(Math.log10(number))/(int)(Math.log10(base));
+                </p>
+        <div class="practice">
+            <a href="../ticketOutTheDoor/set12/Set12TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 12.3: Exercise
+                1</a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
