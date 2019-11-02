@@ -29,11 +29,10 @@ You have been learning how to represent numbers in different bases - decimal, bi
 ### Extra Credit
 
 - [ ] Expand your program to accept: 
-	* A base to convert from (2 thru 9)
-	* A base to convert to (2 thru 9)
+	* A base to convert from (2 thru hexadecimal)
+	* A base to convert to (2 thru hexadecimal)
 	* A number
 	* Then convert the number to the indicated number base 
-- [ ] Expand your program to handle number bases thru hexadecimal
 
 
 
