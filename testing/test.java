@@ -1,6 +1,18 @@
 public class test{
 
+	private char ch;
+
     public static void main(String args[]){
+	char ch2 ='A';
+	int a = ch2;//65
+
+	int randomChar = 565;
+	char ch3 = (char)randomChar;
+	System.out.println(ch3);
+
+System.out.println("everything else");
+
+
 
        
             for(int l = 35; l < 65; l++){
@@ -29,7 +41,7 @@ public class test{
                 lastChar--;
             }
             System.out.println(msg);
-
+/*
 int max = (int)Math.pow(2, 16);
 
 	    for(int l = 100; l < max;l++){
@@ -37,6 +49,7 @@ int max = (int)Math.pow(2, 16);
 		System.out.print(c);
 
 		}
+*/
 
 String w = "Code is Cool!";
 String lc = "";
