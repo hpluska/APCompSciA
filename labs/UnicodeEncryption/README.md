@@ -32,6 +32,10 @@ You have been learning how to represent numbers in different bases - decimal, bi
 
 1E90A90CE 0FA1B20E60E60A9168 0A71B20E309F 1B20E6 0A90A709F1BD09F168 0D00E11681D80A90CE168 09C1E209F1B20E30E10E613C 1B2 15A09F0D0 09F13C13C167
 
+### Extra Credit
+
+- [ ] Develop your own cipher and encrypt a secret message.  Have a classmate decode your secret message.  s 
+
 
 
 

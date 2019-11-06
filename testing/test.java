@@ -66,5 +66,17 @@ for(int c = 0; c < w.length(); c++){
 
 }
 System.out.println(lc);
+
+String result = "";
+
+for(int c = 0; c < w.length(); c++){
+	int n = w.charAt(c);
+
+	result += n + " ";
+}
+
+System.out.println(result);
+
+
     }
 }
