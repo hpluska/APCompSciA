@@ -6,7 +6,7 @@ You have been learning how to represent numbers in different bases - decimal, bi
 
 ## Your Tasks
 
-- [ ] Locate the "Unicode Encryption" lab guide [UnicodeEncryption.pdf](UnicodeEncryption.pdf)
+- [ ] Locate the "Unicode Translation" lab guide [UnicodeTranslation.pdf](UnicodeTranslation.pdf)
 
 - [ ] Complete the group portion of the lab as instructed
 
