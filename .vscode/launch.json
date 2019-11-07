@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - examSet13",
+            "request": "launch",
+            "mainClass": "examSet13"
+        }
+    ]
+}
