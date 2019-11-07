@@ -1,8 +1,8 @@
-# Unicode Encryption
-In this lab you will code to encrypt and decrypt a message 
+# Unicode Translation
+In this lab you will translate messages written in our English character set to unicode and back.   
 
 ## Introduction
-You have been learning how to represent numbers in different bases - decimal, binary, hexadecimal, and octal.  And now you now how to represent letters numerically using the unicode system.  For this lab you will you these skills to encrypt and decrypt messages
+You have been learning how to represent numbers in different bases - decimal, binary, hexadecimal, and octal.  And now you now how to represent letters numerically using the unicode system.  For this lab you will you these skills to translate message between their character and numerical representations. 
 
 ## Your Tasks
 
@@ -13,7 +13,7 @@ You have been learning how to represent numbers in different bases - decimal, bi
 - [ ] Complete the individual portion of the lab
 
 	* In your AP Computer Science A Repo on your computer make sure you have created a directory called "labs"
-	* Inside your labs directory, create another directory called "UnicodeEncryption"
+	* Inside your labs directory, create another directory called "UnicodeTranslation"
 	* Complete the challenges below
 	* Once you have completed your challenges push your AP Computer Science A Repo to GitHub
 	* Show your completed challenges to Ms. Pluska to receive credit for the individual portion of this lab
