@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../styles/notes.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Over+the+Rainbow" rel="stylesheet">
+</head>
+
+<body>
+    <div id="top">
+        <h1>Set 14: Advanced String Methods</h1>
+    </div>
+    <div id="skills">
+        <ul id="skillsList">
+            <li>
+                Skill 14.1 <a href="#skill1">Apply Advanced String Methods</a>
+            </li>
+            <li>
+                Skill 13.2 <a href="#skill2">Declare a <i>char</i> data type</a>
+            </li>
+            <li>
+                Skill 13.3 <a href="#skill3">Explain the variable compatibility between chars, ints, and String</a>
+            </li>
+            <li>
+                Skill 13.4 <a href="#skill4">Convert between <i>char</i> and <i>String</i> data types</a>
+            </li>
+            <li>
+                Skill 13.5 <a href="#skill4">Convert <i>char</i> variables to lower and upper case</a>
+            </li>
+
+        </ul>
+    </div>
+    <div id="skill1" class="skills">Skill 14.1 Apply Advanced String Methods
+    </div>
+    <div class="skillConceptsHeader">Skill 14.1 Concepts</div>
+    <div class="skillConcepts">
+
+            <p>The String methods and techniques we have encountered in previous lessons 
+                include <i>concatenation</i>, <i>length()</i>, <i>substring()</i>, <i>toLowerCase()</i>, <i>toUpperCase()</i>, 
+                <i>escape sequences ("\n", "\t", etc)</i>, <i>equals()</i>, and <i>equalsIgnoreCase()</i></p>
+        
+            <p>We will now look at some of the signatures (and examples) of some of the more 
+                advanced String methods.  </p>
+            
+            <p>Recall that a signature is as follows:</p> 
+
+            <p class = "codeblock">
+
+                <span style="color:red;">returnType</span> 
+                <span style="color:blue;">methodName</span> 
+                    (<span style="color:green;">type</span> <span style="color:magenta;"> parameter1</span>, 
+                    <span style="color:green;">type</span> <span style="color:magenta;">parameter2</span>, etc);
+
+
+            </p>
+
+            <ul span style="margin-left:5em;">
+                <li><span style="color:red;">returnType</span> - The type of variable returned when the method is called (int, double, Strings, etc.)</li>
+                <li><span style="color:blue;">methodName</span> - The name of the method</li>
+                <li><span style="color:green;">type</span> - The parameter required of the method (int, double, String, etc)</li>
+                <li><span style="color:magenta;"> parameter1</span> - The value of the parameter</li>
+            </ul>
+            <p>Below, we will look at several new methods associated with the String class</p>
+            <p>For all the examples below we will assume that "s" is a String as follows, </p>
+            <p class= "codeblock">String s = "Take a Hike!"</p>
+
+            <p>Recall that the indices of the individual characters of this String are as follows, </p>
+
+            <table class="notesTable" style="width:75%; text-align:center;">
+                    <tbody>
+                    <tr>
+                    <th>character</th>
+                    <td>T</td>
+                    <td>a</td>
+                    <td>k</td>
+                    <td>e</td>
+                    <td></td>
+                    <td>a</td>
+                    <td></td>
+                    <td>H</td>
+                    <td>i</td>
+                    <td>k</td>
+                    <td>e</td>
+                    <td>!</td>
+                    </tr>
+                    <th>index</th>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    </tr>
+                    </tbody>
+                    </table>
+
+
+            <p><u><i>public int compareTo(Object myObj)</i></u></p>
+            <p>The <i>compareTo</i> method accepts any Object, here we will specify a 
+                String object.  The general syntax for usage of compareTo is shown below,  
+            </p>
+            <p class="codeblock">                
+                int j = s.compareTo("Idaho");<br>
+                System.out.println(j);//prints 11
+            </p>
+
+            <p>In the example above, <i>11</i> is printed because the first letter in 
+                "Take a Hike" is 11 places <i>after</i> the first letter in "Idaho" in the alphabet. 
+                </p>
+
+            <p>Now, let's consider the reverse, </p>
+            <p class="codeblock">                
+                    int j = ("Idaho").compareTo(s);<br>
+                    System.out.println(j);//prints -11
+            </p>
+            
+            <p>In the above example, because the first letter in "Idaho" is 11 digits <i>before</i> 
+                the first letter in "Take a Hike", -11 is printed. 
+            </p>
+            <p>Now, let's consider what happens when we mix lower and upper case letters
+                in our comparison.  For example, 
+            </p>  
+            
+            <p class="codeblock">                
+                    int j = ("idaho").compareTo(s);<br>
+                    System.out.println(j);//prints 21
+            </p>
+            <p>The result above can be explained in terms of the <i>char</i> values assocated with 
+                first letters in "idaho" and "Take a Hike".  The first letter, <i>i</i>, has 
+                a value of 105 and, <i>T</i>, has a value of 84.  105 - 84 = 21. 
+            </p>
+            
+            <p><u><i>indexOf()</i></u></p>
+            <p>
+            This method comes in 6 flavors (each is described below).  For each case, all return
+             negative one (-1) if the search is unsuccessful.  
+            </p>
+            <table class="notesTable" style="width:100%;">
+                    <tbody>
+                    <tr>
+                    <th width="30%">Signature</th>
+                    <th width="30%">Description</th>
+                    <th width="40%">Example</th>
+                    </tr>
+                    <tr>
+                    <td>public int indexOf(String str)</td>
+                    <td>Search from left to right for the first 
+                        occurrence of the String str. </td>
+                    <td class="codeFont">
+                        s = “The Walking Dead”;<br>
+                        int j = s.indexOf(“Walking”);<br>
+                        System.out.println(j); //prints 4
+                    </td>
+                    </tr>
+                    </tbody>
+                    </table>
+    </div>
+
+    <div id="skill2" class="skills">Skill 13.2 Declare a <i>char</i> data type</i></div>
+    <div class="skillConceptsHeader">Skill 13.2 Concepts</div>
+    <div class="skillConcepts">
+            <p>
+                    In Java, <i>char</i> is short for character. It is 16 bits in size - that is 
+                    it can only take up 16 places in memory.   As a review, consider the number
+                    of places to represent the number 77 in binary.
+                </p>
+                <p class = "codeblock">
+                    int places = (int)(Math.log10(77)/Math.log10(2));//returns 6 
+                </p>
+                <p>The actual value of 77 in binary is 1001101</p>
+        
+                <p>To represent the number 77 in memory requires 6 + 1 or 7 bits</p>
+                <p>Most of the time, the actual data stored 
+                    in the <i>char</i> data type doesn't take up more than 8 bits; 
+                    the reason Java allows 16 bits is so that all characters in all 
+                    languages can be represented. This representation is in the Unicode format described 
+                    previously.
+                </p>
+
+                <p><u>Declaring <i>char</i> variable types</u></p>
+                <p>You'd think that a <i>char</i> could be any value from a to Z, and all the numbers. 
+                    That is true, except for one key item. You can either declare a char variable with 
+                    single quotes, e.g., setting a <i>char</i>'s value to the letter 'a'. Or, you could omit the 
+                    quotes, and set the Unicode representation of the value. Take a look at the following 
+                    code for declaring a <i>char</i> variable equal to 77.</p>
+        
+                <p class="codeblock">
+                    char seventySeven = 77;<br>
+                    System.out.println(seventySeven)//Prints M - the unicode equivalent;
+                </p>
+                <p>The <i>char</i> data type can also be assigned the value of <i>M</i> using single quotes,</p>
+                <p class="codeblock">
+                        char seventySeven = 'M';<br>
+                        System.out.println(seventySeven)//Prints M
+                </p>
+
+        <div class="practice">
+            <a href="../ticketOutTheDoor/set13/Set13TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 13.2: Exercise
+                1</a>
+        </div>
+
+
+    </div>
+    <div id="skill3" class="skills">Skill 13.3 Explain the variable compatibility between chars, ints, and String</i></div>
+    <div class="skillConceptsHeader">Skill 13.3 Concepts</div>
+    <div class="skillConcepts">
+
+            <p><u>Compatiblity between <i>char</i> and <i>String</i> data types</u></p>
+
+            <p><i>char</i> data types and String types cannot be stored into each other.</p>
+            
+            <p>In the example above, if we had tried to declare the <i>char</i> as the actual "77", with quotes, 
+                there would be an error - <i>incompatible types: String cannot be converted to char</i>
+            </p>  
+            <p class="codeblock">
+                    char seventySeven = "77";//Error!
+            </p>
+            
+            <p>Recall, that char variables must be declared with single quotes, but the 
+                following code also produces an error, because there is no unicode equivalent 
+                for the character '77'.
+            
+            </p>
+
+            <p class="codeblock">
+                    char seventySeven = '77';//Error!
+            </p>
+
+            </p>
+
+            <p><u>Compatiblity between <i>char</i> and <i>int</i> data types</u></p>
+            <p><i>char</i> data types can be assigned to <i>int</i> data types.  This
+            is possible because <i>char</i> data types have a unicode (<i>int</i>) equivalent. 
+              
+            </p>
+            <p>The example below illustrates how the unicode (<i>int</i>) equivalent of any symbol can be found using the <i>char</i>
+                and <i>int</i>data types.  
+        </p>
+            <p class="codeblock">
+                    char seventySeven = 'M';<br>
+                    int M = seventySeven;<br>
+                    System.out.println(M);//prints the unicode equivalent, 77
+            </p>
+            <p>The above illustrates how the unicode equivalent of a symbol or letter can be 
+                found by assiging the <i>char</i> data type to an <i>int</i>.  The reverse process
+                however is not allowed.  Consider the following example which results in a 
+                <i>possible lossy conversion from int to char</i> error,
+            </p>
+
+            <p class="codeblock">
+                    int unicode = 12345678;<br>
+                    char symbol = unicode;//lossy conversion error!<br>
+                    System.out.println(symbol);
+            </p>
+            <p>The reason why the above is illegal is because <i>char</i> variables can 
+                take on Unicode values from 0 – 65536 while <i>int</i> variables can go over 
+                2 billion.  The compiler justly complains about “possible loss of precision” and refuses to do it.  
+                To the process can be overwritten by casting the int as a char, </p>
+                <p class="codeblock">
+                        int unicode = 12345678;<br>
+                        char symbol = (char)unicode;<br>
+                        System.out.println(symbol);//prints 慎
+                </p>
+
+
+        <div class="practice">
+            <a href="../ticketOutTheDoor/set13/Set13TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 13.3: Exercise
+                1</a>
+        </div>
+
+    </div>
+    <div id="skill4" class="skills">Skill 13.4 Convert between <i>char</i> and <i>String</i> data types</div>
+    <div class="skillConceptsHeader">Skill 13.4 Concepts</div>
+    <div class="skillConcepts">
+    <p>A String can be converted to a char using the <i>charAt</i> method.  
+        This is illustrated below, 
+        <p class = "codeblock">
+            String wString = "W";<br>
+            char wChar = wString.charAt(0);//"W" now equals the character 'W'<br>
+            int wUnicode = wChar;//converts 'W' to the unicode equivalent<br>
+            System.out.println(wUnicode);//prints 87
+        </p>
+        <div class="practice">
+            <a href="../ticketOutTheDoor/set13/Set13TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 13.4: Exercise
+                1</a>
+        </div>
+    </div>
+    <div id="skill5" class="skills">Skill 13.5 Convert <i>char</i> variables to lower and upper case</div>
+    <div class="skillConceptsHeader">Skill 13.5 Concepts</div>
+    <div class="skillConcepts">
+    <p>The symbols for the upper case letters in our alphabet begin
+        at number 65 in the unicode systems.  The symbols for the lower case letters begin at
+        number 97.  The letters of our alphabet and the corresponding
+        unicode values are shown below.</p>
+        
+        <table class="notesTable" style="width:50%">
+                <tbody><tr>
+                <th style="width:20%">char</th>
+                <th style="width:20%">unicode</th>
+                <th style="width:1%"></th>
+                <th style="width:20%">char</th>
+                <th style="width:20%">unicode</th>
+                </tr>
+                <tr>
+                <td>A</td>
+                <td>65</td>
+                <td></td>
+                <td>a</td>
+                <td>97</td>
+                </tr>
+                <tr>
+                <td>B</td>
+                <td>66</td>
+                <td></td>
+                <td>b</td>
+                <td>98</td>
+                </tr>
+                <tr>
+                <td>C</td>
+                <td>67</td>
+                <td></td>
+                <td>c</td>
+                <td>99</td>
+                </tr>
+                <tr>
+                <td>D</td>
+                <td>68</td>
+                <td></td>
+                <td>d</td>
+                <td>100</td>
+                </tr>
+                <tr>
+                <td>E</td>
+                <td>69</td>
+                <td></td>
+                <td>e</td>
+                <td>101</td>
+                </tr>
+                <tr>
+                <td>F</td>
+                <td>70</td>
+                <td></td>
+                <td>f</td>
+                <td>102</td>
+                </tr>
+                <tr>
+                <td>G</td>
+                <td>71</td>
+                <td></td>
+                <td>g</td>
+                <td>103</td>
+                </tr>
+                <tr>
+                <td>H</td>
+                <td>72</td>
+                <td></td>
+                <td>h</td>
+                <td>104</td>
+                </tr>
+                <tr>
+                <td>I</td>
+                <td>73</td>
+                <td></td>
+                <td>i</td>
+                <td>105</td>
+                </tr>
+                <tr>
+                <td>J</td>
+                <td>74</td>
+                <td></td>
+                <td>j</td>
+                <td>106</td>
+                </tr>
+                <tr>
+                <td>K</td>
+                <td>75</td>
+                <td></td>
+                <td>k</td>
+                <td>107</td>
+                </tr>
+                <tr>
+                <td>L</td>
+                <td>76</td>
+                <td></td>
+                <td>l</td>
+                <td>108</td>
+                </tr>
+                <tr>
+                <td>M</td>
+                <td>77</td>
+                <td></td>
+                <td>m</td>
+                <td>109</td>
+                </tr>
+                <tr>
+                <td>N</td>
+                <td>78</td>
+                <td></td>
+                <td>n</td>
+                <td>110</td>
+                </tr>
+                <tr>
+                <td>O</td>
+                <td>79</td>
+                <td></td>
+                <td>o</td>
+                <td>111</td>
+                </tr>
+                <tr>
+                <td>P</td>
+                <td>80</td>
+                <td></td>
+                <td>p</td>
+                <td>112</td>
+                </tr>
+                <tr>
+                <td>Q</td>
+                <td>81</td>
+                <td></td>
+                <td>q</td>
+                <td>113</td>
+                </tr>
+                <tr>
+                <td>R</td>
+                <td>82</td>
+                <td></td>
+                <td>r</td>
+                <td>114</td>
+                </tr>
+                <tr>
+                <td>S</td>
+                <td>83</td>
+                <td></td>
+                <td>s</td>
+                <td>115</td>
+                </tr>
+                <tr>
+                <td>T</td>
+                <td>84</td>
+                <td></td>
+                <td>t</td>
+                <td>116</td>
+                </tr>
+                <tr>
+                <td>U</td>
+                <td>85</td>
+                <td></td>
+                <td>u</td>
+                <td>117</td>
+                </tr>
+                <tr>
+                <td>V</td>
+                <td>86</td>
+                <td></td>
+                <td>v</td>
+                <td>118</td>
+                </tr>
+                <tr>
+                <td>W</td>
+                <td>87</td>
+                <td></td>
+                <td>w</td>
+                <td>119</td>
+                </tr>
+                <tr>
+                <td>X</td>
+                <td>88</td>
+                <td></td>
+                <td>x</td>
+                <td>120</td>
+                </tr>
+                <tr>
+                <td>Y</td>
+                <td>89</td>
+                <td></td>
+                <td>y</td>
+                <td>121</td>
+                </tr>
+                <tr>
+                <td>Z</td>
+                <td>90</td>
+                <td></td>
+                <td>z</td>
+                <td>122</td>
+                </tr>
+                </tbody>
+                </table>
+        
+        
+        
+        <p>Notice that there is numerical difference of 32 between all the uppercase and lowercase
+        equivalents.  This enables for the easy conversion between uppercase
+        and lower case <i>char</i>  values, 
+
+        <p class="codeblock">
+            char bigLetter = 'H';<br>
+            //Adding an int to a char returns an int, so the result must be cast<br>
+            char smallLetter = (char)(bigLetter + 32);<br>
+            System.out.println(smallLetter);//prints h
+        </p>
+    </p>
+    <div class="practice">
+        <a href="../ticketOutTheDoor/set13/Set13TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 13.5: Exercise
+            1</a>
+    </div>
+    </div>
+</body>
+
+</html>
