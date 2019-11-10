@@ -5,7 +5,6 @@ public class test{
     public static void main(String args[]){
 	char ch2 ='A';
 	int a = ch2;//65
-
 	int randomChar = 565;
 	char ch3 = (char)randomChar;
 	System.out.println(ch3);

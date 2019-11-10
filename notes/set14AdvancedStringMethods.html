@@ -18,18 +18,8 @@
                 Skill 14.1 <a href="#skill1">Apply Advanced String Methods</a>
             </li>
             <li>
-                Skill 13.2 <a href="#skill2">Declare a <i>char</i> data type</a>
+                Skill 14.2 <a href="#skill2">Parse Strings with a Scanner</a>
             </li>
-            <li>
-                Skill 13.3 <a href="#skill3">Explain the variable compatibility between chars, ints, and String</a>
-            </li>
-            <li>
-                Skill 13.4 <a href="#skill4">Convert between <i>char</i> and <i>String</i> data types</a>
-            </li>
-            <li>
-                Skill 13.5 <a href="#skill4">Convert <i>char</i> variables to lower and upper case</a>
-            </li>
-
         </ul>
     </div>
     <div id="skill1" class="skills">Skill 14.1 Apply Advanced String Methods
@@ -153,365 +143,166 @@
                     <tr>
                     <td>public int indexOf(String str)</td>
                     <td>Search from left to right for the first 
-                        occurrence of the String str. </td>
+                        occurrence of the <i>String str</i>. </td>
                     <td class="codeFont">
-                        s = “The Walking Dead”;<br>
-                        int j = s.indexOf(“Walking”);<br>
+                        s = "The Walking Dead";<br>
+                        int j = s.indexOf("Walking");<br>
                         System.out.println(j); //prints 4
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>public int indexOf(String s, int from)</td>
+                    <td>Starting at index, from, search from 
+                        left to right for the first occurrence of the <i>String s</i> </td>
+                    <td class="codeFont">
+                            s = "The Walking Dead";<br><br>
+
+                            int j = s.indexOf("Walking", 7);<br>
+                            System.out.println(j); //prints -1<br><br>
+                            
+                            int j = s.indexOf("a", 7);<br>
+                            System.out.println(j); //prints 14
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>public int indexOf(char ch)</td>
+                    <td>Search from left to right for the first occurrence of the <i>char ch</i></td>
+                    <td class="codeFont">
+                            s = "The Walking Dead";<br>
+
+                            int j = s.indexOf('W');<br>
+                            System.out.println(j); //prints 4
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>public int indexOf(int ascii)</td>
+                    <td>This method is very similar to the one above, except instead of a char
+                         we give the ASCII code of the char desired</td>
+                    <td class="codeFont">
+                            s = "The Walking Dead";<br>
+
+                            int j = s.indexOf(68); //ASCII code for 'D'<br>
+                            System.out.println(j); //prints 12
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>public int indexOf(char ch, int from)</td>
+                    <td>Starting at index from, search from left to right for the 
+                        first occurrence of the <i>char ch</i> </td>
+                    <td class="codeFont">
+                            s = "The Walking Dead";<br>
+        
+                            int j = s.indexOf('e', 4)<br>
+                            System.out.println(j); //prints 13
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>public int indexOf(int ascii, int from)</td>
+                    <td>This method is very similar to the one above, except instead of a 
+                        character we give the ASCII code of the character desired. </td>
+                    <td class="codeFont">
+                            s = "The Walking Dead";<br>
+
+                            int j = s.indexOf(101, 4); //ASCII code for 'e'<br>
+                            System.out.println(j); //prints 13
                     </td>
                     </tr>
                     </tbody>
                     </table>
-    </div>
+    <p><u><i>public char charAt(int indx)</i></u></p>
 
-    <div id="skill2" class="skills">Skill 13.2 Declare a <i>char</i> data type</i></div>
-    <div class="skillConceptsHeader">Skill 13.2 Concepts</div>
-    <div class="skillConcepts">
-            <p>
-                    In Java, <i>char</i> is short for character. It is 16 bits in size - that is 
-                    it can only take up 16 places in memory.   As a review, consider the number
-                    of places to represent the number 77 in binary.
-                </p>
-                <p class = "codeblock">
-                    int places = (int)(Math.log10(77)/Math.log10(2));//returns 6 
-                </p>
-                <p>The actual value of 77 in binary is 1001101</p>
-        
-                <p>To represent the number 77 in memory requires 6 + 1 or 7 bits</p>
-                <p>Most of the time, the actual data stored 
-                    in the <i>char</i> data type doesn't take up more than 8 bits; 
-                    the reason Java allows 16 bits is so that all characters in all 
-                    languages can be represented. This representation is in the Unicode format described 
-                    previously.
-                </p>
-
-                <p><u>Declaring <i>char</i> variable types</u></p>
-                <p>You'd think that a <i>char</i> could be any value from a to Z, and all the numbers. 
-                    That is true, except for one key item. You can either declare a char variable with 
-                    single quotes, e.g., setting a <i>char</i>'s value to the letter 'a'. Or, you could omit the 
-                    quotes, and set the Unicode representation of the value. Take a look at the following 
-                    code for declaring a <i>char</i> variable equal to 77.</p>
-        
-                <p class="codeblock">
-                    char seventySeven = 77;<br>
-                    System.out.println(seventySeven)//Prints M - the unicode equivalent;
-                </p>
-                <p>The <i>char</i> data type can also be assigned the value of <i>M</i> using single quotes,</p>
-                <p class="codeblock">
-                        char seventySeven = 'M';<br>
-                        System.out.println(seventySeven)//Prints M
-                </p>
-
-        <div class="practice">
-            <a href="../ticketOutTheDoor/set13/Set13TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 13.2: Exercise
-                1</a>
-        </div>
-
-
-    </div>
-    <div id="skill3" class="skills">Skill 13.3 Explain the variable compatibility between chars, ints, and String</i></div>
-    <div class="skillConceptsHeader">Skill 13.3 Concepts</div>
-    <div class="skillConcepts">
-
-            <p><u>Compatiblity between <i>char</i> and <i>String</i> data types</u></p>
-
-            <p><i>char</i> data types and String types cannot be stored into each other.</p>
-            
-            <p>In the example above, if we had tried to declare the <i>char</i> as the actual "77", with quotes, 
-                there would be an error - <i>incompatible types: String cannot be converted to char</i>
-            </p>  
-            <p class="codeblock">
-                    char seventySeven = "77";//Error!
-            </p>
-            
-            <p>Recall, that char variables must be declared with single quotes, but the 
-                following code also produces an error, because there is no unicode equivalent 
-                for the character '77'.
-            
-            </p>
-
-            <p class="codeblock">
-                    char seventySeven = '77';//Error!
-            </p>
-
-            </p>
-
-            <p><u>Compatiblity between <i>char</i> and <i>int</i> data types</u></p>
-            <p><i>char</i> data types can be assigned to <i>int</i> data types.  This
-            is possible because <i>char</i> data types have a unicode (<i>int</i>) equivalent. 
-              
-            </p>
-            <p>The example below illustrates how the unicode (<i>int</i>) equivalent of any symbol can be found using the <i>char</i>
-                and <i>int</i>data types.  
-        </p>
-            <p class="codeblock">
-                    char seventySeven = 'M';<br>
-                    int M = seventySeven;<br>
-                    System.out.println(M);//prints the unicode equivalent, 77
-            </p>
-            <p>The above illustrates how the unicode equivalent of a symbol or letter can be 
-                found by assiging the <i>char</i> data type to an <i>int</i>.  The reverse process
-                however is not allowed.  Consider the following example which results in a 
-                <i>possible lossy conversion from int to char</i> error,
-            </p>
-
-            <p class="codeblock">
-                    int unicode = 12345678;<br>
-                    char symbol = unicode;//lossy conversion error!<br>
-                    System.out.println(symbol);
-            </p>
-            <p>The reason why the above is illegal is because <i>char</i> variables can 
-                take on Unicode values from 0 – 65536 while <i>int</i> variables can go over 
-                2 billion.  The compiler justly complains about “possible loss of precision” and refuses to do it.  
-                To the process can be overwritten by casting the int as a char, </p>
-                <p class="codeblock">
-                        int unicode = 12345678;<br>
-                        char symbol = (char)unicode;<br>
-                        System.out.println(symbol);//prints 慎
-                </p>
-
-
-        <div class="practice">
-            <a href="../ticketOutTheDoor/set13/Set13TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 13.3: Exercise
-                1</a>
-        </div>
-
-    </div>
-    <div id="skill4" class="skills">Skill 13.4 Convert between <i>char</i> and <i>String</i> data types</div>
-    <div class="skillConceptsHeader">Skill 13.4 Concepts</div>
-    <div class="skillConcepts">
-    <p>A String can be converted to a char using the <i>charAt</i> method.  
-        This is illustrated below, 
-        <p class = "codeblock">
-            String wString = "W";<br>
-            char wChar = wString.charAt(0);//"W" now equals the character 'W'<br>
-            int wUnicode = wChar;//converts 'W' to the unicode equivalent<br>
-            System.out.println(wUnicode);//prints 87
-        </p>
-        <div class="practice">
-            <a href="../ticketOutTheDoor/set13/Set13TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 13.4: Exercise
-                1</a>
-        </div>
-    </div>
-    <div id="skill5" class="skills">Skill 13.5 Convert <i>char</i> variables to lower and upper case</div>
-    <div class="skillConceptsHeader">Skill 13.5 Concepts</div>
-    <div class="skillConcepts">
-    <p>The symbols for the upper case letters in our alphabet begin
-        at number 65 in the unicode systems.  The symbols for the lower case letters begin at
-        number 97.  The letters of our alphabet and the corresponding
-        unicode values are shown below.</p>
-        
-        <table class="notesTable" style="width:50%">
-                <tbody><tr>
-                <th style="width:20%">char</th>
-                <th style="width:20%">unicode</th>
-                <th style="width:1%"></th>
-                <th style="width:20%">char</th>
-                <th style="width:20%">unicode</th>
-                </tr>
-                <tr>
-                <td>A</td>
-                <td>65</td>
-                <td></td>
-                <td>a</td>
-                <td>97</td>
-                </tr>
-                <tr>
-                <td>B</td>
-                <td>66</td>
-                <td></td>
-                <td>b</td>
-                <td>98</td>
-                </tr>
-                <tr>
-                <td>C</td>
-                <td>67</td>
-                <td></td>
-                <td>c</td>
-                <td>99</td>
-                </tr>
-                <tr>
-                <td>D</td>
-                <td>68</td>
-                <td></td>
-                <td>d</td>
-                <td>100</td>
-                </tr>
-                <tr>
-                <td>E</td>
-                <td>69</td>
-                <td></td>
-                <td>e</td>
-                <td>101</td>
-                </tr>
-                <tr>
-                <td>F</td>
-                <td>70</td>
-                <td></td>
-                <td>f</td>
-                <td>102</td>
-                </tr>
-                <tr>
-                <td>G</td>
-                <td>71</td>
-                <td></td>
-                <td>g</td>
-                <td>103</td>
-                </tr>
-                <tr>
-                <td>H</td>
-                <td>72</td>
-                <td></td>
-                <td>h</td>
-                <td>104</td>
-                </tr>
-                <tr>
-                <td>I</td>
-                <td>73</td>
-                <td></td>
-                <td>i</td>
-                <td>105</td>
-                </tr>
-                <tr>
-                <td>J</td>
-                <td>74</td>
-                <td></td>
-                <td>j</td>
-                <td>106</td>
-                </tr>
-                <tr>
-                <td>K</td>
-                <td>75</td>
-                <td></td>
-                <td>k</td>
-                <td>107</td>
-                </tr>
-                <tr>
-                <td>L</td>
-                <td>76</td>
-                <td></td>
-                <td>l</td>
-                <td>108</td>
-                </tr>
-                <tr>
-                <td>M</td>
-                <td>77</td>
-                <td></td>
-                <td>m</td>
-                <td>109</td>
-                </tr>
-                <tr>
-                <td>N</td>
-                <td>78</td>
-                <td></td>
-                <td>n</td>
-                <td>110</td>
-                </tr>
-                <tr>
-                <td>O</td>
-                <td>79</td>
-                <td></td>
-                <td>o</td>
-                <td>111</td>
-                </tr>
-                <tr>
-                <td>P</td>
-                <td>80</td>
-                <td></td>
-                <td>p</td>
-                <td>112</td>
-                </tr>
-                <tr>
-                <td>Q</td>
-                <td>81</td>
-                <td></td>
-                <td>q</td>
-                <td>113</td>
-                </tr>
-                <tr>
-                <td>R</td>
-                <td>82</td>
-                <td></td>
-                <td>r</td>
-                <td>114</td>
-                </tr>
-                <tr>
-                <td>S</td>
-                <td>83</td>
-                <td></td>
-                <td>s</td>
-                <td>115</td>
-                </tr>
-                <tr>
-                <td>T</td>
-                <td>84</td>
-                <td></td>
-                <td>t</td>
-                <td>116</td>
-                </tr>
-                <tr>
-                <td>U</td>
-                <td>85</td>
-                <td></td>
-                <td>u</td>
-                <td>117</td>
-                </tr>
-                <tr>
-                <td>V</td>
-                <td>86</td>
-                <td></td>
-                <td>v</td>
-                <td>118</td>
-                </tr>
-                <tr>
-                <td>W</td>
-                <td>87</td>
-                <td></td>
-                <td>w</td>
-                <td>119</td>
-                </tr>
-                <tr>
-                <td>X</td>
-                <td>88</td>
-                <td></td>
-                <td>x</td>
-                <td>120</td>
-                </tr>
-                <tr>
-                <td>Y</td>
-                <td>89</td>
-                <td></td>
-                <td>y</td>
-                <td>121</td>
-                </tr>
-                <tr>
-                <td>Z</td>
-                <td>90</td>
-                <td></td>
-                <td>z</td>
-                <td>122</td>
-                </tr>
-                </tbody>
-                </table>
-        
-        
-        
-        <p>Notice that there is numerical difference of 32 between all the uppercase and lowercase
-        equivalents.  This enables for the easy conversion between uppercase
-        and lower case <i>char</i>  values, 
-
-        <p class="codeblock">
-            char bigLetter = 'H';<br>
-            //Adding an int to a char returns an int, so the result must be cast<br>
-            char smallLetter = (char)(bigLetter + 32);<br>
-            System.out.println(smallLetter);//prints h
-        </p>
+    <p>This method returns the character at the specified index.</p>
+    <p class="codeblock">
+    s = "Take a Hike!";<br>
+    
+    char myChar = s.charAt(5);<br>
+    System.out.println(myChar); //prints a
     </p>
+    <p><u><i>public String trim()</i></u></p>
+    <p>This method removes whitespace from both ends of the String while 
+        leaving interior whitespace intact. (Whitespace consists of 
+        new line (<i>\n</i>), tab (<i>\t</i>), and spaces)</p>
+        <p class = "codeblock"> 
+        s = "Take a Hike!";<br>
+
+        s = "\t\t" + s + "\n";//add some space before and after<br>
+        System.out.println("X" + s.trim() + "X"); //prints XTake a HikeX
+        </p>
+    <p><u><i>public boolean contains(String ss)</i></u></p>
+    <p>This method returns true when this String contains the String ss; otherwise, false</p>
+            <p class = "codeblock"> 
+                    boolean b = "Sticks and Stones".contains("tic"); //returns true
+            </p>
+
     <div class="practice">
-        <a href="../ticketOutTheDoor/set13/Set13TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 13.5: Exercise
-            1</a>
+        <a href="../ticketOutTheDoor/set14/Set14TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 14.1: Exercises
+                        1 thru 3</a>
+        </div>
     </div>
+
+    <div id="skill2" class="skills">Skill 14.2 Parse Strings with a Scanner</div>
+    <div class="skillConceptsHeader">Skill 14.2 Concepts</div>
+    <div class="skillConcepts">
+    <u>Pass a <i>String</i> to a <i>Scanner</i></u>
+    <p>
+    In a previous lesson we learned how to use the <i>Scanner</i> class to input 
+    text from the keyboard.  Here, we illustrate further uses of <i>Scanner</i> in 
+    parsing (processing) a <i>String</i>.  Instead of passing <i>System.in</i> to the 
+    <i>Scanner</i> as we did for the keyboard input, we pass a <i>String</i> 
+    as follows, 
+    </p>
+    <p class = "codeblock">
+            Scanner sc = new Scanner(“Please, no more Exams!”);
+    </p>
+                
+    <p>Once a <i>String</i> is passed to the <i>Scanner</i>, it is possible to anaylze it.  
+    The process of analyzing a <i>String</i> or text is called <i>parsing</i>.</p>
+        
+    <u>Delimiters</u>
+    <p>A delimiter is a series of characters that separate the text presented 
+        to a <i>Scanner</i> object into separate chunks called <i>tokens</i>.  The default 
+        delimiter is whitespace. The tokens that make up the <i>String</i>
+        below could be accessed using the <i>next()</i> method. </p>  
+
+    <p class = "codeblock">
+            Scanner sc = new Scanner(“Please, no more Exams!”);<br><br>
+            String firstWord = sc.next(); //Please,<br>
+            String secondWord = sc.next(); //no<br>
+            String thirdWord = sc.next(); //more<br>
+            String lastWord = sc.next(); //Exams!
+    </p>
+        
+    <p>The <i>useDelimiter</i> method allows us to create a custom delimiter.  </p>
+    
+    <p class="codeblock">
+            Scanner sc = new Scanner(“Please, no more Exams!”);<br><br>
+
+            sc.useDelimiter(“,\\s”);  //the delimiter is the comma followed by a space<br>
+            sc.next(); //Please<br>
+            sc.next(); //no more Exams!
+    </p>
+
+    <u><i>hasNext()</i></u>
+    <p>The <i>hasNext()</i> method is useful for evaluating whether or not another token exists.
+    If another token exists <i>hasNext()</i> will return <i>true</i>, otherwise it will return <i>false</i></p>
+    <p class="codeblock">
+            Scanner sc = new Scanner(“Please, no more Exams!”);<br><br>
+
+            sc.useDelimiter(“,\\s”);  //the delimiter is the comma followed by a space<br><br>
+            while(sc.hasNext()){<br><br>
+            <span style="margin-left:10em;">System.out.println(sc.next()); </span><br><br>
+            }
+    </p>
+
+
+        <div class="practice">
+            <a href="../ticketOutTheDoor/set14/Set14TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 14.2: Exercise
+                1</a>
+        </div>
+
+
     </div>
+    
 </body>
 
 </html>

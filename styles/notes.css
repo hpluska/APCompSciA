@@ -110,11 +110,16 @@ body{
   .notesTable th{
       background-color:grey;
       text-align:left;
+
+  }
+  .notesTable td, th{
+    padding:.5em;
   }
 
   .codeFont{
 
     font-family: 'Source Code Pro', monospace;
+    
   }
 
 
