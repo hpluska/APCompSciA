@@ -10,6 +10,52 @@ public class test{
 	String n = "puck";
 	int j = 6, z = 99;
 
+
+	System.out.println("Skill 14.1 Exercise 1 Part 1");
+	int k1 = s.indexOf(m);
+	System.out.println(k1);
+
+	System.out.println("Skill 14.1 Exercise 1 Part 2");
+	int k2 = s.indexOf('c');
+	System.out.println(k2);
+
+	System.out.println("Skill 14.1 Exercise 1 Part 3");
+	char p1 = s.charAt(7);
+	System.out.println(p1);
+
+	System.out.println("Skill 14.1 Exercise 1 Part 4");
+	int k3 = s.indexOf(z);
+	System.out.println(k3);
+
+	System.out.println("Skill 14.1 Exercise 1 Part 5");
+	int k4 = s.indexOf('y', j);
+	System.out.println(k4);
+
+	System.out.println("Skill 14.1 Exercise 1 Part 6");
+	char p2 = s.charAt(z-90);
+	System.out.println(p2);
+
+	System.out.println("Skill 14.1 Exercise 1 Part 7");
+	int k5 = s.indexOf(m, 15);
+	System.out.println(k5);
+
+	System.out.println("Skill 14.1 Exercise 1 Part 8");
+	int k6 = s.indexOf(z + 2, 4);
+	System.out.println(k6);
+
+	System.out.println("Skill 14.1 Exercise 1 Part 9");
+	boolean k7 = s.contains(m);
+	System.out.println(k7);
+
+	System.out.println("Skill 14.1 Exercise 1 Part 10");
+	String str = s.trim();
+	System.out.println("+"+str+"+");
+
+	System.out.println("Skill 14.1 Exercise 1 Part 11");
+	System.out.println(m.compareTo(n));
+
+
+
 	System.out.println(m.compareTo(n));
 
 	System.out.println((int)s.charAt(0));
