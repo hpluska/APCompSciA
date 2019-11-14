@@ -5,13 +5,26 @@ public class examSet14{
 
 	public static void main(String args[]){
 
-	String msg = "Get off the couch!";
+	String s = “Get here Thanksgiving!”;
+	String m = “er”;
+	int j = 8, z = 99;
 
-	Scanner s = new Scanner(msg);
+
+
+
+
+
+	
+	System.out.println("Type a message to encrypt: ");
+	
+	Scanner s = new Scanner(System.in);
+	String scan = s.nextLine();
+	Scanner msg = new Scanner(scan);
+
 	String encrypted = "";
 	
-		while(s.hasNext()){
-			String word = s.next();
+		while(msg.hasNext()){
+			String word = msg.next();
 			for(int l = 0; l < word.length();l++){
 				if(word.charAt(l)=='c')
 					encrypted += "c'mon";
