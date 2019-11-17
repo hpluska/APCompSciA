@@ -23,6 +23,12 @@
             <li>
                 Skill 16.3 <a href="#skill3">Use the split method to produce an array</a>
             </li>
+            <li>
+                Skill 16.4 <a href="#skill4">Count the occurrences of a regular expression</a>
+            </li>
+            <li>
+                Skill 16.5 <a href="#skill4">Apply parallel arrays to manage data</a>
+            </li>
         </ul>
     </div>
     <div id="skill1" class="skills">Skill 16.1 Populate an array from the command line
@@ -150,6 +156,130 @@
     <p><a href="http://users.cs.cf.ac.uk/Dave.Marshall/Internet/NEWS/regexp.html">Regular Expressions Resource</a></p>
     
     
+    <div class="practice">
+        <a href="../ticketOutTheDoor/set15/Set15TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 15.3: Exercises
+                1 and 2</a>
+    </div>
+
+
+    </div>
+    <div id="skill4" class="skills">Skill 16.4 Count the occurrences of a regular expression</div>
+    <div class="skillConceptsHeader">Skill 16.4 Concepts</div>
+    <div class="skillConcepts">
+    <p>
+    The split method can be used to count the number of occurrences of a specified regular
+    expression within a String. For example, consider the following String,  
+    </p>
+    <p class = "codeblock">
+            String s = “IF THE BOX IS RED IT&#39;S THE RIGHT ONE.”;
+    </p>
+    <p>In order to count the occurrences of “THE”, we can use it as the regular expession with the split method
+            (String sp[] = s.split(“THE”)). The underlined portions below show the three different elements
+            of the array into which our array is “split”.</p>
+    <p><u>IF</u> <b>THE</b> <u>BOX IS RED IT&#39;S</u> <b>THE</b> <u>RIGHT ONE.</u></p>
+
+    <p>
+            The number of elements in the array is three (sp.length); therefore, the number of
+            occurrences of “THE” is sp.length – 1. 
+    </p>
+    <p>A complication occurs if the delimiter trails the
+            String as in the following example,</p>
+
+    <p class = "codeblock">
+            String s = "ENOUGH USE OF THE WORD THE";<br>
+            String sp[] = s.split("THE");<br>
+            System.out.println(sp.length-1);//prints 1
+            System.out.println(sp[0]);//prints ENOUGH USE OF
+            System.out.println(sp[1]);//prints WORD
+	        System.out.println(sp[2]);//ArrayIndexOutOfBoundsException
+    </p>
+    <p>The value for the number of instances of "THE" is incorrect when the code above is run. 
+        This is because element sp[2] does not exist. To account for this anomoly we can concatenate a dummy 
+        character to the end of the String, 
+        
+    </p>
+    <p class = "codeblock">
+            String s = "ENOUGH USE OF THE WORD THE" + "DUMMY";<br>
+            String sp[] = s.split("THE");<br>
+            System.out.println(sp.length-1);//prints 2<br>
+            System.out.println(sp[0]);//prints ENOUGH USE OF<br>
+            System.out.println(sp[1]);//prints WORD<br>
+	        System.out.println(sp[2]);//DUMMY
+    </p>
+    <p>Now let's consider how split handles delimiters which occur at the beginning of a String. 
+        In the following example, one would think that the length of the resultant array is one. But when the
+        split method is implemented, two elements are created: An empty String before the "THE" and the text 
+        "ENOUGH USE OF WORD"
+    </p>
+    <p class = "codeblock">
+            String s = "THE ENOUGH USE OF WORD";<br>
+            String sp[] = s.split("THE");<br>
+            System.out.println(sp.length-1);//prints 1<br>
+            System.out.println(sp[0]);//prints " "<br>
+            System.out.println(sp[1]);//prints ENOUGH USE OF WORD
+    </p>
+    <div class="practice">
+        <a href="../ticketOutTheDoor/set15/Set15TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 15.3: Exercises
+                1 and 2</a>
+    </div>
+
+
+    </div>
+    <div id="skill5" class="skills">Skill 16.5 Apply parallel arrays to manage data</div>
+    <div class="skillConceptsHeader">Skill 16.5 Concepts</div>
+    <div class="skillConcepts">
+    <p>
+    The split method can be used to count the number of occurrences of a specified regular
+    expression within a String. For example, consider the following String,  
+    </p>
+    <p class = "codeblock">
+            String s = “IF THE BOX IS RED IT&#39;S THE RIGHT ONE.”;
+    </p>
+    <p>In order to count the occurrences of “THE”, we can use it as the regular expession with the split method
+            (String sp[] = s.split(“THE”)). The underlined portions below show the three different elements
+            of the array into which our array is “split”.</p>
+    <p><u>IF</u> <b>THE</b> <u>BOX IS RED IT&#39;S</u> <b>THE</b> <u>RIGHT ONE.</u></p>
+
+    <p>
+            The number of elements in the array is three (sp.length); therefore, the number of
+            occurrences of “THE” is sp.length – 1. 
+    </p>
+    <p>A complication occurs if the delimiter trails the
+            String as in the following example,</p>
+
+    <p class = "codeblock">
+            String s = "ENOUGH USE OF THE WORD THE";<br>
+            String sp[] = s.split("THE");<br>
+            System.out.println(sp.length-1);//prints 1
+            System.out.println(sp[0]);//prints ENOUGH USE OF
+            System.out.println(sp[1]);//prints WORD
+	        System.out.println(sp[2]);//ArrayIndexOutOfBoundsException
+    </p>
+    <p>The value for the number of instances of "THE" is incorrect when the code above is run. 
+        This is because element sp[2] does not exist. To account for this anomoly we can concatenate a dummy 
+        character to the end of the String, 
+        
+    </p>
+    <p class = "codeblock">
+            String s = "ENOUGH USE OF THE WORD THE" + "DUMMY";<br>
+            String sp[] = s.split("THE");<br>
+            System.out.println(sp.length-1);//prints 2<br>
+            System.out.println(sp[0]);//prints ENOUGH USE OF<br>
+            System.out.println(sp[1]);//prints WORD<br>
+	        System.out.println(sp[2]);//DUMMY
+    </p>
+    <p>Now let's consider how split handles delimiters which occur at the beginning of a String. 
+        In the following example, one would think that the length of the resultant array is one. But when the
+        split method is implemented, two elements are created: An empty String before the "THE" and the text 
+        "ENOUGH USE OF WORD"
+    </p>
+    <p class = "codeblock">
+            String s = "THE ENOUGH USE OF WORD";<br>
+            String sp[] = s.split("THE");<br>
+            System.out.println(sp.length-1);//prints 1<br>
+            System.out.println(sp[0]);//prints " "<br>
+            System.out.println(sp[1]);//prints ENOUGH USE OF WORD
+    </p>
     <div class="practice">
         <a href="../ticketOutTheDoor/set15/Set15TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 15.3: Exercises
                 1 and 2</a>
