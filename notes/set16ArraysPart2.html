@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../styles/notes.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Over+the+Rainbow" rel="stylesheet">
+</head>
+
+<body>
+    <div id="top">
+        <h1>Set 16: Arrays Part 2</h1>
+    </div>
+    <div id="skills">
+        <ul id="skillsList">
+            <li>
+                Skill 16.1 <a href="#skill1">Populate an array from the command line</a>
+            </li>
+            <li>
+                Skill 16.2 <a href="#skill2">Interpret the <i>NullPointerException</i></a>
+            </li>
+            <li>
+                Skill 16.3 <a href="#skill3">Use the split method to produce an array</a>
+            </li>
+        </ul>
+    </div>
+    <div id="skill1" class="skills">Skill 16.1 Populate an array from the command line
+    </div>
+    <div class="skillConceptsHeader">Skill 16.1 Concepts</div>
+    <div class="skillConcepts">
+
+            <p>In our previous lesson we learned how arrays can be applied to store lists of data.  In this 
+                lesson we will explore some additional features associated with arrays, along with how they can be 
+                manipulated and applied to represent complex data sets. 
+            </p>
+
+            <p>Believe it or not you have been declaring arrays since your first program.  Consider 
+                the following code you have been using to declare the main method in all your programs, 
+            </p>
+
+            <p class = "codeblock">
+                public static void main(<span style="color:red;">String args[]</span>){}
+            </p>
+            <p>Now that we know about arrays, we can see the <span style="color:red;">String args[]</span> 
+                is declaring args as a String array.  In fact, the name of the array, <i>args</i> could be
+                called by any legal variable name. </p>
+            <p>But where and how is this <i>args[]</i> array to be used? </p>
+            <p>The <i>args[]</i> array allows us to pass command line arguments to the main method. Consider the 
+            main method in a class called <i>Street.java</i>, where the array name <i>args</i> has been replaced with <i>houses</i></p>
+            <p class = "codeblock">
+
+                    public static void main(<span style="color:red;">String houses[]</span>){}
+                    
+            </p>
+
+            <p>The houses array could be populated directly from the command line using the following syntax</p>
+
+            <p class = "codeblock">
+                    java Street Bart Kyle Bugs Marvin
+            </p>
+            <p>After compiling <i>Street.java</i> and running the command above, our houses array has the following 
+                assignments, 
+            </p>
+        
+            <img src="../images/arrayOfToons.jpg">
+
+
+    <div class="practice">
+        <a href="../ticketOutTheDoor/set15/Set15TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 15.1: Exercise
+                        1</a>
+        </div>
+    </div>
+
+    <div id="skill2" class="skills">Skill 16.2 Interpret the <i>NullPointerException</i></div>
+    <div class="skillConceptsHeader">Skill 16.2 Concepts</div>
+    <div class="skillConcepts">
+    <p>A null pointer exception results when you try to access the value of an array object that has not
+            yet been initialized. In the following example, the <i>houses</i> array is declare, but it 
+            has not been initialized.  Attempting to assign "Homer" to a location in the array results
+            in a <i>NullPointerException</i>.
+    </p>
+    
+    <p class = "codeblock">
+            String houses[]; //the array houses has been declared, but <i>not</i> initialized<br>
+            houses[6] = "Homer"; //results in a NullPointerException 
+    </p>
+
+    <div class="practice">
+        <a href="../ticketOutTheDoor/set15/Set15TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 15.2: Exercise
+            1</a>
+    </div>
+
+
+    </div>
+    <div id="skill3" class="skills">Skill 16.3 Use the split method to produce an array</div>
+    <div class="skillConceptsHeader">Skill 16.3 Concepts</div>
+    <div class="skillConcepts">
+    <p>
+    The split method is useful for splitting a String into separate elements and storing the result as a String array.
+    The signature for the split method is below.  
+    </p>
+    <p class = "codeblock">
+            <span style="color:red;">public String[]</span> 
+            <span style="color:blue;">split</span>
+            (<span style="color:green;">String regex</span>)
+    </p>
+    <ul style="margin-left:5em;">
+        <li><span style="color:red;">public String[]</span> - the value returned when the method is implemented</li>
+        <li><span style="color:blue;">split</span> - the name of the method</li>
+        <li><span style="color:green;">String regex</span> - the expression that indicates where the split should occur</li>
+
+    </ul>
+    <p>The <i>regex</i> (regular expression) indicates where the split can occur.  This expression can specify that the split
+        occur at one character or multiple characters.  Both
+        scenarios are described below. 
+    </p>
+    <u>One character</u>
+    <p>Consider the String people as declared below.  Because the people are separated by commas, we can easily
+        split the String into an array by setting the <i>regex</i> expression equal to ",".
+    </p>
+    <p>Below is an example,</p>
+
+    <p class = "codeblock">
+            String people = "Bart, Kyle, Bugs, Marvin";<br>
+            String houses[] = people.split(",");
+    </p>
+    <p>After implementing the code above, our houses have the following assignments, 
+    </p>
+    <img src="../images/arrayOfToons.jpg">
+    <p><u>Multiple characters</u></p>
+    <p>The split method can be applied to split a String at multiple locations.  Consider the 
+        same String as before, but instead we have separated the people with different characters.  The String 
+        can still be separated, but we need to indicate all the characters where the split should occur.
+        In the code below each character in the <i>regex</i> expression is separated by a "|".  This 
+        symbole stands for "or"; 
+    </p>
+    <p class = "codeblock">
+            String people = "Bart~Kyle,Bugs-Marvin";<br>
+            String houses[] = people.split("~|,|-");<br><br>
+    
+            System.out.println(houses[0]);//prints Bart<br>
+            System.out.println(houses[1]);//prints Kyle<br>
+            System.out.println(houses[2]);//prints Bugs<br>
+            System.out.println(houses[3]);//prints Marvin
+    </p>
+    <p>Regular expression are a very important tool in programming and they can become quite complex.  
+        The link below provides more information on how to parse Strings using regular expressions. 
+    </p>
+    <p><a href="http://users.cs.cf.ac.uk/Dave.Marshall/Internet/NEWS/regexp.html">Regular Expressions Resource</a></p>
+    
+    
+    <div class="practice">
+        <a href="../ticketOutTheDoor/set15/Set15TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 15.3: Exercises
+                1 and 2</a>
+    </div>
+
+
+    </div>
+</body>
+
+</html>
