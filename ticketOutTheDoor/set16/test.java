@@ -1,6 +1,18 @@
 public class test{
 
-	public static void main(String args[]){
+	public static void main(String houses2[]){
+
+		//System.out.println("house2[0] " + houses2[0]);
+		//System.out.println("house2[1] " + houses2[1]);
+
+		String sss = "Some ssStrings";
+		String[] sssArray = sss.split("s");
+		System.out.println("sssLength = " + sssArray.length);
+		System.out.println(sssArray[0]);
+		System.out.println(sssArray[1]);
+		System.out.println(sssArray[2]);
+
+
 		String people = "Bart~Kyle,Bugs-Marvin";
 		String houses[] = people.split("~|,|-");
 
