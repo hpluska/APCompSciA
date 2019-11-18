@@ -27,7 +27,7 @@
                 Skill 16.4 <a href="#skill4">Count the occurrences of a regular expression</a>
             </li>
             <li>
-                Skill 16.5 <a href="#skill4">Apply parallel arrays to manage data</a>
+                Skill 16.5 <a href="#skill5">Apply parallel arrays to manage data</a>
             </li>
         </ul>
     </div>
@@ -73,7 +73,7 @@
 
 
     <div class="practice">
-        <a href="../ticketOutTheDoor/set15/Set15TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 15.1: Exercise
+        <a href="../ticketOutTheDoor/set16/Set16TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 16.1: Exercise
                         1</a>
         </div>
     </div>
@@ -93,7 +93,7 @@
     </p>
 
     <div class="practice">
-        <a href="../ticketOutTheDoor/set15/Set15TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 15.2: Exercise
+        <a href="../ticketOutTheDoor/set16/Set16TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 16.2: Exercise
             1</a>
     </div>
 
@@ -157,8 +157,8 @@
     
     
     <div class="practice">
-        <a href="../ticketOutTheDoor/set15/Set15TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 15.3: Exercises
-                1 and 2</a>
+        <a href="../ticketOutTheDoor/set16/Set16TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 16.3: Exercise
+                1</a>
     </div>
 
 
@@ -219,8 +219,8 @@
             System.out.println(sp[1]);//prints ENOUGH USE OF WORD
     </p>
     <div class="practice">
-        <a href="../ticketOutTheDoor/set15/Set15TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 15.3: Exercises
-                1 and 2</a>
+        <a href="../ticketOutTheDoor/set16/Set16TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 16.4: Exercise
+                1</a>
     </div>
 
 
@@ -229,60 +229,89 @@
     <div class="skillConceptsHeader">Skill 16.5 Concepts</div>
     <div class="skillConcepts">
     <p>
-    The split method can be used to count the number of occurrences of a specified regular
-    expression within a String. For example, consider the following String,  
+    A group of <i>parallel</i> arrays is a data structure that uses multiple arrays to represent a singular array of records. 
+    It does so by keeping a separate, homogeneous data array for each field of the record, each having the same number of elements.  
+    </p>
+    <p>As an example, consider a grade book.  The first array, <i>assignments</i>, is used to store the 
+    assignments.  Then, we have a separate array for each student.  Because each student has the same
+number of assignments we can store them in <i>parallel</i></p>. 
+
+    <table class="notesTable" style="width:100%">
+            <tr>
+            <td style="width:15%; text-align:center;"></td>
+            <th style="width:20%; text-align:center;">0</th>
+            <th style="width:15%; text-align:center;">1</th>
+            <th style="width:15%; text-align:center;">2</th>
+            <th style="width:15%; text-align:center;">3</th>
+            <th style="width:15%; text-align:center;">4</th>
+            </tr>
+            <tr>
+            <th style="width:20%">String assignments[]</th>
+            <td style="width:15%">assignment 1</td>
+            <td style="width:15%">assignment 2</td>
+            <td style="width:15%">assignment 3</td>
+            <td style="width:15%">assignment 4</td>
+            <td style="width:15%">assignment 5</td>
+            </tr>
+            <tr>
+            <th>char Bart[]</th>
+            <td style="text-align:center;">5</td>
+            <td style="text-align:center;">R</td>
+            <td style="text-align:center;">3</td>
+            <td style="text-align:center;">4</td>
+            <td style="text-align:center;">M</td>
+            </tr>
+            <tr>
+            <th>char Kyle[]</th>
+            <td style="text-align:center;">2</td>
+            <td style="text-align:center;">3</td>
+            <td style="text-align:center;">2</td>
+            <td style="text-align:center;">4</td>
+            <td style="text-align:center;">R</td>
+            </tr>
+            <tr>
+            <th>char Bugs[]</th>
+            <td style="text-align:center;">4</td>
+            <td style="text-align:center;">M</td>
+            <td style="text-align:center;">3</td>
+            <td style="text-align:center;">5</td>
+            <td style="text-align:center;">4</td>
+            </tr>
+            <tr>
+            <th>char Marvin[]</th>
+            <td style="text-align:center;">5</td>
+            <td style="text-align:center;">2</td>
+            <td style="text-align:center;">3</td>
+            <td style="text-align:center;">3</td>
+            <td style="text-align:center;">4</td>
+            </tr>
+    </table>
+    
+    <p>Now, let's suppose Bugs completes his missing assignment 2.  Below illustrates how we can use 
+        the fact that all the arrays share the same indexing to update this assignment.
     </p>
     <p class = "codeblock">
-            String s = “IF THE BOX IS RED IT&#39;S THE RIGHT ONE.”;
-    </p>
-    <p>In order to count the occurrences of “THE”, we can use it as the regular expession with the split method
-            (String sp[] = s.split(“THE”)). The underlined portions below show the three different elements
-            of the array into which our array is “split”.</p>
-    <p><u>IF</u> <b>THE</b> <u>BOX IS RED IT&#39;S</u> <b>THE</b> <u>RIGHT ONE.</u></p>
 
-    <p>
-            The number of elements in the array is three (sp.length); therefore, the number of
-            occurrences of “THE” is sp.length – 1. 
-    </p>
-    <p>A complication occurs if the delimiter trails the
-            String as in the following example,</p>
-
-    <p class = "codeblock">
-            String s = "ENOUGH USE OF THE WORD THE";<br>
-            String sp[] = s.split("THE");<br>
-            System.out.println(sp.length-1);//prints 1
-            System.out.println(sp[0]);//prints ENOUGH USE OF
-            System.out.println(sp[1]);//prints WORD
-	        System.out.println(sp[2]);//ArrayIndexOutOfBoundsException
-    </p>
-    <p>The value for the number of instances of "THE" is incorrect when the code above is run. 
-        This is because element sp[2] does not exist. To account for this anomoly we can concatenate a dummy 
-        character to the end of the String, 
+            char score = '3';<br>
+            int index = 0;<br>
         
+            for(int a = 0; a < assignments.length; a++){<br>
+                <span style="margin-left:5em;">if(assignments[a].equals("assignment 2")){</span><br>
+        
+                    <span style="margin-left:10em;">index = a;</span><br>
+        
+                    <span style="margin-left:5em;">}</span><br>
+        
+            }<br>
+            Bugs[index] = score;<br>
+            System.out.println("Bugs now has a score of " + Bugs[index] + " on " + assignments[index]);
+            
     </p>
-    <p class = "codeblock">
-            String s = "ENOUGH USE OF THE WORD THE" + "DUMMY";<br>
-            String sp[] = s.split("THE");<br>
-            System.out.println(sp.length-1);//prints 2<br>
-            System.out.println(sp[0]);//prints ENOUGH USE OF<br>
-            System.out.println(sp[1]);//prints WORD<br>
-	        System.out.println(sp[2]);//DUMMY
-    </p>
-    <p>Now let's consider how split handles delimiters which occur at the beginning of a String. 
-        In the following example, one would think that the length of the resultant array is one. But when the
-        split method is implemented, two elements are created: An empty String before the "THE" and the text 
-        "ENOUGH USE OF WORD"
-    </p>
-    <p class = "codeblock">
-            String s = "THE ENOUGH USE OF WORD";<br>
-            String sp[] = s.split("THE");<br>
-            System.out.println(sp.length-1);//prints 1<br>
-            System.out.println(sp[0]);//prints " "<br>
-            System.out.println(sp[1]);//prints ENOUGH USE OF WORD
-    </p>
+
+    
     <div class="practice">
-        <a href="../ticketOutTheDoor/set15/Set15TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 15.3: Exercises
-                1 and 2</a>
+        <a href="../ticketOutTheDoor/set16/Set16TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 16.5: Exercise
+                1</a>
     </div>
 
 

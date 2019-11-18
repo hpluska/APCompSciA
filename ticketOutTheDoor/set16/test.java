@@ -17,5 +17,47 @@ public class test{
 	    System.out.println(sp[2]);
 
 
+
+	String[] assignments = {"assignment 1", "assignment 2", "assignment 3"};
+	char[] Bart = {'5','R','3'};
+	char[] Kyle = {'2','3','2'};	
+	char[] Bugs = {'4','M','3'};
+	char[] Marvin = {'5','2','3'};
+	char score = '3';
+	int index = 0;
+
+	for(int a = 0; a < assignments.length; a++){
+		if(assignments[a].equals("assignment 2")){
+
+			index = a;
+
+		}
+
 	}
+	Bugs[index] = score;
+	System.out.println("Bugs now has a score of " + Bugs[index] + " on " + assignments[index]);
+	
+
+
+	//class average on assignment 3
+	double avg = 0;
+	for(int a = 0; a < assignments.length; a++){
+		if(assignments[a].equals("assignment 3")){
+
+			avg = (Bart[a] + Kyle[a] + Bugs[a] + Marvin[a])/4.0;
+
+		}
+
+	}
+	System.out.println("The class average on assignment 3 is " + (avg-48));
+	
+
+	String s2 = "Hello Again", sp2[], sp3[];
+	sp2 = s2.split("n");
+	sp3 = s2.split("H");
+	System.out.println(sp2.length);
+	System.out.println(sp3.length);
+
+	}
+
 }
