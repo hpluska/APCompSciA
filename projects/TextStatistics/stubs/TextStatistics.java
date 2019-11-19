@@ -13,7 +13,7 @@ import java.util.logging.Logger;
  */
 
 //TODO: implement the TextStatisticsInterface
-public class TextStatistics{
+public class TextStatistics implements TextStatisticsInterface{
 
     //Declare additional variables here
     private File textFile;
@@ -33,6 +33,13 @@ public class TextStatistics{
         try {
 
             fileScan = new Scanner(textFile);
+
+            while(fileScan.hasNextLine()){
+                String line = fileScan.nextLine();
+
+                lineCount++;
+            }
+		
   
             
         } catch (FileNotFoundException ex) {

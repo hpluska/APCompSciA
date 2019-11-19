@@ -22,68 +22,44 @@ In this program, you are going to implement a program that analyzes text files t
 
 	* TextStatisticsInterface.java
 
-## ProcessText (provided class)
+## ProcessStatistics (provided class)
 
-The ProcessText class will serve as the driver class with a main method which processes one or
-more files to determine some interesting statistics about them. The ProcessText driver class
+The ProcessStatistics class will serve as the driver class with a main method which processes one or more files to determine some interesting statistics about them. The ProcessText driver class
 should meet the following criteria,
 
-- [ ] Command-line validation. The names of the files to process will be given as command
-line arguments. Your driver class must,
+- [ ] Command-line validation. The names of the files to process will be given as command line arguments. Your driver class must,
 
 	* Validate the number of command line arguments. There should be at least one file
 name given.  
-	* If no files are given on the command line, your program must print a usage message
-and exit the program immediately. The message should read as follows. Usage: java
-ProcessText file1 [file2 ...] This lets the user know how they should run the
-program without having to go look up the documentation.
+	* If no files are given on the command line, your program must print a usage message and exit the program immediately. The message should read as follows. Usage: java ProcessText file1 [file2 ...] This lets the user know how they should run the program without having to go look up the documentation.
 
-- [ ] Process command-line arguments. If valid filenames are given on the command line,
-your program will,
+- [ ] Process command-line arguments. If valid filenames are given on the command line, your program will,
 
-	* Will process each command line argument by creating a File object from it and checking to see that the file actually exists. Recall, the args parameter of the main
-method is an array of String objects that contains the command line arguments to
-the program. For your program, the array should contain the names of the files to be
-processed.
-	* If a file does exist, your program will create a TextStatistics object for that file and
-will print out the statistics for the file to the console.
-	* If a file does not exist, a meaningful error message needs to be printed to the user
-and your program will continue processing the next file. (An invalid file in the list
-should not result in the program crashing or exiting before all files have been
+	* Will process each command line argument by creating a File object from it and checking to see that the file actually exists. Recall, the args parameter of the main method is an array of String objects that contains the command line arguments to the program. For your program, the array should contain the names of the files to be processed.
+	* If a file does exist, your program will create a TextStatistics object for that file and will print out the statistics for the file to the console.
+	* If a file does not exist, a meaningful error message needs to be printed to the user and your program will continue processing the next file. (An invalid file in the list should not result in the program crashing or exiting before all files have been
 processed.)
 
 ## TextStatistics
 
 TextStatistics is an instantiable class that reads a given text file, parses it, and stores the generated statistics. The TextStatistics class should do the following,
 
-- [ ] Implement the given TextStatisticsInterface (don’t modify the interface, it just provides
-a list of methods that your class must include). To implement an interface, you must modify your class declaration as follows, 
+- [ ] Implement the given TextStatisticsInterface (don’t modify the interface, it just provides a list of methods that your class must include). To implement an interface, you must modify your class declaration as follows, 
 
 ```
 public class TextStatistics implements TextStatisticsInterface
 
 ```
 
-- [ ] Include instance variables. Include a reference to the processed File. Include variables
-for all of the statistics that are computed for the file. Look at the list of accessor methods in
-the TextStatisticsInterface to determine which statistics will be stored (accessor methods
-typically are named with the word “get” following by whatever information they are
+- [ ] Include instance variables. Include a reference to the processed File. Include variables for all of the statistics that are computed for the file. Look at the list of accessor methods in the TextStatisticsInterface to determine which statistics will be stored (accessor methods typically are named with the word “get” following by whatever information they are
 accessing)
 
-- [ ] Constructor. The constructor takes a File object as a parameter. The constructor should
-open the file and read the entire file line-by-line, processing each line as it reads it.
-Your constructor needs to handle the FileNotFoundException that can occur when the
-File is opened in a Scanner. Use a try-catch statement to do this. Don’t just throw the
-exception. As each line is read, collect the following statistics:
+- [ ] Constructor. The constructor takes a File object as a parameter. The constructor should open the file and read the entire file line-by-line, processing each line as it reads it. Your constructor needs to handle the FileNotFoundException that can occur when the File is opened in a Scanner. Use a try-catch statement to do this. Don’t just throw the exception. As each line is read, collect the following statistics:
 
-	* The number of characters and lines in the file. The number of characters should
-include all whitespace characters, punctuation, etc. The number of lines should
-include any blank lines in the file.
+	* The number of characters and lines in the file. The number of characters should include all whitespace characters, punctuation, etc. The number of lines should include any blank lines in the file.
 	* The number of words in the file. 
 
-- [ ] The number of words of each length that appears in the file. Assume that the
-maximum word length is 23. You do not need to print lengths that have a count of
-zero.  Be careful here!  Consider the examples below, 
+- [ ] The number of words of each length that appears in the file. Assume that the maximum word length is 23. You do not need to print lengths that have a count of zero.  Be careful here!  Consider the examples below, 
 
 ```
 Here is my (word)!
@@ -100,14 +76,10 @@ The length of "Here" is again 4, not 5.
 You program must ignore punction and only count the length of the words. 
 
 - [ ] The average word length for the file.
-- [ ] The number of each letter that appears in the file - do not separate upper and lower
-case, just convert all characters to lower case before counting.
+- [ ] The number of each letter that appears in the file - do not separate upper and lower case, just convert all characters to lower case before counting.
 
-- [ ] Getter (accessor) methods. Implement the accessor methods for the number of characters,
-number of words, number of lines, average word length and for the arrays that contain the
-number of words of each length and the number of times each letter occurs in the file.
-- [ ] toString() method. Write a toString() method that generates and returns a String that can
-be printed to summarize the statistics for the file as shown in the sample output shown
+- [ ] Getter (accessor) methods. Implement the accessor methods for the number of characters, number of words, number of lines, average word length and for the arrays that contain the number of words of each length and the number of times each letter occurs in the file.
+- [ ] toString() method. Write a toString() method that generates and returns a String that can be printed to summarize the statistics for the file as shown in the sample output shown
 below.
 	
 ## Your Tasks
