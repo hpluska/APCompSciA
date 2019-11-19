@@ -13,19 +13,14 @@ In this program, you are going to implement a program that analyzes text files t
 
 ## Specification
 
-For this project you are going to create two classes.
+- [ ] For this project you are going to create two classes.
 
-- TextStatistics will be the class that reads a text file, parses it, and stores the information about the words and characters in the file.
-- ProcessText is the driver class that gets a list of one or more filenames from the command line and collects statistics on each of the files using an instance of TextStatistics object.
+	* TextStatistics will be the class that reads a text file, parses it, and stores the information about the words and characters in the file.
+	* ProcessText is the driver class that gets a list of one or more filenames from the command line and collects statistics on each of the files using an instance of TextStatistics object.
 
-For this project you will also implement an interfaces
+- [ ] For this project you will also implement an interfaces
 
-- TextStatisticsInterface.java
-
-You should be able to develop this program incrementally in such a way that you can turn in a
-program that runs even if you don’t succeed in implementing all the specified functionality.
-
-Specifications for the TextStatistics and ProcessText classes are discussed below.
+	* TextStatisticsInterface.java
 
 ## ProcessText (provided class)
 
@@ -57,7 +52,7 @@ and your program will continue processing the next file. (An invalid file in the
 should not result in the program crashing or exiting before all files have been
 processed.)
 
-# TextStatistics
+## TextStatistics
 
 TextStatistics is an instantiable class that reads a given text file, parses it, and stores the generated statistics. The TextStatistics class should do the following,
 
@@ -81,10 +76,10 @@ Your constructor needs to handle the FileNotFoundException that can occur when t
 File is opened in a Scanner. Use a try-catch statement to do this. Don’t just throw the
 exception. As each line is read, collect the following statistics:
 
-	1. The number of characters and lines in the file. The number of characters should
+	* The number of characters and lines in the file. The number of characters should
 include all whitespace characters, punctuation, etc. The number of lines should
 include any blank lines in the file.
-	2. The number of words in the file. 
+	* The number of words in the file. 
 
 - [ ] The number of words of each length that appears in the file. Assume that the
 maximum word length is 23. You do not need to print lengths that have a count of
@@ -115,7 +110,7 @@ number of words of each length and the number of times each letter occurs in the
 be printed to summarize the statistics for the file as shown in the sample output shown
 below.
 	
-# Your Tasks
+## Your Tasks
 
 - [ ] Begin a project in NetBeans called TextStatistics
 - [ ] Locate the TextStatistics and ProcessText class in the "stubs" folder of this project folder [https://github.com/hpluska/APCompSciA/tree/master/projects/TextStatistics/stubs](https://github.com/hpluska/APCompSciA/tree/master/projects/TextStatistics/stubs)
