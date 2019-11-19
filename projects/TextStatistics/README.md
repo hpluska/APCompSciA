@@ -1,7 +1,7 @@
 # Text Statistics
 
 ## Project Overview
-In this program, you are going to implement a program that analyzes text files to generate some useful statistics. We will provide plain text versions of several books and articles (e.g. Alice in Wonderland, The Gettysburg Address, etc.) for you to analyze using your program.
+In this program, you are going to implement a program that analyzes text files to generate some useful statistics. I will provide plain text versions of several books and articles (e.g. Alice in Wonderland, The Gettysburg Address, etc.) for you to analyze using your program.
 
 ## Objectives
 
@@ -11,7 +11,7 @@ In this program, you are going to implement a program that analyzes text files t
 - [ ] Parse and analyze text input.
 - [ ] Implement an interface.
 
-# Specification
+## Specification
 
 For this project you are going to create two classes.
 
@@ -27,16 +27,18 @@ program that runs even if you don’t succeed in implementing all the specified 
 
 Specifications for the TextStatistics and ProcessText classes are discussed below.
 
-# ProcessText (provided class)
+## ProcessText (provided class)
 
 The ProcessText class will serve as the driver class with a main method which processes one or
 more files to determine some interesting statistics about them. The ProcessText driver class
 should meet the following criteria,
-1. Command-line validation. The names of the files to process will be given as command
+
+- [ ] Command-line validation. The names of the files to process will be given as command
 line arguments. Your driver class must,
-* Validate the number of command line arguments. There should be at least one file
-name given.
-* If no files are given on the command line, your program must print a usage message
+
+	* Validate the number of command line arguments. There should be at least one file
+name given.  
+	* If no files are given on the command line, your program must print a usage message
 and exit the program immediately. The message should read as follows. Usage: java
 ProcessText file1 [file2 ...] This lets the user know how they should run the
 program without having to go look up the documentation.
