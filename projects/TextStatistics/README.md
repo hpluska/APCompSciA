@@ -84,7 +84,7 @@ exception. As each line is read, collect the following statistics:
 	1. The number of characters and lines in the file. The number of characters should
 include all whitespace characters, punctuation, etc. The number of lines should
 include any blank lines in the file.
-	2. The number of words in the file.  
+	2. The number of words in the file. 
 
 - [ ] The number of words of each length that appears in the file. Assume that the
 maximum word length is 23. You do not need to print lengths that have a count of
@@ -94,13 +94,13 @@ zero.  Be careful here!  Consider the examples below,
 Here is my (word)!
 ```
 
-The length of "word" is 4, NOT 7.  
+The length of "word" is 4, NOT 7. 
 
 ```
 Here, is another word!
 ```
 
-The length of "Here" is again 4, not 5.  
+The length of "Here" is again 4, not 5. 
 
 You program must ignore punction and only count the length of the words. 
 
@@ -118,8 +118,10 @@ below.
 # Your Tasks
 
 - [ ] Begin a project in NetBeans called TextStatistics
-- [ ] Locate the TextStatistics and ProcessText class in the "stubs" folder of this project folder [https://github.com/hpluska/TimberlineCS/blob/master/APCSA/Project3/Stubs](https://github.com/hpluska/TimberlineCS/blob/master/APCSA/Project3/Stubs/)
+- [ ] Locate the TextStatistics and ProcessText class in the "stubs" folder of this project folder [https://github.com/hpluska/APCompSciA/tree/master/projects/TextStatistics/stubs](https://github.com/hpluska/APCompSciA/tree/master/projects/TextStatistics/stubs)
 - [ ] Save the TextStatistics and ProcessText class and place it in your NetBeans project folder
+- [ ] Locate the etext folder in the "stubs" folder of this project folder [https://github.com/hpluska/APCompSciA/tree/master/projects/TextStatistics/stubs](https://github.com/hpluska/APCompSciA/tree/master/projects/TextStatistics/stubs)
+- [ ] Download the etext folder and place it in your NetBeans project folder
 - [ ] Begin by implementing ProcessText. You can ignore the command-line arguments to start. Just hard-code a file name so you can test your TextStatistics class as you write it. Create a File object and check to see that the file actually exists.
   * If the file does exist, your program will create a TextStatistics object for that file and print out the statistics for the file to the console.
   * If the file does not exist, a meaningful error message needs to be printed to the user.
