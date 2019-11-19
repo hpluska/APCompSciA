@@ -1,0 +1,321 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+    <link rel="stylesheet" href="../styles/notes.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Over+the+Rainbow" rel="stylesheet">
+</head>
+<body>
+<div id="top">
+    <h1>Set 5: Methods of the Math Class</h1>
+</div>
+<div id="skills">
+    <ul id="skillsList">
+        <li>
+            Skill 5.1 <a href="#skill1">Use the java Math class to perform mathematical operations s</a>
+        </li>
+        <li>
+            Skill 5.2 <a href="#skill2">Apply the random() method to create a random integer in a specified range</a>
+        </li>
+        <li>
+            Skill 5.3 <a href="#skill3">Familiarize yourself with additional methods in the java Math class</a>
+        </li>
+    </ul>    
+</div>
+<div id="skill1" class="skills">Skill 5.1 Use the java math class to perform mathematical operations </div>
+<div class="skillConceptsHeader">Skill 5.1 Concepts</div>
+<div class="skillConcepts">
+    <p>The math class is a powerful class of methods for performing mathematical computations. An
+        example of how the math class can be applied is illustrated below. The example below computes
+        the square root of 17. The result is assigned to the double variable p because square roots
+        typically do not result in integer values.   
+    </p> 
+    <p class="codeblock">
+    double p = Math.square(17); <br>
+    </p>
+    <p>In the above example, </p>
+    <ul>
+        <li><i>double p</i> is the variable to which the result of the Math operation is assigned</li>
+        <li><i>Math.</i> is the notation we use to access the library of Math functions in java</li>
+        <li><i>square(17)</i> is the operation we want to perform on the number 17.  In this case, it is the square root.</li>
+    </ul>
+
+    <img src = "../images/mathClassSquareRoot.jpg">
+
+    <p>Java provides an extensive library of Math operations.  Below is a description of some of them.  Notice that each method
+        has a corresponding <i>signature</i>.  The <i>signature</i> of a method can be interpreted as follows, 
+
+        <img src="../images/mathClassSignature.jpg">
+        
+    </p>
+
+    <table class="notesTable" style ="width:75%;">
+        <tbody><tr>
+        <th style="width:20%">Method</th>
+        <th style="width:30%">Signature</th>
+        <th style="width:30%">Description</th>
+        </tr>
+                <tr>
+                <td>abs</td>
+                <td>int abs(int x)</td>
+                <td>Returns the absolute value of x</td>
+                </tr>
+                <tr>
+                <td>abs</td>
+                <td>double abs(double x)</td>
+                <td>Returns the absolute value of x</td>
+                </tr>
+                <tr>
+                <td>pow</td>
+                <td>double pow(double d, double e)</td>
+                <td>Returns d raised to the e power</td>
+                </tr>
+                <tr>
+                <td>sqrt</td>
+                <td>double sqrt(double x)</td>
+                <td>Returns the square root of x</td>
+                </tr>
+                <tr>
+                <td>ceil</td>
+                <td>double ceil(double x)</td>
+                <td>Returns next highest whole number from x</td>
+                </tr>
+                <tr>
+                <td>floor</td>
+                <td>double floor(double x)</td>
+                <td>Returns next lowest whole number from x</td>
+                </tr>
+                <tr>
+                <td>min</td>
+                <td>double min(double a, double b)</td>
+                <td>Returns the smaller of a and b</td>
+                </tr>
+                <tr>
+                <td>max</td>
+                <td>double max(double a, double b)</td>
+                <td>Returns the larger of a and b</td>
+                </tr>
+                <tr>
+                <td>min</td>
+                <td>int min(int a, int b)</td>
+                <td>Returns the smaller of a and b</td>
+                </tr>
+                <tr>
+                <td>max</td>
+                <td>int max(int a, int b)</td>
+                <td>Returns the larger of a and b</td>
+                </tr>
+                <tr>
+                <td>random</td>
+                <td>double random()</td>
+                <td>Returns a random double (range 0 < r < 1)</td>
+                </tr>
+                <tr>
+                <td>round</td>
+                <td>long round(double x)</td>
+                <td>Returns x rounded to the nearest whole number</td>
+                </tr>
+                <tr>
+                <td>PI</td>
+                <td>double PI</td>
+                <td>Returns 3.1459625…</td>
+                </tr>
+            </tbody>
+        </table>
+    <p>Below are examples of each of the methods described above, </p>
+
+    <ol>
+        <li>
+        <p class="codeblock">
+        double d = -379.22;<br>
+        System.out.println(Math.abs(d));//379.22
+        </p>
+        </li>
+        <li>
+        <p class="codeblock">
+        double d = 42.01;<br>
+        double e = 3.728;<br>
+        System.out.println(Math.pow(a,e));//1126831.027
+        </p>
+        </li>
+        <li>
+        <p class="codeblock">
+        double d = 2034.56;<br>
+        System.out.println(Math.sqrt(d));//45.10609715
+        </p>
+        </li>
+        <li>
+        <p class="codeblock">
+        double d = 1.4;<br>
+        System.out.println(Math.ceil(d));//2.0
+        </p>
+        </li>
+        <li>
+        <p class="codeblock">
+        double d = -1.6;<br>
+        System.out.println(Math.ceil(d));//-1.0
+        </p>
+        </li>
+        <li>
+        <p class="codeblock">
+        double d = 1.4;<br>
+        System.out.println(Math.floor(d));//1.0
+        </p>
+        </li>
+        <li>
+        <p class="codeblock">
+        double d = -1.6;<br>
+        System.out.println(Math.floor(d));//-2.0
+        </p>
+        </li>
+        <li>
+        <p class="codeblock">
+        double d = 7.89;<br>
+        System.out.println(Math.log(d));//2.065596135 *log is base e
+        </p>
+        </li>
+        <li>
+        <p class="codeblock">
+        double x = 2038.5;<br>
+        double y = -8999.0;<br>
+        System.out.println(Math.min(x, y));//-8999.0
+        </p>
+        </li>
+        <li>
+        <p class="codeblock">
+        double x = 2038.5;<br>
+        double y = -8999.0;<br>
+        System.out.println(Math.max(x, y));//2038.5
+        </p>
+        </li>
+        <li>
+        <p class = "codeblock">
+        double x = 148.2;<br>
+        System.out.println(Math.round(x));//148<br><br>
+        double x = 148.7;<br>
+        System.out.println(Math.round(x));//149<br><br>
+        double x = -148.2;<br>
+        System.out.println(Math.round(x));//-148<br><br>
+        double x = -148.7;<br>
+        System.out.println(Math.round(x));//-149
+        </p>
+        </li>
+        <li>
+        <p class = "codeblock">
+        System.out.println(Math.PI);//3.14159265...
+        </p>
+        </li>
+        <li>
+        <p class = "codeblock">
+        System.out.println(Math.random());//prints a random number between 0 and 1 where 0 is inclusive, but 1 is not
+        </p>
+        </li>
+        </ol>
+    <div class="practice">
+                <a href="../ticketOutTheDoor/set5/Set5TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 5.1: Exercise 1</a>
+        </div>
+
+</div>
+<div id="skill2" class="skills">Skill 5.2 Apply the random() method to create a random integer in a specified range</div>
+<div class="skillConceptsHeader">Skill 5.2 Concepts</div>
+<div class="skillConcepts">
+        <p>
+            Many applications you will create will require a random number.  For example, what if
+            you needed to write a program to generate a number that represented a face from a 6-sided die, 
+            or a card from a 52 card deck? 
+        </p>
+        <p>The random() method in the Math class generates a random double type number between 0 and 1,  
+            where 0 is inclusive, but 1 is not.  The below code is illustrative,
+        </p>
+
+        <p class = "codeblock">
+            System.out.println(Math.random());//prints a random double from 0 up to 1
+        </p>
+        
+        <p>To create a number in a different range, say 0 up to 10, simply multiply the result of Math.random()
+            by the desired range.  An example is shown below, 
+        </p>
+        <p class = "codeblock">
+                System.out.println(Math.random()*10);//prints a random double from 0 up to 10
+        </p>
+        <p>Recall, however that the random() method returns a double.  The below code illustrates
+            how to generate a random int from 0 up to 10,
+        </p>
+        <p class = "codeblock">
+                int randomNumber = (int)(Math.random()*10);<br>
+                System.out.println(randomNumber);//prints a random int from 0 up to 10
+        </p>
+        <p>
+            The above examples, illustrate how to scale the random() method to a specified range. The example
+            below illustrates how to shift the range of the random number.  
+        </p>
+        <p class = "codeblock">
+                int randomNumber = (int)(Math.random()*10)+100;<br>
+                System.out.println(randomNumber);//prints a random int from 100 up to 110
+        </p>
+            <div class="practice">
+                    <a href="../ticketOutTheDoor/set5/Set5TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 5.2: Exercise 1</a>
+            </div>      
+</div>
+<div id="skill3" class="skills">Skill 5.3 Familiarize yourself with additional methods in the java Math class</div>
+<div class="skillConceptsHeader">Skill 5.3 Concepts</div>
+<div class="skillConcepts">
+        
+    <table class="notesTable" style ="width:75%;">
+            <tbody><tr>
+            <th style="width:20%">Method</th>
+            <th style="width:30%">Signature</th>
+            <th style="width:30%">Description</th>
+            </tr>
+                    <tr>
+                    <td>log</td>
+                    <td>double log(double x)</td>
+                    <td>Returns log base e of x</td>
+                    </tr>
+                    <tr>
+                    <td>sin</td>
+                    <td>double sin(double a)</td>
+                    <td>Returns the sin of angle a in radians</td>
+                    </tr>
+                    <tr>
+                    <td>cos</td>
+                    <td>double cos(double a)</td>
+                    <td>Returns the cos of angle a in radians</td>
+                    </tr>
+                    <tr>
+                    <td>tan</td>
+                    <td>double tan(double a)</td>
+                    <td>Returns the tangent of angle a in radians</td>
+                    </tr>
+                    <tr>
+                    <td>asin</td>
+                    <td>double asin(double x)</td>
+                    <td>Returns the arcsine of x in the range –PI/2 to PI/2</td>
+                    </tr>
+                    <tr>
+                    <td>acos</td>
+                    <td>double acos(double x)</td>
+                    <td>Returns the arctan of x in the range –PI/2 to PI/2</td>
+                    </tr>
+                    <tr>
+                    <td>toDegrees</td>
+                    <td>double toDegrees(double angRad)</td>
+                    <td>Converts radians to degrees</td>
+                    </tr>
+                    <tr>
+                    <td>toRadians</td>
+                    <td>double toRadians(double angDeg)</td>
+                    <td>Converts degrees to radians</td>
+                    </tr>
+                </tbody>
+            </table>
+        <div class="practice">
+            <a href="../ticketOutTheDoor/set5/Set5TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 5.3: Exercise 1</a>
+        </div>
+
+    </div>
+
+
+</body>
+</html>

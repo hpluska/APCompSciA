@@ -1,0 +1,165 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+    <link rel="stylesheet" href="../styles/notes.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Over+the+Rainbow" rel="stylesheet">
+</head>
+<body>
+<div id="top">
+    <h1>Set 6: Input from the Keyboard</h1>
+</div>
+<div id="skills">
+    <ul id="skillsList">
+        <li>
+            Skill 6.1 <a href="#skill1">Import the java.io and java.util classes</a>
+        </li>
+        <li>
+            Skill 6.2 <a href="#skill2">Use the Scanner class to create a keyboard reader object</a>
+        </li>
+        <li>
+            Skill 6.3 <a href="#skill3">Retrieve and display user input of type int, double, and String</a>
+        </li>
+        <li>
+            Skill 6.4 <a href="#skill4">Beware of the Scanner anomaly</a>
+        </li>
+    </ul>    
+</div>
+<div id="skill1" class="skills">Skill 6.1 Import the java.io and java.util classes
+</div>
+<div class="skillConceptsHeader">Skill 6.1 Concepts</div>
+<div class="skillConcepts">
+    <p>In addition to the Math and String classes we learned about earlier, Java has many more classes 
+        we can access.  But, unlike the Math and String classes, because they are not included with the 
+        core, they must be imported.   
+    </p> 
+    <p>
+        The class we are going to learn about today is the <i>Scanner</i> class.  The Scanner class allows
+        us to get input from the user whether it be from a file or the keyboard.  The following 
+        code illustrates how to import the libraries required to get user input using the Scanner class.  
+    </p>
+    <p class="codeblock">
+    <b>import java.io.*;</b><br>
+    <b>import java.util.*;</b><br><br>
+    public class ScannerPractice{
+    
+    
+    }
+        
+    </p>
+    <p>With the above libraries imported, we can access methods that will make our Java
+        programs much more interactive! </p>
+    
+    <div class="practice">
+                <a href="../ticketOutTheDoor/set6/Set6TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 6.1: Exercise 1</a>
+        </div>
+
+</div>
+<div id="skill2" class="skills">Skill 6.2 Use the Scanner class to create a keyboard reader object</div>
+<div class="skillConceptsHeader">Skill 6.2 Concepts</div>
+<div class="skillConcepts">
+        <p>
+            Before we can access the methods available to us, we must create a <i>Scanner object</i>.  You 
+            can call the Scanner object anything you like, so long as it follows the Java variable naming
+            conventions.  The code below creates a Scanner object called <i>kbReader</i>.  What each 
+            part of the code represents is broken down below,
+        </p>
+        <ul>
+            <li><b>Scanner:</b> The type of variable</li>
+            <li><b>kbReader:</b> The name of the variable</li>
+            <li><b>new:</b> Tells Java we are creating a Scanner object</li>
+            <li><b>Scanner(System.in):</b> The type of Scanner object we are creating.  In this
+            case we will be reading input from the keyboard - System.in</li>
+        </ul>
+        
+
+        <p class = "codeblock">
+            Scanner kbReader = new Scanner(System.in);
+        </p>
+
+            <div class="practice">
+                    <a href="../ticketOutTheDoor/set6/Set6TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 6.2: Exercise 1</a>
+            </div>      
+</div>
+<div id="skill3" class="skills">Skill 6.3 Retrieve and display user input of type int, double, and String</div>
+<div class="skillConceptsHeader">Skill 6.3 Concepts</div>
+<div class="skillConcepts">
+        
+<p>The kbReader object we created above will allow us to get user input.  This process is illustrated below. </p>
+<u>User input of type int</u>
+<p>Getting int data types from the user requires the <i>nextInt()</i> method. Consider the following code</p>
+
+<p class = "codeblock">
+    Scanner kbReader = new Scanner(System.in);<br><br>
+    System.out.println("How old are you?"):<br>
+    int age = kbReader.nextInt();<br>
+    System.out.println("You were born in " + (2019 - age));
+
+</p> 
+<p>In the above code, the line <b><code>int age = kbReader.nextInt()</code></b> is doing two things: (1)
+it is prompting the user for an integer input from the keyboard and (2) it is assigning the user input
+to the int type variable <i>age</i></p>
+<p>Also notice the <i>dot</i> notation.  We have used this before.  The <i>dot</i> notation
+allows us to access the Scanner libraries we imported previously.</p>  
+
+<u>User input of type double</u>
+<p>Getting double data types from the user requires the <i>nextDouble()</i> method. Consider the following code</p>
+
+<p class = "codeblock">
+    Scanner kbReader = new Scanner(System.in);<br><br>
+    System.out.println("How tall are you in inches to the nearest 10th decimal place?"):<br>
+    int height = kbReader.nextDouble();<br>
+    System.out.println("You are " + (int)(height/12) + " feet " + (height % 12) + " inches" );
+
+</p>
+<p>In the above code, the line <b><code>double height = kbReader.nextDouble()</code></b> is doing two things: (1)
+    it is prompting the user for a double input from the keyboard and (2) it is assigning the user input
+    to the double type variable <i>height</i></p>
+
+    <u>User input of type String</u>
+    <p>The <i>next()</i> method accepts String input up to the first white space.  For example if I type <i>Computer Science</i>
+as input, the <i>next()</i> method only scans the word "Computer".  This is illustrated below.</p>
+    
+    <p class = "codeblock">
+        Scanner kbReader = new Scanner(System.in);<br><br>
+        System.out.println("What is the name of this class?"):<br>
+        String firstWord = kbReader.next();//Suppose the user types <i>Computer Science</i><br>
+        System.out.println(firstWord);//Only the word <i>Computer</i> is printed
+    
+    </p>
+
+    <p>The <i>nextLine()</i> method can be used to retrieve an entire line, including white space.
+    This is illustrated below.</p>
+    <p class = "codeblock">
+            Scanner kbReader = new Scanner(System.in);<br><br>
+            System.out.println("What is the name of this class?"):<br>
+            String myClass = kbReader.nextLine();//Suppose the user types <i>Computer Science</i><br>
+            System.out.println(myClass);//<i>Computer Science is printed</i>
+        
+        </p>
+        <div class="practice">
+            <a href="../ticketOutTheDoor/set6/Set6TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 6.3: Exercises 1 thru 3</a>
+        </div>
+
+    </div>
+    <div id="skill4" class="skills">Skill 6.4 Beware of the Scanner anomaly
+        </div>
+        <div class="skillConceptsHeader">Skill 6.4 Concepts</div>
+        <div class="skillConcepts">
+            <p>
+            Using a single Scanner object, the methods nextInt(), nextDouble, next(), and nextLine() may be used in any sequence with the following exception:   
+            </p> 
+            <p>
+            It is not permissible to follow nextInt() or nextDouble() with nextLine().  If it is necessary to do this, then a new Scanner object must be constructed for use with nextLine() and any subsequent inputs. 
+            </p>
+
+            
+            <div class="practice">
+                        <a href="../ticketOutTheDoor/set6/Set6TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 6.4: Exercise 1</a>
+                </div>
+        
+        </div>
+
+</body>
+</html>

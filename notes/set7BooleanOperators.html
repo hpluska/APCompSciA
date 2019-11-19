@@ -1,0 +1,279 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+    <link rel="stylesheet" href="../styles/notes.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Over+the+Rainbow" rel="stylesheet">
+</head>
+<body>
+<div id="top">
+    <h1>Set 7: Boolean Operators</h1>
+</div>
+<div id="skills">
+    <ul id="skillsList">
+        <li>
+            Skill 7.1 <a href="#skill1">Evaluate true and false statements</a>
+        </li>
+        <li>
+            Skill 7.2 <a href="#skill2">Evaluate true and false statements using proper java syntax</a>
+        </li>
+        <li>
+            Skill 7.3 <a href="#skill3">Use truth tables to evaluate whether a statement is true or false</a>
+        </li>
+        <li>
+            Skill 7.4 <a href="#skill4">Apply the "not" operator</a>
+        </li>
+        <li>
+            Skill 7.5 <a href="#skill5">Create boolean variables</a>
+        </li>
+        <li>
+            Skill 7.6 <a href="#skill6">Apply operator precedence</a>
+        </li>
+    </ul>    
+</div>
+<div id="skill1" class="skills">Skill 7.1 Evaluate true and false statements
+</div>
+<div class="skillConceptsHeader">Skill 7.1 Concepts</div>
+<div class="skillConcepts">
+    <p>So far we have looked at three fundamental variable types… int, double, and String.  
+        In this lesson we will look at another very important type of variable, “boolean”.  
+        This type of variable has only two possible values, true or false. </p>
+    <p>
+        Consider the following example.  Suppose that we know that x = 3 and y = 97. Below are statements about x and y, and 
+        whether or not they are true or false individually, AND whether the entire statement is true or false. 
+         
+    </p> 
+    <table class="notesTable" style ="width:75%;">
+            <tbody><tr>
+            <th style="width:40%">Statement</th>
+            <th style="width:60%">True or False</th>
+            </tr>
+                    <tr>
+                    <td><code>(( x < 10 ) AND ( y = 97 )</code></td>
+                    <td>First part is <u>true</u>, second part is <u>true</u>, entire statement is <u>true</u></td>
+                    </tr>
+                    <tr>
+                    <td><code>(( x < 10 ) AND ( y = -3 )</code></td>
+                    <td>First part is <u>true</u>, second part is <u>false</u>, entire statement is <u>false</u> </td>
+                    </tr>
+                    <tr>
+                    <td><code>(( x < 10 ) AND ( y ≠-3 )</code></td>
+                    <td>First part is <u>true</u>, second part is <u>true</u>, entire statement is <u>true</u></td>
+                    </tr>
+                    <tr>
+                    <td><code>(( x < 10 ) OR ( y = 97 ))</code></td>
+                    <td>Either part is <u>true</u>, entire statement is <u>true</u></td>
+                    </tr>
+                    <tr>
+                    <td><code>(( x < 10 ) OR ( y = -3 ))</code></td>
+                    <td>Either part is <u>true</u>, entire statement is <u>true</u></td>
+                    </tr>
+                </tbody>
+            </table>
+    
+   
+    
+    <div class="practice">
+                <a href="../ticketOutTheDoor/set7/Set7TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 7.1: Exercise 1</a>
+        </div>
+
+</div>
+<div id="skill2" class="skills">Skill 7.2 Evaluate true and false statements using proper java syntax</div>
+<div class="skillConceptsHeader">Skill 7.2 Concepts</div>
+<div class="skillConcepts">
+        <p>
+                The above examples illustrate how true and false statements are evaluated, 
+                however the syntax is not correct.  In order for java to correctly read the syntax 
+                the “AND” and “OR” statements must be replaced with the correct symbols as shown below, 
+        </p>
+        <table class="notesTable" style ="width:75%;">
+                <tbody><tr>
+                <th style="width:40%">Statement</th>
+                <th style="width:60%">Java syntax explanation</th>
+                </tr>
+                        <tr>
+                        <td><code>(( x < 10 ) && ( y == 97 )</code></td>
+                        <td><i>And</i> is replaced with &&, <i>=</i> is replaced with “==”</td>
+                        </tr>
+                        <tr>
+                        <td><code>(( x < 10 ) && ( y == -3 )</code></td>
+                        <td><i>And</i> is replaced with &&, <i>=</i> is replaced with “==”</td>
+                        </tr>
+                        <tr>
+                        <td><code>(( x < 10 ) && ( y != -3 )</code></td>
+                        <td><i>And</i> is replaced with &&, <i>≠</i> is replaced with “!=”</td>
+                        </tr>
+                        <tr>
+                        <td><code>(( x < 10 ) || ( y == 97 ))</code></td>
+                        <td><i>OR</i> is replaced with ||, <i>=</i> is replaced with "=="</td>
+                        </tr>
+                        <tr>
+                        <td><code>(( x < 10 ) || ( y == -3 ))</code></td>
+                        <td><i>OR</i> is replaced with ||, <i>=</i> is replaced with "=="</td>
+                        </tr>
+                </tbody>
+            </table>
+
+            <div class="practice">
+                    <a href="../ticketOutTheDoor/set7/Set7TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 7.2: Exercise 1</a>
+            </div>      
+</div>
+<div id="skill3" class="skills">Skill 7.3 Use truth tables to evaluate whether a statement is true or false</div>
+<div class="skillConceptsHeader">Skill 7.3 Concepts</div>
+<div class="skillConcepts">
+        
+<p>Truth tables are helpful for showing how && and || work for various combinations.  
+    These are illustrated below, 
+</p>
+
+<table class="notesTable" style ="width:50%;">
+    <tbody><tr>
+    <th style="width:8%">a</th>
+    <th style="width:8%">b</th>
+    <th style="width:8%">(a && b)</th>
+    <th style="width:1%; background-color:#000000;"></th>
+    <th style="width:8%">a</th>
+    <th style="width:8%">b</th>
+    <th style="width:8%">(a || b)</th>
+    </tr>
+            <tr>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td style="background-color:#000000;"></td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            </tr>
+            <tr>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+            <td style="background-color:#000000;"></td>
+            <td>false</td>
+            <td>true</td>
+            <td>true</td>
+            </tr>
+            <tr>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td style="background-color:#000000;"></td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            </tr>
+            <tr>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td style="background-color:#000000;"></td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            </tr>
+
+    </tbody>
+</table>
+
+        <div class="practice">
+            <a href="../ticketOutTheDoor/set7/Set7TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 7.3: Exercise 1</a>
+        </div>
+
+    </div>
+    <div id="skill4" class="skills">Skill 7.4 Apply the "not" operator
+        </div>
+        <div class="skillConceptsHeader">Skill 7.4 Concepts</div>
+        <div class="skillConcepts">
+            <p>
+            The not (or negation) operator is used to indicate opposite.  
+            For example, what is the opposite of true?... False of course. 
+            The “not” operator is indicated with the ! sign.  Below are some examples. 
+            </p> 
+            <p class="codeblock">
+                System.out.println(!true);//false<br>
+                System.out.println(!false);//true<br>
+                System.out.println(!(3&lt;5));//false<br>
+                System.out.println(!(1==0));//true
+            </p>
+            
+
+            
+            <div class="practice">
+                        <a href="../ticketOutTheDoor/set7/Set7TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 7.4: Exercise 1</a>
+                </div>
+        
+        </div>
+        <div id="skill5" class="skills">Skill 7.5 Create boolean variables</div>
+            <div class="skillConceptsHeader">Skill 7.5 Concepts</div>
+            <div class="skillConcepts">
+                    <p>Boolean variables are denoted with the word “boolean” 
+                        and can be assigned a value that evaluates to true or false.  
+                        Below are three examples, 
+                    </p>
+                    <p class = "codeblock">   
+                    boolean a;//declares a boolean variable a <br>
+                    boolean b = true;//declares and initializes boolean variable b<br>
+                    boolean z = (( p <  j ) && ( x !=  c)); //declares and initializes boolean z
+                    </p>
+    
+                
+                <div class="practice">
+                            <a href="../ticketOutTheDoor/set6/Set6TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 6.4: Exercise 1</a>
+                    </div>
+            
+            </div>
+
+        <div id="skill6" class="skills">Skill 7.6 Apply operator precedence</div>
+        <div class="skillConceptsHeader">Skill 7.6 Concepts</div>
+            <div class="skillConcepts">
+                <p>Just like math operations follow an order of precedence, 
+                    so too do operations like AND (&&) and OR (||).  Consider a problem like,  
+                </p>
+                <p class = "codeblock">   
+                System.out.println( ( true && false ) || ((true && false) || false) );
+                </p>
+                <p>
+                In this example we can tell what parts we should do first because 
+                of the grouping by parenthesis.  However, what if we had a different 
+                problem like the one below?
+                </p>
+                <p class = "codeblock">   
+                System.out.println( false && true || true );
+                </p> 
+                <p>
+                Which part do we do first?  As it turns out we would first 
+                do && and then ||. Because false and true are not the same thing, 
+                false && true evaluates to false.  Next we consider false or true, 
+                which is true.  The order of precedence for the operators we are 
+                studying are as follows, 
+                </p>
+                <p>! &nbsp&nbsp&nbsp    ==  &nbsp&nbsp&nbsp  != &nbsp&nbsp&nbsp    &&   &nbsp&nbsp&nbsp  ||</p>
+                <p>The order of precedence for operators is illustrated in the following examples,</p>
+                <table class="notesTable" style ="width:80%;">
+                        <tbody><tr>
+                        <th style="width:25%">example</th>
+                        <th style="width:25%">explanation</th>
+                        </tr>
+                        <tr>
+                        <td><code>System.out.println(true || false && false);</code></td>
+                        <td>Do the false && false part <b>first</b> to get a result of false<br>
+                        Now do true||false to get a final result of <b>true</b></td>
+                        </tr>
+                        <tr>
+                        <td><code>System.out.println(true && false || false);</code></td>
+                        <td>Do the true && false part <b>first</b> to get a result of false.<br>
+                        Now do false || false to get a final result of <b>false</b></td>        
+                        </tr>
+                        </tbody>
+                    </table>
+                
+                
+                <div class="practice">
+                            <a href="../ticketOutTheDoor/set7/Set7TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 7.6: Exercise 1</a>
+                    </div>
+            
+            </div>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+    <link rel="stylesheet" href="../styles/notes.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Over+the+Rainbow" rel="stylesheet">
+</head>
+<body>
+<div id="top">
+    <h1>Set 11: <i>while</i> and <i>do-while</i> Loops</h1>
+</div>
+<div id="skills">
+    <ul id="skillsList">
+        <li>
+            Skill 11.1 <a href="#skill1">Explain the basic structure of a <i>while</i> loop</a>
+        </li>
+        <li>
+            Skill 11.2 <a href="#skill2">Explain the basic structure of a <i>do-while</i> loop</i></a>
+        </li>
+        <li>
+            Skill 11.3 <a href="#skill3">Explain the advantages of a <i>do-while</i></a>
+        </li>
+    </ul>    
+</div>
+<div id="skill1" class="skills">Skill 11.1 Explain the basic structure of a <i>while</i> loop
+</div>
+<div class="skillConceptsHeader">Skill 11.1 Concepts</div>
+<div class="skillConcepts">
+    <p>The <i>while</i> loop is basically the same as the <i>for-loop</i> you
+         previously learned about.  The only difference is that the initializing 
+         and step expressions are not part of the while-loop 
+        basic structure.  The following code illustrates the basic structure of the 
+        while loop.   
+    </p> 
+
+    <p class="codeblock">
+            while(<span style="color:red;">n &lt= 79</span>){
+                <br><br>
+                <span style="padding-left:5em;">//some code we want to repeat</span>
+                <br><br>
+             }<br><br>
+
+    </p>
+
+    <p>In the above code, notice that the only part similar to the for loop is 
+        the control expression, <span style="color:red;">n &lt= 79</span>.  The initializing and step expression are absent.  
+        As with the for-loop, the while-loop keeps repeating as long as the control 
+        statement is true.  </p>
+
+    <p>In a previous lesson we used a <i>for-loop</i> to sum all the numbers from 3 to 79,</p>
+
+    <p class = "codeblock">
+            int sum = 0;<br><br>
+            for(<span style="color:green;">int n = 3</span>; <span style="color:red;">n &lt= 79</span>; <span style="color:blue;">n++</span>) {<br><br>
+                <span style="padding-left:5em;">sum += n;</span>
+                <br><br>
+             }<br><br>
+             System.out.println(sum);//prints 3157
+    
+    </p>
+    <p>The <i>for-loop</i> above requires the following elements to function,</p>
+    <ul>
+            <li><span style="color:green;">start = 3</span></li>       
+            <li><span style="color:blue;">incrementing = +1</span></li>
+            <li><span style="color:red;">stop = 79</span></li>
+    </ul>
+
+    <p><i>while</i> loops also require these elements.  In fact the <i>for-loop</i> above
+    can also be written as a <i>while</i> loop as follows, </p>
+    <p class = "codeblock">
+    int sum = 0;<br>
+    <span style="color:green;"> int n = 3</span>;<br><br>
+    while(<span style="color:red;">n &lt= 79</span>){
+        <br><br>
+        <span style="padding-left:5em;">sum += n;</span><br>
+        <span style="color:blue; padding-left:5em;">n = +1</span>;
+        <br><br>
+     }<br><br>
+     System.out.println(sum);//prints 3157
+
+    </p>
+
+    <div class="practice">
+                <a href="../ticketOutTheDoor/set11/Set11TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 11.1: Exercises 1 & 2</a>
+    </div>
+
+</div>
+
+<div id="skill2" class="skills">Skill 11.2 Explain the basic structure of a <i>do-while</i> loop</i></div>
+<div class="skillConceptsHeader">Skill 11.2 Concepts</div>
+<div class="skillConcepts">
+
+        <p>
+            A <i>do-while</i> loop is exactly the same as a <i>while</i> loop except 
+            the control expression is at the bottom of the loop rather than at the top 
+            as it is with the <i>while</i> loop.  The following illustrates the skeleton of a 
+            <i>do-while</i> loop, 
+        </p>
+
+        <p class="codeblock">
+                do{
+                    <br><br>
+                    <span style="padding-left:5em;">//some code we want to repeat</span>
+                    <br><br>
+                 }while(<span style="color:red;">n &lt= 79</span>);<br><br>
+    
+        </p>
+
+        <p>
+                The main difference between the <i>while</i> loop and the <i>do-while</i>
+                loop is where the test for staying in the loop is made 
+                (the control expression)</p>
+        <p>
+                <span style="padding-left:5em;"><i>while</i> loop ->  the test is at the top of the loop</span><br>
+                <span style="padding-left:5em;"><i>do-while</i> loop -> the test is at the bottom of the loop</span>
+
+        </p>
+        <p>
+            And, just as we saw that <i>for-loops</i>  can be written as <i>while</i>
+            loops, <i>for-loops</i> can also be written as <i>do-while</i> loops,
+
+        </p>
+        <p class = "codeblock">
+        int sum = 0;<br>
+        <span style="color:green;"> int n = 3</span>;<br><br>
+        do{
+            <br><br>
+            <span style="padding-left:5em;">sum += n;</span><br>
+            <span style="color:blue; padding-left:5em;">n = +1</span>;
+            <br><br>
+         }while(<span style="color:red;">n &lt= 79</span>);<br><br>
+         System.out.println(sum);//prints 3157
+    
+        </p>
+
+        <div class="practice">
+                <a href="../ticketOutTheDoor/set11/Set11TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 11.2: Exercise 1</a>
+        </div>
+
+    
+</div>
+<div id="skill3" class="skills">Explain the advantages of a <i>do-while</i></div>
+<div class="skillConceptsHeader">Skill 11.3 Concepts</div>
+<div class="skillConcepts">
+
+            
+         <p>
+        Depending on the application, <i>do-while</i> loops offer advantages over <i>while</i> loops.
+        Consider for example, an application that prompts a user for input, 
+        </p>
+
+        <p class = "codeblock">
+            String r = "";
+            Scanner s = new Scanner(System.in);<br>
+
+            do{<br><br>
+                <span style="padding-left:5em;">System.out.println("Do you want to play a game (y/n)?");</span><br>
+
+                <span style="padding-left:5em;">r = s.next();</span><br><br>
+
+            }while(!r.equals("y") && !r.equals("n"));
+                
+        </p>
+        <p>In the example above, the user is continuously prompted, until a valid input is entered.
+            Although a <i>while</i> loop could have also been used, it would have required additional code. </p>
+        
+            <p class = "codeblock">
+                    String r = "";
+                    Scanner s = new Scanner(System.in);<br>
+                    System.out.println("Do you want to play a game (y/n)?");<br>
+                    r = s.next();<br><br>
+                    while(!r.equals("y") && !r.equals("n")){<br><br>
+                        <span style="padding-left:5em;">System.out.println("Do you want to play a game (y/n)?");</span><br>
+        
+                        <span style="padding-left:5em;">r = s.next();</span><br><br>
+        
+                    }
+                        
+                </p>
+
+            <p>The above exmaple illustrates the utility of a <i>do-while</i> loop to check user input. 
+            And, conditions that require an action to occur, before the control expression is evaluated.</p>
+        
+            <div class="practice">
+            <a href="../ticketOutTheDoor/set11/Set11TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 11.3: Exercise 1</a>
+        </div>
+
+    </div>
+    
+</body>
+</html>

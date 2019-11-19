@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../styles/notes.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Over+the+Rainbow" rel="stylesheet">
+</head>
+
+<body>
+    <div id="top">
+        <h1>Set 14: Advanced String Methods</h1>
+    </div>
+    <div id="skills">
+        <ul id="skillsList">
+            <li>
+                Skill 14.1 <a href="#skill1">Apply Advanced String Methods</a>
+            </li>
+            <li>
+                Skill 14.2 <a href="#skill2">Parse Strings with a Scanner</a>
+            </li>
+        </ul>
+    </div>
+    <div id="skill1" class="skills">Skill 14.1 Apply Advanced String Methods
+    </div>
+    <div class="skillConceptsHeader">Skill 14.1 Concepts</div>
+    <div class="skillConcepts">
+
+            <p>The String methods and techniques we have encountered in previous lessons 
+                include <i>concatenation</i>, <i>length()</i>, <i>substring()</i>, <i>toLowerCase()</i>, <i>toUpperCase()</i>, 
+                <i>escape sequences ("\n", "\t", etc)</i>, <i>equals()</i>, and <i>equalsIgnoreCase()</i></p>
+        
+            <p>We will now look at some of the signatures (and examples) of some of the more 
+                advanced String methods.  </p>
+            
+            <p>Recall that a signature is as follows:</p> 
+
+            <p class = "codeblock">
+
+                <span style="color:red;">returnType</span> 
+                <span style="color:blue;">methodName</span> 
+                    (<span style="color:green;">type</span> <span style="color:magenta;"> parameter1</span>, 
+                    <span style="color:green;">type</span> <span style="color:magenta;">parameter2</span>, etc);
+
+
+            </p>
+
+            <ul span style="margin-left:5em;">
+                <li><span style="color:red;">returnType</span> - The type of variable returned when the method is called (int, double, Strings, etc.)</li>
+                <li><span style="color:blue;">methodName</span> - The name of the method</li>
+                <li><span style="color:green;">type</span> - The parameter required of the method (int, double, String, etc)</li>
+                <li><span style="color:magenta;"> parameter1</span> - The value of the parameter</li>
+            </ul>
+            <p>Below, we will look at several new methods associated with the String class</p>
+            <p>For all the examples below we will assume that "s" is a String as follows, </p>
+            <p class= "codeblock">String s = "Take a Hike!"</p>
+
+            <p>Recall that the indices of the individual characters of this String are as follows, </p>
+
+            <table class="notesTable" style="width:75%; text-align:center;">
+                    <tbody>
+                    <tr>
+                    <th>character</th>
+                    <td>T</td>
+                    <td>a</td>
+                    <td>k</td>
+                    <td>e</td>
+                    <td></td>
+                    <td>a</td>
+                    <td></td>
+                    <td>H</td>
+                    <td>i</td>
+                    <td>k</td>
+                    <td>e</td>
+                    <td>!</td>
+                    </tr>
+                    <th>index</th>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    </tr>
+                    </tbody>
+                    </table>
+
+
+            <p><u><i>public int compareTo(Object myObj)</i></u></p>
+            <p>The <i>compareTo</i> method accepts any Object, here we will specify a 
+                String object.  The general syntax for usage of compareTo is shown below,  
+            </p>
+            <p class="codeblock">                
+                int j = s.compareTo("Idaho");<br>
+                System.out.println(j);//prints 11
+            </p>
+
+            <p>In the example above, <i>11</i> is printed because the first letter in 
+                "Take a Hike" is 11 places <i>after</i> the first letter in "Idaho" in the alphabet. 
+                </p>
+
+            <p>Now, let's consider the reverse, </p>
+            <p class="codeblock">                
+                    int j = ("Idaho").compareTo(s);<br>
+                    System.out.println(j);//prints -11
+            </p>
+            
+            <p>In the above example, because the first letter in "Idaho" is 11 digits <i>before</i> 
+                the first letter in "Take a Hike", -11 is printed. 
+            </p>
+            <p>Now, let's consider what happens when we mix lower and upper case letters
+                in our comparison.  For example, 
+            </p>  
+            
+            <p class="codeblock">                
+                    int j = ("idaho").compareTo(s);<br>
+                    System.out.println(j);//prints 21
+            </p>
+            <p>The result above can be explained in terms of the <i>char</i> values assocated with 
+                first letters in "idaho" and "Take a Hike".  The first letter, <i>i</i>, has 
+                a value of 105 and, <i>T</i>, has a value of 84.  105 - 84 = 21. 
+            </p>
+            
+            <p><u><i>indexOf()</i></u></p>
+            <p>
+            This method comes in 6 flavors (each is described below).  For each case, all return
+             negative one (-1) if the search is unsuccessful.  
+            </p>
+            <table class="notesTable" style="width:100%;">
+                    <tbody>
+                    <tr>
+                    <th width="30%">Signature</th>
+                    <th width="30%">Description</th>
+                    <th width="40%">Example</th>
+                    </tr>
+                    <tr>
+                    <td>public int indexOf(String str)</td>
+                    <td>Search from left to right for the first 
+                        occurrence of the <i>String str</i>. </td>
+                    <td class="codeFont">
+                        s = "The Walking Dead";<br>
+                        int j = s.indexOf("Walking");<br>
+                        System.out.println(j); //prints 4
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>public int indexOf(String s, int from)</td>
+                    <td>Starting at index, from, search from 
+                        left to right for the first occurrence of the <i>String s</i> </td>
+                    <td class="codeFont">
+                            s = "The Walking Dead";<br><br>
+
+                            int j = s.indexOf("Walking", 7);<br>
+                            System.out.println(j); //prints -1<br><br>
+                            
+                            int j = s.indexOf("a", 7);<br>
+                            System.out.println(j); //prints 14
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>public int indexOf(char ch)</td>
+                    <td>Search from left to right for the first occurrence of the <i>char ch</i></td>
+                    <td class="codeFont">
+                            s = "The Walking Dead";<br>
+
+                            int j = s.indexOf('W');<br>
+                            System.out.println(j); //prints 4
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>public int indexOf(int ascii)</td>
+                    <td>This method is very similar to the one above, except instead of a char
+                         we give the ASCII code of the char desired</td>
+                    <td class="codeFont">
+                            s = "The Walking Dead";<br>
+
+                            int j = s.indexOf(68); //ASCII code for 'D'<br>
+                            System.out.println(j); //prints 12
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>public int indexOf(char ch, int from)</td>
+                    <td>Starting at index from, search from left to right for the 
+                        first occurrence of the <i>char ch</i> </td>
+                    <td class="codeFont">
+                            s = "The Walking Dead";<br>
+        
+                            int j = s.indexOf('e', 4)<br>
+                            System.out.println(j); //prints 13
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>public int indexOf(int ascii, int from)</td>
+                    <td>This method is very similar to the one above, except instead of a 
+                        character we give the ASCII code of the character desired. </td>
+                    <td class="codeFont">
+                            s = "The Walking Dead";<br>
+
+                            int j = s.indexOf(101, 4); //ASCII code for 'e'<br>
+                            System.out.println(j); //prints 13
+                    </td>
+                    </tr>
+                    </tbody>
+                    </table>
+    <p><u><i>public char charAt(int indx)</i></u></p>
+
+    <p>This method returns the character at the specified index.</p>
+    <p class="codeblock">
+    s = "Take a Hike!";<br>
+    
+    char myChar = s.charAt(5);<br>
+    System.out.println(myChar); //prints a
+    </p>
+    <p><u><i>public String trim()</i></u></p>
+    <p>This method removes whitespace from both ends of the String while 
+        leaving interior whitespace intact. (Whitespace consists of 
+        new line (<i>\n</i>), tab (<i>\t</i>), and spaces)</p>
+        <p class = "codeblock"> 
+        s = "Take a Hike!";<br>
+
+        s = "\t\t" + s + "\n";//add some space before and after<br>
+        System.out.println("X" + s.trim() + "X"); //prints XTake a HikeX
+        </p>
+    <p><u><i>public boolean contains(String ss)</i></u></p>
+    <p>This method returns true when this String contains the String ss; otherwise, false</p>
+            <p class = "codeblock"> 
+                    boolean b = "Sticks and Stones".contains("tic"); //returns true
+            </p>
+
+    <div class="practice">
+        <a href="../ticketOutTheDoor/set14/Set14TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 14.1: Exercises
+                        1 thru 2</a>
+        </div>
+    </div>
+
+    <div id="skill2" class="skills">Skill 14.2 Parse Strings with a Scanner</div>
+    <div class="skillConceptsHeader">Skill 14.2 Concepts</div>
+    <div class="skillConcepts">
+    <u>Pass a <i>String</i> to a <i>Scanner</i></u>
+    <p>
+    In a previous lesson we learned how to use the <i>Scanner</i> class to input 
+    text from the keyboard.  Here, we illustrate further uses of <i>Scanner</i> in 
+    parsing (processing) a <i>String</i>.  Instead of passing <i>System.in</i> to the 
+    <i>Scanner</i> as we did for the keyboard input, we pass a <i>String</i> 
+    as follows, 
+    </p>
+    <p class = "codeblock">
+            Scanner sc = new Scanner(“Please, no more Exams!”);
+    </p>
+                
+    <p>Once a <i>String</i> is passed to the <i>Scanner</i>, it is possible to anaylze it.  
+    The process of analyzing a <i>String</i> or text is called <i>parsing</i>.</p>
+        
+    <u>Delimiters</u>
+    <p>A delimiter is a series of characters that separate the text presented 
+        to a <i>Scanner</i> object into separate chunks called <i>tokens</i>.  The default 
+        delimiter is whitespace. The tokens that make up the <i>String</i>
+        below could be accessed using the <i>next()</i> method. </p>  
+
+    <p class = "codeblock">
+            Scanner sc = new Scanner(“Please, no more Exams!”);<br><br>
+            String firstWord = sc.next(); //Please,<br>
+            String secondWord = sc.next(); //no<br>
+            String thirdWord = sc.next(); //more<br>
+            String lastWord = sc.next(); //Exams!
+    </p>
+        
+    <p>The <i>useDelimiter</i> method allows us to create a custom delimiter.  </p>
+    
+    <p class="codeblock">
+            Scanner sc = new Scanner(“Please, no more Exams!”);<br><br>
+
+            sc.useDelimiter(“,\\s”);  //the delimiter is the comma followed by a space<br>
+            sc.next(); //Please<br>
+            sc.next(); //no more Exams!
+    </p>
+
+    <u><i>hasNext()</i></u>
+    <p>The <i>hasNext()</i> method is useful for evaluating whether or not another token exists.
+    If another token exists <i>hasNext()</i> will return <i>true</i>, otherwise it will return <i>false</i></p>
+    <p class="codeblock">
+            Scanner sc = new Scanner(“Please, no more Exams!”);<br><br>
+
+            sc.useDelimiter(“,\\s”);  //the delimiter is the comma followed by a space<br><br>
+            while(sc.hasNext()){<br><br>
+            <span style="margin-left:10em;">System.out.println(sc.next()); </span><br><br>
+            }
+    </p>
+
+
+        <div class="practice">
+            <a href="../ticketOutTheDoor/set14/Set14TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 14.2: Exercise
+                1</a>
+        </div>
+
+
+    </div>
+    
+</body>
+
+</html>

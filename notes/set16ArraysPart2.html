@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../styles/notes.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Over+the+Rainbow" rel="stylesheet">
+</head>
+
+<body>
+    <div id="top">
+        <h1>Set 16: Arrays Part 2</h1>
+    </div>
+    <div id="skills">
+        <ul id="skillsList">
+            <li>
+                Skill 16.1 <a href="#skill1">Populate an array from the command line</a>
+            </li>
+            <li>
+                Skill 16.2 <a href="#skill2">Interpret the <i>NullPointerException</i></a>
+            </li>
+            <li>
+                Skill 16.3 <a href="#skill3">Use the split method to produce an array</a>
+            </li>
+            <li>
+                Skill 16.4 <a href="#skill4">Count the occurrences of a regular expression</a>
+            </li>
+            <li>
+                Skill 16.5 <a href="#skill5">Apply parallel arrays to manage data</a>
+            </li>
+        </ul>
+    </div>
+    <div id="skill1" class="skills">Skill 16.1 Populate an array from the command line
+    </div>
+    <div class="skillConceptsHeader">Skill 16.1 Concepts</div>
+    <div class="skillConcepts">
+
+            <p>In our previous lesson we learned how arrays can be applied to store lists of data.  In this 
+                lesson we will explore some additional features associated with arrays, along with how they can be 
+                manipulated and applied to represent complex data sets. 
+            </p>
+
+            <p>Believe it or not you have been declaring arrays since your first program.  Consider 
+                the following code you have been using to declare the main method in all your programs, 
+            </p>
+
+            <p class = "codeblock">
+                public static void main(<span style="color:red;">String args[]</span>){}
+            </p>
+            <p>Now that we know about arrays, we can see the <span style="color:red;">String args[]</span> 
+                is declaring args as a String array.  In fact, the name of the array, <i>args</i> could be
+                called by any legal variable name. </p>
+            <p>But where and how is this <i>args[]</i> array to be used? </p>
+            <p>The <i>args[]</i> array allows us to pass command line arguments to the main method. Consider the 
+            main method in a class called <i>Street.java</i>, where the array name <i>args</i> has been replaced with <i>houses</i></p>
+            <p class = "codeblock">
+
+                    public static void main(<span style="color:red;">String houses[]</span>){}
+                    
+            </p>
+
+            <p>The houses array could be populated directly from the command line using the following syntax</p>
+
+            <p class = "codeblock">
+                    java Street Bart Kyle Bugs Marvin
+            </p>
+            <p>After compiling <i>Street.java</i> and running the command above, our houses array has the following 
+                assignments, 
+            </p>
+        
+            <img src="../images/arrayOfToons.jpg">
+
+
+    <div class="practice">
+        <a href="../ticketOutTheDoor/set16/Set16TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 16.1: Exercise
+                        1</a>
+        </div>
+    </div>
+
+    <div id="skill2" class="skills">Skill 16.2 Interpret the <i>NullPointerException</i></div>
+    <div class="skillConceptsHeader">Skill 16.2 Concepts</div>
+    <div class="skillConcepts">
+    <p>A null pointer exception results when you try to access the value of an array object that has not
+            yet been initialized. In the following example, the <i>houses</i> array is declare, but it 
+            has not been initialized.  Attempting to assign "Homer" to a location in the array results
+            in a <i>NullPointerException</i>.
+    </p>
+    
+    <p class = "codeblock">
+            String houses[]; //the array houses has been declared, but <i>not</i> initialized<br>
+            houses[6] = "Homer"; //results in a NullPointerException 
+    </p>
+
+    <div class="practice">
+        <a href="../ticketOutTheDoor/set16/Set16TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 16.2: Exercise
+            1</a>
+    </div>
+
+
+    </div>
+    <div id="skill3" class="skills">Skill 16.3 Use the split method to produce an array</div>
+    <div class="skillConceptsHeader">Skill 16.3 Concepts</div>
+    <div class="skillConcepts">
+    <p>
+    The split method is useful for splitting a String into separate elements and storing the result as a String array.
+    The signature for the split method is below.  
+    </p>
+    <p class = "codeblock">
+            <span style="color:red;">public String[]</span> 
+            <span style="color:blue;">split</span>
+            (<span style="color:green;">String regex</span>)
+    </p>
+    <ul style="margin-left:5em;">
+        <li><span style="color:red;">public String[]</span> - the value returned when the method is implemented</li>
+        <li><span style="color:blue;">split</span> - the name of the method</li>
+        <li><span style="color:green;">String regex</span> - the expression that indicates where the split should occur</li>
+
+    </ul>
+    <p>The <i>regex</i> (regular expression) indicates where the split can occur.  This expression can specify that the split
+        occur at one character or multiple characters.  Both
+        scenarios are described below. 
+    </p>
+    <u>One character</u>
+    <p>Consider the String people as declared below.  Because the people are separated by commas, we can easily
+        split the String into an array by setting the <i>regex</i> expression equal to ",".
+    </p>
+    <p>Below is an example,</p>
+
+    <p class = "codeblock">
+            String people = "Bart, Kyle, Bugs, Marvin";<br>
+            String houses[] = people.split(",");
+    </p>
+    <p>After implementing the code above, our houses have the following assignments, 
+    </p>
+    <img src="../images/arrayOfToons.jpg">
+    <p><u>Multiple characters</u></p>
+    <p>The split method can be applied to split a String at multiple locations.  Consider the 
+        same String as before, but instead we have separated the people with different characters.  The String 
+        can still be separated, but we need to indicate all the characters where the split should occur.
+        In the code below each character in the <i>regex</i> expression is separated by a "|".  This 
+        symbole stands for "or"; 
+    </p>
+    <p class = "codeblock">
+            String people = "Bart~Kyle,Bugs-Marvin";<br>
+            String houses[] = people.split("~|,|-");<br><br>
+    
+            System.out.println(houses[0]);//prints Bart<br>
+            System.out.println(houses[1]);//prints Kyle<br>
+            System.out.println(houses[2]);//prints Bugs<br>
+            System.out.println(houses[3]);//prints Marvin
+    </p>
+    <p>Regular expression are a very important tool in programming and they can become quite complex.  
+        The link below provides more information on how to parse Strings using regular expressions. 
+    </p>
+    <p><a href="http://users.cs.cf.ac.uk/Dave.Marshall/Internet/NEWS/regexp.html">Regular Expressions Resource</a></p>
+    
+    
+    <div class="practice">
+        <a href="../ticketOutTheDoor/set16/Set16TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 16.3: Exercise
+                1</a>
+    </div>
+
+
+    </div>
+    <div id="skill4" class="skills">Skill 16.4 Count the occurrences of a regular expression</div>
+    <div class="skillConceptsHeader">Skill 16.4 Concepts</div>
+    <div class="skillConcepts">
+    <p>
+    The split method can be used to count the number of occurrences of a specified regular
+    expression within a String. For example, consider the following String,  
+    </p>
+    <p class = "codeblock">
+            String s = “IF THE BOX IS RED IT&#39;S THE RIGHT ONE.”;
+    </p>
+    <p>In order to count the occurrences of “THE”, we can use it as the regular expession with the split method
+            (String sp[] = s.split(“THE”)). The underlined portions below show the three different elements
+            of the array into which our array is “split”.</p>
+    <p><u>IF</u> <b>THE</b> <u>BOX IS RED IT&#39;S</u> <b>THE</b> <u>RIGHT ONE.</u></p>
+
+    <p>
+            The number of elements in the array is three (sp.length); therefore, the number of
+            occurrences of “THE” is sp.length – 1. 
+    </p>
+    <p>A complication occurs if the delimiter trails the
+            String as in the following example,</p>
+
+    <p class = "codeblock">
+            String s = "ENOUGH USE OF THE WORD THE";<br>
+            String sp[] = s.split("THE");<br>
+            System.out.println(sp.length-1);//prints 1<br>
+            System.out.println(sp[0]);//prints ENOUGH USE OF<br>
+            System.out.println(sp[1]);//prints WORD<br>
+	        System.out.println(sp[2]);//ArrayIndexOutOfBoundsException
+    </p>
+    <p>The value for the number of instances of "THE" is incorrect when the code above is run. 
+        This is because element sp[2] does not exist. To account for this anomoly we can concatenate a dummy 
+        character to the end of the String, 
+        
+    </p>
+    <p class = "codeblock">
+            String s = "ENOUGH USE OF THE WORD THE" + "DUMMY";<br>
+            String sp[] = s.split("THE");<br>
+            System.out.println(sp.length-1);//prints 2<br>
+            System.out.println(sp[0]);//prints ENOUGH USE OF<br>
+            System.out.println(sp[1]);//prints WORD<br>
+	        System.out.println(sp[2]);//DUMMY
+    </p>
+    <p>Now let's consider how split handles delimiters which occur at the beginning of a String. 
+        In the following example, one would think that the length of the resultant array is one. But when the
+        split method is implemented, two elements are created: An empty String before the "THE" and the text 
+        "ENOUGH USE OF WORD"
+    </p>
+    <p class = "codeblock">
+            String s = "THE ENOUGH USE OF WORD";<br>
+            String sp[] = s.split("THE");<br>
+            System.out.println(sp.length-1);//prints 1<br>
+            System.out.println(sp[0]);//prints " "<br>
+            System.out.println(sp[1]);//prints ENOUGH USE OF WORD
+    </p>
+    <div class="practice">
+        <a href="../ticketOutTheDoor/set16/Set16TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 16.4: Exercise
+                1</a>
+    </div>
+
+
+    </div>
+    <div id="skill5" class="skills">Skill 16.5 Apply parallel arrays to manage data</div>
+    <div class="skillConceptsHeader">Skill 16.5 Concepts</div>
+    <div class="skillConcepts">
+    <p>
+    A group of <i>parallel</i> arrays is a data structure that uses multiple arrays to represent a singular array of records. 
+    It does so by keeping a separate, homogeneous data array for each field of the record, each having the same number of elements.  
+    </p>
+    <p>As an example, consider a grade book.  The first array, <i>assignments</i>, is used to store the 
+    assignments.  Then, we have a separate array for each student.  Because each student has the same
+number of assignments we can store them in <i>parallel</i></p> 
+
+    <table class="notesTable" style="width:100%">
+            <tr>
+            <td style="width:15%; text-align:center;"></td>
+            <th style="width:20%; text-align:center;">0</th>
+            <th style="width:15%; text-align:center;">1</th>
+            <th style="width:15%; text-align:center;">2</th>
+            <th style="width:15%; text-align:center;">3</th>
+            <th style="width:15%; text-align:center;">4</th>
+            </tr>
+            <tr>
+            <th style="width:20%">String assignments[]</th>
+            <td style="width:15%">assignment 1</td>
+            <td style="width:15%">assignment 2</td>
+            <td style="width:15%">assignment 3</td>
+            <td style="width:15%">assignment 4</td>
+            <td style="width:15%">assignment 5</td>
+            </tr>
+            <tr>
+            <th>char Bart[]</th>
+            <td style="text-align:center;">5</td>
+            <td style="text-align:center;">R</td>
+            <td style="text-align:center;">3</td>
+            <td style="text-align:center;">4</td>
+            <td style="text-align:center;">M</td>
+            </tr>
+            <tr>
+            <th>char Kyle[]</th>
+            <td style="text-align:center;">2</td>
+            <td style="text-align:center;">3</td>
+            <td style="text-align:center;">2</td>
+            <td style="text-align:center;">4</td>
+            <td style="text-align:center;">R</td>
+            </tr>
+            <tr>
+            <th>char Bugs[]</th>
+            <td style="text-align:center;">4</td>
+            <td style="text-align:center;">M</td>
+            <td style="text-align:center;">3</td>
+            <td style="text-align:center;">5</td>
+            <td style="text-align:center;">4</td>
+            </tr>
+            <tr>
+            <th>char Marvin[]</th>
+            <td style="text-align:center;">5</td>
+            <td style="text-align:center;">2</td>
+            <td style="text-align:center;">3</td>
+            <td style="text-align:center;">3</td>
+            <td style="text-align:center;">4</td>
+            </tr>
+    </table>
+    
+    <p>Now, let's suppose Bugs completes his missing assignment 2.  Below illustrates how we can use 
+        the fact that all the arrays share the same indexing to update this assignment.
+    </p>
+    <p class = "codeblock">
+
+            char score = '3';<br>
+            int index = 0;<br>
+        
+            for(int a = 0; a < assignments.length; a++){<br>
+                <span style="margin-left:5em;">if(assignments[a].equals("assignment 2")){</span><br>
+        
+                    <span style="margin-left:10em;">index = a;</span><br>
+        
+                    <span style="margin-left:5em;">}</span><br>
+        
+            }<br>
+            Bugs[index] = score;<br>
+            System.out.println("Bugs now has a score of " + Bugs[index] + " on " + assignments[index]);
+            
+    </p>
+
+    
+    <div class="practice">
+        <a href="../ticketOutTheDoor/set16/Set16TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 16.5: Exercise
+                1</a>
+    </div>
+
+
+    </div>
+</body>
+
+</html>
