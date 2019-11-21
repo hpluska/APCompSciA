@@ -80,7 +80,6 @@ public class examSets15thru16{
         System.out.println("The student with the highest score is " + highStudent + ", who scored a " + highScore);
 
     }
-}
 
 
 }
