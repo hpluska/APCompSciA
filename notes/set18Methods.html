@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../styles/notes.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Over+the+Rainbow" rel="stylesheet">
+</head>
+
+<body>
+    <div id="top">
+        <h1>Set 18: Methods</h1>
+    </div>
+    <div id="skills">
+        <ul id="skillsList">
+            <li>
+                Skill 18.1 <a href="#skill1">Describe the purpose of classes and objects</a>
+            </li>
+            <li>
+                Skill 17.2 <a href="#skill2">Write code to create a class</i></a>
+            </li>
+            <li>
+                Skill 17.3 <a href="#skill3">Instantiate a class</a>
+            </li>
+            <li>
+                Skill 17.4 <a href="#skill4">Pass parameters to a constructor</a>
+            </li>
+        </ul>
+    </div>
+    <div id="skill1" class="skills">Skill 17.1 Describe the purpose of objects and classes
+    </div>
+    <div class="skillConceptsHeader">Skill 17.1 Concepts</div>
+    <div class="skillConcepts">
+
+            <p>So far we have learned about several different data types.  For example, <i>int</i>, <i>double</i>,
+                <i>String</i>, and <i>boolean</i>.  We can use these different data types to store things like a student's name, their grade level, 
+                their gpa, or whether or not they have a scholarship.   But what if we wanted to do this for thousands of students? 
+            Before we answer this questions, check out the video below,</p>
+
+            <video width="500" controls>
+                    <source src="videos/WhatAreClassesAndObjects.mp4" type="video/mp4">
+                    <source src="videos/WhatAreClassesAndObjects.mp4" type="video/ogg">
+                    Your browser does not support HTML5 video.
+                  </video>
+                <p>Classes in java allow us to model other data types that are not built 
+                    into the  the programming language and create as many subsequent objects of the 
+                    class as needed.  For example, we could create a data type called <i>Student</i> which 
+                    could then store the name, gradeLevel, and GPA of different students. Below, is an illustration of
+                    two Student data types: student1 and student2.  For each Student data type we have also defined
+                    the name, gradeLevel, GPA, and hasScholarship variables.</p>
+
+                    <table class ="notesTable">
+                        <tr><th colspan="3" style="text-align:center;">Student student1</th><th width="1%"></th><th colspan="3" style="text-align:center;">Student student2</th></tr>
+                        <tr><th>data type</th><th>name</th><th>value</th><th width="1%"></th><th>data type</th><th>name</th><th>value</th></tr>
+                        <tr><td>String</td><td>name</td><td>Bart</td><th width="1%"></th><td>String</td><td>name</td><td>Kyle</td></tr>
+                        <tr><td>int</td><td>gradeLevel</td><td>10</td><th width="1%"></th><td>int</td><td>gradeLevel</td><td>11</td></tr>
+                        <tr><td>double</td><td>GPA</td><td>2.6</td><th width="1%"></th><td>double</td><td>GPA</td><td>3.5</td></tr>
+                        <tr><td>boolean</td><td>hasScholarship</td><td>false</td><th width="1%"></th><td>boolean</td><td>hasScholarship</td><td>true</td></tr>
+                    </table>
+
+            <p>
+                In the above example <i>Student</i> is referred to as a class.  <i>student1</i> and <i>student2</i> are referred 
+                to as Student objects, or <i>instances</i> of the Student class.
+            </p>
+            <p class="skillTakeAway">A <b>class</b> is used to model a data type.</p>
+            <p class="skillTakeAway">An <b>instance</b> of a class is referred to as an <b>object</b>.</p>
+
+    <div class="practice">
+        <a href="../ticketOutTheDoor/set17/Set17TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 17.1: Exercise
+                        1</a>
+        </div>
+    </div>
+
+    <div id="skill2" class="skills">Skill 17.2 Write code to create a class</div>
+    <div class="skillConceptsHeader">Skill 17.2 Concepts</div>
+    <div class="skillConcepts">
+    <p>All classes in java are created using the <i>class</i> key word.  For example, 
+    </p>
+    <p class="codeblock">
+        public class Student{<br><br><br>
+        }
+    </p>
+    
+    <p>
+        To properly describe the students above we need the following variables: <i>name</i>, 
+        <i>gradeLevel</i>, <i>GPA</i>, and <i>hasScholarship</i>.  These have been added to our 
+        class below.  
+    
+    </p>
+    <p class="codeblock">
+            public class Student{<br><br>
+                <span style="margin-left:5em;">public String name;</span><br>
+                <span style="margin-left:5em;">public int gradeLevel;</span><br>
+                <span style="margin-left:5em;">public double GPA;</span><br>
+                <span style="margin-left:5em;">public boolean hasScholarship;</span>
+                <br><br>
+            }
+    </p>
+    <p>In the above code snippet, the key word <i>public</i> is an access level modifier 
+        that allows other classes to interact with this class and the variables inside it. 
+        For now, all classes and variables will be public.</p>
+
+    <p>But, before we can start creating student data types, we need to add one more thing to our
+        class, a <i>constructor</i>, 
+    </p>
+
+    <p class="codeblock">
+            public class Student{<br><br>
+                <span style="margin-left:5em;">public String name;</span><br>
+                <span style="margin-left:5em;">public int gradeLevel;</span><br>
+                <span style="margin-left:5em;">public double GPA;</span><br>
+                <span style="margin-left:5em;">public boolean hasScholarship;</span>
+                <br><br>
+                <span style="margin-left:5em;">public Student(){</span><br><br>
+                    <span style="margin-left:5em;">}</span><br>
+            }
+    </p>
+    <p>A constructor is required for all classes.  In fact, if you do not specify one, java will
+        include one for you!  But, the above code is all that is needed to start creating
+        <i>Student</i> data types.
+    </p>
+
+
+    <div class="practice">
+        <a href="../ticketOutTheDoor/set17/Set17TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 17.2: Exercise
+            1</a>
+    </div>
+
+
+    </div>
+    <div id="skill3" class="skills">Skill 17.3 Instantiate a class</div>
+    <div class="skillConceptsHeader">Skill 17.3 Concepts</div>
+    <div class="skillConcepts">
+    <p>
+    <i>Instantiating</i> is a fancy word for <i>creating</i>.  If you <i>instantiate</i> a class
+    you are creating a data type of that class.  In a previous example we defined a <i>Student</i> data
+    type called <i>student1</i> and another <i>Student</i> data type called <i>student2</i>.  We did this 
+    by <i>instantiating</i> the <i>Student</i> class.  
+    </p>
+    <p>To <i>instantiate</i> a class in java we use the <i>new</i> key word as illustrated below.</p>
+    <p class="codeblock">
+            public class StudentMaker{<br><br>
+                
+                <span style="margin-left:5em;">public static void main(String args[]){</span><br><br>
+                <span style="margin-left:10em;">Student student1 = new Student();</span><br>
+                <span style="margin-left:5em;">}</span><br>
+            }
+    </p>
+    <p>The code above created an <i>instance</i> of the <i>Student</i> class called <i>student1</i>.  <i>student1</i>
+    is also referred to as a <i>Student</i> object</p>
+    <p>
+        Notice, that we created our <i>Student</i> object, <i>student1</i> in the main method of 
+        a <i>different</i> class called <i>StudentMaker</i>.  We were able to do this because the student
+        class was given the <i>public</i> access modifier.   Below are the two classes side by side, 
+    </p>
+
+    <table class="notesTable">
+        <tr><th>Student</th><th>StudentMaker</th></tr>
+        <tr><td valign="top"> <p class="codeblock">
+                public class Student{<br><br>
+                    <span style="margin-left:2em;">public String name;</span><br>
+                    <span style="margin-left:2em;">public int gradeLevel;</span><br>
+                    <span style="margin-left:2em;">public double GPA;</span><br>
+                    <span style="margin-left:2em;">public boolean hasScholarship;</span>
+                    <br><br>
+                    <span style="margin-left:2em;">public Student(){</span><br><br>
+                        <span style="margin-left:2em;">}</span><br>
+                }
+        </p></td><td valign="top"> <p class="codeblock">
+                public class StudentMaker{<br><br>
+                    
+                    <span style="margin-left:2em;">public static void main(String args[]){</span><br><br>
+                    <span style="margin-left:4em;">Student student1 = new Student();</span><br>
+                    <span style="margin-left:2em;">}</span><br>
+                }
+        </p></td></tr>
+    </table>
+
+    <p>
+        Now, that we have created our student, we can start defining the student's characteristics,
+        like their name, gradeLevel, GPA, etc.  To access variables associated with our student
+        object we use the <i>dot</i> notation, 
+    </p>
+
+    <table class="notesTable">
+            <tr><th>Student</th><th>StudentMaker</th></tr>
+            <tr><td valign="top"> <p class="codeblock">
+                    public class Student{<br><br>
+                        <span style="margin-left:2em;">public String name;</span><br>
+                        <span style="margin-left:2em;">public int gradeLevel;</span><br>
+                        <span style="margin-left:2em;">public double GPA;</span><br>
+                        <span style="margin-left:2em;">public boolean hasScholarship;</span>
+                        <br><br>
+                        <span style="margin-left:2em;">public Student(){</span><br><br>
+                            <span style="margin-left:2em;">}</span><br>
+                    }
+            </p></td><td valign="top"> <p class="codeblock">
+                    public class StudentMaker{<br><br>
+                        
+                        <span style="margin-left:2em;">public static void main(String args[]){</span><br><br>
+                        <span style="margin-left:4em;">Student student1 = new Student();</span><br>
+                        <span style="margin-left:4em;">student1.name = "Bart";</span><br>
+                        <span style="margin-left:4em;">student1.gradeLevel = 10;</span><br>
+                        <span style="margin-left:4em;">student1.GPA = 2.6;</span><br>
+                        <span style="margin-left:4em;">student1.hasScholarship = false;</span><br>
+                        <span style="margin-left:2em;">}</span><br>
+                    }
+            </p></td></tr>
+        </table>
+    
+    <div class="practice">
+        <a href="../ticketOutTheDoor/set17/Set17TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 17.3: Exercise
+                1</a>
+    </div>
+
+
+    </div>
+    <div id="skill4" class="skills">Skill 17.4 Pass parameters to a constructor</div>
+    <div class="skillConceptsHeader">Skill 17.4 Concepts</div>
+    <div class="skillConcepts">
+    <p>
+    A <i>parameter</i> is a value you can pass to a method (or a constructor).  For example, 
+    rather than defining the students <i>name</i>, <i>gradeLevel</i>, <i>GPA</i>, etc. after the <i>Student</i> 
+    object has been created, this can be done all at once. Before we can do so however, we must
+    modify the constructor in the <i>Student</i> class to allow for parameters. 
+    </p>
+    <p class="codeblock">
+            public class Student{<br><br>
+                <span style="margin-left:5em;">public String name;</span><br>
+                <span style="margin-left:5em;">public int gradeLevel;</span><br>
+                <span style="margin-left:5em;">public double GPA;</span><br>
+                <span style="margin-left:5em;">public boolean hasScholarship;</span>
+                <br><br>
+                <span style="margin-left:5em;">public Student(<span style="color:red;">
+                String n, int g, double gpa, boolean s </span>){</span><br><br>
+                    <span style="margin-left:5em;">}</span><br>
+            }
+    </p>
+    <p>
+        Once the values are received by the constructor, they can be assigned to the 
+        variables <i>name</i>, <i>gradeLevel</i>, <i>GPA</i>, and <i>hasScholarship</i> as 
+        follows, 
+    </p>
+
+    <p class="codeblock">
+            public class Student{<br><br>
+                <span style="margin-left:5em;">public String name;</span><br>
+                <span style="margin-left:5em;">public int gradeLevel;</span><br>
+                <span style="margin-left:5em;">public double GPA;</span><br>
+                <span style="margin-left:5em;">public boolean hasScholarship;</span>
+                <br><br>
+                <span style="margin-left:5em;">public Student(<span style="color:red;">
+                String n, int gl, double gpa, boolean s </span>){</span><br><br>
+
+                    <span style="margin-left:10em;">name = <span style="color:red;">n</span>;</span><br>
+                    <span style="margin-left:10em;">gradeLevel = <span style="color:red;">gl</span>;</span><br>
+                    <span style="margin-left:10em;">GPA = <span style="color:red;">gpa</span>;</span><br>
+                    <span style="margin-left:10em;">hasScholarship = <span style="color:red;">s</span>;</span><br>
+                    <span style="margin-left:5em;">}</span><br>
+            }
+    </p>
+
+    <p>
+    Now, that we have modified the constructor, we must also modify our code to create our <i>Student</i> instances.  Below, 
+    we create two <i>Student</i> instances, <i>student1</i> and <i>student2</i>,  
+    </p>
+    <p class="codeblock">
+            public class StudentMaker{<br><br>
+                
+                <span style="margin-left:5em;">public static void main(String args[]){</span><br><br>
+                <span style="margin-left:10em;">Student student1 = new Student(<span style="color:red;">"Bart", 10, 2.6, false</span>);</span><br>
+                <span style="margin-left:10em;">Student student2 = new Student(<span style="color:red;">"Kyle", 11, 3.5, true</span>);</span><br>
+                <span style="margin-left:5em;">}</span><br>
+            }
+    </p>
+
+    <div class="practice">
+        <a href="../ticketOutTheDoor/set17/Set17TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 17.4: Exercises
+                1 thru 3</a>
+    </div>
+
+
+    </div>
+    
+</body>
+
+</html>
