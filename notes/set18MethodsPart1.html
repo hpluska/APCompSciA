@@ -18,13 +18,13 @@
                 Skill 18.1 <a href="#skill1">Describe the purpose of methods</a>
             </li>
             <li>
-                Skill 17.2 <a href="#skill2">Write code to create a class</i></a>
+                Skill 18.2 <a href="#skill2">Write code to create and implement a method</i></a>
             </li>
             <li>
-                Skill 17.3 <a href="#skill3">Instantiate a class</a>
+                Skill 18.3 <a href="#skill3">Identify the scope of a variable</a>
             </li>
             <li>
-                Skill 17.4 <a href="#skill4">Pass parameters to a constructor</a>
+                Skill 18.4 <a href="#skill4">Pass parameters to a method</a>
             </li>
         </ul>
     </div>
@@ -75,7 +75,7 @@
         </div>
     </div>
 
-    <div id="skill2" class="skills">Skill 18.2 Write code to create a method</div>
+    <div id="skill2" class="skills">Skill 18.2 Write code to create and implement a method</div>
     <div class="skillConceptsHeader">Skill 18.2 Concepts</div>
     <div class="skillConcepts">
     <p>In our previous example, every time the user wanted to make a deposit, make a withdrawel, or check their 
@@ -143,155 +143,93 @@
 
 
     </div>
-    <div id="skill3" class="skills">Skill 17.3 Instantiate a class</div>
-    <div class="skillConceptsHeader">Skill 17.3 Concepts</div>
+    <div id="skill3" class="skills">Skill 18.3 Identify the scope of a variable</div>
+    <div class="skillConceptsHeader">Skill 18.3 Concepts</div>
     <div class="skillConcepts">
     <p>
-    <i>Instantiating</i> is a fancy word for <i>creating</i>.  If you <i>instantiate</i> a class
-    you are creating a data type of that class.  In a previous example we defined a <i>Student</i> data
-    type called <i>student1</i> and another <i>Student</i> data type called <i>student2</i>.  We did this 
-    by <i>instantiating</i> the <i>Student</i> class.  
+        A method is a task that an object of a class can perform. We mark the domain of this task using curly braces: {, and }. 
+        Everything inside the curly braces is part of the task. This domain is called the <i>scope</i> of a method.</p>
+        
+        <p>We cannot access variables that are declared inside a method in code that is outside the scope of that method.</p>
+        
+        <p>Consider the <i>SavingsAccount</i> class below,
     </p>
-    <p>To <i>instantiate</i> a class in java we use the <i>new</i> key word as illustrated below.</p>
     <p class="codeblock">
-            public class StudentMaker{<br><br>
-                
-                <span style="margin-left:5em;">public static void main(String args[]){</span><br><br>
-                <span style="margin-left:10em;">Student student1 = new Student();</span><br>
+        public class SavingsAccount{<br><br>
+            <span style="margin-left:5em;">public String name;</span><br>
+            <span style="margin-left:5em;">public double balance;</span><br>
+            <br>
+            <span style="margin-left:5em;">public SavingsAccount(String n, double b){</span><br><br>
+                <span style="margin-left:10em;">name = n</span><br>
+                <span style="margin-left:10em;">balance = b</span><br>
                 <span style="margin-left:5em;">}</span><br>
-            }
-    </p>
-    <p>The code above created an <i>instance</i> of the <i>Student</i> class called <i>student1</i>.  <i>student1</i>
-    is also referred to as a <i>Student</i> object</p>
-    <p>
-        Notice, that we created our <i>Student</i> object, <i>student1</i> in the main method of 
-        a <i>different</i> class called <i>StudentMaker</i>.  We were able to do this because the student
-        class was given the <i>public</i> access modifier.   Below are the two classes side by side, 
-    </p>
 
-    <table class="notesTable">
-        <tr><th>Student</th><th>StudentMaker</th></tr>
-        <tr><td valign="top"> <p class="codeblock">
-                public class Student{<br><br>
-                    <span style="margin-left:2em;">public String name;</span><br>
-                    <span style="margin-left:2em;">public int gradeLevel;</span><br>
-                    <span style="margin-left:2em;">public double GPA;</span><br>
-                    <span style="margin-left:2em;">public boolean hasScholarship;</span>
-                    <br><br>
-                    <span style="margin-left:2em;">public Student(){</span><br><br>
-                        <span style="margin-left:2em;">}</span><br>
-                }
-        </p></td><td valign="top"> <p class="codeblock">
-                public class StudentMaker{<br><br>
-                    
-                    <span style="margin-left:2em;">public static void main(String args[]){</span><br><br>
-                    <span style="margin-left:4em;">Student student1 = new Student();</span><br>
-                    <span style="margin-left:2em;">}</span><br>
-                }
-        </p></td></tr>
-    </table>
+            <span style="margin-left:5em;">public void checkBalance(){</span><br><br>
+                    <span style="margin-left:10em; color:red;">String message = "Your balance is $" + balance;</span><br>
+                    <span style="margin-left:10em;">System.out.println(message);</span><br>
+                    <span style="margin-left:5em;">}</span><br>
+        }
+</p>
 
-    <p>
-        Now, that we have created our student, we can start defining the student's characteristics,
-        like their name, gradeLevel, GPA, etc.  To access variables associated with our student
-        object we use the <i>dot</i> notation, 
-    </p>
+<p>The variable <i>message</i>, which is declared and initialized inside of <i>checkBalance()</i>, cannot be used inside any other method. 
+    It only exists within the scope of the <i>checkBalance()</i> method.  However, <i>name</i> and <i>balance</i>, which are declared at the top of the class, 
+can be used inside all methods in the class, since they are in the scope of the whole class.</p>
 
-    <table class="notesTable">
-            <tr><th>Student</th><th>StudentMaker</th></tr>
-            <tr><td valign="top"> <p class="codeblock">
-                    public class Student{<br><br>
-                        <span style="margin-left:2em;">public String name;</span><br>
-                        <span style="margin-left:2em;">public int gradeLevel;</span><br>
-                        <span style="margin-left:2em;">public double GPA;</span><br>
-                        <span style="margin-left:2em;">public boolean hasScholarship;</span>
-                        <br><br>
-                        <span style="margin-left:2em;">public Student(){</span><br><br>
-                            <span style="margin-left:2em;">}</span><br>
-                    }
-            </p></td><td valign="top"> <p class="codeblock">
-                    public class StudentMaker{<br><br>
-                        
-                        <span style="margin-left:2em;">public static void main(String args[]){</span><br><br>
-                        <span style="margin-left:4em;">Student student1 = new Student();</span><br>
-                        <span style="margin-left:4em;">student1.name = "Bart";</span><br>
-                        <span style="margin-left:4em;">student1.gradeLevel = 10;</span><br>
-                        <span style="margin-left:4em;">student1.GPA = 2.6;</span><br>
-                        <span style="margin-left:4em;">student1.hasScholarship = false;</span><br>
-                        <span style="margin-left:2em;">}</span><br>
-                    }
-            </p></td></tr>
-        </table>
+
     
-    <div class="practice">
-        <a href="../ticketOutTheDoor/set17/Set17TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 17.3: Exercise
-                1</a>
-    </div>
 
 
     </div>
-    <div id="skill4" class="skills">Skill 17.4 Pass parameters to a constructor</div>
-    <div class="skillConceptsHeader">Skill 17.4 Concepts</div>
+    <div id="skill4" class="skills">Skill 18.4 Pass parameters to a method</div>
+    <div class="skillConceptsHeader">Skill 18.4 Concepts</div>
     <div class="skillConcepts">
     <p>
-    A <i>parameter</i> is a value you can pass to a method (or a constructor).  For example, 
-    rather than defining the students <i>name</i>, <i>gradeLevel</i>, <i>GPA</i>, etc. after the <i>Student</i> 
-    object has been created, this can be done all at once. Before we can do so however, we must
-    modify the constructor in the <i>Student</i> class to allow for parameters. 
+    We saw how a method’s scope prevents us from using variables declared in one method in another method. 
+    What if we had some information in one method that we needed to pass into another method?</p>
+    <p>Similar to how we added parameters to constructors, we can customize all other methods to accept parameters.
     </p>
+
     <p class="codeblock">
-            public class Student{<br><br>
-                <span style="margin-left:5em;">public String name;</span><br>
-                <span style="margin-left:5em;">public int gradeLevel;</span><br>
-                <span style="margin-left:5em;">public double GPA;</span><br>
-                <span style="margin-left:5em;">public boolean hasScholarship;</span>
-                <br><br>
-                <span style="margin-left:5em;">public Student(<span style="color:red;">
-                String n, int g, double gpa, boolean s </span>){</span><br><br>
+        public class SavingsAccount{<br><br>
+            <span style="margin-left:5em;">public String name;</span><br>
+            <span style="margin-left:5em;">public double balance;</span><br>
+            <br>
+            <span style="margin-left:5em;">public SavingsAccount(String n, double b){</span><br><br>
+                <span style="margin-left:10em;">name = n</span><br>
+                <span style="margin-left:10em;">balance = b</span><br>
+                <span style="margin-left:5em;">}</span><br>
+
+            <span style="margin-left:5em;">public void checkBalance(){</span><br><br>
+                    <span style="margin-left:10em;">String message = "Your balance is $" + balance;</span><br>
+                    <span style="margin-left:10em;">System.out.println(message);</span><br>
                     <span style="margin-left:5em;">}</span><br>
-            }
-    </p>
+
+            <span style="margin-left:5em;">public void depositMoney(double d){</span><br><br>
+                        <span style="margin-left:10em;">balance += d;</span><br>
+                        <span style="margin-left:5em;">}</span><br>
+        }
+</p>
     <p>
-        Once the values are received by the constructor, they can be assigned to the 
-        variables <i>name</i>, <i>gradeLevel</i>, <i>GPA</i>, and <i>hasScholarship</i> as 
-        follows, 
+        In the code above, we created a <i>depositMoney()</i> method that accepts an double parameter called d. 
+        In the main() method, we can call the depositMoney() method on an object and provide a double parameter to 
+        increase the balance.
+
     </p>
 
     <p class="codeblock">
-            public class Student{<br><br>
-                <span style="margin-left:5em;">public String name;</span><br>
-                <span style="margin-left:5em;">public int gradeLevel;</span><br>
-                <span style="margin-left:5em;">public double GPA;</span><br>
-                <span style="margin-left:5em;">public boolean hasScholarship;</span>
-                <br><br>
-                <span style="margin-left:5em;">public Student(<span style="color:red;">
-                String n, int gl, double gpa, boolean s </span>){</span><br><br>
-
-                    <span style="margin-left:10em;">name = <span style="color:red;">n</span>;</span><br>
-                    <span style="margin-left:10em;">gradeLevel = <span style="color:red;">gl</span>;</span><br>
-                    <span style="margin-left:10em;">GPA = <span style="color:red;">gpa</span>;</span><br>
-                    <span style="margin-left:10em;">hasScholarship = <span style="color:red;">s</span>;</span><br>
-                    <span style="margin-left:5em;">}</span><br>
-            }
-    </p>
-
-    <p>
-    Now, that we have modified the constructor, we must also modify our code to create our <i>Student</i> instances.  Below, 
-    we create two <i>Student</i> instances, <i>student1</i> and <i>student2</i>,  
-    </p>
-    <p class="codeblock">
-            public class StudentMaker{<br><br>
+            public class SavingsAccountDriver{<br><br>
                 
                 <span style="margin-left:5em;">public static void main(String args[]){</span><br><br>
-                <span style="margin-left:10em;">Student student1 = new Student(<span style="color:red;">"Bart", 10, 2.6, false</span>);</span><br>
-                <span style="margin-left:10em;">Student student2 = new Student(<span style="color:red;">"Kyle", 11, 3.5, true</span>);</span><br>
+                <span style="margin-left:10em;">SavingsAccount account1 = new SavingsAccount("Bart", 125.00);<br>
+                <span style="margin-left:10em;">account1.despositMoney(40.00);</span><br>
+                <span style="margin-left:10em;">account1.checkBalance();//prints <i>Your balance is $165.00</i></span><br>
                 <span style="margin-left:5em;">}</span><br>
             }
     </p>
 
     <div class="practice">
-        <a href="../ticketOutTheDoor/set17/Set17TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 17.4: Exercises
-                1 thru 3</a>
+        <a href="../ticketOutTheDoor/set18/Set18TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 18.4: Exercise
+                1</a>
     </div>
 
 
