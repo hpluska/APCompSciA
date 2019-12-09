@@ -24,7 +24,7 @@ public class TextStatistics implements TextStatisticsInterface{
     private int lineCount, wordCount, charCount, letterCount[], wordLengthCount[];
     private double averageWordLength;
     private String results;
-
+z
 
     public TextStatistics(File file) {
         
