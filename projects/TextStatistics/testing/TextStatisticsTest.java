@@ -5,6 +5,7 @@ import java.util.Arrays;
 /**
  * Simple unit tester for the TextStatistics class.
  * @author amit
+ * @author pluska
  *
  */
 public class TextStatisticsTest
@@ -98,19 +99,19 @@ public class TextStatisticsTest
 		String [] textfile = {"etext" + File.separator + "testfile.txt",
 			              "etext" + File.separator + "Gettysburg-Address.txt",
 				      "etext" + File.separator + "Alice-in-Wonderland.txt"};
-		int[][] wordFreq = {{0, 3, 13, 24, 13, 10, 2, 5, 3, 1, 3, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-				            {0, 8, 50, 55, 61, 35, 27, 17, 7, 10, 6, 4, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-			                {0, 1548, 4387, 6950, 5884, 3489, 1989, 1567, 745, 447, 189, 108, 36, 12, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+		int[][] wordFreq = {{0, 6, 18, 24, 16, 13, 2, 7, 5, 1, 3, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+				            {0, 8, 51, 55, 62, 35, 27, 17, 7, 10, 6, 4, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+			                {0, 1707, 4412, 7062, 5782, 3340, 1951, 1569, 723, 448, 181, 108, 34, 11, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 		};
-		int[][] letterFreq = {{27, 1, 11, 10, 33, 9, 7, 24, 25, 0, 2, 18, 5, 25, 26, 5, 0, 21, 30, 35, 7, 1, 10, 1, 2, 0},
+		int[][] letterFreq = {{34, 2, 18, 12, 38, 8, 7, 26, 29, 0, 2, 18, 7, 31, 32, 7, 0, 23, 38, 38, 9, 1, 11, 1, 2, 0},
 				              {107, 18, 32, 61, 175, 28, 33, 81, 74, 0, 3, 47, 14, 86, 96, 17, 1, 84, 53, 132, 25, 27, 28, 0, 13, 0},
 				              {8787, 1474, 2397, 4931, 13569, 2000, 2528, 7372, 7511, 146, 1158, 4713, 2107, 7013, 8141, 1522, 209, 5433,
 			                   6495, 10684, 3468, 845, 2674, 148, 2264, 78}
 		};
-		int[] numChars = {465, 1622, 148482};
-		int[] numWords = {79, 281, 27356};
+		int[] numChars = {534, 1622, 148482};
+		int[] numWords = {97, 283, 27333};
 		int[] numLines = {11, 39, 3610};
-		double[] avgWordLength = {4.24, 4.40,  3.98};
+		double[] avgWordLength = {4.17, 4.38,  3.93};
 
 		for (int i = 0; i < textfile.length; i++) {
 			File nextFile = new File(textfile[i]);
