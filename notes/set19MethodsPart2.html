@@ -15,145 +15,253 @@
     <div id="skills">
         <ul id="skillsList">
             <li>
-                Skill 19.1 <a href="#skill1">Implement an overloaded method</a>
+                Skill 19.1 <a href="#skill1">Apply the <i>return</i> keyword</a>
             </li>
             <li>
-                Skill 19.2 <a href="#skill2">Implement an overloaded method</i></a>
+                Skill 19.2 <a href="#skill2">Apply <i>public</i> and <i>private</i> access modifiers to manage data members</a>
             </li>
             <li>
-                Skill 18.3 <a href="#skill3">Identify the scope of a variable</a>
-            </li>
-            <li>
-                Skill 18.4 <a href="#skill4">Pass parameters to a method</a>
+                Skill 19.3 <a href="#skill3">Apply method overloading to methods and constructors</a>
             </li>
         </ul>
     </div>
-    <div id="skill1" class="skills">Skill 19.2 Implement an overloaded method
+    <div id="skill1" class="skills">Skill 19.1 Apply the <i>return</i> key word
     </div>
     <div class="skillConceptsHeader">Skill 19.1 Concepts</div>
     <div class="skillConcepts">
-        <u>Purpose of method overloading</u>
-            <p>Method overloading in Java is the ability to create multiple methods of the same name, but with different parameters.  
-                The main advantage of this is cleanliness of code.</p>
+        <p>Up until now all of our methods have been of the <i>void</i> type.  As a review, consider the <i>getSum()</i> method below.  </p>  
+        <p class="codeblock">
+                
+                public class SumNums{<br><br>
+                    <span style="margin-left:2em;">public int num1, num2, sum;</span><br><br>
+                    <span style="margin-left:2em;">public SumNums(int a, int b){</span><br><br>
+                        <span style="margin-left:4em;">num1 = a;</span><br>
+                        <span style="margin-left:4em;">num2 = b;</span><br>
+                        <span style="margin-left:2em;">}</span><br>
 
-            <p>Suppose that you have a class that can use calligraphy to draw various types of data (strings, integers, and so on).
-                It would be cumbersome to use a new name for each method—for example, drawString, drawInteger, drawFloat, and so on. 
-                In the Java programming language, you can use the same name for all the drawing methods but pass a different 
-                argument list to each method. Thus, the data drawing class might declare four methods named draw, 
-                each of which has a different parameter list.</p>
+                    <span style="margin-left:2em;"><span style="color:red;">public</span> <span style="color:blue;">void</span> <span style="color:green;">getSum()</span>{</span><br><br>
+                            <span style="margin-left:4em;">sum = num1 + num2;</span><br>
 
-            <p class="codeblock">
-                    public class DataArtist {<br><br>
-                        <span style="margin-left:5em;">public void draw(String s) {</span><br><br>
-                            <span style="margin-left:10em;">...</span><br><br>
-                        <span style="margin-left:5em;">}</span><br><br>
-                        <span style="margin-left:5em;">public void draw(int i) {</span><br><br>
-                            <span style="margin-left:10em;">...</span><br><br>
-                        <span style="margin-left:5em;">}</span><br><br>
-                        <span style="margin-left:5em;">public void draw(double d) {</span><br><br>
-                            <span style="margin-left:10em;">...</span><br><br>
-                        <span style="margin-left:5em;">}</span><br><br>
-                        <span style="margin-left:5em;">public void draw(int i, double d) {</span><br><br>
-                            <span style="margin-left:10em;">...</span><br><br>
-                        <span style="margin-left:5em;">}</span><br><br>
-                    }
-            </p>
-            <u>Writing an overloaded method</u>
-            <p>
-                Overloaded methods are differentiated by the number and the type of the arguments passed 
-                into the method. In the code sample above, draw(String s) and draw(int i) are distinct and 
-                unique methods because they require different argument types.
-            </p>
-            <p>
-                You cannot declare more than one method with the same name and the same number 
-                and type of arguments, because the compiler cannot tell them apart. For example, 
-                the code below would throw an error,
+                            <span style="margin-left:2em;">}</span><br>
+                }
+
             </p>
 
-            <p class="codeblock">
-                    public class sumNums {<br><br>
-                        <span style="margin-left:5em;">public int sum2(int a, int b) {</span><br><br>
-                            <span style="margin-left:10em;">return a + b;</span><br><br>
-                        <span style="margin-left:5em;">}</span><br><br>
-                        <span style="margin-left:5em;">public double sum2(int a, int b) {</span><br><br>
-                            <span style="margin-left:10em;">return (double)a + b;</span><br><br>
-                        <span style="margin-left:5em;">}</span><br><br>
-                    }
-            </p>
-            <p class="skillTakeAway">Overloaded methods are methods with the same name, but with different parameters.</p>
-            <u>Calling an overloaded method</u>
-            <p>When you call an overloaded method, java will look for the method that matches the parameters.</p>
-            <table class="notesTable">
-                    <tr><th width="50%">SumNums</th><th width="50%">SumNumsDriver</th></tr>
-                    <tr><td valign="top"> <p class="codeblock">
-                            public class SumNums{<br><br>
-                                <span style="margin-left:2em;">//accepts int data types</span><br>
-                                <span style="margin-left:2em;">public  int sum2(int a, int b){</span><br><br>
-                                    <span style="margin-left:4em;">int sum = a + b;</span><br>
-                                    <span style="margin-left:4em;">return sum2;</span><br>
-                                    <span style="margin-left:2em;">}</span><br>
-                                <span style="margin-left:2em;">//accepts double data types</span><br>
-                                <span style="margin-left:2em;">public double sum2(double a, double b){</span><br><br>
-                                        <span style="margin-left:4em;">double sum = a + b;</span><br>
-                                        <span style="margin-left:4em;">return sum;</span><br>
-                                        <span style="margin-left:2em;">}</span><br>
-                            }
-                    </p></td><td valign="top"> <p class="codeblock">
-                            public class SumNumsDriver{<br><br>
-                                
-                                <span style="margin-left:2em;">public static void main(String args[]){</span><br><br>
-                                <span style="margin-left:4em;">SumNums s = new SumNums();</span><br>
-                                <span style="margin-left:4em;">s.sum2(1, 2);//prints 3</span><br>
-                                <span style="margin-left:4em;">s.sum2(1.0, 2.0);//prints 3.0</span><br>
+            <ul>
+                    <li><span style="color:red;">public</span> means that other classes can access this method. We will learn more about that later.</li>
+                    <li>The <span style="color:blue;">void</span> keyword means that there is no specific output from the method. We will see methods that are not void later, but for now all of our methods will be void.</li>
+                    <li><span style="color:green;">getSum</span> is the name of the method.</li>
+                </ul>
+
+    <p>Because, the <i>getSum()</i> method is a <i>void</i> type method, nothing is returned.  In otherwords, the following code would produce an error,</p>
+    <table class="notesTable">
+            <tr><th width="50%">SumNums</th><th width="50%">SumNumsDriver</th></tr>
+            <tr><td valign="top"> <p class="codeblock">
+                    public class SumNums{<br><br>
+                        <span style="margin-left:2em;">public int num1, num2, sum;</span><br><br>
+                        <span style="margin-left:2em;">public SumNums(int a, int b){</span><br><br>
+                            <span style="margin-left:4em;">num1 = a;</span><br>
+                            <span style="margin-left:4em;">num2 = b;</span><br>
+                            <span style="margin-left:2em;">}</span><br>
+ 
+                        <span style="margin-left:2em;">public void getSum(){</span><br><br>
+                                <span style="margin-left:4em;">sum = num1 + num2;</span><br>
+
                                 <span style="margin-left:2em;">}</span><br>
-                            }
-                    </p></td></tr>
-                </table>
-                <u>Overloading a constructor</u>
-                <p>The concept of method overloading is described in more detail below.</p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Egzz2I3iseg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <div class="practice">
-        <a href="../ticketOutTheDoor/set18/Set18TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 18.1: Exercise
-                        1</a>
-        </div>
+                    }
+            </p></td><td valign="top"> <p class="codeblock">
+                    public class SumNumsDriver{<br><br>
+                        
+                        <span style="margin-left:2em;">public static void main(String args[]){</span><br><br>
+                        <span style="margin-left:4em;">SumNums s = new SumNums(1, 2);</span><br>
+                        <span style="margin-left:4em;">System.out.println(s.getSum());//ERROR</span><br>
+                        <span style="margin-left:2em;">}</span><br>
+                    }
+            </p></td></tr>
+        </table>
+        <p>Fixing the error requires that we define the return type of the getSum() method.  This is illustrated below,</p>
+        <p class="codeblock">
+                
+                public class SumNums{<br><br>
+                    <span style="margin-left:2em;">public int num1, num2, sum;</span><br><br>
+                    <span style="margin-left:2em;">public SumNums(int a, int b){</span><br><br>
+                        <span style="margin-left:4em;">num1 = a;</span><br>
+                        <span style="margin-left:4em;">num2 = b;</span><br>
+                        <span style="margin-left:2em;">}</span><br>
+
+                    <span style="margin-left:2em;"><span style="color:red;">public</span> <span style="color:blue;">int</span> <span style="color:green;">getSum()</span>{</span><br><br>
+                            <span style="margin-left:4em;">sum = num1 + num2;</span><br>
+                            <span style="margin-left:4em;"><span style="color:maroon;">return sum;</span><br>
+
+                            <span style="margin-left:2em;">}</span><br>
+                }
+
+            </p>
+
+            <ul>
+                    <li><span style="color:red;">public</span> means that other classes can access this method. We will learn more about that later.</li>
+                    <li>The <span style="color:blue;">int</span> keyword means that the method returns an <i>int</i> data type..</li>
+                    <li><span style="color:green;">getSum</span> is the name of the method.</li>
+                    <li><span style="color:maroon;">return sum</span> returns an <i>int</i> data type.</li>
+                </ul>
+                <p>Now that a return type has been defined, we can print the value associated with the method.  The code shown below will now run without an error.</p>
+                <table class="notesTable">
+                        <tr><th width="50%">SumNums</th><th width="50%">SumNumsDriver</th></tr>
+                        <tr><td valign="top"> <p class="codeblock">
+                                public class SumNums{<br><br>
+                                    <span style="margin-left:2em;">public int num1, num2, sum;</span><br><br>
+                                    <span style="margin-left:2em;">public SumNums(int a, int b){</span><br><br>
+                                        <span style="margin-left:4em;">num1 = a;</span><br>
+                                        <span style="margin-left:4em;">num2 = b;</span><br>
+                                        <span style="margin-left:2em;">}</span><br>
+             
+                                    <span style="margin-left:2em;">public int getSum(){</span><br><br>
+                                            <span style="margin-left:4em;">sum = num1 + num2;</span><br>
+                                            <span style="margin-left:4em;">return sum;</span><br>
+            
+                                            <span style="margin-left:2em;">}</span><br>
+                                }
+                        </p></td><td valign="top"> <p class="codeblock">
+                                public class SumNumsDriver{<br><br>
+                                    
+                                    <span style="margin-left:2em;">public static void main(String args[]){</span><br><br>
+                                    <span style="margin-left:4em;">SumNums s = new SumNums(1, 2);</span><br>
+                                    <span style="margin-left:4em;">System.out.println(s.getSum());//prints 3</span><br>
+                                    <span style="margin-left:2em;">}</span><br>
+                                }
+                        </p></td></tr>
+                    </table>
+    <p>A <i>return</i> statement can be used at various places in a method but we need 
+        to ensure that it is the last statement to get executed in a method.  For example, </p>
+
+        <p class="codeblock">
+                
+                public class SumNums{<br><br>
+                    <span style="margin-left:5em;">public int num1, num2, sum;</span><br><br>
+                    <span style="margin-left:5em;">public SumNums(int a, int b){</span><br><br>
+                        <span style="margin-left:10em;">num1 = a;</span><br>
+                        <span style="margin-left:10em;">num2 = b;</span><br>
+                        <span style="margin-left:5em;">}</span><br>
+
+                    <span style="margin-left:5em;">public String getSum()</span>{</span><br><br>
+                            <span style="margin-left:10em;">sum = num1 + num2;</span><br><br>
+                            <span style="margin-left:10em;">if(sum >= 18)</span><br>
+                            <span style="margin-left:15em;">return "I'm an adult!";</span><br><br>
+                            <span style="margin-left:10em;">return "Not old enough!";</span><br>
+                            <span style="margin-left:5em;">}</span><br>
+                }
+
+            </p>
+
+    <p>If the condition (sum >= 18) is true, then <i>return "I'm an adult!";</i>  executes and the flow of the program <i>returns</i> the String, <i>"I'm an adult!"</i>, to the method that called it,</p>
+    <table class="notesTable">
+            <tr><th width="50%">SumNums</th><th width="50%">SumNumsDriver</th></tr>
+            <tr><td valign="top"> <p class="codeblock">
+                    public class SumNums{<br><br>
+                        <span style="margin-left:2em;">public int num1, num2, sum;</span><br><br>
+                        <span style="margin-left:2em;">public SumNums(int a, int b){</span><br><br>
+                            <span style="margin-left:4em;">num1 = a;</span><br>
+                            <span style="margin-left:4em;">num2 = b;</span><br>
+                            <span style="margin-left:2em;">}</span><br>
+ 
+                            <span style="margin-left:2em;">public String getSum()</span>{</span><br><br>
+                                <span style="margin-left:4em;">sum = num1 + num2;</span><br><br>
+                                <span style="margin-left:4em;">if(sum >= 18)</span><br>
+                                <span style="margin-left:6em;">return "I'm an adult!";</span><br><br>
+                                <span style="margin-left:4em;">return "Not old enough!";</span><br>
+                                <span style="margin-left:2em;">}</span><br>
+                    }
+                    </p>
+            </td><td valign="top"> <p class="codeblock">
+                    public class SumNumsDriver{<br><br>
+                        
+                        <span style="margin-left:2em;">public static void main(String args[]){</span><br><br>
+                        <span style="margin-left:4em;">SumNums s = new SumNums(10, 9);</span><br>
+                        <span style="margin-left:4em;">System.out.println(s.getSum());//prints <i>I'm an adult!</i></span><br>
+                        <span style="margin-left:2em;">}</span><br>
+                    }
+            </p></td></tr>
+        </table>
+
+        <p class="skillTakeAway">For a method with a <b>void</b> return type, a return statement is optional.</p>
+        <p class="skillTakeAway">For a method with any other return type, it <b>MUST</b> return a piece of data of the correct type.</p>
+        <p class="skillTakeAway">Methods end as soon as they reach a return statement, even if there is more code.</p>
+        <div class="practice">
+                <a href="../ticketOutTheDoor/set19/Set19TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 19.1: Exercise
+                    1</a>
+            </div>
     </div>
 
-    <div id="skill2" class="skills">Skill 18.2 Write code to create and implement a method</div>
-    <div class="skillConceptsHeader">Skill 18.2 Concepts</div>
+    <div id="skill2" class="skills">Skill 19.2 Apply <i>public</i> and <i>private</i> access modifiers to manage data members</div>
+    <div class="skillConceptsHeader">Skill 19.2 Concepts</div>
     <div class="skillConcepts">
-    <p>In our previous example, every time the user wanted to make a deposit, make a withdrawel, or check their 
-        balance we had to add code to the main method of our program.  Can you imagine how messy it would look if you needed to make 10 deposits, 
-        followed by 10 more balance inquiries?  
+    <p>So far, all of our variables, methods, and classes have been designated with the <i>public</i> access modifier.  
     </p>
-    <p>Methods in java can be used to define such behaviors and can be applied to greatly simplify our code.  
-        Consider checkBalance method below. 
+    <p>The <i>public</i> access modifier has the widest scope among all other access modifiers. Classes, methods, or 
+        data members which are declared as public are accessible from everywhere in the program, with no restrictions.
     </p>
+    <p>While, declaring some parts of our program as <i>public</i> is necessary, it creates enormous security issues, and the 
+    potential of unintentionally modifying a portion of our program. These issues can be solved with the <i>private</i> access modifier, which is specified using the keyword <i>private</i>.</p>
     <p class="codeblock">
-        <span style="color:red;">public</span> <span style="color:blue;">void</span> <span style="color:green;">checkBalance</span>{<br><br>
-            <span style="margin-left:5em;">System.out.println("Your balance is " + balance);</span><br><br>
-        }
-    </p>
-    <p>The first line, public void checkBalance(), is the method signature. It gives the program some information about the method.  
-        each part of this line is described below, </p>
+                
+            public class SumNums{<br><br>
+                <span style="margin-left:5em;">private int num1, num2, sum;</span><br><br>
+                <span style="margin-left:5em;">public SumNums(int a, int b){</span><br><br>
+                    <span style="margin-left:10em;">num1 = a;</span><br>
+                    <span style="margin-left:10em;">num2 = b;</span><br>
+                    <span style="margin-left:5em;">}</span><br>
 
-        <ul>
-            <li><span style="color:red;">public</span> means that other classes can access this method. We will learn more about that later.</li>
-            <li>The <span style="color:blue;">void</span> keyword means that there is no specific output from the method. We will see methods that are not void later, but for now all of our methods will be void.</li>
-            <li><span style="color:green;">checkBalance</span> is the name of the method.</li>
-        </ul>
+                <span style="margin-left:5em;">public int getSum()</span>{</span><br><br>
+                        <span style="margin-left:10em;">return num1 + num2;</span><br><br>
+                        <span style="margin-left:5em;">}</span><br>
 
-        <p>The statement <i>System.out.println("Your balance is " + balance);</i> is in the body of the 
-            method, which is defined by the curly braces.  Anything we can do in our main() method, we can do in 
-            other methods! All of the Java tools you know, like the math and comparison operators, 
-            can be combined to create useful methods.</p>
+                <span style="margin-left:5em;">public void setNums(int a, int b)</span>{</span><br><br>
+                        <span style="margin-left:10em;">num1 = a;</span><br>
+                        <span style="margin-left:10em;">num2 = b;</span><br><br>
+                        <span style="margin-left:5em;">}</span><br>
+            }
 
-      <p>Now that we have added the <i>checkBalance()</i> method to our SavingsAccount class, 
-        it is available to use on any SavingsAccount object. We can do this by calling the method on the SavingsCount object we create, for example.</p>
+        </p>
+    <p>Notice, in the code above, the instance variables <i>num1</i>, <i>num2</i>, and <i>sum</i> are declared as <i>private</i>.
+    Declaring instance variables as <i>private</i> is always a good practice.  If accessing or changing the instance variables is 
+necessary, <i>getter</i> and <i>setter</i> methods should be used. While the above code illustrates this practice, additional getters and setters 
+methods could be implemented to provide more control over the program.  </p>
 
+<p class="codeblock">
+                
+        public class SumNums{<br><br>
+            <span style="margin-left:5em;">private int num1, num2, sum;</span><br><br>
+            <span style="margin-left:5em;">public SumNums(int a, int b){</span><br><br>
+                <span style="margin-left:10em;">num1 = a;</span><br>
+                <span style="margin-left:10em;">num2 = b;</span><br>
+                <span style="margin-left:5em;">}</span><br>
+
+            <span style="margin-left:5em;">public int getSum()</span>{</span><br><br>
+                    <span style="margin-left:10em;">return num1 + num2;</span><br><br>
+                    <span style="margin-left:5em;">}</span><br>
+
+            <span style="margin-left:5em;">public int getNum1()</span>{</span><br><br>
+                    <span style="margin-left:10em;">return num1;</span><br><br>
+                    <span style="margin-left:5em;">}</span><br>
+
+            <span style="margin-left:5em;">public int getNum2()</span>{</span><br><br>
+                    <span style="margin-left:10em;">return num2;</span><br><br>
+                    <span style="margin-left:5em;">}</span><br>
+
+            <span style="margin-left:5em;">public void setNum1(int a)</span>{</span><br><br>
+                    <span style="margin-left:10em;">num1 = a;</span><br>
+                    <span style="margin-left:5em;">}</span><br>
         
-<p>In the example above, we call the <i>checkBalance()</i> method on the account1 object. This method call occurs 
-    inside the <i>main()</i> method. Running the program results in printing <i>Your balance is $125.00</i> to the console.</p>
+            <span style="margin-left:5em;">public void setNum2(int b)</span>{</span><br><br>
+                    <span style="margin-left:10em;">num2 = b;</span><br>
+                    <span style="margin-left:5em;">}</span><br>
+        }
 
+    </p>
+    <p class="skillTakeAway">Instance variables should always be declared as <b>private</b>.  Public <b>getter</b> and <b>setter</b>
+    methods should be used to retreive and modify instance variables.</p>
+    <p>For more info on methods, check out the video below,</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/nFFEqTKFBws" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <div class="practice">
         <a href="../ticketOutTheDoor/set18/Set18TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 18.2: Exercise
             1</a>
@@ -161,95 +269,150 @@
 
 
     </div>
-    <div id="skill3" class="skills">Skill 18.3 Identify the scope of a variable</div>
-    <div class="skillConceptsHeader">Skill 18.3 Concepts</div>
+    <div id="skill3" class="skills">Skill 19.3 Apply overloading to methods and constructors</div>
+    <div class="skillConceptsHeader">Skill 19.3 Concepts</div>
     <div class="skillConcepts">
-    <p>
-        A method is a task that an object of a class can perform. We mark the domain of this task using curly braces: {, and }. 
-        Everything inside the curly braces is part of the task. This domain is called the <i>scope</i> of a method.</p>
-        
-        <p>We cannot access variables that are declared inside a method in code that is outside the scope of that method.</p>
-        
-        <p>Consider the <i>SavingsAccount</i> class below,
-    </p>
-    <p class="codeblock">
-        public class SavingsAccount{<br><br>
-            <span style="margin-left:5em;">public String name;</span><br>
-            <span style="margin-left:5em;">public double balance;</span><br>
-            <br>
-            <span style="margin-left:5em;">public SavingsAccount(String n, double b){</span><br><br>
-                <span style="margin-left:10em;">name = n</span><br>
-                <span style="margin-left:10em;">balance = b</span><br>
-                <span style="margin-left:5em;">}</span><br>
+        <u>Purpose of method overloading</u>
+        <p>Method overloading in Java is the ability to create multiple methods of the same name, but with different parameters.  
+            The main advantage of this is cleanliness of code.</p>
 
-            <span style="margin-left:5em;">public void checkBalance(){</span><br><br>
-                    <span style="margin-left:10em; color:red;">String message = "Your balance is $" + balance;</span><br>
-                    <span style="margin-left:10em;">System.out.println(message);</span><br>
-                    <span style="margin-left:5em;">}</span><br>
-        }
-</p>
+        <p>Suppose that you have a class that can use calligraphy to draw various types of data (strings, integers, and so on).
+            It would be cumbersome to use a new name for each method—for example, drawString, drawInteger, drawFloat, and so on. 
+            In the Java programming language, you can use the same name for all the drawing methods but pass a different 
+            argument list to each method. Thus, the data drawing class might declare four methods named draw, 
+            each of which has a different parameter list.</p>
 
-<p>The variable <i>message</i>, which is declared and initialized inside of <i>checkBalance()</i>, cannot be used inside any other method. 
-    It only exists within the scope of the <i>checkBalance()</i> method.  However, <i>name</i> and <i>balance</i>, which are declared at the top of the class, 
-can be used inside all methods in the class, since they are in the scope of the whole class.</p>
+        <p class="codeblock">
+                public class DataArtist {<br><br>
+                    <span style="margin-left:5em;">public void draw(String s) {</span><br><br>
+                        <span style="margin-left:10em;">...</span><br><br>
+                    <span style="margin-left:5em;">}</span><br><br>
+                    <span style="margin-left:5em;">public void draw(int i) {</span><br><br>
+                        <span style="margin-left:10em;">...</span><br><br>
+                    <span style="margin-left:5em;">}</span><br><br>
+                    <span style="margin-left:5em;">public void draw(double d) {</span><br><br>
+                        <span style="margin-left:10em;">...</span><br><br>
+                    <span style="margin-left:5em;">}</span><br><br>
+                    <span style="margin-left:5em;">public void draw(int i, double d) {</span><br><br>
+                        <span style="margin-left:10em;">...</span><br><br>
+                    <span style="margin-left:5em;">}</span><br><br>
+                }
+        </p>
+        <u>Writing an overloaded method</u>
+        <p>
+            Overloaded methods are differentiated by the number and the type of the arguments passed 
+            into the method. In the code sample above, draw(String s) and draw(int i) are distinct and 
+            unique methods because they require different argument types.
+        </p>
+        <p>
+            You cannot declare more than one method with the same name and the same number 
+            and type of arguments, because the compiler cannot tell them apart. For example, 
+            the code below would throw an error,
+        </p>
+
+        <p class="codeblock">
+                public class SumNums {<br><br>
+                    <span style="margin-left:5em;">public int sum2(int a, int b) {</span><br><br>
+                        <span style="margin-left:10em;">return a + b;</span><br><br>
+                    <span style="margin-left:5em;">}</span><br><br>
+                    <span style="margin-left:5em;">public double sum2(int a, int b) {</span><br><br>
+                        <span style="margin-left:10em;">return (double)a + b;</span><br><br>
+                    <span style="margin-left:5em;">}</span><br><br>
+                }
+        </p>
+        <p class="skillTakeAway">Overloaded methods are methods with the same name, but with different parameters.</p>
+        <u>Calling an overloaded method</u>
+        <p>When you call an overloaded method, java will look for the method that matches the parameters.</p>
+        <table class="notesTable">
+                <tr><th width="50%">SumNums</th><th width="50%">SumNumsDriver</th></tr>
+                <tr><td valign="top"> <p class="codeblock">
+                        public class SumNums{<br><br>
+                            <span style="margin-left:2em;">//accepts int data types</span><br>
+                            <span style="margin-left:2em;">public  int sum2(int a, int b){</span><br><br>
+                                <span style="margin-left:4em;">int sum = a + b;</span><br>
+                                <span style="margin-left:4em;">return sum2;</span><br>
+                                <span style="margin-left:2em;">}</span><br>
+                            <span style="margin-left:2em;">//accepts double data types</span><br>
+                            <span style="margin-left:2em;">public double sum2(double a, double b){</span><br><br>
+                                    <span style="margin-left:4em;">double sum = a + b;</span><br>
+                                    <span style="margin-left:4em;">return sum;</span><br>
+                                    <span style="margin-left:2em;">}</span><br>
+                        }
+                </p></td><td valign="top"> <p class="codeblock">
+                        public class SumNumsDriver{<br><br>
+                            
+                            <span style="margin-left:2em;">public static void main(String args[]){</span><br><br>
+                            <span style="margin-left:4em;">SumNums s = new SumNums();</span><br>
+                            <span style="margin-left:4em;">s.sum2(1, 2);//prints 3</span><br>
+                            <span style="margin-left:4em;">s.sum2(1.0, 2.0);//prints 3.0</span><br>
+                            <span style="margin-left:2em;">}</span><br>
+                        }
+                </p></td></tr>
+            </table>
+            <u>Overloading a constructor</u>
+            <p>Overloading can also be applied to constructors.  Just as with methods, the differentiating characteristic is the 
+                the number of parameters.  Below, the <i>SumNums</i> class is overloaded with four constructors.
+            </p>
+
+            <p class="codeblock">
+                public class SumNums {<br><br>
+                    <span style="margin-left:5em;">public SumNums() {</span><br><br>
+                        <span style="margin-left:10em;">System.out.println("Nothing to sum!");</span><br><br>
+                    <span style="margin-left:5em;">}</span><br><br>
+                    <span style="margin-left:5em;">public SumNums(int a, int b) {</span><br><br>
+                        <span style="margin-left:10em;">System.out.println(a + b);</span><br><br>
+                    <span style="margin-left:5em;">}</span><br><br>
+                    <span style="margin-left:5em;">public SumNums(int a, int b, int c) {</span><br><br>
+                        <span style="margin-left:10em;">System.out.println(a + b + c);</span><br><br>
+                    <span style="margin-left:5em;">}</span><br><br>
+                    <span style="margin-left:5em;">public SumNums(double a, double b) {</span><br><br>
+                        <span style="margin-left:10em;">System.out.println(a + b);</span><br><br>
+                    <span style="margin-left:5em;">}</span><br><br>
+                }
+        </p>
+        <p>When you create an object from a class with overloaded constructors, java will match the parameters with the appropriate constructor.</p>
+        <table class="notesTable">
+            <tr><th width="50%">SumNums</th><th width="50%">SumNumsDriver</th></tr>
+            <tr><td valign="top"> 
+                <p class="codeblock">
+                    public class SumNums {<br><br>
+                        <span style="margin-left:2em;">public SumNums() {</span><br><br>
+                            <span style="margin-left:4em;">System.out.println("Nothing to sum!");</span><br><br>
+
+                        <span style="margin-left:2em;">}</span><br><br>
+                        <span style="margin-left:2em;">public SumNums(int a, int b) {</span><br><br>
+                            <span style="margin-left:4em;">System.out.println(a + b);</span><br><br>
+                        <span style="margin-left:2em;">}</span><br><br>
+                        <span style="margin-left:2em;">public SumNums(int a, int b, int c) {</span><br><br>
+                            <span style="margin-left:4em;">System.out.println(a + b + c);</span><br><br>
+                        <span style="margin-left:2em;">}</span><br><br>
+                        <span style="margin-left:2em;">public SumNums(double a, double b) {</span><br><br>
+                            <span style="margin-left:4em;">System.out.println(a + b);</span><br><br>
+                        <span style="margin-left:2em;">}</span><br><br>
+
+                    }
+            </p>
+            </td><td valign="top"> <p class="codeblock">
+                    public class SumNumsDriver{<br><br>
+                        
+                        <span style="margin-left:2em;">public static void main(String args[]){</span><br><br>
+                        <span style="margin-left:4em;">SumNums s1 = new SumNums();//Prints <i>Nothing to sum</i></span><br>
+                        <span style="margin-left:4em;">SumNums s2 = new SumNums(1, 2);//Prints <i>3</i></span><br>
+                        <span style="margin-left:4em;">SumNums s3 = new SumNums(1, 2, 3);//Prints <i>6</i></span><br>
+                        <span style="margin-left:4em;">SumNums s4 = new SumNums(1.0, 2.0);//Prints <i>3.0</i></span><br>
+                        <span style="margin-left:2em;">}</span><br>
+                    }
+            </p></td></tr>
+        </table>
 
 
-    
 
-
+            <p>For more info on method overloading, check out the video below.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Egzz2I3iseg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="practice">
+    <a href="../ticketOutTheDoor/set18/Set18TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 18.1: Exercise
+                    1</a>
     </div>
-    <div id="skill4" class="skills">Skill 18.4 Pass parameters to a method</div>
-    <div class="skillConceptsHeader">Skill 18.4 Concepts</div>
-    <div class="skillConcepts">
-    <p>
-    We saw how a method’s scope prevents us from using variables declared in one method in another method. 
-    What if we had some information in one method that we needed to pass into another method?</p>
-    <p>Similar to how we added parameters to constructors, we can customize all other methods to accept parameters.
-    </p>
-
-    <p class="codeblock">
-        public class SavingsAccount{<br><br>
-            <span style="margin-left:5em;">public String name;</span><br>
-            <span style="margin-left:5em;">public double balance;</span><br>
-            <br>
-            <span style="margin-left:5em;">public SavingsAccount(String n, double b){</span><br><br>
-                <span style="margin-left:10em;">name = n</span><br>
-                <span style="margin-left:10em;">balance = b</span><br>
-                <span style="margin-left:5em;">}</span><br>
-
-            <span style="margin-left:5em;">public void checkBalance(){</span><br><br>
-                    <span style="margin-left:10em;">String message = "Your balance is $" + balance;</span><br>
-                    <span style="margin-left:10em;">System.out.println(message);</span><br>
-                    <span style="margin-left:5em;">}</span><br>
-
-            <span style="margin-left:5em;">public void depositMoney(double d){</span><br><br>
-                        <span style="margin-left:10em;">balance += d;</span><br>
-                        <span style="margin-left:5em;">}</span><br>
-        }
-</p>
-    <p>
-        In the code above, we created a <i>depositMoney()</i> method that accepts an double parameter called d. 
-        In the main() method, we can call the depositMoney() method on an object and provide a double parameter to 
-        increase the balance.
-
-    </p>
-
-    <p class="codeblock">
-            public class SavingsAccountDriver{<br><br>
-                
-                <span style="margin-left:5em;">public static void main(String args[]){</span><br><br>
-                <span style="margin-left:10em;">SavingsAccount account1 = new SavingsAccount("Bart", 125.00);<br>
-                <span style="margin-left:10em;">account1.despositMoney(40.00);</span><br>
-                <span style="margin-left:10em;">account1.checkBalance();//prints <i>Your balance is $165.00</i></span><br>
-                <span style="margin-left:5em;">}</span><br>
-            }
-    </p>
-
-    <div class="practice">
-        <a href="../ticketOutTheDoor/set18/Set18TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 18.4: Exercise
-                1</a>
-    </div>
-
 
     </div>
     
