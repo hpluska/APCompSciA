@@ -15,10 +15,10 @@
     <div id="skills">
         <ul id="skillsList">
             <li>
-                Skill 19.1 <a href="#skill1">Describe the purpose of method overloading</a>
+                Skill 19.1 <a href="#skill1">Implement an overloaded method</a>
             </li>
             <li>
-                Skill 18.2 <a href="#skill2">Write code to create and implement a method</i></a>
+                Skill 19.2 <a href="#skill2">Implement an overloaded method</i></a>
             </li>
             <li>
                 Skill 18.3 <a href="#skill3">Identify the scope of a variable</a>
@@ -28,12 +28,12 @@
             </li>
         </ul>
     </div>
-    <div id="skill1" class="skills">Skill 19.1 Describe the purpose of method overloading
+    <div id="skill1" class="skills">Skill 19.2 Implement an overloaded method
     </div>
     <div class="skillConceptsHeader">Skill 19.1 Concepts</div>
     <div class="skillConcepts">
-
-            <p>Overloading in Java is the ability to create multiple methods of the same name, but with different parameters.  
+        <u>Purpose of method overloading</u>
+            <p>Method overloading in Java is the ability to create multiple methods of the same name, but with different parameters.  
                 The main advantage of this is cleanliness of code.</p>
 
             <p>Suppose that you have a class that can use calligraphy to draw various types of data (strings, integers, and so on).
@@ -58,30 +58,60 @@
                         <span style="margin-left:5em;">}</span><br><br>
                     }
             </p>
-
+            <u>Writing an overloaded method</u>
             <p>
-            Now, we’re going to learn about behavior.  <i>Methods</i> will enable us to define the behaviors of the data types we create. 
+                Overloaded methods are differentiated by the number and the type of the arguments passed 
+                into the method. In the code sample above, draw(String s) and draw(int i) are distinct and 
+                unique methods because they require different argument types.
             </p>
-            <p>Let's consider a different example, like a savings account.  Defining the state of the savings 
-                account will require two variables:  name and balance.  Our savings account will also 
-                be able to perform the following behaviors:  deposit money, withdraw money, check balance. 
+            <p>
+                You cannot declare more than one method with the same name and the same number 
+                and type of arguments, because the compiler cannot tell them apart. For example, 
+                the code below would throw an error,
             </p>
-            <table class ="notesTable">
-                    <tr><th style="text-align:center;">SavingsAccount</th></tr>
-                    <tr><td>
-                        name (String)<br>
-                        balance (double)
-                    </td>
-                    </tr>
-                    <tr><td>
-                        checkBalance() (function)<br>
-                        withdrawMoney() (function)<br>
-                        depositMoney() (function)
-                    </td></tr>
-                </table>
-            <p class="skillTakeAway"><b>Instance variables</b> are used to define the object's state.</p>
-            <p class="skillTakeAway"><b>Methods</b> are used to define the object's behaviors.</p>
 
+            <p class="codeblock">
+                    public class sumNums {<br><br>
+                        <span style="margin-left:5em;">public int sum2(int a, int b) {</span><br><br>
+                            <span style="margin-left:10em;">return a + b;</span><br><br>
+                        <span style="margin-left:5em;">}</span><br><br>
+                        <span style="margin-left:5em;">public double sum2(int a, int b) {</span><br><br>
+                            <span style="margin-left:10em;">return (double)a + b;</span><br><br>
+                        <span style="margin-left:5em;">}</span><br><br>
+                    }
+            </p>
+            <p class="skillTakeAway">Overloaded methods are methods with the same name, but with different parameters.</p>
+            <u>Calling an overloaded method</u>
+            <p>When you call an overloaded method, java will look for the method that matches the parameters.</p>
+            <table class="notesTable">
+                    <tr><th width="50%">SumNums</th><th width="50%">SumNumsDriver</th></tr>
+                    <tr><td valign="top"> <p class="codeblock">
+                            public class SumNums{<br><br>
+                                <span style="margin-left:2em;">//accepts int data types</span><br>
+                                <span style="margin-left:2em;">public  int sum2(int a, int b){</span><br><br>
+                                    <span style="margin-left:4em;">int sum = a + b;</span><br>
+                                    <span style="margin-left:4em;">return sum2;</span><br>
+                                    <span style="margin-left:2em;">}</span><br>
+                                <span style="margin-left:2em;">//accepts double data types</span><br>
+                                <span style="margin-left:2em;">public double sum2(double a, double b){</span><br><br>
+                                        <span style="margin-left:4em;">double sum = a + b;</span><br>
+                                        <span style="margin-left:4em;">return sum;</span><br>
+                                        <span style="margin-left:2em;">}</span><br>
+                            }
+                    </p></td><td valign="top"> <p class="codeblock">
+                            public class SumNumsDriver{<br><br>
+                                
+                                <span style="margin-left:2em;">public static void main(String args[]){</span><br><br>
+                                <span style="margin-left:4em;">SumNums s = new SumNums();</span><br>
+                                <span style="margin-left:4em;">s.sum2(1, 2);//prints 3</span><br>
+                                <span style="margin-left:4em;">s.sum2(1.0, 2.0);//prints 3.0</span><br>
+                                <span style="margin-left:2em;">}</span><br>
+                            }
+                    </p></td></tr>
+                </table>
+                <u>Overloading a constructor</u>
+                <p>The concept of method overloading is described in more detail below.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Egzz2I3iseg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <div class="practice">
         <a href="../ticketOutTheDoor/set18/Set18TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 18.1: Exercise
                         1</a>
@@ -120,32 +150,7 @@
       <p>Now that we have added the <i>checkBalance()</i> method to our SavingsAccount class, 
         it is available to use on any SavingsAccount object. We can do this by calling the method on the SavingsCount object we create, for example.</p>
 
-        <table class="notesTable">
-                <tr><th width="50%">SavingsAccount</th><th width="50%">SavingsAccountDriver</th></tr>
-                <tr><td valign="top"> <p class="codeblock">
-                        public class SavingsAccount{<br><br>
-                            <span style="margin-left:2em;">public String name;</span><br>
-                            <span style="margin-left:2em;">public double balance;</span><br>
-                            <br>
-                            <span style="margin-left:2em;">public SavingsAccount(String n, double b){</span><br><br>
-                                <span style="margin-left:4em;">name = n</span><br>
-                                <span style="margin-left:4em;">balance = b</span><br>
-                                <span style="margin-left:2em;">}</span><br>
-
-                            <span style="margin-left:2em;">public void checkBalance(){</span><br><br>
-                                    <span style="margin-left:4em;">System.out.println("Your balance is $" + balance);</span><br>
-                                    <span style="margin-left:2em;">}</span><br>
-                        }
-                </p></td><td valign="top"> <p class="codeblock">
-                        public class SavingsAccountDriver{<br><br>
-                            
-                            <span style="margin-left:2em;">public static void main(String args[]){</span><br><br>
-                            <span style="margin-left:4em;">SavingsAccount account1 = new SavingsAccount("Bart", 125.00);</span><br>
-                            <span style="margin-left:4em;">account1.checkBalance();</span><br>
-                            <span style="margin-left:2em;">}</span><br>
-                        }
-                </p></td></tr>
-            </table>
+        
 <p>In the example above, we call the <i>checkBalance()</i> method on the account1 object. This method call occurs 
     inside the <i>main()</i> method. Running the program results in printing <i>Your balance is $125.00</i> to the console.</p>
 
