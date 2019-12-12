@@ -18,24 +18,24 @@ In this program, you are going to implement a program that analyzes text files t
 	* TextStatistics will be the class that reads a text file, parses it, and stores the information about the words and characters in the file.
 	* ProcessText is the driver class that gets a list of one or more filenames from the command line and collects statistics on each of the files using an instance of TextStatistics object.
 
-- [ ] For this project you will also implement an interfaces
+- [ ] For this project you will also implement an interface
 
 	* TextStatisticsInterface.java
 
 ## ProcessStatistics (provided class)
 
-The ProcessStatistics class will serve as the driver class with a main method which processes one or more files to determine some interesting statistics about them. The ProcessText driver class
+The ProcessStatistics class will serve as the driver class with a main method which processes one or more files to determine some interesting statistics about them. The ProcessStatistics driver class
 should meet the following criteria,
 
 - [ ] Command-line validation. The names of the files to process will be given as command line arguments. Your driver class must,
 
 	* Validate the number of command line arguments. There should be at least one file
-name given.  
-	* If no files are given on the command line, your program must print a usage message and exit the program immediately. The message should read as follows. Usage: java ProcessText file1 [file2 ...] This lets the user know how they should run the program without having to go look up the documentation.
+name given.
+	* If no files are given on the command line, your program must print a usage message and exit the program immediately. The message should read as follows. *Usage: java ProcessText file1 [file2 ...]* This lets the user know how they should run the program without having to go look up the documentation.
 
 - [ ] Process command-line arguments. If valid filenames are given on the command line, your program will,
 
-	* Will process each command line argument by creating a File object from it and checking to see that the file actually exists. Recall, the args parameter of the main method is an array of String objects that contains the command line arguments to the program. For your program, the array should contain the names of the files to be processed.
+	* Process each command line argument by creating a File object from it and checking to see that the file actually exists. Recall, the args parameter of the main method is an array of String objects that contains the command line arguments to the program. For your program, the array should contain the names of the files to be processed.
 	* If a file does exist, your program will create a TextStatistics object for that file and will print out the statistics for the file to the console.
 	* If a file does not exist, a meaningful error message needs to be printed to the user and your program will continue processing the next file. (An invalid file in the list should not result in the program crashing or exiting before all files have been
 processed.)
@@ -54,12 +54,14 @@ public class TextStatistics implements TextStatisticsInterface
 - [ ] Include instance variables. Include a reference to the processed File. Include variables for all of the statistics that are computed for the file. Look at the list of accessor methods in the TextStatisticsInterface to determine which statistics will be stored (accessor methods typically are named with the word “get” following by whatever information they are
 accessing)
 
-- [ ] Constructor. The constructor takes a File object as a parameter. The constructor should open the file and read the entire file line-by-line, processing each line as it reads it. Your constructor needs to handle the FileNotFoundException that can occur when the File is opened in a Scanner. Use a try-catch statement to do this. Don’t just throw the exception. As each line is read, collect the following statistics:
+- [ ] Constructor. The constructor takes a File object as a parameter. The constructor should open the file and read the entire file line-by-line, processing each line as it reads it. Your constructor needs to handle the FileNotFoundException that can occur when the File is opened in a Scanner. Use a try-catch statement to do this. Don’t just throw the exception. As the file is read, your program must collect the following statistics,
 
-	* The number of characters and lines in the file. The number of characters should include all whitespace characters, punctuation, etc. The number of lines should include any blank lines in the file.
-	* The number of words in the file. 
-
-- [ ] The number of words of each length that appears in the file. Assume that the maximum word length is 23. You do not need to print lengths that have a count of zero.  Be careful here!  Consider the examples below, 
+	* The number of lines in the file. The number of lines should include any blank lines in the file.
+	* The number of words in the file
+	* The number characters in the file.  The number of characters should include all whitespace characters, punctuation, etc. 
+	* The average word length
+	* The number of times each letter appears in the file. Do not separate upper and lower case, just convert all characters to lower or upper case before counting.
+	* The number of words of each length that appears in the file. Assume that the maximum word length is 23. You do not need to print lengths that have a count of zero.  Be careful here!  Consider the examples below, 
 
 ```
 Here is my (word)!
@@ -75,87 +77,49 @@ The length of "Here" is again 4, not 5.
 
 You program must ignore punction and only count the length of the words. 
 
-- [ ] The average word length for the file.
-- [ ] The number of each letter that appears in the file - do not separate upper and lower case, just convert all characters to lower case before counting.
-
-- [ ] Getter (accessor) methods. Implement the accessor methods for the number of characters, number of words, number of lines, average word length and for the arrays that contain the number of words of each length and the number of times each letter occurs in the file.
-- [ ] toString() method. Write a toString() method that generates and returns a String that can be printed to summarize the statistics for the file as shown in the sample output shown
+- [ ] Implement a toString() method. Write a toString() method that generates and returns a String that can be printed to summarize the statistics for the file as shown in the sample output shown
 below.
 	
 ## Your Tasks
 
-- [ ] Begin a project in NetBeans called TextStatistics
+- [ ] Begin a project in your IDE called TextStatistics
 - [ ] Locate the TextStatistics and ProcessText class in the "stubs" folder of this project folder [https://github.com/hpluska/APCompSciA/tree/master/projects/TextStatistics/stubs](https://github.com/hpluska/APCompSciA/tree/master/projects/TextStatistics/stubs)
-- [ ] Save the TextStatistics and ProcessText class and place it in your NetBeans project folder
+- [ ] Save the TextStatistics and ProcessText class and place it in your project folder
 - [ ] Locate the etext folder in the "stubs" folder of this project folder [https://github.com/hpluska/APCompSciA/tree/master/projects/TextStatistics/stubs](https://github.com/hpluska/APCompSciA/tree/master/projects/TextStatistics/stubs)
-- [ ] Download the etext folder and place it in your NetBeans project folder
-- [ ] Begin by implementing ProcessText. You can ignore the command-line arguments to start. Just hard-code a file name so you can test your TextStatistics class as you write it. Create a File object and check to see that the file actually exists.
+- [ ] Download the etext folder and place it in your project folder
+- [ ] Begin by implementing ProcessStatistics. You can ignore the command-line arguments to start. Just hard-code a file name so you can test your TextStatistics class as you write it. Create a File object and check to see that the file actually exists.
   * If the file does exist, your program will create a TextStatistics object for that file and print out the statistics for the file to the console.
   * If the file does not exist, a meaningful error message needs to be printed to the user.
 - [ ] Next you can start implementing TextStatistics according to the specifications described above
 - [ ] At this point, you should go back and add command-line argument processing to ProcessText as described in the specifications below. To make sure it correctly handles command line arguments, run it from the command line with no arguments, files that don't exist, and files that do exist.
-- [ ] Make sure to test your program thoroughly. I am giving you the test program and scripts that I will use to grade your program. Take advantage of this and make sure they all pass!
+- [ ] Document your code thoroughly as you go with comments.  The logic of your program must be thoroughly desribed!
+- [ ] Complete the required README using specified guidelines
 
-```
-$ java ProcessText
-Usage: java ProcessText file1 [file2 ...]
+## Grade and Submit your Project
 
-$ java ProcessText not-a-file.txt
-Invalid file path: not-a-file.txt
-
-$ java ProcessText not-a-file.txt testfile.txt
-Invalid file path: not-a-file.txt
-
-===============================================
-11 lines
-79 words
-465 characters
-------------------
-a = 27	n = 25
-b = 1 	o = 26
-c = 11	p = 5
-d = 10	q = 0
-e = 33	r = 21
-f = 9	s = 30
-g = 7	t = 35
-h = 24	u = 7
-i = 25	v = 1
-j = 0	w = 10
-k = 2	x = 1
-l = 18	y = 2
-m = 5	z = 0
-------------------
-length  frequency
-------	---------
-1	3
-2	13
-3	24
-4	13
-5	10
-6	2
-7	5
-8	3
-9	1
-10	3
-11	2
-
-Average word length = 4.24
-
-$ java TextStatisticsTest
-
-Testing on data file:testfile.txt
-
-Passed! getCharCount()
-Passed! getWordCount()
-Passed! getLineCount()
-Passed! getAverageWordLength()
-Passed! Arrays frequencies
-Passed! Letter frequencies
-
-Testing on data file:etext/Gettysburg-Address.txt
-
-```
-
+- [ ] Make sure to test your program thoroughly. I am giving you the test program and scripts that I will use to grade your program. Take advantage of this and make sure they all pass! [https://github.com/hpluska/APCompSciA/tree/master/projects/TextStatistics/testing](https://github.com/hpluska/APCompSciA/tree/master/projects/TextStatistics/testing)
+- [ ] Submit your project using the following guidelines 
+	* Place the following files in a one project directory
+		- TextStatistics.java
+		- ProcessStatistics.java
+		- README
+	* Initialize the directory as a git repository, 
+		- From the command line type 
+			```
+			init git
+			```
+	* Push your project to github
+		- Navigate to [https://classroom.github.com/a/PzNQJi_s](https://classroom.github.com/a/PzNQJi_s)
+		- Follow the prompts to create the repository for the assignment
+		- Copy the "clone" link, then return to the command line
+		- From the command line type
+			```
+			git remote add origin <** paste clone link **>
+			git add .
+			git commit -m "your message goes here"
+			git push origin master
+			```
+		
 
 
 
