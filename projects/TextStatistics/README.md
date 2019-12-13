@@ -106,7 +106,7 @@ below.
 	* Initialize the directory as a git repository, 
 		- From the command line type 
 			```
-			init git
+			git init
 			```
 	* Push your project to github
 		- Navigate to [https://classroom.github.com/a/PzNQJi_s](https://classroom.github.com/a/PzNQJi_s)
