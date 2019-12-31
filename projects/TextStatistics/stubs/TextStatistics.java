@@ -25,7 +25,6 @@ public class TextStatistics implements TextStatisticsInterface{
     private double averageWordLength;
     private String results;
    
-z
 
     public TextStatistics(File file) {
         
