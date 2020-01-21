@@ -7,10 +7,6 @@ In this activity you will be introduce to  2-Dimensional Arrays
 
 - [ ] Complete the GridMaker activity guide as instructed
 
-- [ ] Locate Assignment 22 (2-Dimensional Arrays) [APCSAssignment22.pdf](APCSAssignment22.pdf)
-
-- [ ] Complete the required tasks
-
 - [ ] Receive credit for this activity, 
 
 	* Create a new project in netbeans called GridMaker
