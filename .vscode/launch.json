@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Code",
+            "request": "launch",
+            "mainClass": "Code"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - ElementMaker",
             "request": "launch",
             "mainClass": "ElementMaker",
