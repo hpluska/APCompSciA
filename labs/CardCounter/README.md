@@ -14,7 +14,7 @@ In this lab you will be introduced to inheritance
 	* Create a new project in netbeans called CardCounter
 	* Add the files below to the project folder
 	* Create an image folder in your project folder and save the images below in the image folder
-	* Implement challenges 1 thru 3 (To receive credit, the dealt cards must appear in the GUI)
+	* Implement challenges 1 thru 3 as described in the lab guide (To receive credit, the dealt cards must appear in the GUI)
 
 		- [Card.java](cardcounter/Card.java)
 		- [CardCounter.java](cardcounter/CardCounter.java)
