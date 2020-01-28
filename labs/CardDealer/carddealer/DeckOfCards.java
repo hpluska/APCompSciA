@@ -33,7 +33,7 @@ public class DeckOfCards {
         "ten", //9
         "jack", //10
         "queen", //11
-        "king"//13
+        "king"//12
     };
     
     /**

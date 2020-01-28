@@ -29,7 +29,7 @@ public class CardPanel extends JPanel implements ActionListener {
     private Card clickedCard;
     private JButton[] cardButtons;
     private Card cardArray[];
-    private String pathToCardImages = "/home/timberlinepluska/Desktop/TimberlineCS/RandomJavaProjects/NetbeansProjects/CardCounterWithImages/src/images/";
+    private String pathToCardImages = "images/";
     ImageIcon cardImageIcon;
     int sum;
     /**
@@ -38,13 +38,13 @@ public class CardPanel extends JPanel implements ActionListener {
      */
     public CardPanel(){
         
-        dealSize = 7;
+        dealSize = 50;
         
         CardDealer newDeck = new CardDealer();
         
         newDeck.buildDeck();
         newDeck.shuffleCards();
-        cardArray = newDeck.dealCards(7); 
+        //cardArray = newDeck.dealCards(dealSize); 
 
         
 	//DO NOT EDIT
@@ -65,7 +65,7 @@ public class CardPanel extends JPanel implements ActionListener {
         setPreferredSize(new Dimension(500,500));
         
         for(int c = 0; c < cardArray.length;c++){
-            String cardImage = "card"+cardArray[c].getSuite()+cardArray[c].getFaceValue()+".png";
+           String cardImage = "card"+cardArray[c].getSuite()+cardArray[c].getFaceValue()+".png";
             String cardPath = pathToCardImages+cardImage;
             cardImageIcon = new ImageIcon(cardPath);
             cardButtons[c] = new JButton(cardImageIcon);
