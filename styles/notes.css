@@ -20,7 +20,7 @@ body{
 
 #skills{
     margin-top: 8%;
-    font-size: 2em;
+    font-size: 1.7em;
     color:#393e46;
     border: solid 2px #f8b500;
     border-radius: 20px;
@@ -56,7 +56,7 @@ body{
     color:#f7f7f7;
     width:100%;
     padding:5px;
-    font-size:2em;
+    font-size:1.7em;
     font-weight:bold;
     margin:20px 20px 20px 0px;
 
@@ -64,13 +64,13 @@ body{
 
 .skillConceptsHeader{
     font-weight:bold;
-    font-size:2em;
+    font-size:1.7em;
     margin-left: 20px;
 }
 
 .skillConcepts{
     margin:20px;
-    font-size:2em;
+    font-size:1.5em;
 }
 
 .skillTakeAway {

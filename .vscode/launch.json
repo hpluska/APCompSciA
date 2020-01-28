@@ -2,6 +2,26 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Code",
+            "request": "launch",
+            "mainClass": "Code"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ElementMaker",
+            "request": "launch",
+            "mainClass": "ElementMaker",
+            "projectName": "APCompSciA_c6e698dc"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - examSets15thru16",
+            "request": "launch",
+            "mainClass": "examSets15thru16",
+            "projectName": "APCompSciA_c6e698dc"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - test",
             "request": "launch",
             "mainClass": "test"

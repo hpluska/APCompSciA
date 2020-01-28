@@ -1,0 +1,111 @@
+-------------------
+Testing TextStatistics.java 
+-------------------
+
+Testing on data file:etext/testfile.txt
+
+Passed! getCharCount()
+Passed! getWordCount()
+Passed! getLineCount()
+Passed! getAverageWordLength()
+Passed! Word length frequencies
+Passed! Letter frequencies
+
+
+Testing on data file:etext/Gettysburg-Address.txt
+
+Passed! getCharCount()
+Passed! getWordCount()
+Passed! getLineCount()
+Passed! getAverageWordLength()
+Passed! Word length frequencies
+Passed! Letter frequencies
+
+
+Testing on data file:etext/Alice-in-Wonderland.txt
+
+Passed! getCharCount()
+Passed! getWordCount()
+Passed! getLineCount()
+Passed! getAverageWordLength()
+Passed! Word length frequencies
+Passed! Letter frequencies
+
+----------------------
+Testing ProcessStatistics.java 
+----------------------
+etext/testfile.txt
+=========================================
+11 lines
+97 words
+534 characters
+-----------------
+a = 34	n = 31
+b = 2	o = 32
+c = 18	p = 7
+d = 12	q = 0
+e = 38	r = 23
+f = 8	s = 38
+g = 7	t = 38
+h = 26	u = 9
+i = 29	v = 1
+j = 0	w = 11
+k = 2	x = 1
+l = 18	y = 2
+m = 7	z = 0
+-----------------
+length	frequency
+------	---------
+1	6
+2	18
+3	24
+4	16
+5	13
+6	2
+7	7
+8	5
+9	1
+10	3
+11	2
+
+Average word length = 4.175257731958763
+=========================================
+Invalid file path: not-a-file.txt
+etext/Gettysburg-Address.txt
+=========================================
+39 lines
+283 words
+1622 characters
+-----------------
+a = 107	n = 86
+b = 18	o = 96
+c = 32	p = 17
+d = 61	q = 1
+e = 175	r = 84
+f = 28	s = 53
+g = 33	t = 132
+h = 81	u = 25
+i = 74	v = 27
+j = 0	w = 28
+k = 3	x = 0
+l = 47	y = 13
+m = 14	z = 0
+-----------------
+length	frequency
+------	---------
+1	8
+2	51
+3	55
+4	62
+5	35
+6	27
+7	17
+8	7
+9	10
+10	6
+11	4
+12	1
+
+Average word length = 4.385159010600707
+=========================================
+

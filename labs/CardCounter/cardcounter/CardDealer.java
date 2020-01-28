@@ -23,8 +23,8 @@ public class CardDealer extends DeckOfCards{
         dealSize = d;
         dealt = new Card[dealSize];
         buildDeck();
-        shuffleCards();
-        dealCards();
+        //shuffleCards();
+        //dealCards();
     }
         
     /**

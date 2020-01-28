@@ -42,7 +42,7 @@ Once the option is selected, you must collect the necessary information from the
 
 # Your Tasks
 
-- [ ] Begin a project in NetBeans called DixieCupMaker
+- [ ] Begin a project called DixieCupMaker
 - [ ] Create a new java class in the DixieCupMaker project folder called DixieCup
 - [ ] Write the DixieCup class. This class should have the following methods initially, 
 	* public DixieCup(int i) - the constructor

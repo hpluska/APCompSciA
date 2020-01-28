@@ -13,18 +13,18 @@ import java.util.logging.Logger;
  */
 
 //TODO: implement the TextStatisticsInterface
-public class TextStatistics{
+public class TextStatistics implements TextStatisticsInterface{
 
     //Declare additional variables here
     private File textFile;
     private Scanner fileScan;
     //Be mindful of these when counting the words and their lengths
     //They should not be included as words or counted in the length of the word
-    private final String DELIMITERS = "\\s,.;:'\"&!?-_\n\t12345678910[]{}()@#$%^*/+-";
+    private final String REGEX = "\\W+";
     private int lineCount, wordCount, charCount, letterCount[], wordLengthCount[];
     private double averageWordLength;
     private String results;
-
+   
 
     public TextStatistics(File file) {
         
@@ -33,6 +33,13 @@ public class TextStatistics{
         try {
 
             fileScan = new Scanner(textFile);
+            
+            while(fileScan.hasNextLine()){
+                String line = fileScan.nextLine();
+
+                lineCount++;
+            }
+		
   
             
         } catch (FileNotFoundException ex) {
