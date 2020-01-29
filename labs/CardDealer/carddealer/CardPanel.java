@@ -44,7 +44,7 @@ public class CardPanel extends JPanel implements ActionListener {
         
         newDeck.buildDeck();
         newDeck.shuffleCards();
-        //cardArray = newDeck.dealCards(dealSize); 
+        cardArray = newDeck.dealCards(dealSize); 
 
         
 	//DO NOT EDIT
