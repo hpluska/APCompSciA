@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+//package carddealernonstatic;
 
 /**
  *
@@ -34,6 +34,11 @@ public class Card {
         return value;
     }
     
+    /**
+     * Gets the face value of the card
+     * needed to display the card on the GUI
+     * @return properly formatted face value
+     */
     public String getFaceValue(){
         
         switch(faceValue){
@@ -66,21 +71,19 @@ public class Card {
             case "ace":
                 return "A";
         }
-        
-        
         return "";
     }
     
+    /**
+     * Gets the name of the suite 
+     * needed to display the card on the GUI
+     * @return the name with the first letter capatilized
+     */
     public String getSuite(){
         String tempSuiteArray[] = suite.split(" ");
         String firstLetter = tempSuiteArray[2].substring(0,1).toUpperCase();
         String everythingElse = tempSuiteArray[2].substring(1);
         return firstLetter+everythingElse;
-    }
-    
-    public String getSuiteIcon(){
-        String tempSuiteArray[] = suite.split(" ");
-        return tempSuiteArray[3];
     }
     
     public String toString(){
