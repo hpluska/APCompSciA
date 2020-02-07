@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - main",
+            "request": "launch",
+            "mainClass": "examSet23.main",
+            "projectName": "APCompSciA_c6e698dc"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - PhoneMaker",
+            "request": "launch",
+            "mainClass": "examSet23.PhoneMaker",
+            "projectName": "APCompSciA_c6e698dc"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Code",
             "request": "launch",
             "mainClass": "Code"
