@@ -227,7 +227,7 @@ public class MineHunterGrid extends JPanel implements ActionListener, MineHunter
     {
         public void mouseClicked (MouseEvent e) 
         {       			// write here your event handling code
-            if (e.getModifiers() == MouseEvent.BUTTON3_MASK)
+            if (e.getModifiersEx == MouseEvent.META_DOWN_MASK)
             {
                 //System.out.println(e.getSource());
                 locateClicked((JButton) e.getSource());
