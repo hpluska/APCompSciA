@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package minehunter;
+//package minehunter;
 
 
 import java.awt.Dimension;
@@ -35,7 +35,7 @@ public class MineHunterGrid extends JPanel implements ActionListener, MineHunter
     private boolean[][] mines;
     private boolean[][] locatedMines;
     //TODO: Specify the path to the flag icon 
-    private ImageIcon flag = new ImageIcon("/home/pluska/Desktop/APCompSci/MineHunter/src/images/flag.jpg"); 
+    private ImageIcon flag = new ImageIcon("../images/flag.jpg"); 
     
     private Color[] buttonColors = {Color.WHITE, Color.GRAY, Color.GREEN, Color.YELLOW, Color.PINK, Color.BLUE, Color.RED, Color.BLACK};
     
@@ -227,9 +227,9 @@ public class MineHunterGrid extends JPanel implements ActionListener, MineHunter
     {
         public void mouseClicked (MouseEvent e) 
         {       			// write here your event handling code
-            if(e.getModifiersEx == MouseEvent.META_DOWN_MASK)
+            if(e.getModifiersEx() == MouseEvent.META_DOWN_MASK)
             {
-                //System.out.println(e.getSource());
+                System.out.println("HEY I RIGHT CLICKED");
                 locateClicked((JButton) e.getSource());
                 identifyMines(clickedX, clickedY);
                 if(isDone()){
