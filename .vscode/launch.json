@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - p1",
+            "request": "launch",
+            "mainClass": "examSet26.p1",
+            "projectName": "APCompSciA_c6e698dc"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - main",
             "request": "launch",
             "mainClass": "examSet23.main",
