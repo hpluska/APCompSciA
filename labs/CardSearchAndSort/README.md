@@ -5,9 +5,9 @@ In this lab you will implement methods to search and sort an array of cards
 
 ## Your Tasks
 
-- [ ] Locate the CardSearchAndSort lab guide [CardSearchAndSort.pdf](CardSearchAndSort.pdf)
+- [ ] ~~Locate the CardSearchAndSort lab guide [CardSearchAndSort.pdf](CardSearchAndSort.pdf)~~
 
-- [ ] Complete the group portion of the lab as instructed
+- [ ] ~~Complete the group portion of the lab as instructed~~
 
 - [ ] Complete the individual portion of the lab
 
@@ -33,12 +33,20 @@ public Card[] minToFront(Card[] cArr);
 
 ```
 
-- cardSort
+- selectionSort
 
-In the CardCounter class write a method called cardSort.  The cardSort method should accept an unordered array of cards, then return the sorted array.  The cardSort method should have the following signature, 
-
-```
-public Card[] cardSort(Card[] cArr);
+In the CardCounter class write a method called selectionSort.  The selectionSort method should accept an unordered array of cards, then return the sorted array.  The selectionSort method should have the following signature, 
 
 ```
+public Card[] selectionSort(Card[] cArr);
 
+```
+
+- insertionSort 
+
+In the CardCounter class write a method called insertionSort.  The insertionSort method should accept an unordered array of cards, then return the sorted array.  The insertionSort method should have the following signature, 
+
+```
+public Card[] insertionSort(Card[] cArr);
+
+```
