@@ -7,7 +7,7 @@ In this lab you will build upon the Mine Hunter game you created previously.  Th
 
 ## Your Tasks
 
-- [ ] Locate the MineHunterPath lab guide [MineHunterPath.pdf](MineHunterPath.pdf)
+- [ ] Locate the MineHunterPath lab guide [MineHunterPath.pdf](../labs/MineHunterPath.pdf)
 
 - [ ] Complete the group portion of the lab as instructed
 
@@ -15,17 +15,24 @@ In this lab you will build upon the Mine Hunter game you created previously.  Th
 
 	* Make a copy of your MineHunter project in NetBeans, then rename the copy to MineHunterPath
 	* I made some additions to the MineHunterGrid class, take a look at the files I have provided below and integrate these changes with the MineHunterGrid class you wrote
-		- [MineHunter.java](mineHunterPath/MineHunter.java)
-		- [MineHunterControls.java](mineHunterPath/MineHunterControls.java)
-		- [MineHunterGrid.java](mineHunterPath/MineHunterGrid.java)
-		- [MineHunterInterface.java](mineHunterPath/MineHunterInterface.java)
-		- [MineHunterPane.java](mineHunterPath/MineHunterPane.java)
-		- [MineHunterPath.java](mineHunterPath/MineHunterPath.java) 
+		- [MineHunter.java](../labs/mineHunterPath/MineHunter.java)
+		- [MineHunterControls.java](../labs/mineHunterPath/MineHunterControls.java)
+		- [MineHunterGrid.java](../labs/mineHunterPath/MineHunterGrid.java)
+		- [MineHunterInterface.java](../labs/mineHunterPath/MineHunterInterface.java)
+		- [MineHunterPane.java](../labs/mineHunterPath/MineHunterPane.java)
 		- [flag.jpg](https://github.com/hpluska/APCompSciA/blob/master/labs/MineHunterPath/images/flag.jpg)
 
-	* Complete the challenges below. (NOTE:  You do not need to implement the challenges I have subscribed, you have the freedom to combine methods or create your own. The end goal is that the MineHunterPath class, when implemented, will successfully find a path through the grid of mines. Get creative!)
-	* Once you have completed your challenges push your AP Computer Science A Repo to GitHub.
-	* Show your working game to Ms. Pluska to receive credit for the individual portion of this lab.
+- [ ] Complete the challenges below. (NOTE:  You do not need to implement the challenges I have subscribed, you have the freedom to combine methods or create your own. The end goal is that the MineHunterPath class, when implemented, will successfully find a path through the grid of mines. Get creative!)
+
+- [ ] Submit your lab
+
+    * Navigate to [https://classroom.github.com/a/WLmdJOBk](https://classroom.github.com/a/WLmdJOBk) and add the following files to receive credit for this lab, 
+
+		- MineHunter.java
+		- MineHunterControls.java
+		- MineHunterGrid.java
+		- MineHunterInterface.java
+		- MineHunterPane.java
 
 ### Challenge 1
 Write the reset() method. The reset method, resets the starting point of the path and clears the path array path.clear()
