@@ -7,19 +7,19 @@ In this lab you will build upon the Mine Hunter game you created previously.  Th
 
 ## Your Tasks
 
-- [ ] Locate the MineHunterPath lab guide [MineHunterPath.pdf](../labs/MineHunterPath.pdf)
+- [ ] Locate the MineHunterPath lab guide [MineHunterPath.pdf](../../labs/MineHunterPath.pdf)
 
-- [ ] Complete the group portion of the lab as instructed
+- [ ] ~~Complete the group portion of the lab as instructed~~
 
 - [ ] Complete the individual portion of the lab
 
 	* Make a copy of your MineHunter project in NetBeans, then rename the copy to MineHunterPath
 	* I made some additions to the MineHunterGrid class, take a look at the files I have provided below and integrate these changes with the MineHunterGrid class you wrote
-		- [MineHunter.java](../labs/mineHunterPath/MineHunter.java)
-		- [MineHunterControls.java](../labs/mineHunterPath/MineHunterControls.java)
-		- [MineHunterGrid.java](../labs/mineHunterPath/MineHunterGrid.java)
-		- [MineHunterInterface.java](../labs/mineHunterPath/MineHunterInterface.java)
-		- [MineHunterPane.java](../labs/mineHunterPath/MineHunterPane.java)
+		- [MineHunter.java](../../labs/mineHunterPath/MineHunter.java)
+		- [MineHunterControls.java](../../labs/mineHunterPath/MineHunterControls.java)
+		- [MineHunterGrid.java](../../labs/mineHunterPath/MineHunterGrid.java)
+		- [MineHunterInterface.java](../../labs/mineHunterPath/MineHunterInterface.java)
+		- [MineHunterPane.java](../../labs/mineHunterPath/MineHunterPane.java)
 		- [flag.jpg](https://github.com/hpluska/APCompSciA/blob/master/labs/MineHunterPath/images/flag.jpg)
 
 - [ ] Complete the challenges below. (NOTE:  You do not need to implement the challenges I have subscribed, you have the freedom to combine methods or create your own. The end goal is that the MineHunterPath class, when implemented, will successfully find a path through the grid of mines. Get creative!)
