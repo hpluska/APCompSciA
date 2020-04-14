@@ -7,7 +7,7 @@ In this lab you will build upon the Mine Hunter game you created previously.  Th
 
 ## Your Tasks
 
-- [ ] Locate the MineHunterPath lab guide [MineHunterPath.pdf](../../labs/MineHunterPath.pdf)
+- [ ] Locate the MineHunterPath lab guide [MineHunterPath.pdf](../../labs/MineHunterPath/MineHunterPath.pdf)
 
 - [ ] ~~Complete the group portion of the lab as instructed~~
 
