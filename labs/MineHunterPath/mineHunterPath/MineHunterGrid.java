@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package minehunter;
+//package minehunter;
 
 
 import java.awt.Dimension;
@@ -36,7 +36,7 @@ public class MineHunterGrid extends JPanel implements ActionListener {
     private Color buttonColor = null;
     private boolean[][] mines;
     private boolean[][] locatedMines;
-    private ImageIcon flag = new ImageIcon("/home/timberlinepluska/Desktop/TimberlineCS/RandomJavaProjects/NetbeansProjects/MineWalker/src/Images/flag.jpg");
+    private ImageIcon flag = new ImageIcon("images/flag.jpg");
     private Color[] buttonColors = {Color.WHITE, Color.GRAY, Color.GREEN, Color.YELLOW, Color.PINK, Color.BLUE, Color.RED, Color.BLACK};
     //TODO: declare an arraylist
     private ArrayList<Point> path = new ArrayList<Point>();
@@ -134,8 +134,8 @@ public class MineHunterGrid extends JPanel implements ActionListener {
     
     public void makeMines(){
         mines = new boolean[gridDimensions][gridDimensions];
-        //start for loop at 1 so 0, 0 is not a mine
-        //end for loop at tiles.length-1 is last tile is not a mine
+        //start for loop at 1, 0 is not a mine
+        //end for loop at tiles.length-1, this last tile is not a mine
         for(int rows = 1; rows < tiles.length-1; rows++){
             for(int cols = 1; cols < tiles[rows].length-1;cols++){
                 int percentMines = (int)(Math.random()*100);
@@ -151,6 +151,14 @@ public class MineHunterGrid extends JPanel implements ActionListener {
     
     public void showMines(){
         //developed in a previous lab
+        //added by pluska April 27, 2020
+        for(int rows = 0; rows < tiles.length; rows++){
+            for(int cols = 0; cols < tiles[rows].length; cols++){
+                if(mines[rows][cols]){
+                    tiles[rows][cols].setBackground(Color.RED);
+                }
+            }
+        }
     }
     
     public void checkForMine(int MineX, int MineY){
