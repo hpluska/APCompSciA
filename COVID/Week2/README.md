@@ -20,6 +20,7 @@ In this lab you will build upon the Mine Hunter game you created previously.  Th
 		- [MineHunterGrid.java](../../labs/MineHunterPath/mineHunterPath/MineHunterGrid.java)
 		- [MineHunterInterface.java](../../labs/MineHunterPath/mineHunterPath/MineHunterInterface.java)
 		- [MineHunterPane.java](../../labs/MineHunterPath/mineHunterPath/MineHunterPane.java)
+		- [MineHunterPath.java](../../labs/MineHunterPath/mineHunterPath/MineHunterPath.java)
 		- [flag.jpg](https://github.com/hpluska/APCompSciA/blob/master/labs/MineHunterPath/images/flag.jpg)
 
 - [ ] Complete the challenges below. (NOTE:  You do not need to implement the challenges I have subscribed, you have the freedom to combine methods or create your own. The end goal is that the MineHunterPath class, when implemented, will successfully find a path through the grid of mines. Get creative!)
@@ -33,6 +34,7 @@ In this lab you will build upon the Mine Hunter game you created previously.  Th
 		- MineHunterGrid.java
 		- MineHunterInterface.java
 		- MineHunterPane.java
+		- MineHunterPath.java
 
 ### Challenge 1
 Write the reset() method. The reset method, resets the starting point of the path and clears the path array path.clear()
