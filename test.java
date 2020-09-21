@@ -1,7 +1,7 @@
 public class test{
 
     public static void main(String arg[]){
-        System.out.println("Yayy!");
+        System.out.println("Lets make some changes!");
     }
 
 }
