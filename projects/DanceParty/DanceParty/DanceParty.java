@@ -95,7 +95,7 @@ public class DanceParty extends JPanel
 	    //x1 is an array of x coordinates
 	    //y1 is an array of y coordinates
             g.setColor(Color.black);
-            int x1[]={55+x, 55+x, 65+x};
+            int x1[]={55, 55, 65+x};
             int y1[]={105, 80, 90};
             g.fillPolygon( x1, y1, 3);
 
