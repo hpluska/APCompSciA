@@ -66,7 +66,8 @@ public class DanceParty extends JPanel
 	    frameCount++;
 
             //Increments x by xDelta
- 	    x += xDelta;
+		 x += xDelta;
+		 y += yDelta;
             
 	    //Creates a yellow rectangle that fills the screen 
             g.setColor(Color.YELLOW);
@@ -74,10 +75,10 @@ public class DanceParty extends JPanel
 
 	    //Creates a gray rectangle that moves across the screen
             //if the frameCount is greater than 50
-       	    if(frameCount > 50){
-            	g.setColor(Color.GRAY);
-            	g.fillRect(100 + x,100, 200, 200);
-            }
+       	    //if(frameCount > 50){
+            	g.setColor(Color.PINK);
+            	g.fillRect(x,y, 300, 200);
+            //}
 	    
             //draws the name of the dancer
             g.setColor(Color.BLUE);
@@ -94,9 +95,9 @@ public class DanceParty extends JPanel
 	    //x1 is an array of x coordinates
 	    //y1 is an array of y coordinates
             g.setColor(Color.black);
-            int x1[]={55, 55, 65};
+            int x1[]={55, 55, 65+x};
             int y1[]={105, 80, 90};
-            g.drawPolygon( x1, y1, 3);
+            g.fillPolygon( x1, y1, 3);
 
             //creates a stroke of width 10
             g.setStroke(new BasicStroke(10));
@@ -121,8 +122,8 @@ public class DanceParty extends JPanel
 		this.setDoubleBuffered(true);
 		setBackground(Color.black);
 		//TODO: Initialize x and y to what ever you want
-                x = 175;
-                y = 100;
+                x = 0;
+                y = INIT_HEIGHT/2;
 		startAnimation();
 	}
         

@@ -19,24 +19,17 @@ An example of a the dance party is provided here ([https://github.com/hpluska/AP
 
 ## Your Tasks
 
-**Here is a tutorial to help you get started: [https://hpluska.github.io/APCompSciA/tutorials/Netbeans/GettingStarted.pdf](https://hpluska.github.io/APCompSciA/tutorials/Netbeans/GettingStarted.pdf)**
-
-- [ ] Begin a project in NetBeans called DanceParty
-- [ ] Locate the required DanceParty class and add it to your DanceParty project folder
-	- [https://github.com/hpluska/APCompSciA/tree/master/projects/DanceParty/DanceParty](https://github.com/hpluska/APCompSciA/tree/master/projects/DanceParty/DanceParty)
-- [ ] Locate the required *.au music clip and add it to your DanceParty project folder
 - [ ] Locate the DanceParty class and explore this class.  You will notice examples on how to create movement and different shapes
-- [ ] Locate the TODO in the DanceParty class which instructs you to change the path to the song file you added to your project folder.  Change the path as instructed. 
+- [ ] Locate the TODO's in the DanceParty class which instructs you to change the path to the song file you added to your project folder.  Change the path as instructed. 
 - [ ] Once you have the music playing, get coding and create a Dance Party!
 - [ ] Document your code thoroughly as you go with comments
 - [ ] Complete the required README using specified guidelines
 
-## Grade and Submit your Project
+## Grade your project before you submit
 
 - [ ] Before you submit your project, grade your project against the criteria below. 
 	[Rubric.md](Rubric.md)
-- [ ] Submit your project using the following guidelines 
-	* Navigate to [https://classroom.github.com/a/Vye3BEWh](https://classroom.github.com/a/Vye3BEWh)
+
 
 	
 
