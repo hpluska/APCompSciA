@@ -59,14 +59,19 @@ public class ForLoops extends JPanel
 	    //Draws blue rectangles across the top of the screen
             g.setColor(Color.BLUE);
 	    	System.out.println(getWidth());
-	    for(int rows = 0; rows < getWidth();rows+=step){
+			for(int rows = 0; rows < getHeight();rows+=step){
+				for(int cols = 0; cols< rows;cols+=step){
 		
-		if(rows%20 == 0){
-	    
-	    		g.fillRect(rows,y, step, step);
-		}
+					if(cols%20 == 0){
+				
+						g.fillRect(cols,rows, step, step);
+					}
+				}
+			}
+					
+				
             
-	    }
+	    
 	
 	}
 
