@@ -4,7 +4,7 @@ import java.util.*;
 public class test{
 
 	public static void main(String ars[]){
-	
+	/*
 	String s = "\t\tLucky hocky puck\t\t";
 	String m = "uck";
 	String n = "puck";
@@ -86,8 +86,8 @@ public class test{
 	}
 	System.out.println(s1 + " " + s2 + " " + s3);
 
-
-	String message = "I love to code!";
+*/
+	String message = "a a a a";
 	Scanner sc = new Scanner(message);
 	int words = 0, letters=0, a = 0, b = 0, c = 0;
 
@@ -109,5 +109,6 @@ public class test{
 		System.out.println();
 	}
 	System.out.println(a + ":" + b + ":" + c);
+	
 	} 
 }

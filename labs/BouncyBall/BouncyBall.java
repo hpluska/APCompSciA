@@ -54,11 +54,12 @@ public class BouncyBall extends JPanel
 		x += xDelta;
 		// TODO 1: needs more to stay in-bounds
 		
+		
 
 		// Calculate new y anchor point value
 		y += yDelta;
 		// TODO 2: needs more to stay in-bounds
-
+		
 	
 
 		// TODO 3: use radius, rDelta, MIN_RADIUS, and MAX_RADIUS to increase/decrease oval radius.

@@ -1,10 +1,23 @@
 public class test{
 
-	public static void main(String houses2[]){
+	public static void main(String houses[]){
+
+		System.out.println(houses[0]);
+		System.out.println(houses[1]);
+		System.out.println(houses[2]);
+		System.out.println(houses[3]);
+		System.out.println(houses[4]);
+		String s = "Hello againn", sp[];
+		sp = s.split("n");
+System.out.println(sp.length - 1);
+System.out.println(sp[0]);
+
+
 
 		//System.out.println("house2[0] " + houses2[0]);
 		//System.out.println("house2[1] " + houses2[1]);
 
+		/*
 		String sss = "Some ssStrings";
 		String[] sssArray = sss.split("s");
 		System.out.println("sssLength = " + sssArray.length);
@@ -69,7 +82,7 @@ public class test{
 	sp3 = s2.split("H");
 	System.out.println(sp2.length);
 	System.out.println(sp3.length);
-
+*/
 	}
 
 }
