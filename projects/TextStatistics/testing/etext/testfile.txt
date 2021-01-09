@@ -1,0 +1,11 @@
+----- testfile -----
+This is a test file for the second programming assignment in AP Computer Science A.
+It has 11 lines of text which contains numbers and all sorts of "punctuation" as well
+as words like don't and pre-condition, which count as two words each. It also contains
+numbers which also count as words. This file has 97 words.  The longest one has 11 
+characters and the shortest one has 1.  The average length of a word is 4.  There are 534 
+characters in the input.
+
+How do you like this program?
+
+Finally, the Last line!

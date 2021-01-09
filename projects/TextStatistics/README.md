@@ -13,19 +13,14 @@ In this program, you are going to implement a program that analyzes text files t
 
 ## Specification
 
-- [ ] For this project you are going to create two classes.
+- [ ] For this project you are going to modify two classes.
 
 	* TextStatistics will be the class that reads a text file, parses it, and stores the information about the words and characters in the file.
-	* ProcessText is the driver class that gets a list of one or more filenames from the command line and collects statistics on each of the files using an instance of TextStatistics object.
+	* ProcessStatistics is the driver class that gets a list of one or more filenames from the command line and collects statistics on each of the files using an instance of TextStatistics object.
 
-- [ ] For this project you will also implement an interface
+## Your Tasks - ProcessStatistics
 
-	* TextStatisticsInterface.java
-
-## ProcessStatistics (provided class)
-
-The ProcessStatistics class will serve as the driver class with a main method which processes one or more files to determine some interesting statistics about them. The ProcessStatistics driver class
-should meet the following criteria,
+The ProcessStatistics class will serve as the driver class with a main method which processes one or more files to determine some interesting statistics about them. The ProcessStatistics driver class should meet the following criteria,
 
 - [ ] Command-line validation. The names of the files to process will be given as command line arguments. Your driver class must,
 
@@ -40,16 +35,9 @@ name given.
 	* If a file does not exist, a meaningful error message needs to be printed to the user and your program will continue processing the next file. (An invalid file in the list should not result in the program crashing or exiting before all files have been
 processed.)
 
-## TextStatistics
+## Your Tasks - TextStatistics
 
-TextStatistics is an instantiable class that reads a given text file, parses it, and stores the generated statistics. The TextStatistics class should do the following,
-
-- [ ] Implement the given TextStatisticsInterface (don’t modify the interface, it just provides a list of methods that your class must include). To implement an interface, you must modify your class declaration as follows, 
-
-```
-public class TextStatistics implements TextStatisticsInterface
-
-```
+TextStatistics is a class that reads a given text file, parses it, and stores the generated statistics. The TextStatistics class should do the following,
 
 - [ ] Include instance variables. Include a reference to the processed File. Include variables for all of the statistics that are computed for the file. Look at the list of accessor methods in the TextStatisticsInterface to determine which statistics will be stored (accessor methods typically are named with the word “get” following by whatever information they are
 accessing)
@@ -61,7 +49,7 @@ accessing)
 	* The number characters in the file.  The number of characters should include all whitespace characters, punctuation, etc. 
 	* The average word length
 	* The number of times each letter appears in the file. Do not separate upper and lower case, just convert all characters to lower or upper case before counting.
-	* The number of words of each length that appears in the file. Assume that the maximum word length is 23. You do not need to print lengths that have a count of zero.  Be careful here!  Consider the examples below, 
+	* The number of words of each length that appears in the file. Assume that the maximum word length is 23. All words that are 23 characters or longer should be stored in index 23 of the wordLengthCount[] array.  Do not print lengths that have a count of zero.  Be careful here!  Consider the examples below, 
 
 ```
 Here is my (word)!
@@ -77,48 +65,18 @@ The length of "Here" is again 4, not 5.
 
 You program must ignore punction and only count the length of the words. 
 
-- [ ] Implement a toString() method. Write a toString() method that generates and returns a String that can be printed to summarize the statistics for the file as shown in the sample output shown
-below.
-	
-## Your Tasks
+- [ ] Implement a toString() method. Write a toString() method that generates and returns a String that can be printed to summarize the statistics for the file as shown in the sample output shown here, [statsDisplay.jpg](statsDisplay.jpg)
 
-- [ ] Begin a project in your IDE called TextStatistics
-- [ ] Locate the TextStatistics and ProcessText class in the "stubs" folder of this project folder [https://github.com/hpluska/APCompSciA/tree/master/projects/TextStatistics/stubs](https://github.com/hpluska/APCompSciA/tree/master/projects/TextStatistics/stubs)
-- [ ] Save the TextStatistics and ProcessText class and place it in your project folder
-- [ ] Locate the etext folder in the "stubs" folder of this project folder [https://github.com/hpluska/APCompSciA/tree/master/projects/TextStatistics/stubs](https://github.com/hpluska/APCompSciA/tree/master/projects/TextStatistics/stubs)
-- [ ] Download the etext folder and place it in your project folder
-- [ ] Begin by implementing ProcessStatistics. You can ignore the command-line arguments to start. Just hard-code a file name so you can test your TextStatistics class as you write it. Create a File object and check to see that the file actually exists.
-  * If the file does exist, your program will create a TextStatistics object for that file and print out the statistics for the file to the console.
-  * If the file does not exist, a meaningful error message needs to be printed to the user.
-- [ ] Next you can start implementing TextStatistics according to the specifications described above
-- [ ] At this point, you should go back and add command-line argument processing to ProcessText as described in the specifications below. To make sure it correctly handles command line arguments, run it from the command line with no arguments, files that don't exist, and files that do exist.
+## Document, Grade, and Submit your Project
+
 - [ ] Document your code thoroughly as you go with comments.  The logic of your program must be thoroughly desribed!
-- [ ] Complete the required README using specified guidelines
-
-## Grade and Submit your Project
-
-- [ ] Make sure to test your program thoroughly. I am giving you the test program and scripts that I will use to grade your program. Take advantage of this and make sure they all pass! [https://github.com/hpluska/APCompSciA/tree/master/projects/TextStatistics/testing](https://github.com/hpluska/APCompSciA/tree/master/projects/TextStatistics/testing)
-- [ ] Submit your project using the following guidelines 
-	* Place the following files in a one project directory
-		- TextStatistics.java
-		- ProcessStatistics.java
-		- README
-	* Initialize the directory as a git repository, 
-		- From the command line type 
-			```
-			git init
-			```
-	* Push your project to github
-		- Navigate to [https://classroom.github.com/a/PzNQJi_s](https://classroom.github.com/a/PzNQJi_s)
-		- Follow the prompts to create the repository for the assignment
-		- Copy the "clone" link, then return to the command line
-		- From the command line type
-			```
-			git remote add origin <** paste clone link **>
-			git add .
-			git commit -m "your message goes here"
-			git push origin master
-			```
+- [ ] Complete the required README using specified guidelines.  You will need to replace README with your README.  
+- [ ] Make sure to test your program thoroughly. I am giving you the test program and scripts that I will use to grade your program. Take advantage of this and make sure they all pass! These are located in the _testing_ folder.  To test your program do the following, 
+	* Place ProcessStatistics.java, TextStatistics.java, and TextStatisticsInterface.java in the testing folder
+	* Open this folder in the terminal.  
+		- If you are using Linux OS or Mac OS, you can open the terminal directly in visual studio code by selecting the _Open in Integrated Terminal_ option.  
+		- If you are using Windows OS, you will need to navigate to the testing folder via your file manager.  Once there, right-click and select _Git Bash Here_
+	* Type the following, ```./autograde.sh``` at the command prompt.  A perfect run will display the following results,  [statsDisplay2.jpg](statsDisplay2.jpg)
 		
 
 
