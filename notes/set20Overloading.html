@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../styles/notes.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Over+the+Rainbow" rel="stylesheet">
+</head>
+
+<body>
+    <div id="top">
+        <h1>Set 20: Overloading</h1>
+    </div>
+    <div id="skills">
+        <ul id="skillsList">
+            <li>
+                Skill 20.1 <a href="#skill1">Explain the purpose of overloading</a>
+            </li>
+            <li>
+                Skill 20.2 <a href="#skill2">Apply overloading to a constructor</a>
+            </li>
+            <li>
+                Skill 20.3 <a href="#skill3">Apply overloading to methods</a>
+            </li>
+
+        </ul>
+    </div>
+    <div id="skill1" class="skills">Skill 20.1 Explain the purpose of overloading
+    </div>
+    <div class="skillConceptsHeader">Skill 20.1 Concepts</div>
+    <div class="skillConcepts">
+    <p>Overloading in Java is the ability to create different objects from the same class depending on the types of parameters that are provided.</p> 
+    <p>Overloading can also be applied to methods. Method overloading in Java is the ability to create multiple methods of the same name, but with different parameters.  
+        The main advantage of overloading is cleanliness of code.</p>
+    <p>To understand the purpose of overloading in Java lets consider the following implementation of a 
+        class Box with only one constructor taking three arguments.</p>
+    <p class = "codeblock">
+
+        // An example class to understand need of<br>
+        // constructor overloading.<br>
+        class Box<br>
+        {<br><br>
+            <span style="margin-left:5em;">double width, height,depth;</span><br><br>
+            
+            <span style="margin-left:5em;">// constructor used when all dimensions specified</span><br>
+            <span style="margin-left:5em;">Box(double w, double h, double d)</span><br>
+            <span style="margin-left:5em;">{</span><br><br>
+                <span style="margin-left:10em;">width = w;</span><br>
+                <span style="margin-left:10em;">height = h;</span><br>
+                <span style="margin-left:10em;">depth = d;</span><br><br>
+            <span style="margin-left:5em;">}</span><br><br>
+            <span style="margin-left:5em;">// compute and return volume</span><br>
+            <span style="margin-left:5em;">double volume()</span><br>         
+            <span style="margin-left:5em;">{</span><br><br>
+            <span style="margin-left:10em;">return width * height * depth;</span><br><br>
+            <span style="margin-left:5em;">}</span><br><br>               
+
+        }
+    </p>
+    <p>As we can see, the Box() constructor requires three parameters. 
+        This means that all declarations of Box objects must pass three arguments to the 
+        Box() constructor. For example, the following statement is currently invalid:</p>
+        <p class="codeblock">
+            Box ob = new Box();
+        </p>
+<p>Since Box() requires three arguments, it’s an error to call it without them. 
+    Suppose we simply wanted a box object without initial dimension, or 
+    want to initialize a cube by specifying only one value that would be used for all 
+    three dimensions. From the above implementation of Box class these options are not 
+    available to us.</p>
+
+    <p>These types of problems of different ways of initializing an object can be solved by constructor overloading. 
+        Below is the improved version of class Box with constructor overloading.</p>
+
+        <p class = "codeblock">
+
+            // An example class to understand need of<br>
+            // constructor overloading.<br>
+            class Box<br>
+            {<br><br>
+                <span style="margin-left:5em;">double width, height,depth;</span><br><br>
+                
+                <span style="margin-left:5em;">// constructor used when all dimensions specified</span><br>
+                <span style="margin-left:5em;">Box(double w, double h, double d)</span><br>
+                <span style="margin-left:5em;">{</span><br><br>
+                    <span style="margin-left:10em;">width = w;</span><br>
+                    <span style="margin-left:10em;">height = h;</span><br>
+                    <span style="margin-left:10em;">depth = d;</span><br><br>
+                <span style="margin-left:5em;">}</span><br><br>
+
+                <span style="margin-left:5em;">// constructor used for a cube</span><br>
+                <span style="margin-left:5em;">Box(double len)</span><br>
+                <span style="margin-left:5em;">{</span><br><br>
+                    <span style="margin-left:10em;">width = height = depth = len;</span><br>
+                <span style="margin-left:5em;">}</span><br><br>
+
+                <span style="margin-left:5em;">// constructor used when no dimensions are specified</span><br>
+                <span style="margin-left:5em;">Box()</span><br>
+                <span style="margin-left:5em;">{</span><br><br>
+                    <span style="margin-left:10em;">width = height = depth = 0;</span><br>
+                <span style="margin-left:5em;">}</span><br><br>
+
+                <span style="margin-left:5em;">// compute and return volume</span><br>
+                <span style="margin-left:5em;">double volume()</span><br>         
+                <span style="margin-left:5em;">{</span><br><br>
+                <span style="margin-left:10em;">return width * height * depth;</span><br><br>
+                <span style="margin-left:5em;">}</span><br><br>               
+    
+            }
+        </p>
+
+    <p>Now, let's consider some calls to the Box class from a driver class, </p>
+    <p class = "codeblock">
+        // Driver code <br>
+        public class BoxMaker <br>
+        { <br><br>
+            <span style="margin-left:5em;">public static void main(String args[]) </span><br>
+            <span style="margin-left:5em;">{ </span><br><br>
+          
+                <span style="margin-left:10em;">// create boxes using the various constructors  </span><br> 
+                <span style="margin-left:10em;">Box mybox1 = new Box(10, 20, 15);   </span><br>   
+                <span style="margin-left:10em;">Box mybox2 = new Box();  </span><br>  
+                <span style="margin-left:10em;">Box mycube = new Box(7); </span><br><br>   
+                             
+                <span style="margin-left:10em;">double vol;</span><br><br>   
+                <span style="margin-left:10em;">// get volume of first box</span><br>
+                <span style="margin-left:10em;">vol = mybox1.volume();</span><br>   
+                <span style="margin-left:10em;">//below prints Volume of mybox1 is 3000.0</span><br>   
+                <span style="margin-left:10em;">System.out.println(" Volume of mybox1 is " + vol); </span><br><br>
+                 
+                <span style="margin-left:10em;">// get volume of second box</span><br>
+                <span style="margin-left:10em;">vol = mybox2.volume(); </span><br>
+                <span style="margin-left:10em;">//below prints Volume of mybox2 is 0.0</span><br>      
+                <span style="margin-left:10em;">System.out.println(" Volume of mybox2 is " + vol); </span><br><br>
+                 
+                <span style="margin-left:10em;">// get volume of cube </span><br>
+                <span style="margin-left:10em;">vol = mycube.volume(); </span><br>  
+                <span style="margin-left:10em;">//below prints Volume of mycube is 343.0</span><br>    
+                <span style="margin-left:10em;">System.out.println(" Volume of mycube is " + vol); </span><br><br>
+                <span style="margin-left:5em;">}</span><br>   
+        } 
+
+
+    </p>
+    </div>
+    <div class="practice">
+        <a href="../ticketOutTheDoor/set20/Set20TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 20.1: Exercise 1
+                        </a>
+        </div>
+    <div id="skill2" class="skills">Skill 20.2 Apply overloading to a constructor</div>
+    <div class="skillConceptsHeader">Skill 20.2 Concepts</div>
+    <div class="skillConcepts">
+        <p>As we saw above, overloading a constructor involves having multiple constructors with different parameters.  
+            Overloading constructors provides for cleaner code as we do not need to create unique methods or classes for situations 
+            that may require different parameters.  As another example, lets consider the <i>SumNums</i> class below which is overloaded with four constructors.
+        </p>
+
+        <p class="codeblock">
+            public class SumNums {<br><br>
+                <span style="margin-left:5em;">public SumNums() {</span><br><br>
+                    <span style="margin-left:10em;">System.out.println("Nothing to sum!");</span><br><br>
+                <span style="margin-left:5em;">}</span><br><br>
+                <span style="margin-left:5em;">public SumNums(int a, int b) {</span><br><br>
+                    <span style="margin-left:10em;">System.out.println(a + b);</span><br><br>
+                <span style="margin-left:5em;">}</span><br><br>
+                <span style="margin-left:5em;">public SumNums(int a, int b, int c) {</span><br><br>
+                    <span style="margin-left:10em;">System.out.println(a + b + c);</span><br><br>
+                <span style="margin-left:5em;">}</span><br><br>
+                <span style="margin-left:5em;">public SumNums(double a, double b) {</span><br><br>
+                    <span style="margin-left:10em;">System.out.println(a + b);</span><br><br>
+                <span style="margin-left:5em;">}</span><br><br>
+            }
+    </p>
+    <p>When you create an object from this class with overloaded constructors, java will match the parameters with the appropriate constructor.</p>
+    <table class="notesTable">
+        <tr><th width="50%">SumNums</th><th width="50%">SumNumsDriver</th></tr>
+        <tr><td valign="top"> 
+            <p class="codeblock">
+                public class SumNums {<br><br>
+                    <span style="margin-left:2em;">public SumNums() {</span><br><br>
+                        <span style="margin-left:4em;">System.out.println("Nothing to sum!");</span><br><br>
+
+                    <span style="margin-left:2em;">}</span><br><br>
+                    <span style="margin-left:2em;">public SumNums(int a, int b) {</span><br><br>
+                        <span style="margin-left:4em;">System.out.println(a + b);</span><br><br>
+                    <span style="margin-left:2em;">}</span><br><br>
+                    <span style="margin-left:2em;">public SumNums(int a, int b, int c) {</span><br><br>
+                        <span style="margin-left:4em;">System.out.println(a + b + c);</span><br><br>
+                    <span style="margin-left:2em;">}</span><br><br>
+                    <span style="margin-left:2em;">public SumNums(double a, double b) {</span><br><br>
+                        <span style="margin-left:4em;">System.out.println(a + b);</span><br><br>
+                    <span style="margin-left:2em;">}</span><br><br>
+
+                }
+        </p>
+        </td><td valign="top"> <p class="codeblock">
+                public class SumNumsDriver{<br><br>
+                    
+                    <span style="margin-left:2em;">public static void main(String args[]){</span><br><br>
+                    <span style="margin-left:4em;">SumNums s1 = new SumNums();//Prints <i>Nothing to sum</i></span><br>
+                    <span style="margin-left:4em;">SumNums s2 = new SumNums(1, 2);//Prints <i>3</i></span><br>
+                    <span style="margin-left:4em;">SumNums s3 = new SumNums(1, 2, 3);//Prints <i>6</i></span><br>
+                    <span style="margin-left:4em;">SumNums s4 = new SumNums(1.0, 2.0);//Prints <i>3.0</i></span><br>
+                    <span style="margin-left:2em;">}</span><br>
+                }
+        </p></td></tr>
+    </table>
+    
+</div><!--end concepts-->
+<p class="skillTakeAway">Overloaded constructors are differentiated by their parameters.</p>
+<div class="practice">
+    <a href="../ticketOutTheDoor/set20/Set20TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 20.2: Exercise 1
+                    </a>
+    </div>
+
+    <div id="skill3" class="skills">Skill 20.3 Apply overloading to methods</div>
+    <div class="skillConceptsHeader">Skill 20.3 Concepts</div>
+    <div class="skillConcepts">
+<!--begin overloading methods-->
+<p>
+    Overloaded methods are differentiated by the number and the type of the arguments passed 
+    into the method. For example, 
+</p>
+  
+<p>Suppose that you have a class that can use calligraphy to draw various types of data (strings, integers, and so on).
+    It would be cumbersome to use a new name for each method—for example, drawString, drawInteger, drawFloat, and so on. 
+    In the Java programming language, you can use the same name for all the drawing methods but pass a different 
+    argument list to each method. Thus, the data drawing class might declare four methods named draw, 
+    each of which has a different parameter list.</p>
+
+<p class="codeblock">
+        public class DataArtist {<br><br>
+            <span style="margin-left:5em;">public void draw(String s) {</span><br><br>
+                <span style="margin-left:10em;">...</span><br><br>
+            <span style="margin-left:5em;">}</span><br><br>
+            <span style="margin-left:5em;">public void draw(int i) {</span><br><br>
+                <span style="margin-left:10em;">...</span><br><br>
+            <span style="margin-left:5em;">}</span><br><br>
+            <span style="margin-left:5em;">public void draw(double d) {</span><br><br>
+                <span style="margin-left:10em;">...</span><br><br>
+            <span style="margin-left:5em;">}</span><br><br>
+            <span style="margin-left:5em;">public void draw(int i, double d) {</span><br><br>
+                <span style="margin-left:10em;">...</span><br><br>
+            <span style="margin-left:5em;">}</span><br><br>
+        }
+</p>  
+  <p>  
+    In the code sample above, draw(String s) and draw(int i) are distinct and 
+    unique methods because they require different argument types.
+</p>
+<p>
+    You cannot declare more than one method with the same name and the same number 
+    and type of arguments, because the compiler cannot tell them apart. For example, 
+    the code below would throw an error,
+</p>
+
+<p class="codeblock">
+        public class SumNums {<br><br>
+            <span style="margin-left:5em;">public int sum2(int a, int b) {</span><br><br>
+                <span style="margin-left:10em;">return a + b;</span><br><br>
+            <span style="margin-left:5em;">}</span><br><br>
+            <span style="margin-left:5em;">public double sum2(int a, int b) {</span><br><br>
+                <span style="margin-left:10em;">return (double)a + b;</span><br><br>
+            <span style="margin-left:5em;">}</span><br><br>
+        }
+</p>
+
+<p>When you call an overloaded method, java will look for the method that matches the parameters.</p>
+<table class="notesTable">
+        <tr><th width="50%">SumNums</th><th width="50%">SumNumsDriver</th></tr>
+        <tr><td valign="top"> <p class="codeblock">
+                public class SumNums{<br><br>
+                    <span style="margin-left:2em;">//accepts int data types</span><br>
+                    <span style="margin-left:2em;">public  int sum2(int a, int b){</span><br><br>
+                        <span style="margin-left:4em;">int sum = a + b;</span><br>
+                        <span style="margin-left:4em;">return sum2;</span><br>
+                        <span style="margin-left:2em;">}</span><br>
+                    <span style="margin-left:2em;">//accepts double data types</span><br>
+                    <span style="margin-left:2em;">public double sum2(double a, double b){</span><br><br>
+                            <span style="margin-left:4em;">double sum = a + b;</span><br>
+                            <span style="margin-left:4em;">return sum;</span><br>
+                            <span style="margin-left:2em;">}</span><br>
+                }
+        </p></td><td valign="top"> <p class="codeblock">
+                public class SumNumsDriver{<br><br>
+                    
+                    <span style="margin-left:2em;">public static void main(String args[]){</span><br><br>
+                    <span style="margin-left:4em;">SumNums s = new SumNums();</span><br>
+                    <span style="margin-left:4em;">s.sum2(1, 2);//prints 3</span><br>
+                    <span style="margin-left:4em;">s.sum2(1.0, 2.0);//prints 3.0</span><br>
+                    <span style="margin-left:2em;">}</span><br>
+                }
+        </p></td></tr>
+    </table>
+
+<p class="skillTakeAway">Overloaded methods are methods with the same name, but with different parameters.</p>
+
+
+</div>
+<div class="practice">
+    <a href="../ticketOutTheDoor/set20/Set20TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 20.3: Exercise 1
+                    </a>
+    </div>
+</body>
+
+</html>
