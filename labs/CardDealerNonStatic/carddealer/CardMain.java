@@ -15,7 +15,7 @@ public class CardMain {
     
     public static void main(String args[]){
 
-        JFrame frame = new JFrame("Card Counter");
+        JFrame frame = new JFrame("Card Dealer");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().add(new CardPanel());
 		frame.pack();
