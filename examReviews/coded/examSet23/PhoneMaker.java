@@ -47,6 +47,7 @@ public class PhoneMaker {
             CellPhone cp = new CellPhone(858, 346, 6430, 40.427437, -86.916979);
             PayPhone pp = new PayPhone(212, 840, 9623, 0.50);
 
+            System.out.println(p instanceof CellPhone);
             //(i)
             System.out.println(p);//765-999-1234
             //(ii)
