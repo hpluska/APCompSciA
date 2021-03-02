@@ -39,9 +39,6 @@ public class MineHunterGrid extends JPanel implements ActionListener, MineHunter
     
     private Color[] buttonColors = {Color.WHITE, Color.GRAY, Color.GREEN, Color.YELLOW, Color.PINK, Color.BLUE, Color.RED, Color.BLACK};
     
-
-   
-    
     public MineHunterGrid(int d, int p){
         //Initializes the size of the grid to the users specifications
         gridDimensions = d;
@@ -98,7 +95,7 @@ public class MineHunterGrid extends JPanel implements ActionListener, MineHunter
    /**
     * TODO: Write the showMines method
     * Displays the mines on the grid.  If there is a mine
-    * the background of the button will be red
+    * the background of the button will be red and
     * the flag icon will appear. 
     * Use .setBackground(Color.RED) to set the color
     * Use .setIcon(flag) to show 
@@ -226,10 +223,10 @@ public class MineHunterGrid extends JPanel implements ActionListener, MineHunter
     private class rightClickListener  extends MouseAdapter
     {
         public void mouseClicked (MouseEvent e) 
-        {       			// write here your event handling code
+        {       			
             if(e.getModifiersEx() == MouseEvent.META_DOWN_MASK)
             {
-                System.out.println("HEY I RIGHT CLICKED");
+                //System.out.println("HEY I RIGHT CLICKED");
                 locateClicked((JButton) e.getSource());
                 identifyMines(clickedX, clickedY);
                 if(isDone()){
