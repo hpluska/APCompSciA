@@ -8,6 +8,17 @@ public class test{
 
     public static void main(String args[]){
 
+        ArrayList i = new ArrayList(); //creates an ArrayList of whatever you want
+        i.add(1); //adds 1 to the end of the list
+        i.add(2); //adds 2 to the end of the list
+        i.add(3); //adds 3 to the end of the list
+        
+        for(int j = 0; j < i.size(); j++){ //size() is used to get the length of the array
+        
+        System.out.println(i.get(j)); //get() is used to get the value at position j
+        
+        }
+
     songs.add("A");
     songs.add("B");
     songs.add("C");
