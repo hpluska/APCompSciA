@@ -38,10 +38,7 @@ public class MineHunterGrid extends JPanel implements ActionListener {
     private boolean[][] locatedMines;
     private ImageIcon flag = new ImageIcon("images/flag.jpg");
     private Color[] buttonColors = {Color.WHITE, Color.GRAY, Color.GREEN, Color.YELLOW, Color.PINK, Color.BLUE, Color.RED, Color.BLACK};
-    //TODO: declare an arraylist
     private ArrayList<Point> path = new ArrayList<Point>();
-    
-    
     
     public void doButtonAction(int i) {
         if(i == 0){
@@ -89,18 +86,13 @@ public class MineHunterGrid extends JPanel implements ActionListener {
             }
         }
     }
-    /**
-     * 
-     */
+
     public void showPath(){
-        MineHunterPath newPath = new MineHunterPath(gridDimensions, mines);
-        
+        MineHunterPath newPath = new MineHunterPath(gridDimensions, mines);  
         this.path = newPath.getPath();
-        
         for(Point p : path){
            tiles[p.x][p.y].setBackground(Color.BLACK);
-        }
-        
+        }  
     }
 
     private void locateClicked(JButton c){
@@ -150,8 +142,6 @@ public class MineHunterGrid extends JPanel implements ActionListener {
     
     
     public void showMines(){
-        //developed in a previous lab
-        //added by pluska April 27, 2020
         for(int rows = 0; rows < tiles.length; rows++){
             for(int cols = 0; cols < tiles[rows].length; cols++){
                 if(mines[rows][cols]){

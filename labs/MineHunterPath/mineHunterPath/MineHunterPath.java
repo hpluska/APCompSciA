@@ -58,7 +58,6 @@ public class MineHunterPath {
          */
         private Point getNext(){
             
-           
                 return new Point(x,y);
             
         }
@@ -67,7 +66,7 @@ public class MineHunterPath {
          * @return 
          */
         public ArrayList<Point> getPath(){
-
+            step();
             return path;
         }
         /**

@@ -17,11 +17,15 @@ public class MineHunter {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-                JFrame frame = new JFrame("Mine Walker");
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().add(new MineHunterPane());
-		frame.pack();
-		frame.setVisible(true);
+      JFrame frame = new JFrame("Mine Walker");
+		  frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      if(args.length < 1){
+	  	     frame.getContentPane().add(new MineHunterPane());
+      }else{
+        frame.getContentPane().add(new MineHunterPane(args[0], args[1]);
+      }
+		  frame.pack();
+		  frame.setVisible(true);
     }
     
 }
