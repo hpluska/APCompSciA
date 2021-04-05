@@ -3,14 +3,28 @@ public class test{
     public static int a[] = {1, 2, 3, 4, 0, 0, 5};
     public static int sum = 0;
     public static void main(String args[]){
-      //showMe("WATCH");
+      whatsItDo("WATCH");
       //System.out.println(countEm(0));
       //System.out.println(reverseNum(1234));
 
       //reduceByOne(4);
       //System.out.println(pls(4));
-      homer(9);
+      //homer(9);
+
+      //showMe(0);
     }
+
+public static void whatsItDo(String str)
+{
+   int len = str.length();
+      if (len > 1)
+      {
+        String temp = str.substring(0, len - 1);
+        System.out.println(temp);
+        whatsItDo(temp);
+      }
+}
+
 
 
     public static int countEm(int i){
@@ -76,5 +90,17 @@ System.out.print("," + n);
 }
 
 
+
+public static void showMe(int arg)
+{
+    if (arg < 10)
+    {
+        showMe(arg + 1);
+    }
+    else
+    {
+        System.out.print(arg + " ");
+    }
+}
 
 }
