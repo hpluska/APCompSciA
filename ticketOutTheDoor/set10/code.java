@@ -25,7 +25,7 @@ public class code{
 		String wordR = "";
 		String letter = "";
 
-		for(int w = word.length(); w>0; w--){
+		for(int w = word.length(); w>-1; w--){
 			letter = word.substring(w-1, w);
 			wordR += letter;
 		}

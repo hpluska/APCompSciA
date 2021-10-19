@@ -3,11 +3,30 @@ public class code{
 
 
 	int num = 1234;
+	int numLength = (int)Math.log10(num);
+	int numR = 0;
 	while(num > 0){
-
-		System.out.print(num%10);
+		int lastNum = num%10;
+		numR += lastNum*Math.pow(10,numLength);
+		numLength--;
 		num /= 10;
 	}
+	System.out.println("Reversed number = " + numR);
+
+
+	System.out.println("Wanna play");
+	Scanner sc = new Scanner(System.in);
+
+	String ans = sc.next();
+
+	while(ans.equals("y")){
+
+		System.out.println("Do something");
+		System.out.println("Wanna play");
+		String ans = sc.next();
+
+	}
+
 
 
 	/*
