@@ -789,7 +789,7 @@
                 </p>
                 <p>positions = log<sub>10</sub>(number)</p>
                 <p class="codeblock">
-                        int positions = (int)(Math.log10(number));
+                        int positions = (int)(Math.log10(number))+1;
             
                 </p>
                 <p>Likewise, the positional value is, </p>
@@ -802,7 +802,7 @@
                 
             <p>This idea can be extended to other bases, base 2 for example,</p>
             
-            <p>positions = log<sub>2</sub>(number)</p>
+            <p>positions = log<sub>2</sub>(number)+1</p>
 
             <p>Java does not hava a built in log base 2 operation.  However, the 
                 number of postions required to represent a number in 
@@ -819,12 +819,12 @@
                 <p>The above example illustrates that the number of positions required to represent 
                     the number 32 in base 2 is, 
                 </p>
-                <p>required positions = Log<sub>10</sub>(32)/Log<sub>10</sub>(2)</p>
+                <p>required positions = Log<sub>10</sub>(32)/Log<sub>10</sub>(2)+1</p>
                 <p>Generalizing this expression provides a way to obtain the number of positions
                     required to represent a number in any base, 
                 </p>
                 <p class="codeblock">
-                    int positions = (int)(Math.log10(number))/(int)(Math.log10(base));
+                    int positions = (int)((Math.log10(number))/(Math.log10(base)))+1;
                 </p>
         <div class="practice">
             <a href="../ticketOutTheDoor/set12/Set12TicketOutTheDoorAPCompSciA.pdf" target="_blank">Skill 12.3: Exercise
