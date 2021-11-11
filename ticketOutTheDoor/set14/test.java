@@ -86,7 +86,7 @@ public class test{
 	}
 	System.out.println(s1 + " " + s2 + " " + s3);
 
-*/
+	*/
 	String message = "a a a a";
 	Scanner sc = new Scanner(message);
 	int words = 0, letters=0, a = 0, b = 0, c = 0;
