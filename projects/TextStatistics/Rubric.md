@@ -1,5 +1,12 @@
 Points Possible: /100  
 
+The README compiling and usage section should indicate how to compile and run your program from the command line using appropriate javac and and java commands.  You must also indicate how to pass a file to the program. More documentation in TextStatistics would be helpfull too.  Missing your name as author and a description of ProcessStatistics and TextStatistics (-5)
+
+Missing ToString method (-10)
+Word letter frequencies fail for all files (-10)
+Word length frequencies fail for Alice-in-Wonderland (-5)
+
+
 =================================================
 Quality (15 points)
 ------------------------------------
@@ -23,6 +30,7 @@ ProcessText (20 points)
 - Handles invalid files (5 points)
 	- Prints meaningful error and continues program.
 - Creates TextStatistics instance and prints results using toString (5 points)
+ 
 
 TextStatistics (65 points)
 ------------------------------------

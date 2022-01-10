@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Driver",
+            "request": "launch",
+            "mainClass": "Driver",
+            "projectName": "APCompSciA_689734a7"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - p1",
             "request": "launch",
             "mainClass": "examSet26.p1",
