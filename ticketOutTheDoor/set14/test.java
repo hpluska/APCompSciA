@@ -4,7 +4,7 @@ import java.util.*;
 public class test{
 
 	public static void main(String ars[]){
-	/*
+	
 	String s = "\t\tLucky hocky puck\t\t";
 	String m = "uck";
 	String n = "puck";
@@ -54,7 +54,7 @@ public class test{
 	System.out.println("Skill 14.1 Exercise 1 Part 11");
 	System.out.println(m.compareTo(n));
 
-
+/* 
 
 	System.out.println(m.compareTo(n));
 
@@ -68,14 +68,14 @@ public class test{
 	//check if s1 is last
 	if(s1.compareTo(s2)>0 && s1.compareTo(s3)>0){
 		temp = s3;
-		s3 = s1;
+		s3 = s1;//move s1 to s3
 		s1 = temp;
 	}
 
 	//check if s2 is last
 	if(s2.compareTo(s1)>0 && s2.compareTo(s3)>0){
 		temp = s3;
-		s3 = s2;
+		s3 = s2;//move s2 to s3
 		s2 = temp;
 	}
 	//compare s1 and s2
@@ -87,6 +87,8 @@ public class test{
 	System.out.println(s1 + " " + s2 + " " + s3);
 
 	*/
+
+	/* 
 	String message = "a a a a";
 	Scanner sc = new Scanner(message);
 	int words = 0, letters=0, a = 0, b = 0, c = 0;
@@ -109,6 +111,6 @@ public class test{
 		System.out.println();
 	}
 	System.out.println(a + ":" + b + ":" + c);
-	
+	*/
 	} 
 }

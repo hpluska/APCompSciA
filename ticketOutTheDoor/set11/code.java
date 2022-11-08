@@ -1,7 +1,7 @@
 public class code{
 	public static void main(String args[]){
 
-
+/* 
 	int num = 1234;
 	int numLength = (int)Math.log10(num);
 	int numR = 0;
@@ -27,9 +27,9 @@ public class code{
 
 	}
 
+*/
 
-
-	/*
+	
 	int j = 25;
 		do{
 
@@ -39,7 +39,7 @@ public class code{
 		}while(j >=25 || j<=30);
 
 	
-	*/
+	
 
 	int i = 5, j2 = 0;
 	do{

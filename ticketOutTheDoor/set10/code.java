@@ -2,11 +2,13 @@ public class code{
 
 	public static void main(String args[]){
 		//Skill 1 Exercise 1
+		/* 
 		int j = 0;
 		for(int g = 0; g < 5; g++){
     			j++;
+			
 		}
-		System.out.println(j);//5
+		//System.out.println(g);//5
 		
 		int s = 1;
 		for(int j2 = 3; j2 >= 0; j2--){
@@ -52,16 +54,16 @@ public class code{
 			System.out.println("Not!");
 		}
 
-
+		*/
 
 		//Skill 3 Exercise 1
-		for(int row = 0; row < 10; row++){
-			for(int col = 0; col < 10; col++){
+		for(int down = 10; down > 0; down--){
+			for(int across = 0; across < down; across++){
 				System.out.print("*");
 			}
 		System.out.println();
 		}
-
+/* 
 		//Skill 3 Exercise 1
 		for(int row = 0; row < 10; row++){
 			for(int col = 0; col < row; col++){
@@ -70,7 +72,7 @@ public class code{
 		System.out.println();
 		}
 
-
+*/
 
 
 
