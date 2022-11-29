@@ -2,14 +2,14 @@ public class test{
 
 	public static void main(String houses[]){
 
-		System.out.println(houses[0]);
-		System.out.println(houses[1]);
-		System.out.println(houses[2]);
-		System.out.println(houses[3]);
-		System.out.println(houses[4]);
-		String s = "Hello againn", sp[];
+		// System.out.println(houses[0]);
+		// System.out.println(houses[1]);
+		// System.out.println(houses[2]);
+		// System.out.println(houses[3]);
+		// System.out.println(houses[4]);
+		String s = "Hello againndummy", sp[];
 		sp = s.split("n");
-System.out.println(sp.length - 1);
+System.out.println(sp.length-1);
 System.out.println(sp[0]);
 
 
