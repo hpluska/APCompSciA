@@ -38,7 +38,22 @@
     <p>A static method is one type of method which doesn't need any object to be initialized for it to be called. 
     Have you noticed <em>static</em> is used in the main function in Java? Program execution 
     begins from there without an object being created. </p>
-    <iframe height="500px" width="100%" src="https://repl.it/@hpluska/Set23Skill1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+    <p class="codeblock">
+        public class Main {<br><br>
+            <span style="margin-left:5em;">public static void main(String[] args) {</span><br><br>
+            <span style="margin-left:10em;">System.out.println("Hello world!");</span><br>
+          
+          
+            <span style="margin-left:5em;">}<br>
+          }
+    </p>
+    <!--<iframe height="500px" width="100%" 
+        src="https://repl.it/@hpluska/Set23Skill1?lite=true" 
+        scrolling="no" frameborder="no" allowtransparency="true" 
+        allowfullscreen="true" 
+        sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals">
+    </iframe>-->
 
 </div>
 <div id="skill2" class="skills">Skill 22.2 Explain two uses for static</div>
@@ -51,12 +66,77 @@
             if we want to call a method or access 
             abc from outside the Nerd class, 
             here is how we have had to do it in the past,</p>
+            <table class="notesTable">
+                <tr><th>Nerd</th><th>NerdMaker</th></tr>
+                <tr><td valign="top"> <p class="codeblock">
+                    public class Nerd<br>{ <br><br>
+                    public String name;<br>
+                    public int age;<br><br>
+                    
+                        <span style="margin-left:2em;">public Nerd(){}//constructor</span><br><br>
+
+                    <span style="margin-left:2em;">public double methodA(double x){</span><br><br> 
+                        <span style="margin-left:4em;">return x;</span><br>
+                    <span style="margin-left:2em;">}</span><br>
+                }
+                </p></td>
+                <td valign="top"> <p class="codeblock">
+                    public class NerdMaker{<br><br>
+                        <span style="margin-left:2em;">
+                            public static void main(String args[]){<br><br></span>
+                                <span style="margin-left:4em;">Nerd nerd1 = new Nerd();</span><br>
+                                <span style="margin-left:4em;">nerd1.name = "Minjae";</span><br>
+                                <span style="margin-left:4em;">nerd1.age = 16;</span><br><br>
+
+                                <span style="margin-left:4em;">Nerd nerd2 = new Nerd();</span><br>
+                                <span style="margin-left:4em;">nerd2.name = "Grace";</span><br>
+                                <span style="margin-left:4em;">nerd2.age = 17;</span><br><br>
+                                <span style="margin-left:4em;">System.out.println(nerd1.name);//Minjae</span><br>
+                                <span style="margin-left:4em;">System.out.println(nerd2.name);//Grace</span><br>
+                                <span style="margin-left:4em;">System.out.println(nerd1.age);//16</span><br>
+                                <span style="margin-left:4em;">System.out.println(nerd2.age);//17</span><br>
+                        </span><br>
+                        
+                    }
+                </p></td>
+
+
+            </table>
+
         
-        <iframe height="500px" width="100%" src="https://repl.it/@hpluska/Set23Skill21?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+        <!--<iframe height="500px" width="100%" src="https://repl.it/@hpluska/Set23Skill21?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>-->
         <p>Now, we are going to show how to do this without having to create an object. 
             This will require a slight rewrite of the Nerd class.</p>
 
-        <iframe height="500px" width="100%" src="https://repl.it/@hpluska/Set23Skill22?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+        <!--<iframe height="500px" width="100%" src="https://repl.it/@hpluska/Set23Skill22?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>-->
+        <table class="notesTable">
+            <tr><th>Nerd</th><th>NerdMaker</th></tr>
+            <tr><td valign="top"> <p class="codeblock">
+                public class Nerd<br>{ <br><br>
+                public static String name;<br>
+                public static int age;<br><br>
+                
+                    <span style="margin-left:2em;">public Nerd(){}//constructor</span><br><br>
+
+                <span style="margin-left:2em;">public static double methodA(double x){</span><br><br> 
+                    <span style="margin-left:4em;">return x;</span><br>
+                <span style="margin-left:2em;">}</span><br>
+            }
+            </p></td>
+            <td valign="top"> <p class="codeblock">
+                public class NerdMaker{<br><br>
+                    <span style="margin-left:2em;">
+                        public static void main(String args[]){<br><br></span>
+                            <span style="margin-left:4em;">Nerd.name = "Minjae";</span><br>
+                            <span style="margin-left:4em;">Nerd.age = 16;</span><br>
+                            <span style="margin-left:4em;">System.out.println(Nerd.methodA(6.022E23));</span><br>
+                    </span><br>
+                    
+                }
+            </p></td>
+
+
+        </table>
         <p>Notice that we did not need to create an object this time. 
             Rather we used the name of the class.
                 (That's why they're sometimes called class variables and methods).
@@ -78,7 +158,45 @@
         <p>We will now examine a class with static state variables and see what happens when we create
                         various instances of this class. (Notice that is the same as saying we create various objects from
                         the class.)</p>
-        <iframe height="500px" width="100%" src="https://repl.it/@hpluska/Set23Skill23?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+        <!--<iframe height="500px" width="100%" src="https://repl.it/@hpluska/Set23Skill23?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>-->
+        
+        <table class="notesTable">
+                <tr><th>Nerd</th><th>NerdMaker</th></tr>
+                <tr><td valign="top"> <p class="codeblock">
+                    public class Nerd<br>{ <br><br>
+                    public static String name;<br>
+                    public static int age;<br><br>
+                    
+                    <span style="margin-left:2em;">public Nerd(){}//constructor</span><br><br>
+                    <span style="margin-left:2em;">public static double methodA(double x){</span><br><br> 
+                    <span style="margin-left:4em;">return x;</span><br>
+                    <span style="margin-left:2em;">}</span><br>
+                }
+                </p></td>
+                <td valign="top"> <p class="codeblock">
+                    public class NerdMaker{<br><br>
+                        <span style="margin-left:2em;">
+                            public static void main(String args[]){<br><br></span>
+                                <span style="margin-left:4em;">Nerd nerd1 = new Nerd();</span><br>
+                                <span style="margin-left:4em;">nerd1.name = "Minjae";</span><br>
+                                <span style="margin-left:4em;">nerd1.age = 16;</span><br><br>
+
+                                <span style="margin-left:4em;">Nerd nerd2 = new Nerd();</span><br>
+                                <span style="margin-left:4em;">nerd1.name = "Grace";</span><br>
+                                <span style="margin-left:4em;">nerd1.age = 17;</span><br><br>
+                                <span style="margin-left:4em;">System.out.println(nerd1.name);//grace</span><br>
+                                <span style="margin-left:4em;">System.out.println(nerd2.name);//grace</span><br>
+                                <span style="margin-left:4em;">System.out.println(nerd1.age);//17</span><br>
+                                <span style="margin-left:4em;">System.out.println(nerd2.age);//17</span><br>
+                        </span><br>
+                        
+                    }
+                </p></td>
+
+
+            </table>
+        
+        
         <p>The above illustrates another principle of static data members. That is, they are shared by all
         instances (all objects) of that class. In fact, the static variables are still present and available even
         if no objects are ever instantiated.  </p> 
@@ -92,8 +210,28 @@
         <p>If from within a static method we try to access another method and/or data member of the same
         class, then that other method and/or state variable must also be static. This is illustrated by the
         following code:</p>
-        <iframe height="400px" width="100%" src="https://repl.it/@hpluska/Set23Skill3?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-       
+        <!--<iframe height="400px" width="100%" src="https://repl.it/@hpluska/Set23Skill3?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>-->
+        <p class="codeblock">
+        public class Main {<br><br>
+            public static String name;<br>
+            public static String age;<br><br>
+            <span style="margin-left:5em;">public static void main(String[] args) {</span><br><br>
+            <span style="margin-left:10em;">name = "Minjae";</span><br>
+            <span style="margin-left:10em;">age = 17;</span><br>
+            <span style="margin-left:10em;">System.out.println(methodA(6.022E23));</span><br>
+            <span style="margin-left:10em;">//setName("Kellen"); //Illegal</span><br>         
+          
+            <span style="margin-left:5em;">}<br></br>
+        
+          <span style="margin-left:5em;">public static double methodA(double x){</span><br><br> 
+          <span style="margin-left:10em;">return x;</span><br>
+          <span style="margin-left:5em;">}</span><br><br>
+
+          <span style="margin-left:5em;">public void setName(String n){</span><br><br> 
+            <span style="margin-left:10em;">name = n;//legal</span><br>
+            <span style="margin-left:5em;">}</span><br>
+          }
+        </p>
         <p>From the above example, we can draw the following conclusions,</p>
         <div class="skillTakeAway"><p><ul>
         <li>Static methods can reference only static variables and never the “regular”, non-static
