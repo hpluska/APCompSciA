@@ -165,11 +165,14 @@
                 <tr><td valign="top"> <p class="codeblock">
                     public class Nerd<br>{ <br><br>
                     public static String name;<br>
+                    public static int nerdCount = 0;<br>
                     public static int age;<br><br>
                     
-                    <span style="margin-left:2em;">public Nerd(){}//constructor</span><br><br>
-                    <span style="margin-left:2em;">public static double methodA(double x){</span><br><br> 
-                    <span style="margin-left:4em;">return x;</span><br>
+                    <span style="margin-left:2em;">public Nerd(){</span><br><br>
+                    <span style="margin-left:4em;">nerdCount++;</span><br>
+                    <span style="margin-left:2em;">}</span><br><br>
+                    <span style="margin-left:2em;">public static int getNerdCount(){</span><br><br> 
+                    <span style="margin-left:4em;">return nerdCount;</span><br>
                     <span style="margin-left:2em;">}</span><br>
                 }
                 </p></td>
@@ -188,6 +191,7 @@
                                 <span style="margin-left:4em;">System.out.println(nerd2.name);//grace</span><br>
                                 <span style="margin-left:4em;">System.out.println(nerd1.age);//17</span><br>
                                 <span style="margin-left:4em;">System.out.println(nerd2.age);//17</span><br>
+                                <span style="margin-left:4em;">System.out.println(Nerd.nerdCount);//2</span><br>
                         </span><br>
                         
                     }
