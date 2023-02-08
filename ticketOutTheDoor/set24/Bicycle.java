@@ -1,7 +1,10 @@
 public class Bicycle{
-
-    public Bicycle(){
-        System.out.println("Inside Bicycle");
+    int wheels;
+    public Bicycle(int numberWheels){
+        wheels = numberWheels;
+    }
+    public int getWheels(){
+        return wheels;
     }
         
 

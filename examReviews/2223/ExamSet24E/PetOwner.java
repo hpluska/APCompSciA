@@ -10,7 +10,7 @@ public class PetOwner {
     public void printOwnerInfo() { 
     
         thePet.printPetInfo();
-        System.out.println("Owned by " + owner);
+        System.out.println(" owned by " + owner);
     } 
 
 } 
