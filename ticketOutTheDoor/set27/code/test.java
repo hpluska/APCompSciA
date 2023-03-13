@@ -41,8 +41,8 @@ public class test{
         boolean inList = false;
 
         for(int j = 0; j < dList.size(); j++){
-            for(int i = 0; i < songs.size(); i++){
-                if(dList.get(j).equals(songs.get(i))){
+            for(String s:songs){
+                if(dList.get(j).equals(s)){
                     inList = true;
                 }
             }
