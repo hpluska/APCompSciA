@@ -86,6 +86,19 @@ public class SparseArray {
               
               
          } 
+
+         public int countRowValues(int row){
+            int values = 0;
+            for(int i = 0; i < entries.size(); i++){
+                if(entries.get(i).getRow() == row){
+                    values++;
+                }
+            }
+            if(row < 0 || row > getNumRows()){
+                return -1;
+            }
+            return values;
+         }
     // There may be instance variables, constructors, and methods that are not shown. 
     } 
     

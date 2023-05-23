@@ -4,8 +4,8 @@ public class test{
     public static int sum = 0;
     public static void main(String args[]){
       //whatsItDo("WATCH");
-      System.out.println(countEm(0));
-      //System.out.println(reverseNum(1234));
+      //System.out.println(fun1(5,2));
+      System.out.println(reverseNum(1234));
       //showMe("Tuesday");
 
       //Skill 28.3 Exercise 1
@@ -26,6 +26,18 @@ public class test{
        
     }
 
+    /**
+ * Skill 28.3 Exercise 1 
+ * @param n
+ */
+public static void reduceByOne(int n){
+    if(n > 0){
+         System.out.println(n);
+         reduceByOne(n-1);
+         System.out.println(n);
+    }
+}
+
     //First problem in recursion review slides
     public static void whatsItDo(String str)
     {
@@ -39,16 +51,15 @@ public class test{
     }
 
     //Second problem in recursion review slides
-    public static int countEm(int i){
-
-        while(i<a.length-1){
-            i++;
-            sum+=a[i];
-            System.out.println("sum = " + sum + "\n i = " + i);
-            countEm(i); 
-        }
-    return sum;
-    }
+    //public static int a[] = {1, 2, 3, 4, 0, 0, 5};
+  
+  static int fun1(int x, int y)
+  {
+    if (x == 0)
+        return y;
+    else
+        return fun1(x - 1, x + y);
+  }
 
     //Third problem in recursion review slides
     static int reverse = 0;
@@ -72,17 +83,7 @@ public class test{
         }
     }
 
-/**
- * Skill 28.3 Exercise 1 
- * @param n
- */
-public static void reduceByOne(int n){
-    if(n > 0){
-         System.out.println(n);
-         reduceByOne(n-1);
-         System.out.println(n);
-    }
-}
+
 
     /**
      * Skill 28.4 Exercise 1
