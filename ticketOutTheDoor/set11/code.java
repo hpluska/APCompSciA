@@ -41,16 +41,16 @@ public class code{
 	
 	
 
-	int i = 5, j2 = 0;
-	do{
+	// int i = 5, j2 = 0;
+	// do{
 
-     		for(j2 = 0; j2 < i; j2++){
-          	System.out.print("*");
-     	}
-     	System.out.println();
-     	i--;
+    //  		for(j2 = 0; j2 < i; j2++){
+    //       	System.out.print("*");
+    //  	}
+    //  	System.out.println();
+    //  	i--;
 
-	}while(i > 0);
+	// }while(i > 0);
 	}
 
 }
