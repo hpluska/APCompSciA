@@ -2,37 +2,41 @@ public class test{
 
     public static void main(String args[]){
 
-        for(char i = '+'; i < '='; i++){
-            System.out.print(i + " ");
-        }
-System.out.println();
-        for(int j = 30; j < 65; j++){
-            System.out.print((char)j + " ");
-        }
+        //char i = (char)999999999;
+        // for(char i = 0;i < 4000; i++){
+        //     System.out.println(i);
+        // }
 
-        String word = "WOW";
+        // for(char i = '+'; i < '='; i++){
+        //     System.out.print(i + " ");
+        // }
+// System.out.println();
+//         for(int j = 30; j < 65; j++){
+//             System.out.print((char)j + " ");
+//         }
 
-        int j = 0;
+//         String word = "WOW";
+
+//         int j = 0;
         
-        String result = "Palindrome";
+//         String result = "Palindrome";
         
     
-        for(int i = word.length()-1; i > 0; i--){
+//         for(int i = word.length()-1; i > 0; i--){
         
-            if(word.charAt(i) != word.charAt(j)){
+//             if(word.charAt(i) != word.charAt(j)){
         
-                 result = "Not a palindrome";
+//                  result = "Not a palindrome";
         
-             }
+//              }
         
-        j++;
+//         j++;
         
-        }
+//         }
         
-        System.out.println(result);
+//         System.out.println(result);
 
         String word2 = "Code is Cool!";
-
         for(int i = 0; i < word2.length() - 1; i++){
 
             if(word2.charAt(i)  >= 65 && word2.charAt(i) <=90){
@@ -41,14 +45,14 @@ System.out.println();
        
            }else{
        
-           System.out.print(word2.charAt(i));
+                System.out.print(word2.charAt(i));
            }
        
        
        
        
        
-       }
+//        }
 
 
 
