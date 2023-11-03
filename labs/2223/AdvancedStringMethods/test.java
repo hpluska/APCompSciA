@@ -31,7 +31,6 @@ class Forrest{
     int counter = 0;
     public Forrest(String toSearch, String find){
         int pos = 0;
-
         while(pos < toSearch.length()){
             int i = toSearch.indexOf(find, pos);
             if(i >= 0){
