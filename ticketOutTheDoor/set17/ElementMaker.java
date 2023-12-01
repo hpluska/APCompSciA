@@ -3,9 +3,9 @@ public class ElementMaker{
     public static void main(String args[]){
 
 
-        
-                Element element1 = new Element(args[0], 4, 2, 2);
-                Element element2 = new Element(args[1], 20, 10, 10);
+       Element e1 = new Element("Ne", 20.0, 10, false);
+       Element e2 = new Element("C", 12.0, 6, false);
+       Element e3 = new Element("Fe", 56.0, 26, true);
                  
                 
          

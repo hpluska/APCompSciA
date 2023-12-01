@@ -1,13 +1,20 @@
 public class Element{
-    private String symbol;
-    private double weight;
-    private int protons, neutrons;
+    public String symbol;
+    public double weight;
+    public int atomicNumber;
+    public boolean isMetal;
 
-    public Element(String s, double w, int p, int n){
+    public Element(String s, double w, int an, boolean isM){
+
         symbol = s;
         weight = w;
-        protons = p;
-        neutrons = n;
+        atomicNumber = an;
+        isMetal = isM;
+        System.out.println("This is " + s);
+    
+    }
 
+    private double getWeight(){
+        return weight;
     }
 }
