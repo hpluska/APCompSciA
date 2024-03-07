@@ -1,21 +1,33 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class main{
     public static void main(String args[]){
-
+        //Error - bad code!
         // //for(int num = 1234; num >=0; num = num/10){
         // //    System.out.print(num%10);
         // //
     
-        // Scanner sc = new Scanner(System.in);
 
-        // //System.out.println("How old are you?");
+
+
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("How old are you?");
         // //unchecked
-        // int age = sc.nextInt();
-        // //System.out.println("You are " + age + " years old.");
-        // //unchecked
+            try{
+              int age = sc.nextInt();
+              System.out.println("You are " + age + " years old.");
+            }catch(InputMismatchException e){
+                System.out.println("Bad input");
+            }
+      
+        
+        //System.out.println(age/0);
+        // /oi/unchecked
    
 
         // try{
@@ -39,17 +51,14 @@ public class main{
 
         //checked
         // File f = new File("file.txt");
-        // //try {
-        //     try {
+  
+        // try {
         //         Scanner fileScan = new Scanner(f);
-        //     } catch (ArithmeticException e) {
+        // } catch (ArithmeticException e) {
         //         // TODO Auto-generated catch block
-        //         System.out.println("file not found");
+        //        // System.out.println("file not found");
         //     }
-        // // } catch (FileNotFoundException e) {
-        // //     System.out.println("file not found");
-
-        // // }
+   
         
 
    

@@ -12,6 +12,8 @@ public class test{
         i.add(1); //adds 1 to the end of the list
         i.add(2); //adds 2 to the end of the list
         i.add(3); //adds 3 to the end of the list
+
+        System.out.println(i.size());
         
         for(int j = 0; j < i.size(); j++){ //size() is used to get the length of the array
         
