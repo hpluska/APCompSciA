@@ -5,18 +5,18 @@ public class test{
     public static void main(String args[]){
       //whatsItDo("WATCH");
       //System.out.println(fun1(5,2));
-      System.out.println(reverseNum(1234));
+    //   System.out.println(reverseNum(1234));
       //showMe("Tuesday");
 
       //Skill 28.3 Exercise 1
       //reduceByOne(4);
 
       //Skill 28.4 Exercise 1 
-      //calcMethod(16);
-      //System.out.println("result  = " + calcMethod(16));
+      calcMethod(16);
+      System.out.println("result  = " + calcMethod(16));
 
       //Skill 28.4 Exercise 2
-      //System.out.println(goAgain("today", 1));
+      System.out.println(goAgain("today", 1));
 
       //Skill 28.4 Exercise 3 
       //System.out.println(pls(4));
