@@ -5,6 +5,13 @@ public class test{
         // int x = 79, y = 46, z = -3; 
         // double d = 13.89, jj = 40.0; 
         // boolean b = true, c = false; 
+
+        String s1 = "a";
+        String s2 = "b";
+
+        if(s1.equals(s2)){
+            System.out.println("boo");
+        }
         
         // if(x == y && !(z < 0) || b && c){
         //     System.out.println("this is if"); 
@@ -18,12 +25,12 @@ public class test{
         //     System.out.println("this is else"); 
         // }
 
-        String a1 = "dog";
-        String b1 = "dat";
-        if(a1 == b1){
-            System.out.println("same");
-        }else{
-            System.out.println("not the same");
-        }
+        // String a1 = "dog";
+        // String b1 = "dat";
+        // if(a1 == b1){
+        //     System.out.println("same");
+        // }else{
+        //     System.out.println("not the same");
+        // }
     }
 }

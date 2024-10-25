@@ -114,5 +114,16 @@ public class code{
 	  	// }
 	  
 	  	// System.out.print(result);
+
+		int num = 123456;
+		int result = 0;
+		int length = (int)(Math.log10(num));
+		
+		for(int i = num; i > 0; i/=10){
+			result += i%10*Math.pow(10,length);
+			length--;
+		}
+
+		System.out.println(result);
 	}//end main
 }//end class
