@@ -5,9 +5,9 @@ public class MountainBike extends Bicycle{
         type = t;
     }
 
-    public void bikeInfo(){
+    public String bikeInfo(){
 
-        System.out.println("Mountain Bike");
+        return "mountain bike";
     }
 
     public String getType(){

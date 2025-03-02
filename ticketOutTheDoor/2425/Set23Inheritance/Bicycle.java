@@ -6,6 +6,11 @@ public class Bicycle{
     public int getWheels(){
         return wheels;
     }
+
+    public String bikeInfo(){
+
+        return "bike";
+    }
         
 
 }
