@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class main{
+public class main throws FileNotFoundException{
     public static void main(String args[]){
         //Error - bad code!
         // for(int num = 1234; num >=0; num = num/10){
@@ -49,14 +49,14 @@ public class main{
         // }
             
 
-        //checked
-        // File f = new File("file.txt");
-        // try {
-        //     Scanner s = new Scanner(f);
-        // } catch (FileNotFoundException e) {
-        //     // e.printStackTrace();
-        //     System.out.println("file not found");
-        // }
+        // checked
+        File f = new File("file.txt");
+        try {
+            Scanner s = new Scanner(f);
+        } catch (FileNotFoundException e) {
+            // e.printStackTrace();
+            System.out.println("file not found");
+        }
   
         // try {
         //         Scanner fileScan = new Scanner(f);
