@@ -91,6 +91,24 @@ public class SparseArray {
               
          } 
 
+         public void removeCol(int col){
+            if(0 <= col && col < getNumCols()){
+                for(int n = 0; n < entries.size(); n++){
+                    if(entries.get(n).getCol() > col){
+                        entries.add(new SparseArrayEntry(entries.get(n).getRow(), 
+                        entries.get(n).getCol() - 1, entries.get(n).getValue()));
+                        entries.remove(n);
+                        n--;
+                    }
+                    if(entries.get(n).getCol() == col){
+                        entries.remove(n);
+                        n--;
+                    }
+                }
+                numCols--;
+            }
+         }
+
          public int countRowValues(int row){
             int values = 0;
             for(int i = 0; i < entries.size(); i++){
