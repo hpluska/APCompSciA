@@ -116,7 +116,7 @@ public class SparseArray {
                     values++;
                 }
             }
-            if(row < 0 || row > getNumRows()){
+            if(row <= 0 || row > getNumRows()){
                 return -1;
             }
             return values;
