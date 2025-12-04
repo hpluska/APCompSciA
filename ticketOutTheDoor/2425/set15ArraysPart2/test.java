@@ -2,14 +2,17 @@ public class test{
 
 	public static void main(String houses[]){
 
-		String s = "Hello againnx", sp[];
+		String s = "Hello againn", sp[];
 		sp = s.split("n");
-System.out.println(sp.length);
-System.out.println(sp[0]);
-System.out.println(sp[1]);
-System.out.println(sp[2]);
+		System.out.println("Array length: " + sp.length);
+		for (int i = 0; i < sp.length; i++) {
+			System.out.println("sp[" + i + "] = \"" + sp[i] + "\"");
+		}
+		// System.out.println(sp.length);
+		// System.out.println("index 0 = " + sp[0]);
+		// System.out.println("index 1 = " + sp[1]);
 
-System.out.println("The number of n's is: " + (sp.length - 1));
+		// System.out.println("The number of n's is: " + (sp.length - 1));
 
 
 
