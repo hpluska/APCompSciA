@@ -12,22 +12,23 @@ h1{
     font-size: 2em;
     color:#393e46;
     border-bottom: solid 2px #f8b500;
-    width:25%;
+    width:80%;
     /*border-radius: 20px;*/
     padding:10px;
     z-index:0;
 
 }
 
+
 #home, #labs, #reviewsAndSolutions, #dailyTasks, #contact{
 	background-color: #caccce;
-    min-height:100%;
+    min-height:300px;
 	padding-top:290px;
     z-index:1;
 }
 
 #notes, #projects, #tutorials{
-	min-height:100%;
+	min-height:300px;
 	/*border:solid 1px black;*/
 	background-color:#f7f7f7;
 	padding-top:290px;
