@@ -7,9 +7,20 @@ public class Code{
 
     public static void main(String args[]){
         String gradebook[][] = {{"5","4.5","3","4","3.5"},
-                                {"2","3","2.5","4","R"},
-                                {"4","1","3.5","5","4"},
+                                {"2","3","2.5","4","R", "1"},
+                                {"4","1","3.5","5","4", "3", "5"},//7
                                 {"5","2","3.5","3","4.5"}};
+
+        String gradebook2[][] = new String[gradebook.length + 1][7];
+
+        for(int i = 0; i < gradebook.length; i++){
+            gradebook2[i] = gradebook[i];
+            System.out.println(Arrays.toString(gradebook2[i]));
+        }
+
+
+
+
         //String gradebook[][] = {{"5","4.5","3","4","3.5"}, {"2","3","2.5","4","R"}, {"4","1","3.5","5","4"}, {"5","2","3.5","3","4.5"}};
         // String gradebook2[][] = new String[gradebook.length+1][7];
 
@@ -22,12 +33,12 @@ public class Code{
         //     System.out.println(Arrays.toString(gradebook2[a]));
         // }
 
-        for (int row = 0; row < gradebook.length; row++) {
-            for (int col = 0; col < gradebook[row].length; col++) {
-                System.out.print(gradebook[row][col] + " , ");
-            }
-            System.out.println();
-        }
+        // for (int row = 0; row < gradebook.length; row++) {
+        //     for (int col = 0; col < gradebook[row].length; col++) {
+        //         System.out.print(gradebook[row][col] + " , ");
+        //     }
+        //     System.out.println();
+        // }
     }
 
 }
