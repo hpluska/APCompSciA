@@ -32,4 +32,13 @@ public class Square{
         
     }
     
+    static int[][] makeLatin2(){
+        for(int row = 1; row < square.length; row++){
+            for(int col = 0; col < square[row].length; col++){
+                square[row][col] = square[0][(row + col)%square.length];
+            }
+        }
+    return square;  
+        
+    }
 }
